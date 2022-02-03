@@ -43,7 +43,7 @@ export const FIRE_BCH_PAIR: AddressMap = {
   [ChainId.ROPSTEN]: '',
   [ChainId.BSC]: '',
   [ChainId.MOONRIVER]: '0x0acDB54E610dAbC82b8FA454b21AD425ae460DF9',
-  [ChainId.SMARTBCH]: '0x6ed8DcB768472207984f28811231010ac269C826',
+  [ChainId.SMARTBCH]: '0xd7b00DfB01b7226aE64224869B8273ec05640F1C',
 }
 
 export const BNB_USD_PAIR: AddressMap = {

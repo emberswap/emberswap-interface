@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 
   const emberBCHPrice = Number(emberBCHReserves.reserve1) / Number(emberBCHReserves.reserve0)
 
-  let fireBCHContract = new web3.eth.Contract(IUniswapV2PairABI, '0x6ed8DcB768472207984f28811231010ac269C826')
+  let fireBCHContract = new web3.eth.Contract(IUniswapV2PairABI, '0xd7b00DfB01b7226aE64224869B8273ec05640F1C')
   const fireBCHReserves = await fireBCHContract.methods.getReserves().call()
 
   const fireBCHPrice = Number(fireBCHReserves.reserve0) / Number(fireBCHReserves.reserve1)
