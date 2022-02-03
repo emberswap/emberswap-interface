@@ -1,15 +1,15 @@
 import { CurrencyAmount, JSBI, MASTERCHEF_ADDRESS } from '../../sdk'
 import { Chef } from './enum'
-import { SOLAR, MASTERCHEF_V2_ADDRESS, MINICHEF_ADDRESS } from '../../constants'
+import { EMBER, MASTERCHEF_V2_ADDRESS, MINICHEF_ADDRESS } from '../../constants'
 import { NEVER_RELOAD, useSingleCallResult, useSingleContractMultipleData } from '../../state/multicall/hooks'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 import {
-  useSolarDistributorContract,
+  useEmberDistributorContract,
   useBNBPairContract,
-  useSolarMovrContract,
-  useSolarVaultContract,
-  useMovrUsdcContract,
-  useRibMovrContract,
+  useEmberBCHContract,
+  useEmberVaultContract,
+  useBCHFlexUSDContract,
+  useFireBCHContract,
 } from '../../hooks'
 
 import { Contract } from '@ethersproject/contracts'
@@ -21,14 +21,14 @@ import { useVaultInfo, useVaults } from '../vault/hooks'
 const { default: axios } = require('axios')
 
 export function useChefContract(chef: Chef) {
-  const solarDistributorContract = useSolarDistributorContract()
+  const emberDistributorContract = useEmberDistributorContract()
   const contracts = useMemo(
     () => ({
-      [Chef.MASTERCHEF]: solarDistributorContract,
-      [Chef.MASTERCHEF_V2]: solarDistributorContract,
-      [Chef.MINICHEF]: solarDistributorContract,
+      [Chef.MASTERCHEF]: emberDistributorContract,
+      [Chef.MASTERCHEF_V2]: emberDistributorContract,
+      [Chef.MINICHEF]: emberDistributorContract,
     }),
-    [solarDistributorContract]
+    [emberDistributorContract]
   )
   return useMemo(() => {
     return contracts[chef]
@@ -36,14 +36,14 @@ export function useChefContract(chef: Chef) {
 }
 
 export function useChefContracts(chefs: Chef[]) {
-  const solarDistributorContract = useSolarDistributorContract()
+  const emberDistributorContract = useEmberDistributorContract()
   const contracts = useMemo(
     () => ({
-      [Chef.MASTERCHEF]: solarDistributorContract,
-      [Chef.MASTERCHEF_V2]: solarDistributorContract,
-      [Chef.MINICHEF]: solarDistributorContract,
+      [Chef.MASTERCHEF]: emberDistributorContract,
+      [Chef.MASTERCHEF_V2]: emberDistributorContract,
+      [Chef.MINICHEF]: emberDistributorContract,
     }),
-    [solarDistributorContract]
+    [emberDistributorContract]
   )
   return chefs.map((chef) => contracts[chef])
 }
@@ -63,7 +63,7 @@ export function useUserInfo(farm, token) {
   const result = useSingleCallResult(args ? contract : null, 'userInfo', args)?.result
 
   const value = result?.[0]
-  const harvestValue = result?.[3]
+  const harvestValue = result?.[3]?.[0]
 
   const amount = value ? JSBI.BigInt(value.toString()) : undefined
   const nextHarvestUntil = harvestValue ? JSBI.BigInt(harvestValue.toString()) : undefined
@@ -74,7 +74,7 @@ export function useUserInfo(farm, token) {
   }
 }
 
-export function usePendingSolar(farm) {
+export function usePendingEmber(farm) {
   const { account, chainId } = useActiveWeb3React()
 
   const contract = useChefContract(0)
@@ -86,13 +86,13 @@ export function usePendingSolar(farm) {
     return [String(farm.id), String(account)]
   }, [farm, account])
 
-  const result = useSingleCallResult(args ? contract : null, 'pendingSolar', args)?.result
+  const result = useSingleCallResult(args ? contract : null, 'pendingTokens', args)?.result
 
-  const value = result?.[0]
+  const value = result?.[3]?.[0]
 
   const amount = value ? JSBI.BigInt(value.toString()) : undefined
 
-  return amount ? CurrencyAmount.fromRawAmount(SOLAR[chainId], amount) : undefined
+  return amount ? CurrencyAmount.fromRawAmount(EMBER[chainId], amount) : undefined
 }
 
 export function usePendingToken(farm, contract) {
@@ -114,7 +114,7 @@ export function usePendingToken(farm, contract) {
   return useMemo(() => pendingTokens, [pendingTokens])
 }
 
-export function useSolarPositions(contract?: Contract | null) {
+export function useEmberPositions(contract?: Contract | null) {
   const { account } = useActiveWeb3React()
 
   const numberOfPools = useSingleCallResult(contract ? contract : null, 'poolLength', undefined, NEVER_RELOAD)
@@ -127,31 +127,31 @@ export function useSolarPositions(contract?: Contract | null) {
     return [...Array(numberOfPools.toNumber()).keys()].map((pid) => [String(pid), String(account)])
   }, [numberOfPools, account])
 
-  const pendingSolar = useSingleContractMultipleData(args ? contract : null, 'pendingSolar', args)
+  const pendingEmber = useSingleContractMultipleData(args ? contract : null, 'pendingTokens', args)
 
   const userInfo = useSingleContractMultipleData(args ? contract : null, 'userInfo', args)
 
   return useMemo(() => {
-    if (!pendingSolar || !userInfo) {
+    if (!pendingEmber || !userInfo) {
       return []
     }
-    return zip(pendingSolar, userInfo)
+    return zip(pendingEmber, userInfo)
       .map((data, i) => ({
         id: args[i][0],
-        pendingSolar: data[0].result?.[0] || Zero,
+        pendingEmber: data[0].result?.[3]?.[0] || Zero,
         amount: data[1].result?.[0] || Zero,
       }))
-      .filter(({ pendingSolar, amount }) => {
-        return (pendingSolar && !pendingSolar.isZero()) || (amount && !amount.isZero())
+      .filter(({ pendingEmber, amount }) => {
+        return (pendingEmber && !pendingEmber.isZero()) || (amount && !amount.isZero())
       })
-  }, [args, pendingSolar, userInfo])
+  }, [args, pendingEmber, userInfo])
 }
 
 export function usePositions() {
-  return useSolarPositions(useSolarDistributorContract())
+  return useEmberPositions(useEmberDistributorContract())
 }
 
-export function useSolarFarms(contract?: Contract | null) {
+export function useEmberFarms(contract?: Contract | null) {
   const { account } = useActiveWeb3React()
 
   const numberOfPools = useSingleCallResult(contract ? contract : null, 'poolLength', undefined, NEVER_RELOAD)
@@ -174,8 +174,8 @@ export function useSolarFarms(contract?: Contract | null) {
       id: args[i][0],
       lpToken: data[0].result?.['lpToken'] || '',
       allocPoint: data[0].result?.['allocPoint'] || '',
-      lastRewardBlock: data[0].result?.['lastRewardBlock'] || '',
-      accSolarPerShare: data[0].result?.['accSolarPerShare'] || '',
+      lastRewardBlock: data[0].result?.['lastRewardTimestamp'] || '',
+      accEmberPerShare: data[0].result?.['accEmberPerShare'] || '',
       depositFeeBP: data[0].result?.['depositFeeBP'] || '',
       harvestInterval: data[0].result?.['harvestInterval'] || '',
       totalLp: data[0].result?.['totalLp'] || '',
@@ -252,7 +252,7 @@ export function useTokenInfo(tokenContract?: Contract | null) {
   let lockedInVaults = JSBI.BigInt(0)
 
   vaults
-    .filter((r) => r.lockupDuration > 0)
+    .filter((r) => r.lockupDuration >= 0)
     .forEach((r) => {
       lockedInVaults = JSBI.add(lockedInVaults, JSBI.BigInt(r.totalLp.toString()))
     })
@@ -284,22 +284,22 @@ export function useTokenInfo(tokenContract?: Contract | null) {
 }
 
 export function useFarms() {
-  return useSolarFarms(useSolarDistributorContract())
+  return useEmberFarms(useEmberDistributorContract())
 }
 
 export function usePricesApi() {
-  const movrPrice = useMovrPrice()
-  const solarPrice = useSolarPrice()
-  const ribPrice = useRibPrice()
+  const bchPrice = useBCHPrice()
+  const emberPrice = useEmberPrice()
+  const firePrice = useFirePrice()
 
   return useMemo(() => {
     return {
-      movr: movrPrice,
-      solar: solarPrice * movrPrice,
-      rib: ribPrice * movrPrice,
-      usdc: 1,
+      bch: bchPrice,
+      ember: emberPrice * bchPrice,
+      fire: firePrice * bchPrice,
+      flexusd: 1,
     }
-  }, [movrPrice, ribPrice, solarPrice])
+  }, [bchPrice, firePrice, emberPrice])
 }
 
 export function useFarmsApi() {
@@ -307,19 +307,19 @@ export function useFarmsApi() {
   return useAsync(usePriceApi, true)
 }
 
-export function useMovrPrice() {
+export function useBCHPrice() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  return usePrice(useMovrUsdcContract(), 12)
+  return usePrice(useBCHFlexUSDContract())
 }
 
-export function useSolarPrice() {
+export function useEmberPrice() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  return usePrice(useSolarMovrContract())
+  return usePrice(useEmberBCHContract(), 0, false)
 }
 
-export function useRibPrice() {
+export function useFirePrice() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  return usePrice(useRibMovrContract(), 0, true)
+  return usePrice(useFireBCHContract(), 0, true)
 }
 
 export function useBNBPrice() {
@@ -327,16 +327,16 @@ export function useBNBPrice() {
   return usePrice(useBNBPairContract())
 }
 
-export function useSolarDistributorInfo(contract) {
-  const solarPerBlock = useSingleCallResult(contract ? contract : null, 'solarPerBlock', undefined, NEVER_RELOAD)
+export function useEmberDistributorInfo(contract) {
+  const emberPerSec = useSingleCallResult(contract ? contract : null, 'emberPerSec', undefined, NEVER_RELOAD)
     ?.result?.[0]
 
   const totalAllocPoint = useSingleCallResult(contract ? contract : null, 'totalAllocPoint', undefined, NEVER_RELOAD)
     ?.result?.[0]
 
-  return useMemo(() => ({ solarPerBlock, totalAllocPoint }), [solarPerBlock, totalAllocPoint])
+  return useMemo(() => ({ emberPerSec, totalAllocPoint }), [emberPerSec, totalAllocPoint])
 }
 
 export function useDistributorInfo() {
-  return useSolarDistributorInfo(useSolarDistributorContract())
+  return useEmberDistributorInfo(useEmberDistributorContract())
 }

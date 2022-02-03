@@ -35,7 +35,7 @@ msgstr ""
 #~ msgstr "創建新的市場"
 
 #: src/pages/locker/create/index.tsx:350
-msgid "- 0.1 MOVR to lock"
+msgid "- 0.1 BCH to lock"
 msgstr ""
 
 #: src/pages/locker/create/index.tsx:356
@@ -90,10 +90,10 @@ msgstr ""
 #~ msgstr "Polygon上的300M + TVL！啟用優化的路由"
 
 #: src/pages/Yield/minichefv2/InputGroup.tsx:69
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
 #~ msgstr "<0>提示： </0>為了開始獲得獎勵，您需要首先通過向指定貨幣對添加流動性或<1>遷移現有流動性來獲取一些SLP。 </1>擁有SLP後，您可以將其抵押到此挖礦頁面中開始挖礦。隨時可以借出質押停止挖礦，通過單擊“移除流動性”將SLP轉換回基本代幣。單擊“收獲”可隨時獲得獎勵。"
 
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
 #~ msgstr "<0>提示： </0>為了開始獲得獎勵，您需要首先通過向指定貨幣對添加流動性或<1>遷移現有流動性來獲取一些SLP。 </1>擁有SLP後，您可以將其抵押到此挖礦頁面中開始挖礦。隨時可以借出質押停止挖礦，通過單擊“移除流動性”將SLP轉換回基本代幣。單擊“收獲”可隨時獲得獎勵。"
 
 #: src/pages/RemoveLiquidity/index.tsx:450
@@ -118,7 +118,7 @@ msgstr ""
 #~ msgstr ""
 
 #: src/features/swap/AdvancedSwapDetails.tsx:92
-msgid "A portion of each trade (0.25%) goes Solarbeam Treasury."
+msgid "A portion of each trade (0.25%) goes EmberSwap Treasury."
 msgstr ""
 
 #: src/features/lending/TradeReview.tsx:72
@@ -874,7 +874,7 @@ msgid "Harvest"
 msgstr ""
 
 #: src/features/farm/FarmListItemDetails.tsx:247
-msgid "Harvest {0} SOLAR"
+msgid "Harvest {0} EMBER"
 msgstr ""
 
 #: src/pages/Yield/masterchefv1/InputGroup.tsx:126
@@ -1563,7 +1563,7 @@ msgid "Remove Liquidity"
 msgstr "移除流動性"
 
 #: src/pages/exchange/remove/[[...tokens]].tsx:715
-msgid "Remove liquidity of Solarbeam"
+msgid "Remove liquidity of EmberSwap"
 msgstr ""
 
 #: src/pages/exchange/swap/[[...tokens]].tsx:459
@@ -1630,11 +1630,11 @@ msgstr "路由經過這些代幣將給您的交易帶來最好的價格。"
 #~ msgstr "SAAVE：在一次交易中疊加您的收益率"
 
 #: src/pages/kashi/borrow/[pair].tsx:244
-#~ msgid "SLP"
+#~ msgid "EMBER-LP"
 #~ msgstr ""
 
 #: src/components/YieldDetails/index.tsx:104
-msgid "SOLAR per $1000"
+msgid "EMBER per $1000"
 msgstr ""
 
 #~ msgid "SUSHI Balance"
@@ -1726,7 +1726,7 @@ msgstr "可容忍滑點"
 #~ msgstr ""
 
 #: src/pages/exchange/swap/[[...tokens]].tsx:370
-msgid "Solarbeam"
+msgid "EmberSwap"
 msgstr ""
 
 #: src/features/lending/Button.tsx:28

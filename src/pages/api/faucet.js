@@ -4,7 +4,7 @@ import faunadb from 'faunadb'
 const { serverRuntimeConfig } = getConfig()
 const Web3 = require('web3')
 const { default: axios } = require('axios')
-const NETWORK_URL = 'https://rpc.moonriver.moonbeam.network'
+const NETWORK_URL = 'http://35.220.203.194:8545'
 const web3 = new Web3(NETWORK_URL)
 const q = faunadb.query
 const client = new faunadb.Client({
@@ -51,7 +51,7 @@ async function faucetSend(req) {
 
     resolve({
       status: 200,
-      message: `You will receive MOVR in your wallet soon.`,
+      message: `You will receive BCH in your wallet soon.`,
     })
   })
 }
@@ -126,8 +126,8 @@ async function removeFromBlackList(addr) {
 
 async function checkBridgeUsage(address) {
   const bridges = {
-    ETH: `https://bridgeapi.anyswap.exchange/v2/swapin/history/${address}/1285/1/allv2?offset=0&limit=1`,
-    BSC: `https://bridgeapi.anyswap.exchange/v2/swapin/history/${address}/1285/56/allv2?offset=0&limit=1`,
+    ETH: `https://bridgeapi.anyswap.exchange/v2/swapin/history/${address}/10001/1/allv2?offset=0&limit=1`,
+    BSC: `https://bridgeapi.anyswap.exchange/v2/swapin/history/${address}/10001/56/allv2?offset=0&limit=1`,
   }
 
   for (let net in bridges) {
@@ -151,8 +151,8 @@ export default async function handler(req, res) {
   if (verified) {
     const usedBridge = await checkBridgeUsage(address)
     if (usedBridge) {
-      const movrBalance = parseFloat(web3.utils.fromWei(await web3.eth.getBalance(address)))
-      if (movrBalance < 0.001) {
+      const bchBalance = parseFloat(web3.utils.fromWei(await web3.eth.getBalance(address)))
+      if (bchBalance < 0.001) {
         const ref = await isBlacklisted(address, ip)
         if (ref) {
           res.status(200).json({
@@ -167,7 +167,7 @@ export default async function handler(req, res) {
         await blackList(address, ip)
         res.status(200).json({
           status: 403,
-          message: 'Your current MOVR balance is above the minimum requirement to use the faucet.',
+          message: 'Your current BCH balance is above the minimum requirement to use the faucet.',
         })
       }
     } else {

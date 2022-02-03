@@ -16,7 +16,7 @@ import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
 import { LOCKER_ADDRESS } from '../../../constants'
-import SolarbeamLogo from '../../../components/SolarbeamLogo'
+import EmberswapLogo from '../../../components/EmberswapLogo'
 import { useTransactionAdder } from '../../../state/transactions/hooks'
 import Button, { ButtonConfirmed, ButtonError } from '../../../components/Button'
 import NumericalInput from '../../../components/NumericalInput'
@@ -127,15 +127,15 @@ export default function CreateLocker(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Locker | Solarbeam</title>
-        <meta key="description" name="description" content="Solarbeam Locker" />
+        <title>Locker | EmberSwap</title>
+        <meta key="description" name="description" content="EmberSwap Locker" />
       </Head>
 
       <div className="container px-0 mx-auto pb-6">
         <div className={`mb-2 pb-4 grid grid-cols-12 gap-4`}>
           <div className="flex justify-center items-center col-span-12 lg:justify">
-            <Link href="/farm">
-              <SolarbeamLogo />
+            <Link href="/farm?filter=all">
+              <EmberswapLogo />
             </Link>
           </div>
         </div>
@@ -347,12 +347,12 @@ export default function CreateLocker(): JSX.Element {
                     </div>
                     <div className="mb-2 text-2xl text-emphesis">{i18n._(t`Fees`)}</div>{' '}
                     <div className="mb-4 text-base text-secondary">
-                      <p>{i18n._(t`- 0.1 MOVR to lock`)}</p>
+                      <p>{i18n._(t`- 0.1 BCH to lock`)}</p>
                     </div>
                     <div className="mb-2 text-2xl text-emphesis">{i18n._(t`Considerations`)}</div>{' '}
                     <div className="mb-4 text-base text-secondary">
                       <p>{i18n._(t`- You will not be able to withdraw your tokens before the unlock time`)}</p>
-                      <p>{i18n._(t`- Locker contract address: ${LOCKER_ADDRESS[chainId || 1285]}`)}</p>
+                      <p>{i18n._(t`- Locker contract address: ${LOCKER_ADDRESS[chainId || 10001]}`)}</p>
                       <p>{i18n._(t`- Always DYOR`)}</p>
                     </div>
                   </div>

@@ -3,6 +3,7 @@ import { BigNumber } from '@ethersproject/bignumber'
 import { Zero } from '@ethersproject/constants'
 import { useCallback } from 'react'
 import { useToken } from '../../hooks/Tokens'
+import { getGasPrice } from '../../constants'
 
 export default function useLocker() {
   const contract = useLockerContract()
@@ -13,6 +14,7 @@ export default function useLocker() {
       try {
         return await contract?.lockTokens(token, withdrawer, amount.toString(), unlockTimestamp, {
           value: '100000000000000000',
+          gasPrice: getGasPrice(),
         })
       } catch (e) {
         console.error(e)
@@ -25,7 +27,7 @@ export default function useLocker() {
   const withdrawTokens = useCallback(
     async (id: string) => {
       try {
-        return await contract?.withdrawTokens(id)
+        return await contract?.withdrawTokens(id, { gasPrice: getGasPrice(), })
       } catch (e) {
         console.error(e)
         return e

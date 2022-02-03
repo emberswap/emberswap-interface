@@ -10,7 +10,7 @@ import Card from '../../components/Card'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import DoubleGlowShadow from '../../components/DoubleGlowShadow'
-import SolarbeamLogo from '../../components/SolarbeamLogo'
+import EmberswapLogo from '../../components/EmberswapLogo'
 import { useTransactionAdder } from '../../state/transactions/hooks'
 import useLocker from '../../features/locker/useLocker'
 import { Disclosure } from '@headlessui/react'
@@ -62,15 +62,15 @@ export default function Locker(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Locker | Solarbeam</title>
-        <meta key="description" name="description" content="Solarbeam Locker" />
+        <title>Locker | EmberSwap</title>
+        <meta key="description" name="description" content="EmberSwap Locker" />
       </Head>
 
       <div className="container px-0 mx-auto pb-6">
         <div className={`mb-2 pb-4 grid grid-cols-12 gap-4`}>
           <div className="flex justify-center items-center col-span-12 lg:justify">
-            <Link href="/farm">
-              <SolarbeamLogo />
+            <Link href="/farm?filter=all">
+              <EmberswapLogo />
             </Link>
           </div>
         </div>

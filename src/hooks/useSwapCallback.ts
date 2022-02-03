@@ -32,7 +32,7 @@ import { useMemo } from 'react'
 import { useTransactionAdder } from '../state/transactions/hooks'
 import useTransactionDeadline from './useTransactionDeadline'
 import { useUserArcherETHTip } from '../state/user/hooks'
-
+import { getGasPrice } from '../constants'
 export enum SwapCallbackState {
   INVALID,
   LOADING,
@@ -353,7 +353,7 @@ export function useSwapCallback(
               data: calldata,
               // let the wallet try if we can't estimate the gas
               ...('gasEstimate' in bestCallOption ? { gasLimit: calculateGasMargin(bestCallOption.gasEstimate) } : {}),
-              gasPrice: !eip1559 && chainId === ChainId.HARMONY ? BigNumber.from('2000000000') : undefined,
+              gasPrice: !eip1559 && chainId === ChainId.SMARTBCH ? BigNumber.from('1035000000') : undefined,
               ...(value && !isZero(value) ? { value } : {}),
             })
             .then((response) => {

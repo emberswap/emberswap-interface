@@ -94,7 +94,7 @@ const useZapperFarms = () => {
 
           return {
             ...pool,
-            type: 'SLP',
+            type: 'EMBER-LP',
             symbol: pair.token0.symbol + '-' + pair.token1.symbol,
             name: pair.token0.name + ' ' + pair.token1.name,
             pid: Number(pool.id),
@@ -151,7 +151,7 @@ const useZapperFarms = () => {
 
           return {
             ...farmDetails,
-            type: farmDetails.type, // KMP or SLP
+            type: farmDetails.type, // KMP or EMBER-LP
             depositedLP: deposited,
             depositedUSD: depositedUSD,
             pendingSushi: pending,

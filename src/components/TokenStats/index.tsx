@@ -8,17 +8,17 @@ import { ChainId } from '../../sdk'
 import { PriceContext } from '../../contexts/priceContext'
 
 const supportedTokens = {
-  MOVR: {
-    name: 'Moonriver',
-    symbol: 'MOVR',
-    icon: '/images/tokens/movr.png',
+  BCH: {
+    name: 'BCH',
+    symbol: 'BCH',
+    icon: '/images/tokens/bch.png',
   },
-  SOLAR: {
-    name: 'Solarbeam Token',
-    symbol: 'SOLAR',
-    icon: '/images/tokens/solar.png',
+  EMBER: {
+    name: 'Ember',
+    symbol: 'EMBER',
+    icon: '/images/tokens/ember.png',
     address: {
-      [ChainId.MOONRIVER]: '0x6bD193Ee6D2104F14F94E2cA6efefae561A4334B',
+      [ChainId.SMARTBCH]: '0x0b2C58719a2073640BfC390D703eA832057D2543',
     },
   },
 }

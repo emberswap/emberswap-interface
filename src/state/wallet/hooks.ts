@@ -155,10 +155,10 @@ export function useMultichainCurrencyBalance(
   account?: string,
   currency?: Currency
 ): CurrencyAmount<Currency> | undefined {
-  const { chainId: moonriverChainId } = useActiveWeb3React()
-  const moonriverBalance = useCurrencyBalance(
-    chainId == moonriverChainId && account,
-    chainId == moonriverChainId && currency
+  const { chainId: smartbchChainId } = useActiveWeb3React()
+  const smartbchBalance = useCurrencyBalance(
+    chainId == smartbchChainId && account,
+    chainId == smartbchChainId && currency
   )
   const [value, setValue] = useState(null)
 
@@ -185,14 +185,14 @@ export function useMultichainCurrencyBalance(
   }, [account, chainId, currency])
 
   useEffect(() => {
-    if (account && chainId && currency && chainId != moonriverChainId) {
+    if (account && chainId && currency && chainId != smartbchChainId) {
       getBalance()
     } else {
       setValue(null)
     }
-  }, [account, chainId, currency, getBalance, moonriverChainId])
+  }, [account, chainId, currency, getBalance, smartbchChainId])
 
   return useMemo(() => {
-    return chainId == moonriverChainId ? moonriverBalance : value
-  }, [chainId, moonriverBalance, moonriverChainId, value])
+    return chainId == smartbchChainId ? smartbchBalance : value
+  }, [chainId, smartbchBalance, smartbchChainId, value])
 }

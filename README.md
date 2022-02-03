@@ -1,6 +1,6 @@
-# Solarbeam.io
-Solarbeam DEX on Moonriver
+# EmberSwap
+EmberSwap DEX on SmartBCH
 
 ### Whitelisting
 
-Whitelisting requests are submited under [solarbeam-tokenlist](https://github.com/solarbeamio/solarbeam-tokenlist) repository.
+Whitelisting requests are submited under [emberswap-tokenlist](https://github.com/emberswap/emberswap-tokenlist) repository.

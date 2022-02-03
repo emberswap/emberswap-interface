@@ -27,11 +27,11 @@ const Menu = ({ positionsLength, onSearch, term }) => {
   return (
     <div className={`grid grid-cols-12`}>
       <div className="col-span-12 flex flex-col space-y-4">
-        <MenuItem href="/farm" title={i18n._(t`All Farms`)} />
+        <MenuItem href="/farm?filter=all" title={i18n._(t`All Farms`)} />
         {account && positionsLength > 0 && <MenuItem href={`/farm?filter=my`} title={i18n._(t`My Farms`)} />}
-
-        {/* <MenuItem href="/farm?filter=solar" title="SOLAR Farms" />
-        <MenuItem href="/farm?filter=moonriver" title="MOVR Farms" />
+        {account && positionsLength > 0 && <MenuItem href={`/farm?filter=past`} title={i18n._(t`Past Farms`)} />}
+        {/* <MenuItem href="/farm?filter=ember" title="EMBER Farms" />
+        <MenuItem href="/farm?filter=bch" title="BCH Farms" />
         <MenuItem href="/farm?filter=stables" title="Stables Farms" />
         <MenuItem href="/farm?filter=single" title="Single Asset" /> */}
       </div>

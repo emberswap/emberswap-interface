@@ -4,7 +4,7 @@ import IUniswapV2PairABI from '@sushiswap/core/abi/IUniswapV2Pair.json'
 import { Interface } from '@ethersproject/abi'
 import { useContext, useMemo } from 'react'
 import { useMultipleContractSingleData } from '../state/multicall/hooks'
-import { SOLAR_ADDRESS, FACTORY_ADDRESS, SOLAR_DISTRIBUTOR_ADDRESS, SOLAR_VAULT_ADDRESS } from '../constants'
+import { EMBER_ADDRESS, FACTORY_ADDRESS, EMBER_DISTRIBUTOR_ADDRESS, EMBER_VAULT_ADDRESS } from '../constants'
 import { useActiveWeb3React } from '../hooks/useActiveWeb3React'
 import { PriceContext } from '../contexts/priceContext'
 import { POOLS, TokenInfo } from '../constants/farms'
@@ -78,12 +78,12 @@ export interface TVLInfo {
 export function useVaultTVL(): TVLInfo[] {
   const { chainId } = useActiveWeb3React()
   const priceData = useContext(PriceContext)
-  const solarPrice = priceData?.['solar']
-  const movrPrice = priceData?.['movr']
-  const ribPrice = priceData?.['rib']
+  const emberPrice = priceData?.['ember']
+  const bchPrice = priceData?.['bch']
+  const firePrice = priceData?.['fire']
 
-  const farmingPools = Object.keys(VAULTS[ChainId.MOONRIVER]).map((key) => {
-    return { ...VAULTS[ChainId.MOONRIVER][key] }
+  const farmingPools = Object.keys(VAULTS[ChainId.SMARTBCH]).map((key) => {
+    return { ...VAULTS[ChainId.SMARTBCH][key] }
   })
 
   const singlePools = farmingPools.filter((r) => !r.token1)
@@ -94,35 +94,35 @@ export function useVaultTVL(): TVLInfo[] {
   const results = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'getReserves')
   const totalSupply = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'totalSupply')
   const distributorBalance = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'balanceOf', [
-    SOLAR_VAULT_ADDRESS[ChainId.MOONRIVER],
+    EMBER_VAULT_ADDRESS[ChainId.SMARTBCH],
   ])
   const distributorBalanceSingle = useMultipleContractSingleData(singleAddresses, PAIR_INTERFACE, 'balanceOf', [
-    SOLAR_VAULT_ADDRESS[ChainId.MOONRIVER],
+    EMBER_VAULT_ADDRESS[ChainId.SMARTBCH],
   ])
 
   return useMemo(() => {
     function isKnownToken(token: TokenInfo) {
       return (
-        token.id.toLowerCase() == SOLAR_ADDRESS[chainId].toLowerCase() ||
-        token.symbol == 'WMOVR' ||
-        token.symbol == 'MOVR' ||
-        token.symbol == 'RIB' ||
-        token.symbol == 'USDC' ||
-        token.symbol == 'BUSD'
+        token.id.toLowerCase() == EMBER_ADDRESS[chainId].toLowerCase() ||
+        token.symbol == 'WBCH'   ||
+        token.symbol == 'BCH'    ||
+        token.symbol == 'FIRE'   ||
+        token.symbol == 'FLEXUSD'||
+        token.symbol == 'lawUSD'
       )
     }
 
     function getPrice(token: TokenInfo) {
-      if (token.id.toLowerCase() == SOLAR_ADDRESS[chainId].toLowerCase()) {
-        return solarPrice
+      if (token.id.toLowerCase() == EMBER_ADDRESS[chainId].toLowerCase()) {
+        return emberPrice
       }
-      if (token.symbol == 'WMOVR' || token.symbol == 'MOVR') {
-        return movrPrice
+      if (token.symbol == 'WBCH' || token.symbol == 'BCH') {
+        return bchPrice
       }
-      if (token.symbol == 'RIB' || token.symbol == 'RIB') {
-        return ribPrice
+      if (token.symbol == 'FIRE' || token.symbol == 'FIRE') {
+        return firePrice
       }
-      if (token.symbol == 'USDC' || token.symbol == 'BUSD') {
+      if (token.symbol == 'FLEXUSD' || token.symbol == 'lawUSD') {
         return 1
       }
       return 0
@@ -198,9 +198,9 @@ export function useVaultTVL(): TVLInfo[] {
     results,
     distributorBalanceSingle,
     chainId,
-    solarPrice,
-    movrPrice,
-    ribPrice,
+    emberPrice,
+    bchPrice,
+    firePrice,
     totalSupply,
     distributorBalance,
     lpPools,
@@ -211,12 +211,12 @@ export function useVaultTVL(): TVLInfo[] {
 export function useTVL(): TVLInfo[] {
   const { chainId } = useActiveWeb3React()
   const priceData = useContext(PriceContext)
-  const solarPrice = priceData?.['solar']
-  const movrPrice = priceData?.['movr']
-  const ribPrice = priceData?.['rib']
+  const emberPrice = priceData?.['ember']
+  const bchPrice = priceData?.['bch']
+  const firePrice = priceData?.['fire']
 
-  const farmingPools = Object.keys(POOLS[ChainId.MOONRIVER]).map((key) => {
-    return { ...POOLS[ChainId.MOONRIVER][key], lpToken: key }
+  const farmingPools = Object.keys(POOLS[ChainId.SMARTBCH]).map((key) => {
+    return { ...POOLS[ChainId.SMARTBCH][key], lpToken: key }
   })
 
   const singlePools = farmingPools.filter((r) => !r.token1)
@@ -227,35 +227,35 @@ export function useTVL(): TVLInfo[] {
   const results = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'getReserves')
   const totalSupply = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'totalSupply')
   const distributorBalance = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'balanceOf', [
-    SOLAR_DISTRIBUTOR_ADDRESS[ChainId.MOONRIVER],
+    EMBER_DISTRIBUTOR_ADDRESS[ChainId.SMARTBCH],
   ])
   const distributorBalanceSingle = useMultipleContractSingleData(singleAddresses, PAIR_INTERFACE, 'balanceOf', [
-    SOLAR_DISTRIBUTOR_ADDRESS[ChainId.MOONRIVER],
+    EMBER_DISTRIBUTOR_ADDRESS[ChainId.SMARTBCH],
   ])
 
   return useMemo(() => {
     function isKnownToken(token: TokenInfo) {
       return (
-        token.id.toLowerCase() == SOLAR_ADDRESS[chainId].toLowerCase() ||
-        token.symbol == 'WMOVR' ||
-        token.symbol == 'MOVR' ||
-        token.symbol == 'RIB' ||
-        token.symbol == 'USDC' ||
-        token.symbol == 'BUSD'
+        token.id.toLowerCase() == EMBER_ADDRESS[chainId].toLowerCase() ||
+        token.symbol == 'WBCH'    ||
+        token.symbol == 'BCH'     ||
+        token.symbol == 'FIRE'    ||
+        token.symbol == 'FLEXUSD' ||
+        token.symbol == 'lawUSD'
       )
     }
 
     function getPrice(token: TokenInfo) {
-      if (token.id.toLowerCase() == SOLAR_ADDRESS[chainId].toLowerCase()) {
-        return solarPrice
+      if (token.id.toLowerCase() == EMBER_ADDRESS[chainId].toLowerCase()) {
+        return emberPrice
       }
-      if (token.symbol == 'WMOVR' || token.symbol == 'MOVR') {
-        return movrPrice
+      if (token.symbol == 'WBCH' || token.symbol == 'BCH') {
+        return bchPrice
       }
-      if (token.symbol == 'RIB' || token.symbol == 'RIB') {
-        return ribPrice
+      if (token.symbol == 'FIRE' || token.symbol == 'FIRE') {
+        return firePrice
       }
-      if (token.symbol == 'USDC' || token.symbol == 'BUSD') {
+      if (token.symbol == 'FLEXUSD' || token.symbol == 'lawUSD') {
         return 1
       }
       return 0
@@ -329,9 +329,9 @@ export function useTVL(): TVLInfo[] {
     results,
     distributorBalanceSingle,
     chainId,
-    solarPrice,
-    movrPrice,
-    ribPrice,
+    emberPrice,
+    bchPrice,
+    firePrice,
     totalSupply,
     distributorBalance,
     lpPools,
@@ -371,33 +371,33 @@ export function useV2PairsWithPrice(
   const totalSupply = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'totalSupply')
 
   const priceData = useContext(PriceContext)
-  const solarPrice = priceData?.['solar']
-  const movrPrice = priceData?.['movr']
-  const ribPrice = priceData?.['rib']
+  const emberPrice = priceData?.['ember']
+  const bchPrice = priceData?.['bch']
+  const firePrice = priceData?.['fire']
 
   return useMemo(() => {
     function isKnownToken(token: Token) {
       return (
-        token.address.toLowerCase() == SOLAR_ADDRESS[chainId].toLowerCase() ||
-        token.symbol == 'WMOVR' ||
-        token.symbol == 'MOVR' ||
-        token.symbol == 'RIB' ||
-        token.symbol == 'USDC' ||
-        token.symbol == 'BUSD'
+        token.address.toLowerCase() == EMBER_ADDRESS[chainId].toLowerCase() ||
+        token.symbol == 'WBCH'    ||
+        token.symbol == 'BCH'     ||
+        token.symbol == 'FIRE'    ||
+        token.symbol == 'FLEXUSD' ||
+        token.symbol == 'lawUSD' 
       )
     }
 
     function getPrice(token: Token) {
-      if (token.address.toLowerCase() == SOLAR_ADDRESS[chainId].toLowerCase()) {
-        return solarPrice
+      if (token.address.toLowerCase() == EMBER_ADDRESS[chainId].toLowerCase()) {
+        return emberPrice
       }
-      if (token.symbol == 'WMOVR' || token.symbol == 'MOVR') {
-        return movrPrice
+      if (token.symbol == 'WBCH' || token.symbol == 'BCH') {
+        return bchPrice
       }
-      if (token.symbol == 'RIB' || token.symbol == 'RIB') {
-        return ribPrice
+      if (token.symbol == 'FIRE' || token.symbol == 'FIRE') {
+        return firePrice
       }
-      if (token.symbol == 'USDC' || token.symbol == 'BUSD') {
+      if (token.symbol == 'FLEXUSD' || token.symbol == 'lawUSD') {
         return 1
       }
       return 0
@@ -441,7 +441,7 @@ export function useV2PairsWithPrice(
         lpPrice,
       ]
     })
-  }, [results, chainId, solarPrice, movrPrice, ribPrice, tokens, totalSupply])
+  }, [results, chainId, emberPrice, bchPrice, firePrice, tokens, totalSupply])
 }
 
 export function useV2Pair(tokenA?: Currency, tokenB?: Currency): [PairState, Pair | null] {

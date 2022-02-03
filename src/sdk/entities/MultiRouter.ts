@@ -302,7 +302,7 @@ class Graph {
                 });
                 outAmount -= p;
             });
-            console.assert(Math.abs(outAmount) < 1e-6 , "Error 281");
+            console.assert(Math.abs(outAmount) < 0 , "Error 281");
         })
         return legs;
     }

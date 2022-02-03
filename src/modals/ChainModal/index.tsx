@@ -50,16 +50,16 @@ export const SUPPORTED_NETWORKS: {
     rpcUrls: ['https://bsc-dataseed.binance.org'],
     blockExplorerUrls: ['https://bscscan.com'],
   },
-  [ChainId.MOONRIVER]: {
-    chainId: '0x505',
-    chainName: 'Moonriver',
+  [ChainId.SMARTBCH]: {
+    chainId: '0x2711',
+    chainName: 'SmartBCH Testnet',
     nativeCurrency: {
-      name: 'Moonriver',
-      symbol: 'MOVR',
+      name: 'BCH',
+      symbol: 'BCH',
       decimals: 18,
     },
-    rpcUrls: ['https://rpc.moonriver.moonbeam.network', 'https://moonriver.api.onfinality.io/public'],
-    blockExplorerUrls: ['https://blockscout.moonriver.moonbeam.network/'],
+    rpcUrls: ['http://35.220.203.194:8545', 'https://moeing.tech:9545'],
+    blockExplorerUrls: ['https://smartscan.cash/'],
   },
 }
 

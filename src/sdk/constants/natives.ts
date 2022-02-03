@@ -10,7 +10,8 @@ import {
   Okex,
   Palm,
   xDai,
-  Moonriver
+  Moonriver,
+  BCH
 } from '../entities/natives'
 
 import { ChainId } from '../enums'
@@ -29,6 +30,7 @@ export const NATIVE = {
   [ChainId.BSC]: Binance.onChain(ChainId.BSC),
   [ChainId.BSC_TESTNET]: Binance.onChain(ChainId.BSC_TESTNET),
   [ChainId.MOONRIVER]:Moonriver.onChain(ChainId.MOONRIVER),
+  [ChainId.SMARTBCH]:BCH.onChain(ChainId.SMARTBCH),
   [ChainId.AVALANCHE]: Avalanche.onChain(ChainId.AVALANCHE),
   [ChainId.AVALANCHE_TESTNET]: Avalanche.onChain(ChainId.AVALANCHE_TESTNET),
   [ChainId.HECO]: Heco.onChain(ChainId.HECO),

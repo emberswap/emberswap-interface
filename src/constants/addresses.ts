@@ -9,40 +9,48 @@ export const LOCKER_ADDRESS: AddressMap = {
   [ChainId.ROPSTEN]: '',
   [ChainId.BSC]: '',
   [ChainId.MOONRIVER]: '0xA9Ead5d7C9D0B59A2900824A125F3913009fD638',
+  [ChainId.SMARTBCH]: '0x21bdD302794D6eC4Bff806AF26550008901CbEff',
 }
 
-export const SOLAR_DISTRIBUTOR_ADDRESS: AddressMap = {
+export const EMBER_DISTRIBUTOR_ADDRESS: AddressMap = {
   [ChainId.ROPSTEN]: '',
   [ChainId.BSC]: '',
   [ChainId.MOONRIVER]: '0xf03b75831397D4695a6b9dDdEEA0E578faa30907',
+  [ChainId.SMARTBCH]: '0x0cf19C89e1F3d20B28dAB683EeE6C1cBf3B6c828',
 }
 
-export const SOLAR_VAULT_ADDRESS: AddressMap = {
+export const EMBER_VAULT_ADDRESS: AddressMap = {
   [ChainId.MOONRIVER]: '0x7e6E03822D0077F3C417D33caeAc900Fc2645679',
+  [ChainId.SMARTBCH]: '0x2bc8f4a65bd470185C06afB2b8aF5aDFDd6f8A65',
 }
 
-export const SOLAR_MOVR_PAIR: AddressMap = {
+export const EMBER_BCH_PAIR: AddressMap = {
   [ChainId.ROPSTEN]: '',
   [ChainId.BSC]: '',
   [ChainId.MOONRIVER]: '0x7eDA899b3522683636746a2f3a7814e6fFca75e1',
+  [ChainId.SMARTBCH]: '0x11dcfD25bda4fb21Df3171493ed77Ec176d11983',
+  
 }
 
-export const MOVR_USDC_PAIR: AddressMap = {
+export const BCH_FLEXUSD_PAIR: AddressMap = {
   [ChainId.ROPSTEN]: '',
   [ChainId.BSC]: '',
   [ChainId.MOONRIVER]: '0xe537f70a8b62204832B8Ba91940B77d3f79AEb81',
+  [ChainId.SMARTBCH]: '0x6bE8ec1e1398c7aaE1F075601A92643AFdfe3Abb',
 }
 
-export const RIB_MOVR_PAIR: AddressMap = {
+export const FIRE_BCH_PAIR: AddressMap = {
   [ChainId.ROPSTEN]: '',
   [ChainId.BSC]: '',
   [ChainId.MOONRIVER]: '0x0acDB54E610dAbC82b8FA454b21AD425ae460DF9',
+  [ChainId.SMARTBCH]: '0x6ed8DcB768472207984f28811231010ac269C826',
 }
 
 export const BNB_USD_PAIR: AddressMap = {
   [ChainId.ROPSTEN]: '',
   [ChainId.BSC]: '',
   [ChainId.MOONRIVER]: '',
+  [ChainId.SMARTBCH]: '',
 }
 
 export const ARCHER_ROUTER_ADDRESS: AddressMap = {
@@ -88,6 +96,7 @@ export const MULTICALL2_ADDRESS: AddressMap = {
   [ChainId.BSC_TESTNET]: '0xA6949B8FBa9DF546b9c66F98CFCa960A96E3b68e',
   [ChainId.MOONBEAM_TESTNET]: '',
   [ChainId.MOONRIVER]: '0x43D002a2B468F048028Ea9C2D3eD4705a94e68Ae',
+  [ChainId.SMARTBCH]: '0xd0220AF0283276eE89287e6a13969E378E104Bb3',
   [ChainId.AVALANCHE]: '0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3',
   [ChainId.AVALANCHE_TESTNET]: '',
   [ChainId.HECO]: '0xdDCbf776dF3dE60163066A5ddDF2277cB445E0F3',
@@ -116,6 +125,7 @@ export const WETH9: AddressMap = {
   [ChainId.BSC_TESTNET]: '',
   [ChainId.MOONBEAM_TESTNET]: '',
   [ChainId.MOONRIVER]: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
+  [ChainId.SMARTBCH]: '0x17F4FCF5b6E0A95D4eE331c8529041896A073F9b',
   [ChainId.AVALANCHE]: '',
   [ChainId.AVALANCHE_TESTNET]: '',
   [ChainId.HECO]: '',
@@ -144,6 +154,7 @@ export const WNATIVE: AddressMap = {
   [ChainId.BSC_TESTNET]: '',
   [ChainId.MOONBEAM_TESTNET]: '',
   [ChainId.MOONRIVER]: '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
+  [ChainId.SMARTBCH]: '0x17F4FCF5b6E0A95D4eE331c8529041896A073F9b',
   [ChainId.AVALANCHE]: '',
   [ChainId.AVALANCHE_TESTNET]: '',
   [ChainId.HECO]: '',

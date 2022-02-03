@@ -37,8 +37,8 @@ msgstr ""
 #~ msgstr "创建新的市场"
 
 #: src/pages/locker/create/index.tsx:350
-msgid "- 0.1 MOVR to lock"
-msgstr "- 0.1 MOVR上锁"
+msgid "- 0.1 BCH to lock"
+msgstr "- 0.1 BCH上锁"
 
 #: src/pages/locker/create/index.tsx:356
 msgid "- Always DYOR"
@@ -93,10 +93,10 @@ msgstr "30天"
 #~ msgstr "Polygon上的300M+ TVL!启用优化的路由"
 
 #: src/pages/Yield/minichefv2/InputGroup.tsx:69
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
 #~ msgstr "<0>提示： </0>为了开始获得奖励，您需要首先通过向指定代币对添加流动性或<1>迁移现有流动性来获取一些SLP。 </1>拥有SLP后，您可以将其抵押到此挖矿页面中开始挖矿。随时可以借出质押停止挖矿，通过单击“移除流动性”将SLP转换回基本代币。单击“收获”可随时获得奖励。"
 
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
 #~ msgstr "<0>提示： </0>为了开始获得奖励，您需要首先通过向指定代币对添加流动性或<1>迁移现有流动性来获取一些SLP。 </1>拥有SLP后，您可以将其抵押到此挖矿页面中开始挖矿。随时可以借出质押停止挖矿，通过单击“移除流动性”将SLP转换回基本代币。单击“收获”可随时获得奖励。"
 
 #: src/pages/RemoveLiquidity/index.tsx:450
@@ -120,8 +120,8 @@ msgstr "30天"
 #~ msgstr ""
 
 #: src/features/swap/AdvancedSwapDetails.tsx:92
-msgid "A portion of each trade (0.25%) goes Solarbeam Treasury."
-msgstr "每笔交易的一部分（0.25%）会进入Solarbeam金库"
+msgid "A portion of each trade (0.25%) goes EmberSwap Treasury."
+msgstr "每笔交易的一部分（0.25%）会进入EmberSwap金库"
 
 #: src/features/lending/TradeReview.tsx:72
 msgid "A portion of each trade (0.25%) goes to liquidity providers as a protocol incentive."
@@ -161,7 +161,7 @@ msgstr "添加"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/NavigationTabs/index.tsx:69
-#: src/pages/exchange/add/[[...tokens]].tsx:341
+#: src/pages/exchange/add/[[...tokens]].tsx:345
 msgid "Add Liquidity"
 msgstr "添加流动性"
 
@@ -194,10 +194,10 @@ msgstr "添加流动性"
 msgid "Add {0} to MetaMask"
 msgstr "将{0}加入MetaMask"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:193
-#: src/pages/exchange/add/[[...tokens]].tsx:219
-#: src/pages/exchange/add/[[...tokens]].tsx:193
-#: src/pages/exchange/add/[[...tokens]].tsx:219
+#: src/pages/exchange/add/[[...tokens]].tsx:197
+#: src/pages/exchange/add/[[...tokens]].tsx:223
+#: src/pages/exchange/add/[[...tokens]].tsx:197
+#: src/pages/exchange/add/[[...tokens]].tsx:223
 msgid "Add {0} {1} and {2} {3}"
 msgstr "添加 {0} {1} 和 {2} {3}"
 
@@ -234,14 +234,15 @@ msgstr "移除数量"
 msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 msgstr "在试图执行该交换时发生了错误。你可能需要增加你的滑点容忍度。如果这不起作用，可能与你交易的代币不兼容。注意转移和重新安置代币的费用与Uniswap V3不兼容。"
 
-#: src/components/Header/index.tsx:99
-#~ msgid "Analytics"
-#~ msgstr "分析界面"
+#: src/components/Header/index.tsx:81
+#: src/components/Header/index.tsx:200
+msgid "Analytics"
+msgstr "分析界面"
 
 #: src/features/farm/FarmListItemDetails.tsx:129
 #: src/features/lending/Button.tsx:64
 #: src/features/vault/VaultListItemDetails.tsx:160
-#: src/pages/exchange/remove/[[...tokens]].tsx:826
+#: src/pages/exchange/remove/[[...tokens]].tsx:828
 #: src/pages/locker/create/index.tsx:307
 msgid "Approve"
 msgstr "批准"
@@ -255,17 +256,17 @@ msgid "Approve Limit Order"
 msgstr "授权限价订单"
 
 #: src/features/limit-order/LimitOrderButton.tsx:160
-#: src/pages/exchange/add/[[...tokens]].tsx:460
-#: src/pages/exchange/add/[[...tokens]].tsx:477
+#: src/pages/exchange/add/[[...tokens]].tsx:464
+#: src/pages/exchange/add/[[...tokens]].tsx:481
 #: src/pages/exchange/swap/[[...tokens]].tsx:536
 msgid "Approve {0}"
 msgstr "批准{0}"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:824
+#: src/pages/exchange/remove/[[...tokens]].tsx:826
 msgid "Approved"
 msgstr "已批准"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:822
+#: src/pages/exchange/remove/[[...tokens]].tsx:824
 msgid "Approving"
 msgstr "批准中"
 
@@ -274,8 +275,8 @@ msgid "Approving Limit Order"
 msgstr "授权限价订单"
 
 #: src/features/limit-order/LimitOrderButton.tsx:158
-#: src/pages/exchange/add/[[...tokens]].tsx:458
-#: src/pages/exchange/add/[[...tokens]].tsx:475
+#: src/pages/exchange/add/[[...tokens]].tsx:462
+#: src/pages/exchange/add/[[...tokens]].tsx:479
 msgid "Approving {0}"
 msgstr "批准{0}"
 
@@ -295,6 +296,10 @@ msgstr "自动"
 #: src/guards/Network/index.tsx:43
 msgid "Available Networks"
 msgstr "可用网络"
+
+#: src/pages/faucet/index.tsx:82
+#~ msgid "BCH Faucet"
+#~ msgstr ""
 
 #: src/components/WalletModal/index.tsx:306
 #~ msgid "Back"
@@ -377,15 +382,14 @@ msgstr "余额"
 #~ msgid "Borrowing allows you to obtain liquidity without selling. Your borrow limit depends on the amount of deposited collateral. You will be able to borrow up to 75% of your collateral and repay at any time with accrued interest."
 #~ msgstr "借款让您在不出售资产的情况下获得流动性。您的借款上限取决于您抵押物的价值。您可以借出您抵押品价值的75%，随时可以还款，并附上利息。"
 
-#: src/components/Header/index.tsx:72
-#: src/components/Header/index.tsx:191
+#: src/pages/bridge/faucet/index.tsx:92
 #: src/pages/bridge/history/index.tsx:227
 #: src/pages/bridge/history/index.tsx:247
-#: src/pages/bridge/index.tsx:390
-#: src/pages/bridge/index.tsx:405
-#: src/pages/bridge/index.tsx:421
-#: src/pages/bridge/index.tsx:463
-#: src/pages/bridge/index.tsx:483
+#: src/pages/bridge/index.tsx:391
+#: src/pages/bridge/index.tsx:406
+#: src/pages/bridge/index.tsx:422
+#: src/pages/bridge/index.tsx:470
+#: src/pages/bridge/index.tsx:490
 msgid "Bridge"
 msgstr "跨链桥"
 
@@ -396,12 +400,12 @@ msgstr "跨链桥"
 #~ msgid "Bridge Token"
 #~ msgstr ""
 
-#: src/pages/bridge/index.tsx:519
-msgid "Bridge tokens to and from the Moonriver Network"
+#: src/pages/bridge/index.tsx:526
+msgid "Bridge tokens to and from the SmartBCH Network"
 msgstr ""
 
-#: src/pages/bridge/index.tsx:438
-#: src/pages/bridge/index.tsx:455
+#: src/pages/bridge/index.tsx:445
+#: src/pages/bridge/index.tsx:462
 msgid "Bridge {0}"
 msgstr ""
 
@@ -523,11 +527,11 @@ msgstr "清除"
 #~ msgid "Community Approval"
 #~ msgstr "社区批准"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:650
+#: src/pages/exchange/remove/[[...tokens]].tsx:652
 msgid "Confirm"
 msgstr "确认"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:494
+#: src/pages/exchange/add/[[...tokens]].tsx:498
 msgid "Confirm Adding Liquidity"
 msgstr "确认添加流动性"
 
@@ -548,7 +552,7 @@ msgstr "确认供应"
 msgid "Confirm Swap"
 msgstr "确认交换"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:836
+#: src/pages/exchange/remove/[[...tokens]].tsx:838
 msgid "Confirm Withdrawal"
 msgstr "确认提取"
 
@@ -709,7 +713,7 @@ msgstr "文档"
 
 #: src/components/Header/More.tsx:15
 #: src/components/Menu.tsx:14
-msgid "Documentation for Solarbeam.io users"
+msgid "Documentation for EmberSwap users"
 msgstr ""
 
 #: src/components/Header/More.tsx:21 src/components/Menu.tsx:19
@@ -728,9 +732,33 @@ msgstr ""
 #~ msgid "Dont see a pool you joined?"
 #~ msgstr "没有看到您加入的池子吗？"
 
+#: src/components/YieldDetails/index.tsx:104
+msgid "EMBER per $1000"
+msgstr "每 $1000 的EMBER"
+
+#: src/pages/kashi/borrow/[pair].tsx:244
+#~ msgid "EMBER-LP"
+#~ msgstr ""
+
 #: src/guards/Network/index.tsx:36
 msgid "Either return to the {link}, or change to an available network."
 msgstr "要么返回到{链接}， 要么换到一个可用的网络。"
+
+#: src/pages/bridge/index.tsx:76
+#~ msgid "Ember Bridge"
+#~ msgstr ""
+
+#: src/pages/vaults/index.tsx:154
+msgid "Ember Vault"
+msgstr ""
+
+#: src/pages/vaults/index.tsx:158
+msgid "Ember Vault is a set of high incentivized pools. Long term supporters can choose to lock EMBER for a determined period for higher rewards."
+msgstr ""
+
+#: src/pages/exchange/swap/[[...tokens]].tsx:369
+msgid "EmberSwap"
+msgstr "EmberSwap"
 
 #: src/components/LanguageSwitch/index.tsx:16
 msgid "English"
@@ -756,7 +784,7 @@ msgstr "输入接收人"
 msgid "Enter a valid slippage percentage"
 msgstr "输入有效的滑点百分比"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:436
+#: src/pages/exchange/add/[[...tokens]].tsx:440
 #: src/state/burn/hooks.ts:138
 #: src/state/limit-order/hooks.ts:168
 #: src/state/mint/hooks.ts:202
@@ -814,12 +842,13 @@ msgid "Expired"
 msgstr "过期"
 
 #: src/components/Header/index.tsx:51
-#: src/components/Header/index.tsx:170
+#: src/components/Header/index.tsx:171
 msgid "Farm"
 msgstr "农耕"
 
+#: src/pages/bridge/faucet/index.tsx:118
 #: src/pages/bridge/history/index.tsx:273
-#: src/pages/bridge/index.tsx:509
+#: src/pages/bridge/index.tsx:516
 msgid "Faucet"
 msgstr ""
 
@@ -841,10 +870,6 @@ msgstr "已填充"
 #: src/pages/exchange/find/index.tsx:83
 msgid "Find Pool"
 msgstr "查找池"
-
-#: src/components/Header/More.tsx:45
-msgid "Follow us on Medium"
-msgstr ""
 
 #: src/components/Header/More.tsx:39
 #: src/components/Menu.tsx:38
@@ -906,13 +931,18 @@ msgstr "从"
 msgid "Github"
 msgstr "Github"
 
-#: src/pages/faucet/index.tsx:122
-msgid "Give me some MOVR"
+#: src/pages/bridge/faucet/index.tsx:164
+msgid "Give me some BCH"
 msgstr ""
 
 #: src/components/Back.tsx:23
 msgid "Go Back"
 msgstr "返回"
+
+#: src/components/Header/index.tsx:72
+#: src/components/Header/index.tsx:192
+msgid "Governance"
+msgstr ""
 
 #: src/pages/exchange/migrate/index.tsx:136
 #~ msgid "Hardware Wallet"
@@ -925,14 +955,14 @@ msgstr "返回"
 #: src/features/farm/FarmListItem.tsx:97
 #: src/features/farm/FarmListItemDetails.tsx:236
 #: src/features/vault/VaultListItemDetails.tsx:294
-#: src/pages/farm/index.tsx:233
+#: src/pages/farm/index.tsx:236
 msgid "Harvest"
 msgstr "收获"
 
 #: src/features/farm/FarmListItemDetails.tsx:248
 #: src/features/vault/VaultListItemDetails.tsx:318
-msgid "Harvest {0} SOLAR"
-msgstr "收获 {0} SOLAR"
+msgid "Harvest {0} EMBER"
+msgstr "收获 {0} EMBER"
 
 #: src/pages/Yield/masterchefv1/InputGroup.tsx:126
 #~ msgid "Harvest {0} SUSHI"
@@ -947,6 +977,10 @@ msgstr "收获 {0} SOLAR"
 
 #: src/features/farm/FarmListItemDetails.tsx:206
 #~ msgid "Harvest {0} SUSHI {1}"
+#~ msgstr ""
+
+#: src/features/farm/FarmListItemDetails.tsx:248
+#~ msgid "Harvest {pendingEmber} EMBER"
 #~ msgstr ""
 
 #: src/pages/Pool/index.tsx:162
@@ -981,9 +1015,20 @@ msgstr "收获 {0} SOLAR"
 #~ msgid "Historical Total Locked: {0} SUSHI"
 #~ msgstr "锁仓的总数：{0}SUSHI"
 
+#: src/pages/bridge/faucet/index.tsx:105
 #: src/pages/bridge/history/index.tsx:260
-#: src/pages/bridge/index.tsx:496
+#: src/pages/bridge/index.tsx:503
 msgid "History"
+msgstr ""
+
+#: src/components/Header/More.tsx:44
+#: src/components/Menu.tsx:43
+msgid "Home"
+msgstr ""
+
+#: src/components/Header/More.tsx:45
+#: src/components/Menu.tsx:44
+msgid "Hosted by the Incinerate Protocol"
 msgstr ""
 
 #: src/pages/locker/create/index.tsx:338
@@ -1216,7 +1261,7 @@ msgid "Lock"
 msgstr "锁定"
 
 #: src/components/Header/index.tsx:67
-#: src/components/Header/index.tsx:186
+#: src/components/Header/index.tsx:187
 msgid "Locker"
 msgstr "锁"
 
@@ -1306,10 +1351,6 @@ msgstr "最大可发送"
 msgid "Me"
 msgstr "我"
 
-#: src/components/Header/More.tsx:44
-msgid "Medium"
-msgstr ""
-
 #: src/pages/exchange/pool/index.tsx:167
 msgid "Migrate"
 msgstr "迁移"
@@ -1346,10 +1387,6 @@ msgstr "最少可获得的数量"
 #~ msgid "Missed the Auction?"
 #~ msgstr "错过了拍卖？"
 
-#: src/pages/faucet/index.tsx:82
-msgid "Moonriver Faucet"
-msgstr ""
-
 #: src/features/farm/FarmMenu.tsx:31
 msgid "My Farms"
 msgstr ""
@@ -1368,8 +1405,8 @@ msgstr "我的订单"
 
 #: src/components/Header/index.tsx:80
 #: src/components/Header/index.tsx:196
-msgid "NFT Launchpad"
-msgstr "NFT Launchpad"
+#~ msgid "NFT Launchpad"
+#~ msgstr "NFT Launchpad"
 
 #: src/features/meowshi/MeowshiButton.tsx:110
 #~ msgid "Network not supported yet"
@@ -1453,7 +1490,7 @@ msgstr "打开订单"
 #~ msgid "Open Source"
 #~ msgstr "开源"
 
-#: src/components/Header/index.tsx:114
+#: src/components/Header/index.tsx:115
 msgid "Open main menu"
 msgstr "打开主菜单"
 
@@ -1472,13 +1509,13 @@ msgstr "订单已失效"
 msgid "Order History"
 msgstr "订单历史"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:272
+#: src/pages/exchange/add/[[...tokens]].tsx:276
 msgid ""
 "Output is estimated. If the price changes by more than {0}% your transaction\n"
 "will revert."
 msgstr "输出是预估值 如果价格变化超过{0}%，你的交易将被取消"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:603
+#: src/pages/exchange/remove/[[...tokens]].tsx:605
 msgid "Output is estimated. If the price changes by more than {0}% your transaction will revert."
 msgstr "估计输出。如果价格变化超过{0} ％，您的交易将被退回。"
 
@@ -1497,6 +1534,10 @@ msgstr "输出将发送到"
 #: src/components/swap/SwapModalHeader.tsx:100
 #~ msgid "Output will be sent to <0>{0}</0>"
 #~ msgstr "输出将发送到<0> {0} </0>"
+
+#: src/features/farm/FarmMenu.tsx:32
+msgid "Past Farms"
+msgstr ""
 
 #: src/features/open-order/CompletedOrders.tsx:35
 #: src/features/open-order/OpenOrders.tsx:63
@@ -1536,7 +1577,7 @@ msgid "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 msgstr ""
 
 #: src/components/Header/index.tsx:43
-#: src/components/Header/index.tsx:162
+#: src/components/Header/index.tsx:163
 #: src/pages/exchange/pool/index.tsx:95
 msgid "Pool"
 msgstr "资金池"
@@ -1554,7 +1595,7 @@ msgstr "找到池！"
 #~ msgstr "流动性池奖励"
 
 #: src/components/PositionCard/index.tsx:77
-#: src/pages/exchange/add/[[...tokens]].tsx:269
+#: src/pages/exchange/add/[[...tokens]].tsx:273
 msgid "Pool Tokens"
 msgstr "流动性池中的总代币"
 
@@ -1574,7 +1615,7 @@ msgstr "汇集{0}"
 #~ msgid "Pour a hot bowl of MISO, the new <0>token launchpad</0> from SUSHI"
 #~ msgstr "来一碗热味增汤, Sushi全新的<0>代币Launchpad</0>"
 
-#: src/pages/bridge/index.tsx:633
+#: src/pages/bridge/index.tsx:640
 msgid "Powered by Anyswap Network"
 msgstr ""
 
@@ -1613,7 +1654,7 @@ msgid "Rate"
 msgstr "比率"
 
 #: src/features/liquidity/ConfirmAddModalBottom.tsx:30
-#: src/pages/exchange/remove/[[...tokens]].tsx:618
+#: src/pages/exchange/remove/[[...tokens]].tsx:620
 msgid "Rates"
 msgstr "费率"
 
@@ -1645,13 +1686,13 @@ msgstr "去除"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/NavigationTabs/index.tsx:69
-#: src/pages/exchange/remove/[[...tokens]].tsx:714
+#: src/pages/exchange/remove/[[...tokens]].tsx:716
 msgid "Remove Liquidity"
 msgstr "删除流动金"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:715
-msgid "Remove liquidity of Solarbeam"
-msgstr "从Solarbeam中移除流动性"
+#: src/pages/exchange/remove/[[...tokens]].tsx:717
+msgid "Remove liquidity of EmberSwap"
+msgstr "从EmberSwap中移除流动性"
 
 #: src/pages/exchange/swap/[[...tokens]].tsx:458
 msgid "Remove recipient"
@@ -1661,12 +1702,12 @@ msgstr "移除接收人"
 #~ msgid "Remove send"
 #~ msgstr "删除发送"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:277
-#: src/pages/exchange/remove/[[...tokens]].tsx:277
+#: src/pages/exchange/remove/[[...tokens]].tsx:279
+#: src/pages/exchange/remove/[[...tokens]].tsx:279
 msgid "Remove {0} {1} and {2} {3}"
 msgstr "移除{0} {1} 和 {2} {3}"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:657
+#: src/pages/exchange/remove/[[...tokens]].tsx:659
 msgid "Removing {0} {1} and {2} {3}"
 msgstr "移除{0}{1}和{2}{3}"
 
@@ -1715,14 +1756,6 @@ msgstr "路由经过这些代币将给您的交易带来最好的价格。"
 #: src/pages/Saave/index.tsx:49
 #~ msgid "SAAVE: Stack your yields in one transaction"
 #~ msgstr "SAAVE：在一次交易中叠加您的收益率"
-
-#: src/pages/kashi/borrow/[pair].tsx:244
-#~ msgid "SLP"
-#~ msgstr ""
-
-#: src/components/YieldDetails/index.tsx:104
-msgid "SOLAR per $1000"
-msgstr "每 $1000 的SOLAR"
 
 #~ msgid "SUSHI Balance"
 #~ msgstr "SUSHI余额"
@@ -1813,22 +1846,6 @@ msgstr "可容忍滑点"
 #~ msgid "Slippage tolerance..."
 #~ msgstr ""
 
-#: src/pages/bridge/index.tsx:76
-#~ msgid "Solar Bridge"
-#~ msgstr ""
-
-#: src/pages/vaults/index.tsx:154
-msgid "Solar Vault"
-msgstr ""
-
-#: src/pages/vaults/index.tsx:158
-msgid "Solar Vault is a set of high incentivized pools. Long term supporters can choose to lock SOLAR for a determined period for higher rewards."
-msgstr ""
-
-#: src/pages/exchange/swap/[[...tokens]].tsx:369
-msgid "Solarbeam"
-msgstr "Solarbeam"
-
 #: src/features/lending/Button.tsx:28
 #: src/features/limit-order/LimitOrderButton.tsx:189
 msgid "Something went wrong during signing of the approval. This is expected for hardware wallets, such as Trezor and Ledger. Click again and the fallback method will be used"
@@ -1909,7 +1926,7 @@ msgstr "供应和市值"
 #~ msgid "Supply APR"
 #~ msgstr "存款APR"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:295
+#: src/pages/exchange/add/[[...tokens]].tsx:299
 msgid "Supplying {0} {1} and {2} {3}"
 msgstr "提供{0} {1}和{2} {3}"
 
@@ -1934,7 +1951,7 @@ msgstr "提供{0} {1}和{2} {3}"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/Header/index.tsx:35
-#: src/components/Header/index.tsx:154
+#: src/components/Header/index.tsx:155
 #: src/pages/exchange/swap/[[...tokens]].tsx:569
 #: src/pages/exchange/swap/[[...tokens]].tsx:598
 msgid "Swap"
@@ -2006,7 +2023,7 @@ msgid "The output token cannot be transferred. There may be an issue with the ou
 msgstr "输出代币不能被转移。输出代币可能有问题。"
 
 #: src/pages/vaults/index.tsx:163
-msgid "The participants receive various benefits such as higher rewards according to lock duration, higher allocations in Solar Launchpad and more."
+msgid "The participants receive higher rewards according to lock duration."
 msgstr ""
 
 #: src/hooks/useSwapCallback.ts:139 src/hooks/useSwapCallback.ts:139
@@ -2079,7 +2096,7 @@ msgstr "切换专家模式"
 msgid "Token"
 msgstr "代币"
 
-#: src/pages/bridge/index.tsx:547
+#: src/pages/bridge/index.tsx:554
 msgid "Token to bridge:"
 msgstr ""
 
@@ -2179,7 +2196,7 @@ msgstr "解除抵押"
 #~ msgid "Unstaked"
 #~ msgstr "解除质押"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:430
+#: src/pages/exchange/add/[[...tokens]].tsx:434
 #: src/pages/exchange/swap/[[...tokens]].tsx:500
 msgid "Unsupported Asset"
 msgstr "不支持的资产"
@@ -2221,7 +2238,7 @@ msgstr "解开"
 #~ msgstr "V2奖励器"
 
 #: src/components/Header/index.tsx:59
-#: src/components/Header/index.tsx:178
+#: src/components/Header/index.tsx:179
 msgid "Vaults"
 msgstr ""
 
@@ -2245,8 +2262,8 @@ msgstr ""
 msgid "View Contract"
 msgstr "查看合约"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:517
-#: src/pages/exchange/remove/[[...tokens]].tsx:850
+#: src/pages/exchange/add/[[...tokens]].tsx:521
+#: src/pages/exchange/remove/[[...tokens]].tsx:852
 msgid "View Liquidity Positions"
 msgstr "查看流动性仓位"
 
@@ -2367,12 +2384,12 @@ msgid "You Pay:"
 msgstr "你支付"
 
 #: src/features/liquidity/RemoveLiquidityReceiveDetails.tsx:40
-#: src/pages/exchange/remove/[[...tokens]].tsx:730
-#: src/pages/exchange/remove/[[...tokens]].tsx:762
+#: src/pages/exchange/remove/[[...tokens]].tsx:732
+#: src/pages/exchange/remove/[[...tokens]].tsx:764
 msgid "You Will Receive"
 msgstr "你将收到"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:365
+#: src/pages/exchange/add/[[...tokens]].tsx:369
 msgid "You are creating a pool"
 msgstr "您正在创建一个池"
 
@@ -2380,7 +2397,7 @@ msgstr "您正在创建一个池"
 msgid "You are on the wrong network"
 msgstr "网络错误"
 
-#: src/pages/bridge/index.tsx:440
+#: src/pages/bridge/index.tsx:447
 msgid "You are sending {0} {1} from {2}"
 msgstr ""
 
@@ -2408,11 +2425,11 @@ msgstr "你收到<0>（至少）：</0>"
 #~ msgid "You receive:"
 #~ msgstr ""
 
-#: src/pages/exchange/add/[[...tokens]].tsx:365
+#: src/pages/exchange/add/[[...tokens]].tsx:369
 msgid "You will receive"
 msgstr "您将收到"
 
-#: src/pages/bridge/index.tsx:443
+#: src/pages/bridge/index.tsx:450
 msgid "You will receive {0} {1} on {2}"
 msgstr ""
 
@@ -2632,7 +2649,7 @@ msgstr "{0} {1} 每 {2}"
 #~ msgid "{0} {sign} market rate"
 #~ msgstr ""
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:638
+#: src/pages/exchange/remove/[[...tokens]].tsx:640
 msgid "{0}/{1} Burned"
 msgstr "{0}/{1} 销毁"
 

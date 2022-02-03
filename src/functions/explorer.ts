@@ -92,8 +92,8 @@ const builders = {
     }
   },
 
-  moonriver: (chainName: string, data: string, type: 'transaction' | 'token' | 'address' | 'block') => {
-    const prefix = 'https://blockscout.moonriver.moonbeam.network/'
+  smartscan: (chainName: string, data: string, type: 'transaction' | 'token' | 'address' | 'block') => {
+    const prefix = 'https://smartscan.cash/'
     switch (type) {
       case 'transaction':
         return `${prefix}/tx/${data}`
@@ -247,9 +247,9 @@ const chains: ChainObject = {
     chainName: '',
     builder: builders.moonbase,
   },
-  [ChainId.MOONRIVER]: {
+  [ChainId.SMARTBCH]: {
     chainName: '',
-    builder: builders.moonriver,
+    builder: builders.smartscan,
   },
   [ChainId.AVALANCHE]: {
     chainName: '',

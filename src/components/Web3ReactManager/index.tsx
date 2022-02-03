@@ -46,7 +46,7 @@ export default function Web3ReactManager({ children }: { children: JSX.Element }
   //     route: router.route
   //   })
 
-  //   if (router.route !== '/bridge' && chainId !== ChainId.MOONRIVER) {
+  //   if (router.route !== '/bridge' && chainId !== ChainId.SMARTBCH) {
   //     setWrongNetwork(true)
   //   } else {
   //     setWrongNetwork(false)
@@ -59,7 +59,7 @@ export default function Web3ReactManager({ children }: { children: JSX.Element }
   useEffect(() => {
     if (window && window.ethereum && router.route !== '/bridge' && router.route !== '/bridge/history') {
       const provider: any = window.ethereum
-      const params = SUPPORTED_NETWORKS[ChainId.MOONRIVER]
+      const params = SUPPORTED_NETWORKS[ChainId.SMARTBCH]
 
       if (provider) {
         try {
@@ -129,7 +129,7 @@ export default function Web3ReactManager({ children }: { children: JSX.Element }
       <h1 className="text-center">
         {`Looks like you're using an unsupported network.`}
         <br />
-        {`Switch to Moonriver Network to use Solarbeam.io.`}
+        {`Switch to SmartBCH Network to use EmberSwap.`}
       </h1>
     )
   }

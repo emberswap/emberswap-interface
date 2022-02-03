@@ -1,10 +1,10 @@
 const Web3 = require('web3')
-import distributorAbi from '../../constants/abis/solar-distributor.json'
+import distributorAbi from '../../constants/abis/ember-distributor.json'
 import pairAbi from '../../constants/abis/uniswap-v2-pair.json'
 import { POOLS } from '../../constants/farms'
 import { ChainId } from '../../sdk'
 
-const NETWORK_URL = 'https://moonriver-api.bwarelabs.com/0e63ad82-4f98-46f9-8496-f75657e3a8e4'
+const NETWORK_URL = 'http://35.220.203.194:8545'
 const web3 = new Web3(NETWORK_URL)
 
 export default async function handler(req, res) {
@@ -16,7 +16,7 @@ let farmsResult = null
 
 export async function farms() {
   if (!farmsResult) {
-    let distributorContract = new web3.eth.Contract(distributorAbi, '0xf03b75831397D4695a6b9dDdEEA0E578faa30907')
+    let distributorContract = new web3.eth.Contract(distributorAbi, '0x0cf19C89e1F3d20B28dAB683EeE6C1cBf3B6c828')
     const poolLength = await distributorContract.methods.poolLength().call()
 
     const forHelper = []
@@ -39,7 +39,7 @@ export async function farms() {
     })
 
     const ret = []
-    const poolStaticInfo = POOLS[ChainId.MOONRIVER]
+    const poolStaticInfo = POOLS[ChainId.SMARTBCH]
 
     for (const pool of poolsInfo) {
       const staticInfo = poolStaticInfo[web3.utils.toChecksumAddress(pool.lpToken)]
@@ -47,7 +47,7 @@ export async function farms() {
       if (!staticInfo.token1) {
         ret.push({
           address: staticInfo.token0.id,
-          baseSymbol: staticInfo.token0.symbol.toLowerCase().replace('wmovr', 'movr'),
+          baseSymbol: staticInfo.token0.symbol.toLowerCase().replace('wbch', 'bch'),
           baseAmount: pool.totalLp / 10 ** staticInfo.token0?.decimals,
           single: true,
         })
@@ -58,7 +58,7 @@ export async function farms() {
           lpContract.methods.totalSupply().call(),
           lpContract.methods.token0().call(),
           lpContract.methods.token1().call(),
-          lpContract.methods.balanceOf('0xf03b75831397D4695a6b9dDdEEA0E578faa30907').call(),
+          lpContract.methods.balanceOf('0x0cf19C89e1F3d20B28dAB683EeE6C1cBf3B6c828').call(),
         ]
 
         const [reserves, totalSupply, token0, token1, distributorBalance] = await Promise.all(promisesCall)
@@ -80,21 +80,21 @@ export async function farms() {
         ret.push({
           address: web3.utils.toChecksumAddress(pool.lpToken),
           baseSymbol:
-            token0info.symbol == 'SOLAR' || token1info.symbol == 'SOLAR'
-              ? 'solar'
-              : token0info.symbol == 'MOVR' || token1info.symbol == 'MOVR'
-              ? 'movr'
-              : token0info.symbol == 'USDC' || token1info.symbol == 'USDC'
-              ? 'usdc'
+            token0info.symbol == 'EMBER' || token1info.symbol == 'EMBER'
+              ? 'ember'
+              : token0info.symbol == 'BCH' || token1info.symbol == 'BCH'
+              ? 'bch'
+              : token0info.symbol == 'FLEXUSD' || token1info.symbol == 'FLEXUSD'
+              ? 'flexusd'
               : '',
           baseAmount:
-            token0info.symbol == 'SOLAR' || token0info.symbol == 'MOVR'
+            token0info.symbol == 'EMBER' || token0info.symbol == 'BCH'
               ? token0amount
-              : token1info.symbol == 'SOLAR' || token1info.symbol == 'MOVR'
+              : token1info.symbol == 'EMBER' || token1info.symbol == 'BCH'
               ? token1amount
-              : token0info.symbol == 'USDC'
+              : token0info.symbol == 'FLEXUSD'
               ? token0amount
-              : token1info.symbol == 'USDC'
+              : token1info.symbol == 'FLEXUSD'
               ? token1amount
               : 0,
           single: false,

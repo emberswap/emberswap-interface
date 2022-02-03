@@ -267,7 +267,7 @@ export function useERC20Permit(
 
 const REMOVE_V2_LIQUIDITY_PERMIT_INFO: PermitInfo = {
   version: '1',
-  name: 'Solarbeam LP Token',
+  name: 'Ember-LP Token',
   type: PermitType.AMOUNT,
 }
 

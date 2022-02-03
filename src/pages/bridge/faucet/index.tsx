@@ -8,7 +8,7 @@ import { ButtonError } from '../../../components/Button'
 import { AutoColumn } from '../../../components/Column'
 import { AutoRow } from '../../../components/Row'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
-import SolarbeamLogo from '../../../components/SolarbeamLogo'
+import EmberswapLogo from '../../../components/EmberswapLogo'
 import Container from '../../../components/Container'
 import Typography from '../../../components/Typography'
 import { i18n } from '@lingui/core'
@@ -62,11 +62,11 @@ export default function Faucet(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Faucet | Solarbeam</title>
-        <meta key="description" name="description" content="Moonriver Faucet" />
+        <title>Faucet | EmberSwap</title>
+        <meta key="description" name="description" content="BCH Faucet" />
       </Head>
 
-      <SolarbeamLogo />
+      <EmberswapLogo />
 
       <ReCAPTCHA
         ref={recaptchaRef}
@@ -124,17 +124,17 @@ export default function Faucet(): JSX.Element {
             <div className="h-[570px] flex flex-col justify-center items-center">
               <div className="p-4 mb-3 space-y-3 text-center">
                 <Typography component="h1" variant="base">
-                  A Faucet is a tool that provides a small amount of MOVR for users that used the bridge to start using
-                  Solarbeam.io without having to buy MOVR somewhere else.
+                  A Faucet is a tool that provides a small amount of BCH for users that used the bridge to start using
+                  EmberSwap without having to buy BCH somewhere else.
                 </Typography>
               </div>
               <div className="flex flex-1 justify-center text-center items-center mt-8 mb-12">
-                <Image src="/images/faucet/moonriver-faucet.png" alt="Solarbeam" width={150} height={150} />
+                <Image src="/images/faucet/smartbch-faucet.png" alt="EmberSwap" width={150} height={150} />
               </div>
               <div className="p-4 mb-3 space-y-1 text-center">
                 <Typography component="h1" variant="base">
                   Faucet balance:{' '}
-                  {formatNumberScale(tokenBalance[FAUCET_ADDRESS]?.toSignificant(4, undefined, 2) ?? 0, false, 4)} MOVR
+                  {formatNumberScale(tokenBalance[FAUCET_ADDRESS]?.toSignificant(4, undefined, 2) ?? 0, false, 4)} BCH
                 </Typography>
                 <Typography component="h1" variant="base">
                   Faucet Address: {FAUCET_ADDRESS}
@@ -161,7 +161,7 @@ export default function Faucet(): JSX.Element {
                           </AutoRow>
                         </div>
                       ) : (
-                        i18n._(t`Give me some MOVR`)
+                        i18n._(t`Give me some BCH`)
                       )}
                     </ButtonError>
                   )}

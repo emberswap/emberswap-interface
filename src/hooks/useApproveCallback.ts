@@ -8,7 +8,7 @@ import {
 import { useCallback, useMemo } from 'react'
 import { useHasPendingApproval, useTransactionAdder } from '../state/transactions/hooks'
 
-import { ARCHER_ROUTER_ADDRESS, ROUTER_ADDRESS } from '../constants'
+import { ARCHER_ROUTER_ADDRESS, getGasPrice, ROUTER_ADDRESS } from '../constants'
 import { MaxUint256 } from '@ethersproject/constants'
 import { TransactionResponse } from '@ethersproject/providers'
 import { calculateGasMargin } from '../functions/trade'
@@ -86,6 +86,7 @@ export function useApproveCallback(
     return tokenContract
       .approve(spender, useExact ? amountToApprove.quotient.toString() : MaxUint256, {
         gasLimit: calculateGasMargin(estimatedGas),
+        gasPrice: getGasPrice(),
       })
       .then((response: TransactionResponse) => {
         addTransaction(response, {

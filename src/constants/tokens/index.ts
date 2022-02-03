@@ -57,6 +57,13 @@ export const MOONRIVER: { [key: string]: Token } = {
   BUSD: new Token(ChainId.MOONRIVER, '0x5D9ab5522c64E1F6ef5e3627ECCc093f56167818', 18, 'BUSD', 'Binance-Peg BUSD Token'),
 }
 
+export const SMARTBCH: { [key: string]: Token } = {
+  LAWUSD: new Token(ChainId.SMARTBCH, '0x18d2Cd266416E1fBe49aa32DDBA510c5Ddee8882', 18, 'lawUSD', 'LAW US Dollar'),
+  FLEXUSD: new Token(ChainId.SMARTBCH, '0x638eE360741A331FCdA33D0083068f86FAe741Ed', 18, 'FLEXUSD', 'FlexUSD'),
+  EMBER: new Token(ChainId.SMARTBCH, '0x0b2C58719a2073640BfC390D703eA832057D2543', 18, 'EMBER', 'Ember'),
+  FIRE: new Token(ChainId.SMARTBCH, '0xDF7bA1eCfE1851D634a2DE0cd7AB1aA6dEC86269', 18, 'FIRE', 'Incinerate'),
+}
+
 export const HECO: { [key: string]: Token } = {
   DAI: new Token(ChainId.HECO, '0x3D760a45D0887DFD89A2F5385a236B29Cb46ED2a', 18, 'DAI', 'Dai Stablecoin'),
   USDC: new Token(ChainId.HECO, '0x9362Bbef4B8313A8Aa9f0c9808B80577Aa26B73B', 18, 'USDC', 'USD Coin'),
@@ -192,7 +199,7 @@ type ChainTokenMap = {
   readonly [chainId in ChainId]?: Token
 }
 
-export const SOLAR_ADDRESS = {
+export const EMBER_ADDRESS = {
   [ChainId.MAINNET]: '',
   [ChainId.ROPSTEN]: '',
   [ChainId.RINKEBY]: '',
@@ -220,20 +227,21 @@ export const SOLAR_ADDRESS = {
   [ChainId.PALM]: '',
   [ChainId.PALM_TESTNET]: '',
   [ChainId.MOONRIVER]: '0x6bD193Ee6D2104F14F94E2cA6efefae561A4334B',
+  [ChainId.SMARTBCH]: '0x0b2C58719a2073640BfC390D703eA832057D2543',
 }
 
-export const SOLAR: ChainTokenMap = {
-  [ChainId.MOONRIVER]: new Token(ChainId.MOONRIVER, SOLAR_ADDRESS[ChainId.MOONRIVER], 18, 'SOLAR', 'Solarbeam Token'),
+export const EMBER: ChainTokenMap = {
+  [ChainId.SMARTBCH]: new Token(ChainId.SMARTBCH, EMBER_ADDRESS[ChainId.SMARTBCH], 18, 'EMBER', 'Ember'),
 }
 
 export const WETH9_EXTENDED: { [chainId: number]: Token } = {
   ...WETH9,
-  [SupportedChainId.MOONRIVER]: new Token(
-    ChainId.MOONRIVER,
-    '0x98878B06940aE243284CA214f92Bb71a2b032B8A',
+  [SupportedChainId.SMARTBCH]: new Token(
+    ChainId.SMARTBCH,
+    '0x17F4FCF5b6E0A95D4eE331c8529041896A073F9b',
     18,
-    'MOVR',
-    'Moonriver'
+    'BCH',
+    'BCH'
   ),
 }
 

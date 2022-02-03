@@ -56,11 +56,11 @@ msgstr ""
 #~ msgstr "Polygonで3億を超えるTVL！最適化されたルーティングが有効"
 
 #: src/pages/Yield/minichefv2/InputGroup.tsx:69
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
 #~ msgstr "<0>ヒント：</0>報酬の獲得を開始するには、まず、指定のペアに流動性を追加するか、<1>既存の流動性を移行して</1>SLPを取得する必要があります。SLPを取得したら、このイールドファームに出資して報酬の獲得を開始することができます。いつでも出資を解除して、「流動性を削除」をクリックしてSLPをベーストークンに戻すことができます。「収穫」をクリックすると、いつでも報酬を受け取ることができます。"
 
 #, fuzzy
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
 #~ msgstr "<0>ヒント：</0>報酬の獲得を開始するには、まず、指定のペアに流動性を追加するか、<1>既存の流動性を移行して</1>SLPを取得する必要があります。SLPを取得したら、このイールドファームに出資して報酬の獲得を開始することができます。いつでも出資を解除して、「流動性を削除」をクリックしてSLPをベーストークンに戻すことができます。「収穫」をクリックすると、いつでも報酬を受け取ることができます。"
 
 #: src/pages/RemoveLiquidity/index.tsx:450
@@ -1509,7 +1509,7 @@ msgstr ""
 #~ msgstr "SAAVE：1回の取引で利回りを積み上げられます"
 
 #: src/pages/kashi/borrow/[pair].tsx:244
-msgid "SLP"
+msgid "EMBER-LP"
 msgstr ""
 
 #~ msgid "SUSHI Balance"

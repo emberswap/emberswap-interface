@@ -11,38 +11,38 @@ import { useLingui } from '@lingui/react'
 const items = (i18n: I18n) => [
   {
     name: i18n._(t`Docs`),
-    description: i18n._(t`Documentation for Solarbeam.io users`),
-    href: 'https://docs.solarbeam.io',
+    description: i18n._(t`Documentation for EmberSwap users`),
+    href: 'https://docs.emberswap.com',
     external: true,
   },
   {
     name: i18n._(t`Github`),
     description: i18n._(t`We're supporters of Open Source`),
-    href: 'https://github.com/solarbeamio',
+    href: 'https://github.com/emberswap',
     external: true,
   },
   {
     name: i18n._(t`Telegram`),
     description: i18n._(t`Join the community on Telegram`),
-    href: 'https://t.me/solarbeamio',
+    href: 'https://t.me/IncinerateOfficial',
     external: true,
   },
   {
     name: i18n._(t`Discord`),
     description: i18n._(t`Join the community on Discord`),
-    href: 'https://discord.gg/solarbeam',
+    href: 'https://discord.gg/x3TsF9MBrq',
     external: true,
   },
   {
     name: i18n._(t`Twitter`),
     description: i18n._(t`Follow us on Twitter`),
-    href: 'https://twitter.com/solarbeamio',
+    href: 'https://twitter.com/incinerate_cash',
     external: true,
   },
   {
-    name: i18n._(t`Medium`),
-    description: i18n._(t`Follow us on Medium`),
-    href: 'https://solarbeam.medium.com',
+    name: i18n._(t`Home`),
+    description: i18n._(t`Hosted by the Incinerate Protocol`),
+    href: 'https://incinerate.cash',
     external: true,
   },
 ]

@@ -2,13 +2,13 @@
   {
     "inputs": [
       {
-        "internalType": "contract ISolarERC20",
-        "name": "_solar",
+        "internalType": "contract IEmberERC20",
+        "name": "_ember",
         "type": "address"
       },
       {
         "internalType": "uint256",
-        "name": "_solarPerBlock",
+        "name": "_emberPerSec",
         "type": "uint256"
       }
     ],
@@ -328,11 +328,6 @@
         "type": "uint256"
       },
       {
-        "internalType": "uint256",
-        "name": "_lockupDuration",
-        "type": "uint256"
-      },
-      {
         "internalType": "bool",
         "name": "_withUpdate",
         "type": "bool"
@@ -401,6 +396,19 @@
   {
     "inputs": [],
     "name": "disableMetaTxns",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_pid",
+        "type": "uint256"
+      }
+    ],
+    "name": "emergencyWithdraw",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -520,11 +528,22 @@
         "internalType": "uint256",
         "name": "_pid",
         "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "_user",
+        "type": "address"
       }
     ],
-    "name": "payOrLockupPendingSolar",
-    "outputs": [],
-    "stateMutability": "nonpayable",
+    "name": "pendingEmber",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -540,12 +559,27 @@
         "type": "address"
       }
     ],
-    "name": "pendingSolar",
+    "name": "pendingTokens",
     "outputs": [
       {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
+        "internalType": "address[]",
+        "name": "addresses",
+        "type": "address[]"
+      },
+      {
+        "internalType": "string[]",
+        "name": "symbols",
+        "type": "string[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "decimals",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "amounts",
+        "type": "uint256[]"
       }
     ],
     "stateMutability": "view",
@@ -573,12 +607,12 @@
       },
       {
         "internalType": "uint256",
-        "name": "lastRewardBlock",
+        "name": "lastRewardTimestamp",
         "type": "uint256"
       },
       {
         "internalType": "uint256",
-        "name": "accSolarPerShare",
+        "name": "accEmberPerShare",
         "type": "uint256"
       },
       {
@@ -594,11 +628,6 @@
       {
         "internalType": "uint256",
         "name": "totalLp",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "lockupDuration",
         "type": "uint256"
       }
     ],
@@ -621,6 +650,39 @@
   {
     "inputs": [],
     "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_pid",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_allocPoint",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint16",
+        "name": "_depositFeeBP",
+        "type": "uint16"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_harvestInterval",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "_withUpdate",
+        "type": "bool"
+      }
+    ],
+    "name": "set",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -653,10 +715,10 @@
   },
   {
     "inputs": [],
-    "name": "solar",
+    "name": "ember",
     "outputs": [
       {
-        "internalType": "contract ISolarERC20",
+        "internalType": "contract IEmberERC20",
         "name": "",
         "type": "address"
       }
@@ -666,7 +728,7 @@
   },
   {
     "inputs": [],
-    "name": "solarPerBlock",
+    "name": "emberPerSec",
     "outputs": [
       {
         "internalType": "uint256",
@@ -725,7 +787,7 @@
   },
   {
     "inputs": [],
-    "name": "totalSolarInPools",
+    "name": "totalEmberInPools",
     "outputs": [
       {
         "internalType": "uint256",
@@ -789,7 +851,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "_solarPerBlock",
+        "name": "_emberPerSec",
         "type": "uint256"
       }
     ],
@@ -844,35 +906,6 @@
       {
         "internalType": "uint256",
         "name": "nextHarvestUntil",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "lastInteraction",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "_pid",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "_user",
-        "type": "address"
-      }
-    ],
-    "name": "userLockedUntil",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
         "type": "uint256"
       }
     ],

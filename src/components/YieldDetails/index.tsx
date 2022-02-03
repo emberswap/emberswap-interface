@@ -22,7 +22,7 @@ interface YieldDetailsProps {
   roiPerMonth: number
   roiPerYear: number
   lpPrice: number
-  solarPrice: number
+  emberPrice: number
 }
 
 const YieldDetails: React.FC<YieldDetailsProps> = ({
@@ -34,7 +34,7 @@ const YieldDetails: React.FC<YieldDetailsProps> = ({
   roiPerMonth,
   roiPerYear,
   lpPrice,
-  solarPrice,
+  emberPrice,
 }) => {
   const { chainId } = useActiveWeb3React()
 
@@ -42,10 +42,10 @@ const YieldDetails: React.FC<YieldDetailsProps> = ({
 
   const roiPerWeek: number = roiPerDay * 7
 
-  const perDay: number = Number((1000 * roiPerDay) / solarPrice)
-  const perWeek: number = Number((1000 * roiPerWeek) / solarPrice)
-  const perMonth: number = Number((1000 * roiPerMonth) / solarPrice)
-  const perYear: number = Number((1000 * roiPerYear) / solarPrice)
+  const perDay: number = Number((1000 * roiPerDay) / emberPrice)
+  const perWeek: number = Number((1000 * roiPerWeek) / emberPrice)
+  const perMonth: number = Number((1000 * roiPerMonth) / emberPrice)
+  const perYear: number = Number((1000 * roiPerYear) / emberPrice)
 
   const getRoiEntry = (period: string, percent: number, value: Number) => {
     return (
@@ -101,7 +101,7 @@ const YieldDetails: React.FC<YieldDetailsProps> = ({
           </div>
 
           <div className="flex flex-row py-1 px-2 w-full">
-            <div className="flex items-center justify-between uppercase">{i18n._(t`SOLAR per $1000`)}</div>
+            <div className="flex items-center justify-between uppercase">{i18n._(t`EMBER per $1000`)}</div>
           </div>
         </div>
         {getRoiEntry('1d', roiPerDay, perDay)}

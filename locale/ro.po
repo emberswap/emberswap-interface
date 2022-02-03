@@ -58,12 +58,12 @@ msgstr ""
 #~ msgstr "300M+ TVL pe Polygon! Rutare optimizată activată"
 
 #: src/pages/Yield/minichefv2/InputGroup.tsx:69
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
-#~ msgstr "<0>Sfat:</0> Pentru a începe să obțineți recompense, va trebui mai întâi să achiziționați SLP adăugând lichidități la perechea specificată sau <1>migrând lichiditățile existente.</1> Odată ce aveți SLP, îl puteți investi în această fermă de randament pentru a începe să obțineți recompense. Retrageți investiția oricând și apoi vă puteți converti SLP-ul în token-uri de bază făcând clic pe Eliminare lichiditate. Faceți clic pe Recoltare pentru a vă primi recompensele în orice moment."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
+#~ msgstr "<0>Sfat:</0> Pentru a începe să obțineți recompense, va trebui mai întâi să achiziționați EMBER-LP adăugând lichidități la perechea specificată sau <1>migrând lichiditățile existente.</1> Odată ce aveți EMBER-LP, îl puteți investi în această fermă de randament pentru a începe să obțineți recompense. Retrageți investiția oricând și apoi vă puteți converti EMBER-LP-ul în token-uri de bază făcând clic pe Eliminare lichiditate. Faceți clic pe Recoltare pentru a vă primi recompensele în orice moment."
 
 #, fuzzy
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
-#~ msgstr "<0>Sfat:</0> Pentru a începe să obțineți recompense, va trebui mai întâi să achiziționați SLP adăugând lichidități la perechea specificată sau <1>migrând lichiditățile existente.</1> Odată ce aveți SLP, îl puteți investi în această fermă de randament pentru a începe să obțineți recompense. Retrageți investiția oricând și apoi vă puteți converti SLP-ul în token-uri de bază făcând clic pe Eliminare lichiditate. Faceți clic pe Recoltare pentru a vă primi recompensele în orice moment."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
+#~ msgstr "<0>Sfat:</0> Pentru a începe să obțineți recompense, va trebui mai întâi să achiziționați EMBER-LP adăugând lichidități la perechea specificată sau <1>migrând lichiditățile existente.</1> Odată ce aveți EMBER-LP, îl puteți investi în această fermă de randament pentru a începe să obțineți recompense. Retrageți investiția oricând și apoi vă puteți converti EMBER-LP-ul în token-uri de bază făcând clic pe Eliminare lichiditate. Faceți clic pe Recoltare pentru a vă primi recompensele în orice moment."
 
 #: src/pages/RemoveLiquidity/index.tsx:450
 #~ msgid "<0>Tip:</0> Removing pool tokens converts your position back into underlying tokens at the current rate, proportional to your share of the pool. Accrued fees are included in the amounts you receive."
@@ -1529,7 +1529,7 @@ msgstr ""
 #~ msgstr "SAAVE: Cumulați randamentele într-o singură tranzacție"
 
 #: src/pages/kashi/borrow/[pair].tsx:244
-msgid "SLP"
+msgid "EMBER-LP"
 msgstr ""
 
 #~ msgid "SUSHI Balance"

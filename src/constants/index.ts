@@ -21,6 +21,7 @@ export const RPC = {
   [ChainId.BSC_TESTNET]: 'https://data-seed-prebsc-2-s3.binance.org:8545',
   [ChainId.MOONBEAM_TESTNET]: 'https://rpc.testnet.moonbeam.network',
   [ChainId.MOONRIVER]: 'https://moonriver-api.bwarelabs.com/0e63ad82-4f98-46f9-8496-f75657e3a8e', //'https://moonriver.api.onfinality.io/public',
+  [ChainId.SMARTBCH]: 'https://moeing.tech:9545', //'https://moeing.tech:9545',
   [ChainId.AVALANCHE]: 'https://api.avax.network/ext/bc/C/rpc',
   [ChainId.AVALANCHE_TESTNET]: 'https://api.avax-test.network/ext/bc/C/rpc',
   [ChainId.HECO]: 'https://http-mainnet.hecochain.com',
@@ -40,6 +41,7 @@ export const AVERAGE_BLOCK_TIME_IN_SECS = 13
 export const AVERAGE_BLOCK_TIME = {
   [ChainId.ROPSTEN]: AVERAGE_BLOCK_TIME_IN_SECS,
   [ChainId.MOONRIVER]: 12,
+  [ChainId.SMARTBCH]: 5.5,
   [ChainId.BSC]: 3,
 }
 
@@ -112,24 +114,24 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     href: null,
     color: '#E8831D',
   },
-  WALLET_CONNECT: {
-    connector: walletconnect,
-    name: 'WalletConnect',
-    iconName: 'wallet-connect.svg',
-    description: 'Connect to Trust Wallet, Rainbow Wallet and more...',
-    href: null,
-    color: '#4196FC',
-    mobile: true,
-  },
-  TRUST_WALLET: {
-    connector: injected,
-    name: 'Trust Wallet',
-    iconName: 'trustwallet.svg',
-    description: 'The most trusted & secure crypto wallet.',
-    href: null,
-    color: '#3688EB',
-    mobile: true,
-  },
+  // WALLET_CONNECT: {
+  //   connector: walletconnect,
+  //   name: 'WalletConnect',
+  //   iconName: 'wallet-connect.svg',
+  //   description: 'Connect to Trust Wallet, Rainbow Wallet and more...',
+  //   href: null,
+  //   color: '#4196FC',
+  //   mobile: true,
+  // },
+  // TRUST_WALLET: {
+  //   connector: injected,
+  //   name: 'Trust Wallet',
+  //   iconName: 'trustwallet.svg',
+  //   description: 'The most trusted & secure crypto wallet.',
+  //   href: null,
+  //   color: '#3688EB',
+  //   mobile: true,
+  // },
   // LATTICE: {
   //   connector: async () => {
   //     const LatticeConnector = (await import('@web3-react/lattice-connector')).LatticeConnector
@@ -190,15 +192,15 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
   //   color: '#315CF5',
   //   mobile: true,
   // },
-  Binance: {
-    connector: binance,
-    name: 'Binance',
-    iconName: 'bsc.jpg',
-    description: 'Login using Binance hosted wallet',
-    href: null,
-    color: '#F0B90B',
-    mobile: false,
-  },
+  // Binance: {
+  //   connector: binance,
+  //   name: 'Binance',
+  //   iconName: 'bsc.jpg',
+  //   description: 'Login using Binance hosted wallet',
+  //   href: null,
+  //   color: '#F0B90B',
+  //   mobile: false,
+  // },
 }
 
 export const NetworkContextName = 'NETWORK'
@@ -221,6 +223,11 @@ export const DEFAULT_ARCHER_GAS_PRICES: BigNumber[] = [
   BigNumber.from(800000000000),
   BigNumber.from(2000000000000),
 ]
+
+export function getGasPrice(): BigNumber {
+  return BigNumber.from(1025000000)
+}
+
 // default miner tip, equal to median gas price * default gas estimate
 export const DEFAULT_ARCHER_ETH_TIP: JSBI = JSBI.BigInt(
   DEFAULT_ARCHER_GAS_ESTIMATE.mul(DEFAULT_ARCHER_GAS_PRICES[4]).toString()

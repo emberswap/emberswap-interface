@@ -138,16 +138,16 @@ export const SUPPORTED_NETWORKS: {
   //   rpcUrls: ['https://arb1.arbitrum.io/rpc'],
   //   blockExplorerUrls: ['https://mainnet-arb-explorer.netlify.app'],
   // },
-  [ChainId.MOONRIVER]: {
-    chainId: '0x505',
-    chainName: 'Moonriver',
+  [ChainId.SMARTBCH]: {
+    chainId: '0x2711',
+    chainName: 'SmartBCH Testnet',
     nativeCurrency: {
-      name: 'Moonriver',
-      symbol: 'MOVR',
+      name: 'BCH',
+      symbol: 'BCH',
       decimals: 18,
     },
-    rpcUrls: ['https://rpc.moonriver.moonbeam.network','https://moonriver.api.onfinality.io/public'],
-    blockExplorerUrls: ['https://blockscout.moonriver.moonbeam.network/'],
+    rpcUrls: ['http://35.220.203.194:8545','https://moeing.tech:9545'],
+    blockExplorerUrls: ['https://smartscan.cash/'],
   },
 }
 
@@ -162,7 +162,7 @@ export default function NetworkModal(): JSX.Element | null {
     <Modal isOpen={networkModalOpen} onDismiss={toggleNetworkModal} maxWidth={672}>
       <ModalHeader onClose={toggleNetworkModal} title="Select a Network" />
       <div className="mb-6 text-lg text-primary">
-        You are currently browsing <span className="font-bold text-yellow">SOLAR</span>
+        You are currently browsing <span className="font-bold text-yellow">EMBER</span>
         <br /> on the <span className="font-bold text-light-yellow">{NETWORK_LABEL[chainId]}</span> network
       </div>
 
@@ -179,7 +179,7 @@ export default function NetworkModal(): JSX.Element | null {
           // ChainId.HARMONY,
           // ChainId.AVALANCHE,
           // ChainId.CELO,
-          ChainId.MOONRIVER
+          ChainId.SMARTBCH
         ].map((key: ChainId, i: number) => {
           if (chainId === key) {
             return (

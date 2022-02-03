@@ -19,7 +19,7 @@ const TokenBalance = ({ farm }: any) => {
   const currency1 = useCurrency(farm.liquidityPair.token1.id)
   return (
     <>
-      {farm.type === 'SLP' && (
+      {farm.type === 'EMBER-LP' && (
         <Paper className="bg-dark-800">
           <div
             className="grid grid-cols-3 px-4 py-4 text-sm rounded cursor-pointer select-none"
@@ -36,7 +36,7 @@ const TokenBalance = ({ farm }: any) => {
             <div className="flex items-center justify-end">
               <div>
                 <div className="text-right">{formatNumber(farm.tvl, true)} </div>
-                <div className="text-right text-secondary">{formatNumber(farm.slpBalance / 1e18, false)} SLP</div>
+                <div className="text-right text-secondary">{formatNumber(farm.slpBalance / 1e18, false)} EMBER-LP</div>
               </div>
             </div>
             <div className="flex items-center justify-end">

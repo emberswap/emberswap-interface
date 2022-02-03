@@ -1,30 +1,30 @@
 const Web3 = require('web3')
 const { default: axios } = require('axios')
 import IUniswapV2PairABI from '../../constants/abis/uniswap-v2-pair.json'
-const NETWORK_URL = 'https://moonriver.api.onfinality.io/public'
+const NETWORK_URL = 'https://moeing.tech:9545'
 const web3 = new Web3(NETWORK_URL)
 
 export default async function handler(req, res) {
-  let movrUSDCContract = new web3.eth.Contract(IUniswapV2PairABI, '0xe537f70a8b62204832B8Ba91940B77d3f79AEb81')
-  const movrUSDCReserves = await movrUSDCContract.methods.getReserves().call()
+  let bchFLEXUSDContract = new web3.eth.Contract(IUniswapV2PairABI, '0x6bE8ec1e1398c7aaE1F075601A92643AFdfe3Abb')
+  const bchFLEXUSDReserves = await bchFLEXUSDContract.methods.getReserves().call()
 
-  const movrUSDCPrice = (Number(movrUSDCReserves.reserve1) / Number(movrUSDCReserves.reserve0) ) * 1e12
+  const bchFLEXUSDPrice = (Number(bchFLEXUSDReserves.reserve1) / Number(bchFLEXUSDReserves.reserve0) ) / 1e18
 
-  let solarMovrContract = new web3.eth.Contract(IUniswapV2PairABI, '0x7eDA899b3522683636746a2f3a7814e6fFca75e1')
-  const solarMovrReserves = await solarMovrContract.methods.getReserves().call()
+  let emberBCHContract = new web3.eth.Contract(IUniswapV2PairABI, '0x11dcfD25bda4fb21Df3171493ed77Ec176d11983')
+  const emberBCHReserves = await emberBCHContract.methods.getReserves().call()
 
-  const solarMovrPrice = Number(solarMovrReserves.reserve1) / Number(solarMovrReserves.reserve0)
+  const emberBCHPrice = Number(emberBCHReserves.reserve1) / Number(emberBCHReserves.reserve0)
 
-  let ribMovrContract = new web3.eth.Contract(IUniswapV2PairABI, '0x0acDB54E610dAbC82b8FA454b21AD425ae460DF9')
-  const ribMovrReserves = await ribMovrContract.methods.getReserves().call()
+  let fireBCHContract = new web3.eth.Contract(IUniswapV2PairABI, '0x6ed8DcB768472207984f28811231010ac269C826')
+  const fireBCHReserves = await fireBCHContract.methods.getReserves().call()
 
-  const ribMovrPrice = Number(ribMovrReserves.reserve0) / Number(ribMovrReserves.reserve1)
+  const fireBCHPrice = Number(fireBCHReserves.reserve0) / Number(fireBCHReserves.reserve1)
 
   let ret = {}
-  ret['movr'] = movrUSDCPrice
-  ret['solar'] = solarMovrPrice * movrUSDCPrice
-  ret['rib'] = ribMovrPrice * movrUSDCPrice
-  ret['usdc'] = 1
+  ret['bch'] = bchFLEXUSDPrice
+  ret['ember'] = emberBCHPrice * bchFLEXUSDPrice
+  ret['fire'] = fireBCHPrice * bchFLEXUSDPrice
+  ret['flexusd'] = 1
 
   res.status(200).json(ret)
 }

@@ -12,7 +12,7 @@ export const poolsQuery = gql`
       id
       pair
       allocPoint
-      lastRewardBlock
+      lastRewardTimestamp
       accSushiPerShare
       balance
       userCount

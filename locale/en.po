@@ -4,7 +4,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: lokalise.com\n"
-"Project-Id-Version: Solarbeam Interface\n"
+"Project-Id-Version: EmberSwap Interface\n"
 "PO-Revision-Date: 2021-05-05 14:23\n"
 "Last-Translator: lokalise.com\n"
 "Language-Team: lokalise.com\n\n"
@@ -35,8 +35,8 @@ msgstr ""
 #~ msgstr "+ Create a new market"
 
 #: src/pages/locker/create/index.tsx:350
-msgid "- 0.1 MOVR to lock"
-msgstr "- 0.1 MOVR to lock"
+msgid "- 0.1 BCH to lock"
+msgstr "- 0.1 BCH to lock"
 
 #: src/pages/locker/create/index.tsx:356
 msgid "- Always DYOR"
@@ -91,11 +91,11 @@ msgstr "30 Days"
 #~ msgstr "300M+ TVL on Polygon! Optimized routing enabled"
 
 #: src/pages/Yield/minichefv2/InputGroup.tsx:69
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
-#~ msgstr "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
+#~ msgstr "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
 
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
-#~ msgstr "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
+#~ msgstr "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
 
 #: src/pages/RemoveLiquidity/index.tsx:450
 #~ msgid "<0>Tip:</0> Removing pool tokens converts your position back into underlying tokens at the current rate, proportional to your share of the pool. Accrued fees are included in the amounts you receive."
@@ -119,12 +119,12 @@ msgstr "30 Days"
 #~ msgstr "A portion of each trade (0.05%) goes to xSUSHI holders as a protocol incentive."
 
 #: src/features/swap/AdvancedSwapDetails.tsx:92
-#~ msgid "A portion of each trade (0.20%) goes Solarbeam Treasury."
-#~ msgstr "A portion of each trade (0.20%) goes Solarbeam Treasury."
+#~ msgid "A portion of each trade (0.20%) goes EmberSwap Treasury."
+#~ msgstr "A portion of each trade (0.20%) goes EmberSwap Treasury."
 
 #: src/features/swap/AdvancedSwapDetails.tsx:92
-msgid "A portion of each trade (0.25%) goes Solarbeam Treasury."
-msgstr "A portion of each trade (0.25%) goes Solarbeam Treasury."
+msgid "A portion of each trade (0.25%) goes EmberSwap Treasury."
+msgstr "A portion of each trade (0.25%) goes EmberSwap Treasury."
 
 #: src/features/lending/TradeReview.tsx:72
 msgid "A portion of each trade (0.25%) goes to liquidity providers as a protocol incentive."
@@ -164,7 +164,7 @@ msgstr "Add"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/NavigationTabs/index.tsx:69
-#: src/pages/exchange/add/[[...tokens]].tsx:341
+#: src/pages/exchange/add/[[...tokens]].tsx:345
 msgid "Add Liquidity"
 msgstr "Add Liquidity"
 
@@ -197,10 +197,10 @@ msgstr "Add liquidity"
 msgid "Add {0} to MetaMask"
 msgstr "Add {0} to MetaMask"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:193
-#: src/pages/exchange/add/[[...tokens]].tsx:219
-#: src/pages/exchange/add/[[...tokens]].tsx:193
-#: src/pages/exchange/add/[[...tokens]].tsx:219
+#: src/pages/exchange/add/[[...tokens]].tsx:197
+#: src/pages/exchange/add/[[...tokens]].tsx:223
+#: src/pages/exchange/add/[[...tokens]].tsx:197
+#: src/pages/exchange/add/[[...tokens]].tsx:223
 msgid "Add {0} {1} and {2} {3}"
 msgstr "Add {0} {1} and {2} {3}"
 
@@ -237,14 +237,15 @@ msgstr "Amount to Remove"
 msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 msgstr "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 
-#: src/components/Header/index.tsx:99
-#~ msgid "Analytics"
-#~ msgstr "Analytics"
+#: src/components/Header/index.tsx:81
+#: src/components/Header/index.tsx:200
+msgid "Analytics"
+msgstr "Analytics"
 
 #: src/features/farm/FarmListItemDetails.tsx:129
 #: src/features/lending/Button.tsx:64
 #: src/features/vault/VaultListItemDetails.tsx:160
-#: src/pages/exchange/remove/[[...tokens]].tsx:826
+#: src/pages/exchange/remove/[[...tokens]].tsx:828
 #: src/pages/locker/create/index.tsx:307
 msgid "Approve"
 msgstr "Approve"
@@ -258,17 +259,17 @@ msgid "Approve Limit Order"
 msgstr "Approve Limit Order"
 
 #: src/features/limit-order/LimitOrderButton.tsx:160
-#: src/pages/exchange/add/[[...tokens]].tsx:460
-#: src/pages/exchange/add/[[...tokens]].tsx:477
+#: src/pages/exchange/add/[[...tokens]].tsx:464
+#: src/pages/exchange/add/[[...tokens]].tsx:481
 #: src/pages/exchange/swap/[[...tokens]].tsx:536
 msgid "Approve {0}"
 msgstr "Approve {0}"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:824
+#: src/pages/exchange/remove/[[...tokens]].tsx:826
 msgid "Approved"
 msgstr "Approved"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:822
+#: src/pages/exchange/remove/[[...tokens]].tsx:824
 msgid "Approving"
 msgstr "Approving"
 
@@ -277,8 +278,8 @@ msgid "Approving Limit Order"
 msgstr "Approving Limit Order"
 
 #: src/features/limit-order/LimitOrderButton.tsx:158
-#: src/pages/exchange/add/[[...tokens]].tsx:458
-#: src/pages/exchange/add/[[...tokens]].tsx:475
+#: src/pages/exchange/add/[[...tokens]].tsx:462
+#: src/pages/exchange/add/[[...tokens]].tsx:479
 msgid "Approving {0}"
 msgstr "Approving {0}"
 
@@ -299,6 +300,10 @@ msgstr "Auto"
 #: src/guards/Network/index.tsx:43
 msgid "Available Networks"
 msgstr "Available Networks"
+
+#: src/pages/faucet/index.tsx:82
+#~ msgid "BCH Faucet"
+#~ msgstr "BCH Faucet"
 
 #: src/components/WalletModal/index.tsx:306
 #~ msgid "Back"
@@ -388,15 +393,14 @@ msgstr "Balance:"
 #~ msgid "Borrowing allows you to obtain liquidity without selling. Your borrow limit depends on the amount of deposited collateral. You will be able to borrow up to 75% of your collateral and repay at any time with accrued interest."
 #~ msgstr "Borrowing allows you to obtain liquidity without selling. Your borrow limit depends on the amount of deposited collateral. You will be able to borrow up to 75% of your collateral and repay at any time with accrued interest."
 
-#: src/components/Header/index.tsx:72
-#: src/components/Header/index.tsx:191
+#: src/pages/bridge/faucet/index.tsx:92
 #: src/pages/bridge/history/index.tsx:227
 #: src/pages/bridge/history/index.tsx:247
-#: src/pages/bridge/index.tsx:390
-#: src/pages/bridge/index.tsx:405
-#: src/pages/bridge/index.tsx:421
-#: src/pages/bridge/index.tsx:463
-#: src/pages/bridge/index.tsx:483
+#: src/pages/bridge/index.tsx:391
+#: src/pages/bridge/index.tsx:406
+#: src/pages/bridge/index.tsx:422
+#: src/pages/bridge/index.tsx:470
+#: src/pages/bridge/index.tsx:490
 msgid "Bridge"
 msgstr "Bridge"
 
@@ -407,12 +411,12 @@ msgstr "Bridge"
 #~ msgid "Bridge Token"
 #~ msgstr "Bridge Token"
 
-#: src/pages/bridge/index.tsx:519
-msgid "Bridge tokens to and from the Moonriver Network"
-msgstr "Bridge tokens to and from the Moonriver Network"
+#: src/pages/bridge/index.tsx:526
+msgid "Bridge tokens to and from the SmartBCH Network"
+msgstr "Bridge tokens to and from the SmartBCH Network"
 
-#: src/pages/bridge/index.tsx:438
-#: src/pages/bridge/index.tsx:455
+#: src/pages/bridge/index.tsx:445
+#: src/pages/bridge/index.tsx:462
 msgid "Bridge {0}"
 msgstr "Bridge {0}"
 
@@ -564,11 +568,11 @@ msgstr "Clear all"
 #~ msgid "Community Approval"
 #~ msgstr "Community Approval"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:650
+#: src/pages/exchange/remove/[[...tokens]].tsx:652
 msgid "Confirm"
 msgstr "Confirm"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:494
+#: src/pages/exchange/add/[[...tokens]].tsx:498
 msgid "Confirm Adding Liquidity"
 msgstr "Confirm Adding Liquidity"
 
@@ -589,7 +593,7 @@ msgstr "Confirm Supply"
 msgid "Confirm Swap"
 msgstr "Confirm Swap"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:836
+#: src/pages/exchange/remove/[[...tokens]].tsx:838
 msgid "Confirm Withdrawal"
 msgstr "Confirm Withdrawal"
 
@@ -752,8 +756,8 @@ msgstr "Docs"
 
 #: src/components/Header/More.tsx:15
 #: src/components/Menu.tsx:14
-msgid "Documentation for Solarbeam.io users"
-msgstr "Documentation for Solarbeam.io users"
+msgid "Documentation for EmberSwap users"
+msgstr "Documentation for EmberSwap users"
 
 #: src/components/Header/More.tsx:21
 #: src/components/Menu.tsx:19
@@ -762,8 +766,8 @@ msgstr "Documentation for Solarbeam.io users"
 
 #: src/components/Header/More.tsx:15
 #: src/components/Menu.tsx:14
-#~ msgid "Documentation for users of SolarBeam."
-#~ msgstr "Documentation for users of SolarBeam."
+#~ msgid "Documentation for users of EmberSwap."
+#~ msgstr "Documentation for users of EmberSwap."
 
 #: src/components/Header/More.tsx:15
 #: src/components/Menu.tsx:14
@@ -782,9 +786,33 @@ msgstr "Documentation for Solarbeam.io users"
 #~ msgid "Dual Asset"
 #~ msgstr "Dual Asset"
 
+#: src/components/YieldDetails/index.tsx:104
+msgid "EMBER per $1000"
+msgstr "EMBER per $1000"
+
+#: src/pages/kashi/borrow/[pair].tsx:244
+#~ msgid "EMBER-LP"
+#~ msgstr "EMBER-LP"
+
 #: src/guards/Network/index.tsx:36
 msgid "Either return to the {link}, or change to an available network."
 msgstr "Either return to the {link}, or change to an available network."
+
+#: src/pages/bridge/index.tsx:76
+#~ msgid "Ember Bridge"
+#~ msgstr "Ember Bridge"
+
+#: src/pages/vaults/index.tsx:154
+msgid "Ember Vault"
+msgstr "Ember Vault"
+
+#: src/pages/vaults/index.tsx:158
+msgid "Ember Vault is a set of high incentivized pools. Long term supporters can choose to lock EMBER for a determined period for higher rewards."
+msgstr "Ember Vault is a set of high incentivized pools. Long term supporters can choose to lock EMBER for a determined period for higher rewards."
+
+#: src/pages/exchange/swap/[[...tokens]].tsx:369
+msgid "EmberSwap"
+msgstr "EmberSwap"
 
 #: src/components/LanguageSwitch/index.tsx:16
 msgid "English"
@@ -810,7 +838,7 @@ msgstr "Enter a recipient"
 msgid "Enter a valid slippage percentage"
 msgstr "Enter a valid slippage percentage"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:436
+#: src/pages/exchange/add/[[...tokens]].tsx:440
 #: src/state/burn/hooks.ts:138
 #: src/state/limit-order/hooks.ts:168
 #: src/state/mint/hooks.ts:202
@@ -872,12 +900,13 @@ msgid "Expired"
 msgstr "Expired"
 
 #: src/components/Header/index.tsx:51
-#: src/components/Header/index.tsx:170
+#: src/components/Header/index.tsx:171
 msgid "Farm"
 msgstr "Farm"
 
+#: src/pages/bridge/faucet/index.tsx:118
 #: src/pages/bridge/history/index.tsx:273
-#: src/pages/bridge/index.tsx:509
+#: src/pages/bridge/index.tsx:516
 msgid "Faucet"
 msgstr "Faucet"
 
@@ -899,10 +928,6 @@ msgstr "Filled"
 #: src/pages/exchange/find/index.tsx:83
 msgid "Find Pool"
 msgstr "Find Pool"
-
-#: src/components/Header/More.tsx:45
-msgid "Follow us on Medium"
-msgstr "Follow us on Medium"
 
 #: src/components/Header/More.tsx:39
 #: src/components/Menu.tsx:38
@@ -987,13 +1012,18 @@ msgstr "From"
 msgid "Github"
 msgstr "Github"
 
-#: src/pages/faucet/index.tsx:122
-msgid "Give me some MOVR"
-msgstr "Give me some MOVR"
+#: src/pages/bridge/faucet/index.tsx:164
+msgid "Give me some BCH"
+msgstr "Give me some BCH"
 
 #: src/components/Back.tsx:23
 msgid "Go Back"
 msgstr "Go Back"
+
+#: src/components/Header/index.tsx:72
+#: src/components/Header/index.tsx:192
+msgid "Governance"
+msgstr "Governance"
 
 #: src/pages/exchange/migrate/index.tsx:136
 #~ msgid "Hardware Wallet"
@@ -1006,14 +1036,14 @@ msgstr "Go Back"
 #: src/features/farm/FarmListItem.tsx:97
 #: src/features/farm/FarmListItemDetails.tsx:236
 #: src/features/vault/VaultListItemDetails.tsx:294
-#: src/pages/farm/index.tsx:233
+#: src/pages/farm/index.tsx:236
 msgid "Harvest"
 msgstr "Harvest"
 
 #: src/features/farm/FarmListItemDetails.tsx:248
 #: src/features/vault/VaultListItemDetails.tsx:318
-msgid "Harvest {0} SOLAR"
-msgstr "Harvest {0} SOLAR"
+msgid "Harvest {0} EMBER"
+msgstr "Harvest {0} EMBER"
 
 #: src/pages/Yield/masterchefv1/InputGroup.tsx:126
 #~ msgid "Harvest {0} SUSHI"
@@ -1030,6 +1060,10 @@ msgstr "Harvest {0} SOLAR"
 #: src/features/farm/FarmListItemDetails.tsx:206
 #~ msgid "Harvest {0} SUSHI {1}"
 #~ msgstr "Harvest {0} SUSHI {1}"
+
+#: src/features/farm/FarmListItemDetails.tsx:248
+#~ msgid "Harvest {pendingEmber} EMBER"
+#~ msgstr "Harvest {pendingEmber} EMBER"
 
 #: src/pages/Pool/index.tsx:162
 #~ msgid "Have Liquidity on {0}?"
@@ -1063,10 +1097,21 @@ msgstr "Harvest {0} SOLAR"
 #~ msgid "Historical Total Locked: {0} SUSHI"
 #~ msgstr "Historical Total Locked: {0} SUSHI"
 
+#: src/pages/bridge/faucet/index.tsx:105
 #: src/pages/bridge/history/index.tsx:260
-#: src/pages/bridge/index.tsx:496
+#: src/pages/bridge/index.tsx:503
 msgid "History"
 msgstr "History"
+
+#: src/components/Header/More.tsx:44
+#: src/components/Menu.tsx:43
+msgid "Home"
+msgstr "Home"
+
+#: src/components/Header/More.tsx:45
+#: src/components/Menu.tsx:44
+msgid "Hosted by the Incinerate Protocol"
+msgstr "Hosted by the Incinerate Protocol"
 
 #: src/pages/locker/create/index.tsx:338
 msgid "How to use"
@@ -1308,7 +1353,7 @@ msgid "Lock"
 msgstr "Lock"
 
 #: src/components/Header/index.tsx:67
-#: src/components/Header/index.tsx:186
+#: src/components/Header/index.tsx:187
 msgid "Locker"
 msgstr "Locker"
 
@@ -1403,10 +1448,6 @@ msgstr "Maximum sent"
 msgid "Me"
 msgstr "Me"
 
-#: src/components/Header/More.tsx:44
-msgid "Medium"
-msgstr "Medium"
-
 #: src/pages/exchange/pool/index.tsx:167
 msgid "Migrate"
 msgstr "Migrate"
@@ -1444,10 +1485,6 @@ msgstr "Minimum received"
 #~ msgid "Missed the Auction?"
 #~ msgstr ""
 
-#: src/pages/faucet/index.tsx:82
-msgid "Moonriver Faucet"
-msgstr "Moonriver Faucet"
-
 #: src/features/farm/FarmMenu.tsx:31
 msgid "My Farms"
 msgstr "My Farms"
@@ -1466,8 +1503,8 @@ msgstr "My Orders"
 
 #: src/components/Header/index.tsx:80
 #: src/components/Header/index.tsx:196
-msgid "NFT Launchpad"
-msgstr "NFT Launchpad"
+#~ msgid "NFT Launchpad"
+#~ msgstr "NFT Launchpad"
 
 #: src/features/meowshi/MeowshiButton.tsx:110
 #~ msgid "Network not supported yet"
@@ -1553,7 +1590,7 @@ msgstr "Open Orders"
 #~ msgid "Open Source"
 #~ msgstr "Open Source"
 
-#: src/components/Header/index.tsx:114
+#: src/components/Header/index.tsx:115
 msgid "Open main menu"
 msgstr "Open main menu"
 
@@ -1579,7 +1616,7 @@ msgstr "Order History"
 #~ msgid "Order by"
 #~ msgstr "Order by"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:272
+#: src/pages/exchange/add/[[...tokens]].tsx:276
 msgid ""
 "Output is estimated. If the price changes by more than {0}% your transaction\n"
 "will revert."
@@ -1587,7 +1624,7 @@ msgstr ""
 "Output is estimated. If the price changes by more than {0}% your transaction\n"
 "will revert."
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:603
+#: src/pages/exchange/remove/[[...tokens]].tsx:605
 msgid "Output is estimated. If the price changes by more than {0}% your transaction will revert."
 msgstr "Output is estimated. If the price changes by more than {0}% your transaction will revert."
 
@@ -1606,6 +1643,10 @@ msgstr "Output will be sent to"
 #: src/components/swap/SwapModalHeader.tsx:100
 #~ msgid "Output will be sent to <0>{0}</0>"
 #~ msgstr "Output will be sent to <0>{0}</0>"
+
+#: src/features/farm/FarmMenu.tsx:32
+msgid "Past Farms"
+msgstr "Past Farms"
 
 #: src/features/open-order/CompletedOrders.tsx:35
 #: src/features/open-order/OpenOrders.tsx:63
@@ -1645,7 +1686,7 @@ msgid "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 msgstr "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 
 #: src/components/Header/index.tsx:43
-#: src/components/Header/index.tsx:162
+#: src/components/Header/index.tsx:163
 #: src/pages/exchange/pool/index.tsx:95
 msgid "Pool"
 msgstr "Pool"
@@ -1663,7 +1704,7 @@ msgstr "Pool Found!"
 #~ msgstr "Pool Rewards"
 
 #: src/components/PositionCard/index.tsx:77
-#: src/pages/exchange/add/[[...tokens]].tsx:269
+#: src/pages/exchange/add/[[...tokens]].tsx:273
 msgid "Pool Tokens"
 msgstr "Pool Tokens"
 
@@ -1689,7 +1730,7 @@ msgstr "Pooled {0}"
 #~ msgid "Pour a hot bowl of MISO, the new <0>token launchpad</0> from SUSHI"
 #~ msgstr ""
 
-#: src/pages/bridge/index.tsx:633
+#: src/pages/bridge/index.tsx:640
 msgid "Powered by Anyswap Network"
 msgstr "Powered by Anyswap Network"
 
@@ -1729,7 +1770,7 @@ msgid "Rate"
 msgstr "Rate"
 
 #: src/features/liquidity/ConfirmAddModalBottom.tsx:30
-#: src/pages/exchange/remove/[[...tokens]].tsx:618
+#: src/pages/exchange/remove/[[...tokens]].tsx:620
 msgid "Rates"
 msgstr "Rates"
 
@@ -1761,17 +1802,13 @@ msgstr "Remove"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/NavigationTabs/index.tsx:69
-#: src/pages/exchange/remove/[[...tokens]].tsx:714
+#: src/pages/exchange/remove/[[...tokens]].tsx:716
 msgid "Remove Liquidity"
 msgstr "Remove Liquidity"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:715
-#~ msgid "Remove liquidity of SolarBeam"
-#~ msgstr "Remove liquidity of SolarBeam"
-
-#: src/pages/exchange/remove/[[...tokens]].tsx:715
-msgid "Remove liquidity of Solarbeam"
-msgstr "Remove liquidity of Solarbeam"
+#: src/pages/exchange/remove/[[...tokens]].tsx:717
+msgid "Remove liquidity of EmberSwap"
+msgstr "Remove liquidity of EmberSwap"
 
 #: src/pages/exchange/swap/[[...tokens]].tsx:458
 msgid "Remove recipient"
@@ -1781,12 +1818,12 @@ msgstr "Remove recipient"
 #~ msgid "Remove send"
 #~ msgstr "Remove send"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:277
-#: src/pages/exchange/remove/[[...tokens]].tsx:277
+#: src/pages/exchange/remove/[[...tokens]].tsx:279
+#: src/pages/exchange/remove/[[...tokens]].tsx:279
 msgid "Remove {0} {1} and {2} {3}"
 msgstr "Remove {0} {1} and {2} {3}"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:657
+#: src/pages/exchange/remove/[[...tokens]].tsx:659
 msgid "Removing {0} {1} and {2} {3}"
 msgstr "Removing {0} {1} and {2} {3}"
 
@@ -1835,14 +1872,6 @@ msgstr "Routing through these tokens resulted in the best price for your trade."
 #: src/pages/Saave/index.tsx:49
 #~ msgid "SAAVE: Stack your yields in one transaction"
 #~ msgstr "SAAVE: Stack your yields in one transaction"
-
-#: src/pages/kashi/borrow/[pair].tsx:244
-#~ msgid "SLP"
-#~ msgstr "SLP"
-
-#: src/components/YieldDetails/index.tsx:104
-msgid "SOLAR per $1000"
-msgstr "SOLAR per $1000"
 
 #~ msgid "SUSHI Balance"
 #~ msgstr "SUSHI Balance"
@@ -1938,26 +1967,6 @@ msgstr "Slippage tolerance"
 #~ msgid "Slippage tolerance..."
 #~ msgstr "Slippage tolerance..."
 
-#: src/pages/bridge/index.tsx:76
-#~ msgid "Solar Bridge"
-#~ msgstr "Solar Bridge"
-
-#: src/pages/vaults/index.tsx:154
-msgid "Solar Vault"
-msgstr "Solar Vault"
-
-#: src/pages/vaults/index.tsx:158
-msgid "Solar Vault is a set of high incentivized pools. Long term supporters can choose to lock SOLAR for a determined period for higher rewards."
-msgstr "Solar Vault is a set of high incentivized pools. Long term supporters can choose to lock SOLAR for a determined period for higher rewards."
-
-#: src/pages/exchange/swap/[[...tokens]].tsx:371
-#~ msgid "SolarBeam"
-#~ msgstr "SolarBeam"
-
-#: src/pages/exchange/swap/[[...tokens]].tsx:369
-msgid "Solarbeam"
-msgstr "Solarbeam"
-
 #: src/features/lending/Button.tsx:28
 #: src/features/limit-order/LimitOrderButton.tsx:189
 msgid "Something went wrong during signing of the approval. This is expected for hardware wallets, such as Trezor and Ledger. Click again and the fallback method will be used"
@@ -2044,7 +2053,7 @@ msgstr "Supply & Market Cap"
 #~ msgid "Supply APR"
 #~ msgstr "Supply APR"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:295
+#: src/pages/exchange/add/[[...tokens]].tsx:299
 msgid "Supplying {0} {1} and {2} {3}"
 msgstr "Supplying {0} {1} and {2} {3}"
 
@@ -2070,7 +2079,7 @@ msgstr "Supplying {0} {1} and {2} {3}"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/Header/index.tsx:35
-#: src/components/Header/index.tsx:154
+#: src/components/Header/index.tsx:155
 #: src/pages/exchange/swap/[[...tokens]].tsx:569
 #: src/pages/exchange/swap/[[...tokens]].tsx:598
 msgid "Swap"
@@ -2147,8 +2156,8 @@ msgid "The output token cannot be transferred. There may be an issue with the ou
 msgstr "The output token cannot be transferred. There may be an issue with the output token."
 
 #: src/pages/vaults/index.tsx:163
-msgid "The participants receive various benefits such as higher rewards according to lock duration, higher allocations in Solar Launchpad and more."
-msgstr "The participants receive various benefits such as higher rewards according to lock duration, higher allocations in Solar Launchpad and more."
+msgid "The participants receive higher rewards according to lock duration."
+msgstr "The participants receive higher rewards according to lock duration."
 
 #: src/hooks/useSwapCallback.ts:139
 #: src/hooks/useSwapCallback.ts:139
@@ -2225,7 +2234,7 @@ msgstr "Toggle Expert Mode"
 msgid "Token"
 msgstr "Token"
 
-#: src/pages/bridge/index.tsx:547
+#: src/pages/bridge/index.tsx:554
 msgid "Token to bridge:"
 msgstr "Token to bridge:"
 
@@ -2328,7 +2337,7 @@ msgstr "Unstake"
 #~ msgid "Unstaked"
 #~ msgstr "Unstaked"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:430
+#: src/pages/exchange/add/[[...tokens]].tsx:434
 #: src/pages/exchange/swap/[[...tokens]].tsx:500
 msgid "Unsupported Asset"
 msgstr "Unsupported Asset"
@@ -2374,7 +2383,7 @@ msgstr "Unwrap"
 #~ msgstr "VFAT FARMING CALCULATOR"
 
 #: src/components/Header/index.tsx:59
-#: src/components/Header/index.tsx:178
+#: src/components/Header/index.tsx:179
 msgid "Vaults"
 msgstr "Vaults"
 
@@ -2398,8 +2407,8 @@ msgstr "Vaults"
 msgid "View Contract"
 msgstr "View Contract"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:517
-#: src/pages/exchange/remove/[[...tokens]].tsx:850
+#: src/pages/exchange/add/[[...tokens]].tsx:521
+#: src/pages/exchange/remove/[[...tokens]].tsx:852
 msgid "View Liquidity Positions"
 msgstr "View Liquidity Positions"
 
@@ -2527,12 +2536,12 @@ msgid "You Pay:"
 msgstr "You Pay:"
 
 #: src/features/liquidity/RemoveLiquidityReceiveDetails.tsx:40
-#: src/pages/exchange/remove/[[...tokens]].tsx:730
-#: src/pages/exchange/remove/[[...tokens]].tsx:762
+#: src/pages/exchange/remove/[[...tokens]].tsx:732
+#: src/pages/exchange/remove/[[...tokens]].tsx:764
 msgid "You Will Receive"
 msgstr "You Will Receive"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:365
+#: src/pages/exchange/add/[[...tokens]].tsx:369
 msgid "You are creating a pool"
 msgstr "You are creating a pool"
 
@@ -2540,7 +2549,7 @@ msgstr "You are creating a pool"
 msgid "You are on the wrong network"
 msgstr "You are on the wrong network"
 
-#: src/pages/bridge/index.tsx:440
+#: src/pages/bridge/index.tsx:447
 msgid "You are sending {0} {1} from {2}"
 msgstr "You are sending {0} {1} from {2}"
 
@@ -2568,11 +2577,11 @@ msgstr "You receive <0>(at least):</0>"
 #~ msgid "You receive:"
 #~ msgstr "You receive:"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:365
+#: src/pages/exchange/add/[[...tokens]].tsx:369
 msgid "You will receive"
 msgstr "You will receive"
 
-#: src/pages/bridge/index.tsx:443
+#: src/pages/bridge/index.tsx:450
 msgid "You will receive {0} {1} on {2}"
 msgstr "You will receive {0} {1} on {2}"
 
@@ -2802,7 +2811,7 @@ msgstr "{0} {1} per {2}"
 #~ msgid "{0} {sign} market rate"
 #~ msgstr "{0} {sign} market rate"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:638
+#: src/pages/exchange/remove/[[...tokens]].tsx:640
 msgid "{0}/{1} Burned"
 msgstr "{0}/{1} Burned"
 

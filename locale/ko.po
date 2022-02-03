@@ -56,11 +56,11 @@ msgstr ""
 #~ msgstr "Polygon에 예치된 300M 이상의 TVL! 최적화된 라우팅 적용"
 
 #: src/pages/Yield/minichefv2/InputGroup.tsx:69
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
 #~ msgstr "<0>팁</0> 보상을 받으려면 먼저 지정된 쌍에 유동성을 추가하거나 기존 유동성을 <1> </1> SLP가 있으면 이 수확량 농장에 스테이킹하여 보상받을 수 있습니다. 언제든지 언스테이킹 한 다음 유동성 제거를 클릭하여 SLP를 기본 토큰으로 다시 전환할 수 있습니다. 수확을 클릭하면 언제든지 보상받을 수 있습니다."
 
 #, fuzzy
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
 #~ msgstr "<0>팁</0> 보상을 받으려면 먼저 지정된 쌍에 유동성을 추가하거나 기존 유동성을 <1> </1> SLP가 있으면 이 수확량 농장에 스테이킹하여 보상받을 수 있습니다. 언제든지 언스테이킹 한 다음 유동성 제거를 클릭하여 SLP를 기본 토큰으로 다시 전환할 수 있습니다. 수확을 클릭하면 언제든지 보상받을 수 있습니다."
 
 #: src/pages/RemoveLiquidity/index.tsx:450
@@ -1503,7 +1503,7 @@ msgstr ""
 #~ msgstr "SAAVE : 한 번의 거래로 수익을 쌓으세요"
 
 #: src/pages/kashi/borrow/[pair].tsx:244
-msgid "SLP"
+msgid "EMBER-LP"
 msgstr ""
 
 #~ msgid "SUSHI Balance"

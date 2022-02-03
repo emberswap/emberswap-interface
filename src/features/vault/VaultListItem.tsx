@@ -7,7 +7,7 @@ import Image from '../../components/Image'
 import React, { useContext, useState } from 'react'
 import { useCurrency } from '../../hooks/Tokens'
 import { useV2PairsWithPrice } from '../../hooks/useV2Pairs'
-import { SOLAR_ADDRESS } from '../../constants/tokens'
+import { EMBER_ADDRESS } from '../../constants/tokens'
 import { useActiveWeb3React } from '../../hooks'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
@@ -28,9 +28,9 @@ const VaultListItem = ({ farm, ...rest }) => {
 
   const priceData = useContext(PriceContext)
 
-  const solarPrice = priceData?.['solar']
-  const movrPrice = priceData?.['movr']
-  const ribPrice = priceData?.['rib']
+  const emberPrice = priceData?.['ember']
+  const bchPrice = priceData?.['bch']
+  const firePrice = priceData?.['fire']
 
   const [selectedFarm, setSelectedFarm] = useState<string>(null)
 
@@ -40,19 +40,19 @@ const VaultListItem = ({ farm, ...rest }) => {
   function getTvl() {
     let lpPrice = 0
     let decimals = 18
-    if (farm.lpToken.toLowerCase() == SOLAR_ADDRESS[chainId].toLowerCase()) {
-      lpPrice = solarPrice
+    if (farm.lpToken.toLowerCase() == EMBER_ADDRESS[chainId].toLowerCase()) {
+      lpPrice = emberPrice
       decimals = farm.pair.token0?.decimals
     } else if (farm.lpToken.toLowerCase() == WNATIVE[chainId].toLowerCase()) {
-      lpPrice = movrPrice
-    } else if (farm.lpToken.toLowerCase() == '0xbD90A6125a84E5C512129D622a75CDDE176aDE5E'.toLowerCase()) {
-      lpPrice = ribPrice
+      lpPrice = bchPrice
+    } else if (farm.lpToken.toLowerCase() == '0xDF7bA1eCfE1851D634a2DE0cd7AB1aA6dEC86269'.toLowerCase()) {
+      lpPrice = firePrice
     } else {
       lpPrice = pairPrice
     }
 
     farm.lpPrice = lpPrice
-    farm.solarPrice = solarPrice
+    farm.emberPrice = emberPrice
 
     return Number(farm.totalLp / 10 ** decimals) * lpPrice
   }
@@ -64,7 +64,7 @@ const VaultListItem = ({ farm, ...rest }) => {
       return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
     }, 0) / tvl
 
-  const roiPerHour = roiPerBlock * farm.blocksPerHour
+  const roiPerHour = roiPerBlock * farm.blocksPerHour / 2
   const roiPerDay = roiPerHour * 24
   const roiPerMonth = roiPerDay * 30
   const roiPerYear = roiPerDay * 365
@@ -107,7 +107,7 @@ const VaultListItem = ({ farm, ...rest }) => {
                     {farm?.rewards?.map((reward, i) => (
                       <div key={i} className="flex items-center">
                         <Image
-                          src={`http://solarbeam.io/images/tokens/solar.png`}
+                          src={`https://incinerate.cash/img/ex_icons/emberswap.png`}
                           width="50px"
                           height="50px"
                           className="rounded-md"
@@ -157,7 +157,7 @@ const VaultListItem = ({ farm, ...rest }) => {
           token0={token0}
           token1={token1}
           lpPrice={farm.lpPrice}
-          solarPrice={solarPrice}
+          emberPrice={emberPrice}
         />
       )}
     </React.Fragment>

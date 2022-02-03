@@ -4,16 +4,16 @@ import { useActiveWeb3React, useFuse } from '../../hooks'
 import Head from 'next/head'
 import React, { useContext, useState } from 'react'
 import { formatNumberScale } from '../../functions'
-import { usePositions, useSolarVaultInfo, useVaults } from '../../features/vault/hooks'
+import { usePositions, useEmberVaultInfo, useVaults } from '../../features/vault/hooks'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Card from '../../components/Card'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import DoubleGlowShadow from '../../components/DoubleGlowShadow'
-import { SOLAR_ADDRESS, AVERAGE_BLOCK_TIME, WNATIVE } from '../../constants'
+import { EMBER_ADDRESS, AVERAGE_BLOCK_TIME, WNATIVE } from '../../constants'
 import { VAULTS } from '../../constants/vaults'
-import SolarbeamLogo from '../../components/SolarbeamLogo'
+import EmberswapLogo from '../../components/EmberswapLogo'
 import { PriceContext } from '../../contexts/priceContext'
 import useMasterChef from '../../features/farm/useMasterChef'
 import { useTVL } from '../../hooks/useV2Pairs'
@@ -29,12 +29,12 @@ export default function Vault(): JSX.Element {
 
   const vaults = useVaults()
 
-  const distributorInfo = useSolarVaultInfo()
+  const distributorInfo = useEmberVaultInfo()
 
   const priceData = useContext(PriceContext)
 
-  const solarPrice = priceData?.['solar']
-  const movrPrice = priceData?.['movr']
+  const emberPrice = priceData?.['ember']
+  const bchPrice = priceData?.['bch']
 
   const tvlInfo = useTVL()
 
@@ -43,13 +43,13 @@ export default function Vault(): JSX.Element {
   }, 0)
 
   const summTvlVaults = vaults.reduce((previousValue, currentValue) => {
-    return previousValue + (currentValue.totalLp / 1e18) * solarPrice
+    return previousValue + (currentValue.totalLp / 1e18) * emberPrice
   }, 0)
 
   const blocksPerDay = 86400 / Number(AVERAGE_BLOCK_TIME[chainId])
 
   const map = (pool) => {
-    pool.owner = 'Solarbeam'
+    pool.owner = 'Ember'
     pool.balance = 0
 
     const pair = VAULTS[chainId][pool.id]
@@ -58,14 +58,14 @@ export default function Vault(): JSX.Element {
 
     function getRewards() {
       const rewardPerBlock =
-        ((pool.allocPoint / distributorInfo.totalAllocPoint) * distributorInfo.solarPerBlock) / 1e18
+        ((pool.allocPoint / distributorInfo.totalAllocPoint) * distributorInfo.emberPerBlock) / 1e18
 
       const defaultReward = {
-        token: 'SOLAR',
-        icon: '/images/token/solar.png',
+        token: 'EMBER',
+        icon: '/images/token/ember.png',
         rewardPerBlock,
         rewardPerDay: rewardPerBlock * blocksPerDay,
-        rewardPrice: solarPrice,
+        rewardPrice: emberPrice,
       }
 
       const defaultRewards = [defaultReward]
@@ -77,11 +77,11 @@ export default function Vault(): JSX.Element {
     function getTvl(pool) {
       let lpPrice = 0
       let decimals = 18
-      if (pool.lpToken == SOLAR_ADDRESS[chainId]) {
-        lpPrice = solarPrice
+      if (pool.lpToken == EMBER_ADDRESS[chainId]) {
+        lpPrice = emberPrice
         decimals = pair.token0?.decimals
       } else if (pool.lpToken.toLowerCase() == WNATIVE[chainId].toLowerCase()) {
-        lpPrice = movrPrice
+        lpPrice = bchPrice
       } else {
         lpPrice = 0
       }
@@ -125,21 +125,21 @@ export default function Vault(): JSX.Element {
   const data = vaults.map(map)
 
   const valueStaked = positions.reduce((previousValue, currentValue) => {
-    return previousValue + (currentValue.amount / 1e18) * solarPrice
+    return previousValue + (currentValue.amount / 1e18) * emberPrice
   }, 0)
 
   return (
     <>
       <Head>
-        <title>Vaults | Solarbeam</title>
-        <meta key="description" name="description" content="Solar Vaults" />
+        <title>Vaults | EmberSwap</title>
+        <meta key="description" name="description" content="Ember Vaults" />
       </Head>
 
       <div className="container px-0 mx-auto pb-6">
         <div className={`mb-2 pb-4 grid grid-cols-12 gap-4`}>
           <div className="flex justify-center items-center col-span-12 lg:justify">
-            <Link href="/farm">
-              <SolarbeamLogo />
+            <Link href="/farm?filter=all">
+              <EmberswapLogo />
             </Link>
           </div>
         </div>
@@ -151,16 +151,16 @@ export default function Vault(): JSX.Element {
                   <div className={`col-span-12 md:col-span-3 space-y-4`}>
                     <div className={`hidden md:block`}>
                       <div className={`col-span-12 md:col-span-4 bg-dark-800 px-6 py-4 rounded`}>
-                        <div className="mb-2 text-2xl text-emphesis">{i18n._(t`Solar Vault`)}</div>
+                        <div className="mb-2 text-2xl text-emphesis">{i18n._(t`Ember Vault`)}</div>
                         <div className="mb-4 text-base text-secondary">
                           <p>
                             {i18n._(
-                              t`Solar Vault is a set of high incentivized pools. Long term supporters can choose to lock SOLAR for a determined period for higher rewards.`
+                              t`Ember Vault is a set of high incentivized pools. Long term supporters can choose to lock EMBER for a determined period for higher rewards.`
                             )}
                           </p>
                           <p className="mt-2">
                             {i18n._(
-                              t`The participants receive various benefits such as higher rewards according to lock duration, higher allocations in Solar Launchpad and more.`
+                              t`The participants receive higher rewards according to lock duration.`
                             )}
                           </p>
                         </div>

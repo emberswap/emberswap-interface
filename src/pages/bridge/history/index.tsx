@@ -8,7 +8,7 @@ import { t } from '@lingui/macro'
 import { useActiveWeb3React } from '../../../hooks/useActiveWeb3React'
 import { useLingui } from '@lingui/react'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
-import SolarbeamLogo from '../../../components/SolarbeamLogo'
+import EmberswapLogo from '../../../components/EmberswapLogo'
 import useSWR, { SWRResponse } from 'swr'
 import NavLink from '../../../components/NavLink'
 import Button from '../../../components/Button'
@@ -97,7 +97,7 @@ const Transaction: FC<{ chainId: string; hash: string }> = ({ chainId, hash }) =
   const addedTime = moment.unix(tzTime).fromNow()
 
   const getUrl = () => {
-    if (srcChaindId == ChainId.MOONRIVER) {
+    if (srcChaindId == ChainId.SMARTBCH) {
       return `https://bridgeapi.anyswap.exchange/v2/getWithdrawHashStatus/${from}/${hash}/${srcChaindId}/${pairId}/${destChainId}`
     } else {
       return `https://bridgeapi.anyswap.exchange/v2/getHashStatus/${from}/${hash}/${destChainId}/${pairId}/${srcChaindId}`
@@ -224,11 +224,11 @@ export default function Bridge() {
   return (
     <>
       <Head>
-        <title>{i18n._(t`Bridge`)} | Solarbeam</title>
+        <title>{i18n._(t`Bridge`)} | EmberSwap</title>
         <meta key="description" name="description" content="Bridge" />
       </Head>
 
-      <SolarbeamLogo />
+      <EmberswapLogo />
 
       <Container maxWidth="2xl" className="space-y-6">
         <DoubleGlowShadow opacity="0.6">

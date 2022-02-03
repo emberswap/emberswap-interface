@@ -18,6 +18,7 @@ const Rinkeby = '/images/networks/rinkeby-network.jpg'
 const Ropsten = '/images/networks/ropsten-network.jpg'
 const xDai = '/images/networks/xdai-network.jpg'
 const Celo = '/images/networks/celo-network.jpg'
+const Smartbch = '/images/networks/bch.png'
 export const NETWORK_ICON = {
   [ChainId.MAINNET]: Mainnet,
   [ChainId.ROPSTEN]: Ropsten,
@@ -35,6 +36,7 @@ export const NETWORK_ICON = {
   [ChainId.ARBITRUM_TESTNET]: Arbitrum,
   [ChainId.MOONBEAM_TESTNET]: Moonbeam,
   [ChainId.MOONRIVER]: Moonriver,
+  [ChainId.SMARTBCH]: Smartbch,
   [ChainId.AVALANCHE]: Avalanche,
   [ChainId.AVALANCHE_TESTNET]: Avalanche,
   [ChainId.HECO]: Heco,
@@ -63,6 +65,7 @@ export const NETWORK_LABEL: { [chainId in ChainId]?: string } = {
   [ChainId.BSC_TESTNET]: 'BSC Testnet',
   [ChainId.MOONBEAM_TESTNET]: 'Moonbase',
   [ChainId.MOONRIVER]: 'Moonriver',
+  [ChainId.SMARTBCH]: 'SmartBCH',
   [ChainId.AVALANCHE]: 'Avalanche',
   [ChainId.AVALANCHE_TESTNET]: 'Fuji',
   [ChainId.HECO]: 'HECO',

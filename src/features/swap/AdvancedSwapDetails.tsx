@@ -89,7 +89,7 @@ export function AdvancedSwapDetails({ trade, allowedSlippage, minerBribe }: Adva
       <RowBetween>
         <RowFixed>
           <div className="text-sm text-secondary">{i18n._(t`Trading Fee`)}</div>
-          <QuestionHelper text={i18n._(t`A portion of each trade (0.25%) goes Solarbeam Treasury.`)} />
+          <QuestionHelper text={i18n._(t`A portion of each trade (0.25%) goes EmberSwap Treasury.`)} />
         </RowFixed>
         <div className="text-sm font-bold text-high-emphesis">
           {realizedLPFee

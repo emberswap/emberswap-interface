@@ -15,7 +15,7 @@ import { useTokenInfo } from '../../features/farm/hooks'
 import { formatNumberScale } from '../../functions'
 import { ExternalLink as LinkIcon } from 'react-feather'
 import { PriceContext } from '../../contexts/priceContext'
-import { useSolarContract } from '../../hooks'
+import { useEmberContract } from '../../hooks'
 import QuestionHelper from '../../components/QuestionHelper'
 
 const CloseIcon = styled.div`
@@ -75,13 +75,13 @@ export default function TokenStatsModal({ token }: { token: any }) {
   const { i18n } = useLingui()
 
   const priceData = useContext(PriceContext)
-  let tokenInfo = useTokenInfo(useSolarContract())
+  let tokenInfo = useTokenInfo(useEmberContract())
 
-  if (token.symbol == 'MOVR') tokenInfo = { circulatingSupply: '1500000', burnt: '0', totalSupply: '0', vaults: '0' }
+  if (token.symbol == 'BCH') tokenInfo = { circulatingSupply: '19000000', burnt: '0', totalSupply: '0', vaults: '0' }
 
   const price = formatNumberScale(priceData?.[token.symbol.toLowerCase()], true, 2)
 
-  const modalOpen = useModalOpen(token.symbol == 'SOLAR' ? ApplicationModal.SOLAR_STATS : ApplicationModal.MOVR_STATS)
+  const modalOpen = useModalOpen(token.symbol == 'EMBER' ? ApplicationModal.EMBER_STATS : ApplicationModal.BCH_STATS)
 
   const toggleWalletModal = useTokenStatsModalToggle(token)
 
@@ -122,7 +122,7 @@ export default function TokenStatsModal({ token }: { token: any }) {
                 {token?.address && (
                   <ExternalLink
                     href={
-                      'https://blockscout.moonriver.moonbeam.network/tokens/0x6bD193Ee6D2104F14F94E2cA6efefae561A4334B'
+                      'https://smartscan.cash/address/0x0b2C58719a2073640BfC390D703eA832057D2543'
                     }
                     className="px-3 ring-0 ring-transparent ring-opacity-0"
                     color="light-green"
@@ -150,7 +150,7 @@ export default function TokenStatsModal({ token }: { token: any }) {
                 <Typography variant="sm" className="flex items-center py-0.5">
                   {i18n._(t`Circulating Supply`)}
                 </Typography>
-                {token.symbol == 'SOLAR' && (
+                {token.symbol == 'EMBER' && (
                   <QuestionHelper
                     text={
                       <div className="flex flex-col gap-2 py-1 px-3 w-full">

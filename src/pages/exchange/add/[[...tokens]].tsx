@@ -2,7 +2,7 @@ import { ApprovalState, useApproveCallback } from '../../../hooks/useApproveCall
 import { AutoRow, RowBetween } from '../../../components/Row'
 import Button, { ButtonError } from '../../../components/Button'
 import { Currency, CurrencyAmount, Percent, WNATIVE, currencyEquals } from '../../../sdk'
-import { ZERO_PERCENT } from '../../../constants'
+import { getGasPrice, ZERO_PERCENT } from '../../../constants'
 import React, { useCallback, useState } from 'react'
 import TransactionConfirmationModal, { ConfirmationModalContent } from '../../../modals/TransactionConfirmationModal'
 import { calculateGasMargin, calculateSlippageAmount } from '../../../functions/trade'
@@ -40,7 +40,7 @@ import { useTransactionAdder } from '../../../state/transactions/hooks'
 import useTransactionDeadline from '../../../hooks/useTransactionDeadline'
 import { useWalletModalToggle } from '../../../state/application/hooks'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
-import SolarbeamLogo from '../../../components/SolarbeamLogo'
+import EmberswapLogo from '../../../components/EmberswapLogo'
 
 const DEFAULT_ADD_V2_SLIPPAGE_TOLERANCE = new Percent(50, 10_000)
 
@@ -180,11 +180,15 @@ export default function Add() {
     }
 
     setAttemptingTxn(true)
-    await estimate(...args, value ? { value } : {})
+    await estimate(...args, {
+      ...(value ? { value } : {}),
+      gasPrice: getGasPrice(),
+    })
       .then((estimatedGasLimit) => {
         return method(...args, {
           ...(value ? { value } : {}),
           gasLimit: calculateGasMargin(estimatedGasLimit),
+          gasPrice: getGasPrice(),
         }).then((response) => {
           setAttemptingTxn(false)
 
@@ -338,14 +342,14 @@ export default function Add() {
   return (
     <>
       <Head>
-        <title>{i18n._(t`Add Liquidity`)} | Solarbeam</title>
+        <title>{i18n._(t`Add Liquidity`)} | EmberSwap</title>
         <meta
           key="description"
           name="description"
-          content="Add liquidity to the Solarbeam AMM to enable gas optimised and low slippage trades across countless networks"
+          content="Add liquidity to the EmberSwap AMM to enable gas optimised and low slippage trades on SmartBCH"
         />
       </Head>
-      <SolarbeamLogo />
+      <EmberswapLogo />
       <Container id="remove-liquidity-page" maxWidth="2xl" className="space-y-4">
         <DoubleGlowShadow>
           <div className="p-4 space-y-4 rounded bg-dark-900" style={{ zIndex: 1 }}>

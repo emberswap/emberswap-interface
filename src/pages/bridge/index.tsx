@@ -6,7 +6,7 @@ import {
   CurrencyAmount,
   Ether,
   JSBI,
-  Moonriver,
+  BCH,
   NATIVE,
   Token,
   WNATIVE,
@@ -24,7 +24,7 @@ import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import { useLingui } from '@lingui/react'
 import { useMultichainCurrencyBalance, useTokenBalance } from '../../state/wallet/hooks'
 import DoubleGlowShadow from '../../components/DoubleGlowShadow'
-import SolarbeamLogo from '../../components/SolarbeamLogo'
+import EmberswapLogo from '../../components/EmberswapLogo'
 import { BottomGrouping } from '../../features/swap/styleds'
 import Button from '../../components/Button'
 import DualChainCurrencyInputPanel from '../../components/DualChainCurrencyInputPanel'
@@ -117,7 +117,7 @@ export default function Bridge() {
   const [chainFrom, setChainFrom] = useState<Chain | null>(currentChainFrom || DEFAULT_CHAIN_FROM)
 
   const [chainTo, setChainTo] = useState<Chain | null>(
-    chainId == ChainId.MOONRIVER ? DEFAULT_CHAIN_FROM : DEFAULT_CHAIN_TO
+    chainId == ChainId.SMARTBCH ? DEFAULT_CHAIN_FROM : DEFAULT_CHAIN_TO
   )
 
   const [tokenList, setTokenList] = useState<Currency[] | null>([])
@@ -126,7 +126,7 @@ export default function Bridge() {
   const [tokenToBridge, setTokenToBridge] = useState<AvailableChainsInfo | null>(null)
   const currencyContract = useTokenContract(currency0?.isToken && currency0?.address, true)
   const anyswapCurrencyContract = useAnyswapTokenContract(
-    currency0 && currency0.chainId == ChainId.MOONRIVER && tokenToBridge.other.ContractAddress,
+    currency0 && currency0.chainId == ChainId.SMARTBCH && tokenToBridge.other.ContractAddress,
     true
   )
   const [pendingTx, setPendingTx] = useState(false)
@@ -140,7 +140,7 @@ export default function Bridge() {
 
 
   const { data: anyswapInfo, error }: SWRResponse<AnyswapTokensMap, Error> = useSWR(
-    'https://bridgeapi.anyswap.exchange/v2/serverInfo/1285',
+    'https://bridgeapi.anyswap.exchange/v2/serverInfo/10001',
     (url) =>
       fetch(url)
         .then((result) => result.json())
@@ -225,8 +225,8 @@ export default function Bridge() {
       .map((r) => {
         const info: AvailableChainsInfo = anyswapInfo[chainFrom.id][r]
         if (r.toLowerCase() == WNATIVE[chainFrom.id].address.toLowerCase()) {
-          if (chainFrom.id == ChainId.MOONRIVER) {
-            return Moonriver.onChain(chainFrom.id)
+          if (chainFrom.id == ChainId.SMARTBCH) {
+            return BCH.onChain(chainFrom.id)
           }
           if (chainFrom.id == ChainId.BSC) {
             return Binance.onChain(chainFrom.id)
@@ -249,7 +249,7 @@ export default function Bridge() {
       if (chainTo.id == chain.id) {
         changeTo = chainFrom
       }
-      if (changeTo.id !== ChainId.MOONRIVER && chain.id !== ChainId.MOONRIVER) {
+      if (changeTo.id !== ChainId.SMARTBCH && chain.id !== ChainId.SMARTBCH) {
         setChainTo(DEFAULT_CHAIN_TO)
       } else {
         setChainTo(changeTo)
@@ -265,7 +265,7 @@ export default function Bridge() {
       if (chainFrom.id == chain.id) {
         changeFrom = chainTo
       }
-      if (changeFrom.id !== ChainId.MOONRIVER && chain.id !== ChainId.MOONRIVER) {
+      if (changeFrom.id !== ChainId.SMARTBCH && chain.id !== ChainId.SMARTBCH) {
         setChainFrom(DEFAULT_CHAIN_TO)
       } else {
         setChainFrom(changeFrom)
@@ -370,13 +370,13 @@ export default function Bridge() {
 
   const bridgeToken = async () => {
     const token = tokenToBridge.other
-    const depositAddress = currency0.chainId == ChainId.MOONRIVER ? token.ContractAddress : token.DepositAddress
+    const depositAddress = currency0.chainId == ChainId.SMARTBCH ? token.ContractAddress : token.DepositAddress
 
     const amountToBridge = ethers.utils.parseUnits(currencyAmount, token.Decimals)
     setPendingTx(true)
 
     try {
-      if (currency0.chainId == ChainId.MOONRIVER) {
+      if (currency0.chainId == ChainId.SMARTBCH) {
         if (currency0.isNative) {
         } else if (currency0.isToken) {
           const fn = anyswapCurrencyContract?.interface?.getFunction('Swapout')
@@ -433,7 +433,7 @@ export default function Bridge() {
     }
   }
 
-  const anyswapChains = [ChainId.MOONRIVER, ChainId.BSC, ChainId.MAINNET]
+  const anyswapChains = [ChainId.SMARTBCH, ChainId.BSC, ChainId.MAINNET]
   const availableChains = Object.keys(anyswapInfo || {})
     .map((r) => parseInt(r))
     .filter((r) => anyswapChains.includes(r))
@@ -467,11 +467,11 @@ export default function Bridge() {
       </Modal>
 
       <Head>
-        <title>{i18n._(t`Bridge`)} | Solarbeam</title>
+        <title>{i18n._(t`Bridge`)} | EmberSwap</title>
         <meta key="description" name="description" content="Bridge" />
       </Head>
 
-      <SolarbeamLogo />
+      <EmberswapLogo />
 
       <Container maxWidth="2xl" className="space-y-6">
         <DoubleGlowShadow opacity="0.6">
@@ -523,7 +523,7 @@ export default function Bridge() {
             <div className="p-4 text-center">
               <div className="justify-between space-x-3 items-center">
                 <Typography component="h3" variant="base">
-                  {i18n._(t`Bridge tokens to and from the Moonriver Network`)}
+                  {i18n._(t`Bridge tokens to and from the SmartBCH Network`)}
                 </Typography>
               </div>
             </div>

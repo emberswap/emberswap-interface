@@ -10,14 +10,14 @@ export default function NFTLaunchpad(): JSX.Element {
   return (
     <>
       <Head>
-        <title>Eclipse | Solarbeam</title>
-        <meta key="description" name="description" content="Eclipse" />
+        <title>Governance | EmberSwap</title>
+        <meta key="description" name="description" content="Governance" />
       </Head>
 
       <div className="container px-0 mx-auto pb-6">
         <div className={`mb-2 grid grid-cols-12 gap-4`}>
           <div className="flex justify-center items-center col-span-12 lg:justify">
-            <Link href="/eclipse">Coming soon</Link>
+            <Link href="/governance">Coming soon</Link>
           </div>
         </div>
       </div>

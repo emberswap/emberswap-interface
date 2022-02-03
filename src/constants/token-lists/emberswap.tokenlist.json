@@ -1,0 +1,55 @@
+{
+  "name": "EmberSwap List",
+  "timestamp": "2022-02-02T12:15:29.993Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png",
+  "keywords": ["sushiswap", "default"],
+  "tokens": [
+    {
+      "name": "Ember",
+      "address": "0x0b2C58719a2073640BfC390D703eA832057D2543",
+      "symbol": "EMBER",
+      "decimals": 18,
+      "chainId": 10001,
+      "logoURI": "https://incinerate.cash/img/ex_icons/emberswap.png"
+    },
+    {
+      "name": "Wrapped BCH",
+      "address": "0x17F4FCF5b6E0A95D4eE331c8529041896A073F9b",
+      "symbol": "WBCH",
+      "decimals": 18,
+      "chainId": 10001,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0x17F4FCF5b6E0A95D4eE331c8529041896A073F9b/logo.png"
+    },
+    {
+      "name": "Incinerate",
+      "address": "0xDF7bA1eCfE1851D634a2DE0cd7AB1aA6dEC86269",
+      "symbol": "FIRE",
+      "decimals": 18,
+      "chainId": 10001,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0xDF7bA1eCfE1851D634a2DE0cd7AB1aA6dEC86269/logo.png"
+    },
+    {
+      "name": "FlexUSD",
+      "address": "0x638eE360741A331FCdA33D0083068f86FAe741Ed",
+      "symbol": "FLEXUSD",
+      "decimals": 18,
+      "chainId": 10001,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0x638eE360741A331FCdA33D0083068f86FAe741Ed/logo.png"
+    },
+    {
+      "name": "LAW US Dollar",
+      "address": "0x18d2Cd266416E1fBe49aa32DDBA510c5Ddee8882",
+      "symbol": "lawUSD",
+      "decimals": 18,
+      "chainId": 10001,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0xE1E655BE6F50344e6dd708c27BD8D66492d6ecAf/logo.png"
+    }
+    
+  ]
+}

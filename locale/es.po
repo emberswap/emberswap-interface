@@ -59,12 +59,12 @@ msgstr ""
 #~ msgstr "300M+ TVL en Polygon. Enrutamiento optimizado habilitado"
 
 #: src/pages/Yield/minichefv2/InputGroup.tsx:69
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
-#~ msgstr "<0>Consejo:</0> para comenzar a ganar recompensas, primero deberá adquirir algo de SLP agregando liquidez al par especificado o <1>migrando la liquidez existente. </1>Una vez que tenga SLP, puede apostarlo en esta granja de rendimiento para comenzar a ganar recompensas. Retire la apuesta en cualquier momento y luego puede convertir su SLP de nuevo a tokens base haciendo clic en Eliminar liquidez. Haga clic en Cosecha para recibir sus recompensas en cualquier momento."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
+#~ msgstr "<0>Consejo:</0> para comenzar a ganar recompensas, primero deberá adquirir algo de EMBER-LP agregando liquidez al par especificado o <1>migrando la liquidez existente. </1>Una vez que tenga EMBER-LP, puede apostarlo en esta granja de rendimiento para comenzar a ganar recompensas. Retire la apuesta en cualquier momento y luego puede convertir su EMBER-LP de nuevo a tokens base haciendo clic en Eliminar liquidez. Haga clic en Cosecha para recibir sus recompensas en cualquier momento."
 
 #, fuzzy
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
-#~ msgstr "<0>Consejo:</0> para comenzar a ganar recompensas, primero deberá adquirir algo de SLP agregando liquidez al par especificado o <1>migrando la liquidez existente. </1>Una vez que tenga SLP, puede apostarlo en esta granja de rendimiento para comenzar a ganar recompensas. Retire la apuesta en cualquier momento y luego puede convertir su SLP de nuevo a tokens base haciendo clic en Eliminar liquidez. Haga clic en Cosecha para recibir sus recompensas en cualquier momento."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
+#~ msgstr "<0>Consejo:</0> para comenzar a ganar recompensas, primero deberá adquirir algo de EMBER-LP agregando liquidez al par especificado o <1>migrando la liquidez existente. </1>Una vez que tenga EMBER-LP, puede apostarlo en esta granja de rendimiento para comenzar a ganar recompensas. Retire la apuesta en cualquier momento y luego puede convertir su EMBER-LP de nuevo a tokens base haciendo clic en Eliminar liquidez. Haga clic en Cosecha para recibir sus recompensas en cualquier momento."
 
 #: src/pages/RemoveLiquidity/index.tsx:450
 #~ msgid "<0>Tip:</0> Removing pool tokens converts your position back into underlying tokens at the current rate, proportional to your share of the pool. Accrued fees are included in the amounts you receive."
@@ -1512,7 +1512,7 @@ msgstr ""
 #~ msgstr "SAAVE: acumule sus rendimientos en una transacción"
 
 #: src/pages/kashi/borrow/[pair].tsx:244
-msgid "SLP"
+msgid "EMBER-LP"
 msgstr ""
 
 #~ msgid "SUSHI Balance"

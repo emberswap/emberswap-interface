@@ -7,6 +7,7 @@ import { useCurrencyBalance } from '../state/wallet/hooks'
 import { useMemo } from 'react'
 import { useTransactionAdder } from '../state/transactions/hooks'
 import { useWETH9Contract } from './useContract'
+import { getGasPrice } from '../constants'
 
 export enum WrapType {
   NOT_APPLICABLE,
@@ -55,6 +56,7 @@ export default function useWrapCallback(
                 try {
                   const txReceipt = await wethContract.deposit({
                     value: `0x${inputAmount.quotient.toString(16)}`,
+                    gasPrice: getGasPrice(),
                   })
                   addTransaction(txReceipt, {
                     summary: `Wrap ${inputAmount.toSignificant(6)} ${NATIVE[chainId].symbol} to ${
@@ -79,7 +81,9 @@ export default function useWrapCallback(
           sufficientBalance && inputAmount
             ? async () => {
                 try {
-                  const txReceipt = await wethContract.withdraw(`0x${inputAmount.quotient.toString(16)}`)
+                  const txReceipt = await wethContract.withdraw(`0x${inputAmount.quotient.toString(16)}`, {
+                    gasPrice: getGasPrice(),
+                  })
                   addTransaction(txReceipt, {
                     summary: `Unwrap ${inputAmount.toSignificant(6)} ${WNATIVE[chainId].symbol} to ${
                       NATIVE[chainId].symbol

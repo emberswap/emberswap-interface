@@ -58,12 +58,12 @@ msgstr ""
 #~ msgstr "Hơn 300 triệu tổng giá trị bị khóa, TVL, trên Polygon! Đã bật điều hướng được tối ưu hóa"
 
 #: src/pages/Yield/minichefv2/InputGroup.tsx:69
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
-#~ msgstr "<0>Lời khuyên:</0> Để bắt đầu kiếm phần thưởng, trước tiên bạn sẽ cần phải có được một số SLP bằng cách thêm thanh khoản vào cặp được chỉ định hoặc <1>di chuyển thanh khoản hiện có.</1> Sau khi có SLP, bạn có thể đặt cược vào khai thác lợi suất này để bắt đầu kiếm phần thưởng. Hủy đặt cược bất cứ lúc nào và sau đó bạn có thể chuyển đổi SLP của mình trở lại thành token cơ sở bằng cách nhấp vào Xóa tính thanh khoản. Nhấp vào Thu hoạch để nhận phần thưởng bất cứ lúc nào."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive you rewards at any time."
+#~ msgstr "<0>Lời khuyên:</0> Để bắt đầu kiếm phần thưởng, trước tiên bạn sẽ cần phải có được một số EMBER-LP bằng cách thêm thanh khoản vào cặp được chỉ định hoặc <1>di chuyển thanh khoản hiện có.</1> Sau khi có EMBER-LP, bạn có thể đặt cược vào khai thác lợi suất này để bắt đầu kiếm phần thưởng. Hủy đặt cược bất cứ lúc nào và sau đó bạn có thể chuyển đổi EMBER-LP của mình trở lại thành token cơ sở bằng cách nhấp vào Xóa tính thanh khoản. Nhấp vào Thu hoạch để nhận phần thưởng bất cứ lúc nào."
 
 #, fuzzy
-#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some SLP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have SLP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your SLP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
-#~ msgstr "<0>Lời khuyên:</0> Để bắt đầu kiếm phần thưởng, trước tiên bạn sẽ cần phải có được một số SLP bằng cách thêm thanh khoản vào cặp được chỉ định hoặc <1>di chuyển thanh khoản hiện có.</1> Sau khi có SLP, bạn có thể đặt cược vào khai thác lợi suất này để bắt đầu kiếm phần thưởng. Hủy đặt cược bất cứ lúc nào và sau đó bạn có thể chuyển đổi SLP của mình trở lại thành token cơ sở bằng cách nhấp vào Xóa tính thanh khoản. Nhấp vào Thu hoạch để nhận phần thưởng bất cứ lúc nào."
+#~ msgid "<0>Tip:</0> In order to start earning rewards, you will need to first acquire some EMBER-LP by adding liquidity to the specified pair or <1>migrating existing liquidity.</1> Once you have EMBER-LP you can stake it into this yield farm to start earning rewards. Unstake anytime and then you can convert your EMBER-LP back to base tokens by clicking Remove Liquidity. Click Harvest to receive your rewards at any time."
+#~ msgstr "<0>Lời khuyên:</0> Để bắt đầu kiếm phần thưởng, trước tiên bạn sẽ cần phải có được một số EMBER-LP bằng cách thêm thanh khoản vào cặp được chỉ định hoặc <1>di chuyển thanh khoản hiện có.</1> Sau khi có EMBER-LP, bạn có thể đặt cược vào khai thác lợi suất này để bắt đầu kiếm phần thưởng. Hủy đặt cược bất cứ lúc nào và sau đó bạn có thể chuyển đổi EMBER-LP của mình trở lại thành token cơ sở bằng cách nhấp vào Xóa tính thanh khoản. Nhấp vào Thu hoạch để nhận phần thưởng bất cứ lúc nào."
 
 #: src/pages/RemoveLiquidity/index.tsx:450
 #~ msgid "<0>Tip:</0> Removing pool tokens converts your position back into underlying tokens at the current rate, proportional to your share of the pool. Accrued fees are included in the amounts you receive."
@@ -1521,7 +1521,7 @@ msgstr ""
 #~ msgstr "SAAVE: Cộng dồn lợi suất của bạn trong một giao dịch"
 
 #: src/pages/kashi/borrow/[pair].tsx:244
-msgid "SLP"
+msgid "EMBER-LP"
 msgstr ""
 
 #~ msgid "SUSHI Balance"

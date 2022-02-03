@@ -19,7 +19,7 @@ export type LogoProps = {
 const Logo: FC<LogoProps> = ({ srcs, width, height, style, alt = '', className, ...rest }) => {
   const [, refresh] = useState<number>(0)
   let src = srcs.find((src) => !BAD_SRCS[src])
-  src = alt == 'SOLAR' ? '/images/tokens/solar.png' : src
+  src = alt == 'EMBER' ? '/images/tokens/ember.png' : src
   return (
     <div className="rounded" style={{ width, height }}>
       <Image

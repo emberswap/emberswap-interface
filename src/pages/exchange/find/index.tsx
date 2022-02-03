@@ -25,7 +25,7 @@ import { usePairAdder } from '../../../state/user/hooks'
 import { useTokenBalance } from '../../../state/wallet/hooks'
 import Image from 'next/image'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
-import SolarbeamLogo from '../../../components/SolarbeamLogo'
+import EmberswapLogo from '../../../components/EmberswapLogo'
 
 enum Fields {
   TOKEN0 = 0,
@@ -80,11 +80,11 @@ export default function PoolFinder() {
   return (
     <>
       <Head>
-        <title>{i18n._(t`Find Pool`)} | Solarbeam</title>
+        <title>{i18n._(t`Find Pool`)} | EmberSwap</title>
         <meta key="description" name="description" content="Find pool" />
       </Head>
 
-      <SolarbeamLogo />
+      <EmberswapLogo />
 
       <Container maxWidth="2xl" className="space-y-6">
         <DoubleGlowShadow>

@@ -36,7 +36,7 @@ export function useWalletModalToggle(): () => void {
 }
 
 export function useTokenStatsModalToggle(token): () => void {
-  return useToggleModal(token.symbol == 'SOLAR' ? ApplicationModal.SOLAR_STATS : ApplicationModal.MOVR_STATS)
+  return useToggleModal(token.symbol == 'EMBER' ? ApplicationModal.EMBER_STATS : ApplicationModal.BCH_STATS)
 }
 
 export function useYieldDetailsModalToggle(): () => void {

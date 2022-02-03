@@ -13,7 +13,7 @@ import ModalHeader from '../../components/ModalHeader'
 import { RowFixed } from '../../components/Row'
 import { getExplorerLink } from '../../functions/explorer'
 import loadingRollingCircle from '../../animation/loading-rolling-circle.json'
-import solarbeamLoading from '../../animation/solarbeam-loading.json'
+import emberswapLoading from '../../animation/emberswap-loading.json'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import useAddTokenToMetaMask from '../../hooks/useAddTokenToMetaMask'
 import { useLingui } from '@lingui/react'
@@ -36,7 +36,7 @@ export const ConfirmationPendingContent: FC<ConfirmationPendingContentProps> = (
         <CloseIcon onClick={onDismiss} />
       </div>
       <div className="w-24 pb-4 m-auto">
-        <Lottie animationData={solarbeamLoading} autoplay loop />
+        <Lottie animationData={emberswapLoading} autoplay loop />
       </div>
       <div className="flex flex-col items-center justify-center gap-3">
         <div className="text-xl font-bold text-high-emphesis">{i18n._(t`Waiting for Confirmation`)}</div>

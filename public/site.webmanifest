@@ -1,6 +1,6 @@
 {
-    "name": "SolarBeam",
-    "short_name": "SolarBeam",
+    "name": "EmberSwap",
+    "short_name": "EmberSwap",
     "icons": [
         {
             "src": "/android-icon-36x36.png",
@@ -33,7 +33,7 @@
             "type": "image/png"
         }        
     ],
-    "theme_color": "#111",
-    "background_color": "#111",
+    "theme_color": "#1B1F26",
+    "background_color": "#1B1F26",
     "display": "standalone"
 }
