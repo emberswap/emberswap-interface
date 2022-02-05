@@ -38,3 +38,4 @@ describe('parseENSAddress', () => {
         expect(parseENSAddress('only-single--dash.eth')).toEqual(undefined)
     })
 })
+
