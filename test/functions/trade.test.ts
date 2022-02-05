@@ -22,3 +22,4 @@ describe('#calculateGasMargin', () => {
     expect(calculateGasMargin(BigNumber.from(50)).toString()).toEqual('55')
   })
 })
+
