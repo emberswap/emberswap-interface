@@ -25,3 +25,4 @@ describe('#shortenAddress', () => {
         ).toBe('0x2E1b...54CC')
     })
 })
+
