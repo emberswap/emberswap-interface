@@ -14,3 +14,4 @@ export default interface LPToken {
   decimals?: number
   version?: 'v1' | 'v2'
 }
+
