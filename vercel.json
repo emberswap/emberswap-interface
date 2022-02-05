@@ -31,3 +31,4 @@
     { "source": "/migrate/v2", "destination": "/migrate", "permanent": true }
   ]
 }
+
