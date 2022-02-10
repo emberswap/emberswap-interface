@@ -3,4 +3,4 @@ EmberSwap DEX on SmartBCH
 
 ### Whitelisting
 
-Whitelisting requests are submited under [emberswap-tokenlist](https://github.com/emberswap/emberswap-tokenlist) repository.
+Whitelisting requests are submitted under [emberswap-tokenlist](https://github.com/emberswap/emberswap-tokenlist) repository.
