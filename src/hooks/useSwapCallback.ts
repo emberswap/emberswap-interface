@@ -353,7 +353,7 @@ export function useSwapCallback(
               data: calldata,
               // let the wallet try if we can't estimate the gas
               ...('gasEstimate' in bestCallOption ? { gasLimit: calculateGasMargin(bestCallOption.gasEstimate) } : {}),
-              gasPrice: !eip1559 && chainId === ChainId.SMARTBCH ? BigNumber.from('1035000000') : undefined,
+              gasPrice: !eip1559 && chainId === ChainId.SMARTBCH ? BigNumber.from('1050000000') : undefined,
               ...(value && !isZero(value) ? { value } : {}),
             })
             .then((response) => {
