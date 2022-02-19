@@ -7,49 +7,96 @@
     "patch": 0
   },
   "tags": {},
-  "logoURI": "https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png",
+  "logoURI": "https://incinerate.cash/img/ex_icons/ember.png",
   "keywords": ["sushiswap", "default"],
   "tokens": [
     {
       "name": "Ember",
-      "address": "0x0b2C58719a2073640BfC390D703eA832057D2543",
+      "address": "0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D",
       "symbol": "EMBER",
       "decimals": 18,
-      "chainId": 10001,
-      "logoURI": "https://incinerate.cash/img/ex_icons/emberswap.png"
-    },
-    {
-      "name": "Wrapped BCH",
-      "address": "0x17F4FCF5b6E0A95D4eE331c8529041896A073F9b",
-      "symbol": "WBCH",
-      "decimals": 18,
-      "chainId": 10001,
-      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0x17F4FCF5b6E0A95D4eE331c8529041896A073F9b/logo.png"
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D/logo.png"
     },
     {
       "name": "Incinerate",
-      "address": "0xDF7bA1eCfE1851D634a2DE0cd7AB1aA6dEC86269",
+      "address": "0x225FCa2A940cd5B18DFb168cD9B7f921C63d7B6E",
       "symbol": "FIRE",
       "decimals": 18,
-      "chainId": 10001,
-      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0xDF7bA1eCfE1851D634a2DE0cd7AB1aA6dEC86269/logo.png"
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x225FCa2A940cd5B18DFb168cD9B7f921C63d7B6E/logo.png"
+    },
+    {
+      "name": "Wrapped BCH",
+      "address": "0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04",
+      "symbol": "WBCH",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04/logo.png"
     },
     {
       "name": "FlexUSD",
-      "address": "0x638eE360741A331FCdA33D0083068f86FAe741Ed",
+      "address": "0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72",
       "symbol": "FLEXUSD",
       "decimals": 18,
-      "chainId": 10001,
-      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0x638eE360741A331FCdA33D0083068f86FAe741Ed/logo.png"
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72/logo.png"
     },
     {
       "name": "LAW US Dollar",
-      "address": "0x18d2Cd266416E1fBe49aa32DDBA510c5Ddee8882",
+      "address": "0xE1E655BE6F50344e6dd708c27BD8D66492d6ecAf",
       "symbol": "lawUSD",
       "decimals": 18,
-      "chainId": 10001,
+      "chainId": 10000,
       "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0xE1E655BE6F50344e6dd708c27BD8D66492d6ecAf/logo.png"
+    },
+    {
+      "name": "LAW",
+      "address": "0x0b00366fBF7037E9d75E4A569ab27dAB84759302",
+      "symbol": "LAW",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0x0b00366fBF7037E9d75E4A569ab27dAB84759302/logo.png"
+    },
+    {
+      "name": "CashCats",
+      "address": "0x265bD28d79400D55a1665707Fa14A72978FA6043",
+      "symbol": "$CATS",
+      "decimals": 2,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0x265bD28d79400D55a1665707Fa14A72978FA6043/logo.png"
+    },
+    {
+      "name": "Celery",
+      "address": "0x7642Df81b5BEAeEb331cc5A104bd13Ba68c34B91",
+      "symbol": "CLY",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0x7642Df81b5BEAeEb331cc5A104bd13Ba68c34B91/logo.png"
+    },
+    {
+      "name": "FLEX Coin",
+      "address": "0x98Dd7eC28FB43b3C4c770AE532417015fa939Dd3",
+      "symbol": "FLEX",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0x98Dd7eC28FB43b3C4c770AE532417015fa939Dd3/logo.png"
+    },
+    {
+      "name": "Smart BUSD",
+      "address": "0x9288df32951386A8254aEaF80a66B78cCaf75b82",
+      "symbol": "sBUSD",
+      "decimals": 2,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0x9288df32951386A8254aEaF80a66B78cCaf75b82/logo.png"
+    },
+    {
+      "name": "BCHPad",
+      "address": "0x9192940099fDB2338B928DE2cad9Cd1525fEa881",
+      "symbol": "BPAD",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0x9192940099fDB2338B928DE2cad9Cd1525fEa881/logo.png"
     }
-    
   ]
 }

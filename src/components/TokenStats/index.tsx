@@ -18,7 +18,7 @@ const supportedTokens = {
     symbol: 'EMBER',
     icon: '/images/tokens/ember.png',
     address: {
-      [ChainId.SMARTBCH]: '0x0b2C58719a2073640BfC390D703eA832057D2543',
+      [ChainId.SMARTBCH]: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
     },
   },
 }

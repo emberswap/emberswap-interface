@@ -65,7 +65,7 @@ function combineMaps(map1: TokenAddressMap, map2: TokenAddressMap): TokenAddress
     79377087078960: { ...map1[79377087078960], ...map2[79377087078960] }, // arbitrum testnet
     1287: { ...map1[1287], ...map2[1287] }, // moonbase
     1285: { ...map1[1285], ...map2[1285] }, // moonriver
-    10001: { ...map1[10001], ...map2[10001] }, // smartbch
+    10000: { ...map1[10000], ...map2[10000] }, // smartbch
     128: { ...map1[128], ...map2[128] }, // heco
     256: { ...map1[256], ...map2[256] }, // heco testnet
     43114: { ...map1[43114], ...map2[43114] }, // avax mainnet

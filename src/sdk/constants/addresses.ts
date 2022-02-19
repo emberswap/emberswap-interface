@@ -30,7 +30,7 @@ export const FACTORY_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.PALM]: '',
   [ChainId.PALM_TESTNET]: '',
   [ChainId.MOONRIVER]: '0x049581aEB6Fe262727f290165C29BDAB065a1B68',
-  [ChainId.SMARTBCH]: '0xB72c1F953cCa7a4b2c22d696AbC5d23552714c18',
+  [ChainId.SMARTBCH]: '0xE62983a68679834eD884B9673Fb6aF13db740fF0',
 }
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
@@ -63,7 +63,7 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.PALM]: '',
   [ChainId.PALM_TESTNET]: '',
   [ChainId.MOONRIVER]: '0xAA30eF758139ae4a7f798112902Bf6d65612045f',
-  [ChainId.SMARTBCH]: '0xCDF845157D3fE9b6148CFA40Cf122316D5698a85',
+  [ChainId.SMARTBCH]: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
 }
 
 export const SUSHI_ADDRESS: { [chainId in ChainId]: string } = {

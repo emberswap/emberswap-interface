@@ -124,7 +124,7 @@ function MyApp({
         <meta key="twitter:url" name="twitter:url" content="https://emberswap.com" />
         <meta key="twitter:description" name="twitter:description" content="EmberSwap - AMM on SmartBCH." />
         <meta key="twitter:image" name="twitter:image" content="https://incinerate.cash/img/ex_icons/emberswap.png" />
-        <meta key="twitter:creator" name="twitter:creator" content="@incinerate_cash" />
+        <meta key="twitter:creator" name="twitter:creator" content="@EmberSwapDEX" />
         <meta key="og:type" property="og:type" content="website" />
         <meta key="og:site_name" property="og:site_name" content="EmberSwap App" />
         <meta key="og:url" property="og:url" content="https://emberswap.com" />

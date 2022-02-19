@@ -34,11 +34,11 @@ export const RPC = {
   [ChainId.OKEX_TESTNET]: 'https://exchaintestrpc.okex.org',
   [ChainId.ARBITRUM]: 'https://arb1.arbitrum.io/rpc',
   [ChainId.MOONRIVER]: 'https://moonriver-api.bwarelabs.com/0e63ad82-4f98-46f9-8496-f75657e3a8e4', //'https://moonriver.api.onfinality.io/public',
-  [ChainId.SMARTBCH]: 'http://35.220.203.194:8545', //'https://moeing.tech:9545',
+  [ChainId.SMARTBCH]: 'https://smartbch.fountainhead.cash/mainnet', //'https://smartbch.greyh.at',
 }
 
 export const network = new NetworkConnector({
-  defaultChainId: 10001,
+  defaultChainId: 10000,
   urls: RPC,
 })
 
@@ -64,7 +64,7 @@ export const injected = new InjectedConnector({
     // 97, // binance smart chain testnet
     // 1287, // moonbase
     // 1285, // moonriver
-    10001, // smartbch
+    10000, // smartbch
     // 43114, // avalanche
     // 43113, // fuji
     // 128, // heco
@@ -95,7 +95,7 @@ export const bridgeInjected = new InjectedConnector({
     // 97, // binance smart chain testnet
     // 1287, // moonbase
     // 1285, // moonriver
-    10001, // smartbch
+    10000, // smartbch
     // 43114, // avalanche
     // 43113, // fuji
     // 128, // heco

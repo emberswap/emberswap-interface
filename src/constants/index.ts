@@ -21,7 +21,7 @@ export const RPC = {
   [ChainId.BSC_TESTNET]: 'https://data-seed-prebsc-2-s3.binance.org:8545',
   [ChainId.MOONBEAM_TESTNET]: 'https://rpc.testnet.moonbeam.network',
   [ChainId.MOONRIVER]: 'https://moonriver-api.bwarelabs.com/0e63ad82-4f98-46f9-8496-f75657e3a8e', //'https://moonriver.api.onfinality.io/public',
-  [ChainId.SMARTBCH]: 'https://moeing.tech:9545', //'https://moeing.tech:9545',
+  [ChainId.SMARTBCH]: 'https://smartbch.greyh.at', //'https://smartbch.greyh.at',
   [ChainId.AVALANCHE]: 'https://api.avax.network/ext/bc/C/rpc',
   [ChainId.AVALANCHE_TESTNET]: 'https://api.avax-test.network/ext/bc/C/rpc',
   [ChainId.HECO]: 'https://http-mainnet.hecochain.com',
@@ -225,7 +225,7 @@ export const DEFAULT_ARCHER_GAS_PRICES: BigNumber[] = [
 ]
 
 export function getGasPrice(): BigNumber {
-  return BigNumber.from(1025000000)
+  return BigNumber.from(1050000000)
 }
 
 // default miner tip, equal to median gas price * default gas estimate

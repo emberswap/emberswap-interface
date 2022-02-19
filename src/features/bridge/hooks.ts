@@ -35,5 +35,5 @@ const useAsync = (asyncFunction, immediate = true) => {
 }
 
 export function useBridgeInfo() {
-  return useAsync(() => Promise.all([axios.get('https://bridgeapi.anyswap.exchange/v2/serverInfo/10001')]))
+  return useAsync(() => Promise.all([axios.get('https://bridgeapi.anyswap.exchange/v2/serverInfo/10000')]))
 }

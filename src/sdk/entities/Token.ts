@@ -198,7 +198,7 @@ export const WETH9: { [chainId: number]: Token } = {
   ),
   [ChainId.SMARTBCH]: new Token(
     ChainId.SMARTBCH,
-    '0x17F4FCF5b6E0A95D4eE331c8529041896A073F9b',
+    '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04',
     18,
     'WBCH',
     'Wrapped BCH'
@@ -348,7 +348,7 @@ export const WNATIVE: { [chainId: number]: Token } = {
   ),
   [ChainId.SMARTBCH]: new Token(
     ChainId.SMARTBCH,
-    '0x17F4FCF5b6E0A95D4eE331c8529041896A073F9b',
+    '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04',
     18,
     'WBCH',
     'Wrapped BCH'

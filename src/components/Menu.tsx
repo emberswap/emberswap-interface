@@ -36,7 +36,7 @@ const items = (i18n: I18n) => [
   {
     name: i18n._(t`Twitter`),
     description: i18n._(t`Follow us on Twitter`),
-    href: 'https://twitter.com/incinerate_cash',
+    href: 'https://twitter.com/EmberSwapDEX',
     external: true,
   },
   {

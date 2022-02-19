@@ -139,14 +139,14 @@ export const SUPPORTED_NETWORKS: {
   //   blockExplorerUrls: ['https://mainnet-arb-explorer.netlify.app'],
   // },
   [ChainId.SMARTBCH]: {
-    chainId: '0x2711',
-    chainName: 'SmartBCH Testnet',
+    chainId: '0x2710',
+    chainName: 'SmartBCH',
     nativeCurrency: {
       name: 'BCH',
       symbol: 'BCH',
       decimals: 18,
     },
-    rpcUrls: ['http://35.220.203.194:8545','https://moeing.tech:9545'],
+    rpcUrls: ['https://smartbch.fountainhead.cash/mainnet','https://smartbch.greyh.at'],
     blockExplorerUrls: ['https://smartscan.cash/'],
   },
 }

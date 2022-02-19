@@ -4,7 +4,7 @@ import pairAbi from '../../constants/abis/uniswap-v2-pair.json'
 import { POOLS } from '../../constants/farms'
 import { ChainId } from '../../sdk'
 
-const NETWORK_URL = 'http://35.220.203.194:8545'
+const NETWORK_URL = 'https://smartbch.fountainhead.cash/mainnet'
 const web3 = new Web3(NETWORK_URL)
 
 export default async function handler(req, res) {
@@ -16,7 +16,7 @@ let farmsResult = null
 
 export async function farms() {
   if (!farmsResult) {
-    let distributorContract = new web3.eth.Contract(distributorAbi, '0x0cf19C89e1F3d20B28dAB683EeE6C1cBf3B6c828')
+    let distributorContract = new web3.eth.Contract(distributorAbi, '0x8ecb32C33AB3f7ee3D6Ce9D4020bC53fecB36Be9')
     const poolLength = await distributorContract.methods.poolLength().call()
 
     const forHelper = []
@@ -58,7 +58,7 @@ export async function farms() {
           lpContract.methods.totalSupply().call(),
           lpContract.methods.token0().call(),
           lpContract.methods.token1().call(),
-          lpContract.methods.balanceOf('0x0cf19C89e1F3d20B28dAB683EeE6C1cBf3B6c828').call(),
+          lpContract.methods.balanceOf('0x8ecb32C33AB3f7ee3D6Ce9D4020bC53fecB36Be9').call(),
         ]
 
         const [reserves, totalSupply, token0, token1, distributorBalance] = await Promise.all(promisesCall)

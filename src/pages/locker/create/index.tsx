@@ -352,7 +352,7 @@ export default function CreateLocker(): JSX.Element {
                     <div className="mb-2 text-2xl text-emphesis">{i18n._(t`Considerations`)}</div>{' '}
                     <div className="mb-4 text-base text-secondary">
                       <p>{i18n._(t`- You will not be able to withdraw your tokens before the unlock time`)}</p>
-                      <p>{i18n._(t`- Locker contract address: ${LOCKER_ADDRESS[chainId || 10001]}`)}</p>
+                      <p>{i18n._(t`- Locker contract address: ${LOCKER_ADDRESS[chainId || 10000]}`)}</p>
                       <p>{i18n._(t`- Always DYOR`)}</p>
                     </div>
                   </div>

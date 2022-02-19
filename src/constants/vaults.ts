@@ -26,9 +26,9 @@ export const VAULTS: AddressMap = {
   [ChainId.SMARTBCH]: {
     '0': {
       id: 0,
-      lpToken: '0x0b2C58719a2073640BfC390D703eA832057D2543',
+      lpToken: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
       token0: {
-        id: '0x0b2C58719a2073640BfC390D703eA832057D2543',
+        id: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
         name: 'Ember',
         symbol: 'EMBER',
         decimals: 18,
@@ -36,9 +36,9 @@ export const VAULTS: AddressMap = {
     },
     '1': {
       id: 1,
-      lpToken: '0x0b2C58719a2073640BfC390D703eA832057D2543',
+      lpToken: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
       token0: {
-        id: '0x0b2C58719a2073640BfC390D703eA832057D2543',
+        id: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
         name: 'Ember',
         symbol: 'EMBER',
         decimals: 18,
@@ -46,9 +46,9 @@ export const VAULTS: AddressMap = {
     },
     '2': {
       id: 2,
-      lpToken: '0x0b2C58719a2073640BfC390D703eA832057D2543',
+      lpToken: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
       token0: {
-        id: '0x0b2C58719a2073640BfC390D703eA832057D2543',
+        id: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
         name: 'Ember',
         symbol: 'EMBER',
         decimals: 18,
@@ -56,9 +56,9 @@ export const VAULTS: AddressMap = {
     },
     '3': {
       id: 3,
-      lpToken: '0x0b2C58719a2073640BfC390D703eA832057D2543',
+      lpToken: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
       token0: {
-        id: '0x0b2C58719a2073640BfC390D703eA832057D2543',
+        id: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
         name: 'Ember',
         symbol: 'EMBER',
         decimals: 18,
@@ -66,9 +66,9 @@ export const VAULTS: AddressMap = {
     },
     '4': {
       id: 4,
-      lpToken: '0x0b2C58719a2073640BfC390D703eA832057D2543',
+      lpToken: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
       token0: {
-        id: '0x0b2C58719a2073640BfC390D703eA832057D2543',
+        id: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
         name: 'Ember',
         symbol: 'EMBER',
         decimals: 18,

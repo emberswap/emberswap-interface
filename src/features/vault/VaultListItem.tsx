@@ -45,7 +45,7 @@ const VaultListItem = ({ farm, ...rest }) => {
       decimals = farm.pair.token0?.decimals
     } else if (farm.lpToken.toLowerCase() == WNATIVE[chainId].toLowerCase()) {
       lpPrice = bchPrice
-    } else if (farm.lpToken.toLowerCase() == '0xDF7bA1eCfE1851D634a2DE0cd7AB1aA6dEC86269'.toLowerCase()) {
+    } else if (farm.lpToken.toLowerCase() == '0x225FCa2A940cd5B18DFb168cD9B7f921C63d7B6E'.toLowerCase()) {
       lpPrice = firePrice
     } else {
       lpPrice = pairPrice
