@@ -314,7 +314,7 @@ export function useBCHPrice() {
 
 export function useEmberPrice() {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  return usePrice(useEmberBCHContract(), 0, false)
+  return usePrice(useEmberBCHContract(), 0, true)
 }
 
 export function useFirePrice() {
