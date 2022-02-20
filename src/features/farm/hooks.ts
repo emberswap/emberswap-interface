@@ -329,7 +329,7 @@ export function useBNBPrice() {
 
 export function useEmberDistributorInfo(contract) {
   const emberPerSec = useSingleCallResult(contract ? contract : null, 'emberPerSec', undefined, NEVER_RELOAD)
-    ?.result?.[0]
+    ?.result?.[0] * 5.5
 
   const totalAllocPoint = useSingleCallResult(contract ? contract : null, 'totalAllocPoint', undefined, NEVER_RELOAD)
     ?.result?.[0]
