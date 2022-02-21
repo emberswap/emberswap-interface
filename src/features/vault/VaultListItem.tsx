@@ -64,7 +64,7 @@ const VaultListItem = ({ farm, ...rest }) => {
       return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
     }, 0) / tvl
 
-  const roiPerHour = roiPerBlock * farm.blocksPerHour / 2
+  const roiPerHour = roiPerBlock * farm.blocksPerHour
   const roiPerDay = roiPerHour * 24
   const roiPerMonth = roiPerDay * 30
   const roiPerYear = roiPerDay * 365
