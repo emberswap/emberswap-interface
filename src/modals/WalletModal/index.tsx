@@ -181,7 +181,6 @@ export default function WalletModal({
           return null
         }
 
-        if (!window.web3 && !window.ethereum && option.mobile) {
           return (
             <Option
               onClick={() => {
@@ -197,8 +196,6 @@ export default function WalletModal({
               icon={'/images/wallets/' + option.iconName}
             />
           )
-        }
-        return null
       }
 
       // overwrite injected when needed
