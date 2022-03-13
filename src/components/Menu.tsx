@@ -40,6 +40,12 @@ const items = (i18n: I18n) => [
     external: true,
   },
   {
+    name: i18n._(t`Disperse`),
+    description: i18n._(t`Distribute BCH or tokens to multiple addresses`),
+    href: 'https://disperse.emberswap.com',
+    external: true,
+  },
+  {
     name: i18n._(t`Home`),
     description: i18n._(t`Hosted by the Incinerate Protocol`),
     href: 'https://incinerate.cash',

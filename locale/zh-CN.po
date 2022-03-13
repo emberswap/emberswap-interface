@@ -706,6 +706,16 @@ msgstr "Discord"
 msgid "Dismiss"
 msgstr "解散"
 
+#: src/components/Header/More.tsx:44
+#: src/components/Menu.tsx:43
+msgid "Disperse"
+msgstr ""
+
+#: src/components/Header/More.tsx:45
+#: src/components/Menu.tsx:44
+msgid "Distribute BCH or tokens to multiple addresses"
+msgstr ""
+
 #: src/components/Header/More.tsx:14
 #: src/components/Menu.tsx:13
 msgid "Docs"
@@ -1021,13 +1031,13 @@ msgstr "收获 {0} EMBER"
 msgid "History"
 msgstr ""
 
-#: src/components/Header/More.tsx:44
-#: src/components/Menu.tsx:43
+#: src/components/Header/More.tsx:50
+#: src/components/Menu.tsx:49
 msgid "Home"
 msgstr ""
 
-#: src/components/Header/More.tsx:45
-#: src/components/Menu.tsx:44
+#: src/components/Header/More.tsx:51
+#: src/components/Menu.tsx:50
 msgid "Hosted by the Incinerate Protocol"
 msgstr ""
 
