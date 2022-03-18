@@ -17,6 +17,9 @@ import {
 } from '../constants/abis/argent-wallet-detector'
 import { BAR_ADDRESS, ChainId, MAKER_ADDRESS, MASTERCHEF_ADDRESS, SUSHI_ADDRESS, TIMELOCK_ADDRESS } from '../sdk'
 import {
+  ENS_REGISTRAR_ADDRESS,
+} from '@mistswapdex/sdk'
+import {
   BENTOBOX_ADDRESS,
   BORING_HELPER_ADDRESS,
   CHAINLINK_ORACLE_ADDRESS,
@@ -134,6 +137,10 @@ export function useENSRegistrarContract(withSignerIfPossible?: boolean): Contrac
       case ChainId.ROPSTEN:
       case ChainId.RINKEBY:
         address = '0x00000000000C2E074eC69A0dFb2997BA6C7d2e1e'
+        break
+      case ChainId.SMARTBCH:
+      case ChainId.SMARTBCH_AMBER:
+        address = ENS_REGISTRAR_ADDRESS[chainId]
         break
     }
   }

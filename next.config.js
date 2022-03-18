@@ -18,7 +18,7 @@ module.exports = withBundleAnalyzer(
       disable: true,
     },
     images: {
-      domains: ['emberswap.com', 'incinerate.cash', 'marketcap.cash', 'res.cloudinary.com', 'raw.githubusercontent.com', 'logos.covalenthq.com'],
+      domains: ['emberswap.com', 'incinerate.cash', 'marketcap.cash', 'res.cloudinary.com', 'raw.githubusercontent.com', 'logos.covalenthq.com', 'metadata.bch.domains'],
     },
     reactStrictMode: true,
     serverRuntimeConfig: {

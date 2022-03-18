@@ -291,6 +291,11 @@ export const EIP_1559_ACTIVATION_BLOCK: { [chainId in ChainId]?: number } = {
   [ChainId.RINKEBY]: 8897988,
 }
 
+export const LNS_METADATA_URL: { [chainId in ChainId]?: string } = {
+  [ChainId.SMARTBCH]: 'https://metadata.bch.domains/smartbch',
+  [ChainId.SMARTBCH_AMBER]: 'https://metadata.bch.domains/smartbch-amber',
+}
+
 export * from './routing'
 export * from './addresses'
 export * from './tokens'

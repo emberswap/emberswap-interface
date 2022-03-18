@@ -1,11 +1,11 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState } from 'react'
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../../connectors'
 import { isTransactionRecent, useAllTransactions } from '../../state/transactions/hooks'
 
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import Image from 'next/image'
 import Loader from '../Loader'
-import { BridgeContextName, NetworkContextName } from '../../constants'
+import { BridgeContextName, LNS_METADATA_URL, NetworkContextName } from '../../constants'
 import { TransactionDetails } from '../../state/transactions/reducer'
 import WalletModal from '../../modals/WalletModal'
 import Web3Connect from '../Web3Connect'
@@ -79,13 +79,19 @@ function StatusIcon({ connector }: { connector: AbstractConnector }) {
   return null
 }
 
+const BAD_AVATAR_SRCS: { [tokenAddress: string]: true } = {}
+
 function Web3StatusInner() {
   const { i18n } = useLingui()
-  const { account, connector } = useWeb3React()
+  const { account, chainId, connector } = useWeb3React()
   const { account: bridgeAccount } = useWeb3React(BridgeContextName)
   const { route } = useRouter()
 
   const { ENSName } = useENSName(account ?? undefined)
+
+  const [, avatarRefresh] = useState<number>(0)
+  const avatarSrcs = [`${LNS_METADATA_URL[chainId]}/avatar/${ENSName}`]
+  const avatarSrc = avatarSrcs.find((src) => !BAD_AVATAR_SRCS[src]) || '/chef.svg'
 
   const allTransactions = useAllTransactions()
 
@@ -124,7 +130,7 @@ function Web3StatusInner() {
       return (
         <div
           id="web3-status-connected"
-          className="flex items-center px-3 py-2 text-bold rounded-lg bg-transparent text-sm"
+          className="flex items-center px-3 py-2 text-bold rounded-lg text-sm bg-dark-800 shadow-sm hover:bg-dark-700"
           onClick={toggleWalletModal}
         >
           {hasPendingTransactions ? (
@@ -135,8 +141,19 @@ function Web3StatusInner() {
               <Loader stroke="white" />
             </div>
           ) : (
-            <div className="mr-2">{ENSName || shortenAddress(account)}</div>
-          )}
+          <div className="flex items-center gap-2">
+            <Image
+              src={avatarSrc}
+              onError={() => {
+                if (avatarSrc) BAD_AVATAR_SRCS[avatarSrc] = true
+                avatarRefresh((i) => i + 1)
+              }}
+              alt="Chef"
+              width={20}
+              height={20}
+            />
+            <div>{ENSName || shortenAddress(account)}</div>
+          </div>          )}
           {/* {!hasPendingTransactions && connector && <StatusIcon connector={connector} />} */}
         </div>
       )
