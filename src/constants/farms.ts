@@ -295,5 +295,39 @@ export const POOLS: AddressMap = {
       name: 'Ember-LP',
       symbol: 'EMBER-LP',
     },
+    '0x06Bb1466D3146D2A0c01c866F5371444b655E26e': {
+      id: 16,
+      token0: {
+        id: '0x6732E55Ac3ECa734F54C26Bd8DF4eED52Fb79a6E',
+        name: 'Joystick.club',
+        symbol: 'JOY',
+        decimals: 18,
+      },
+      token1: {
+        id: '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04',
+        name: 'BCH',
+        symbol: 'BCH',
+        decimals: 18,
+      },
+      name: 'Ember-LP',
+      symbol: 'EMBER-LP',
+    },
+    '0x2006661B99Eaee057604f30B83bBDfCa6908bA3c': {
+      id: 17,
+      token0: {
+        id: '0xe11829a7d5d8806bb36e118461a1012588fafd89',
+        name: 'SPICE',
+        symbol: 'SPICE',
+        decimals: 18,
+      },
+      token1: {
+        id: '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04',
+        name: 'BCH',
+        symbol: 'BCH',
+        decimals: 18,
+      },
+      name: 'Ember-LP',
+      symbol: 'EMBER-LP',
+    },
   },
 }
