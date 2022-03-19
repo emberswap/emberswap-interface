@@ -1558,7 +1558,7 @@ msgstr "支付"
 msgid "Pay from:"
 msgstr "支付自"
 
-#: src/components/Web3Status/index.tsx:133
+#: src/components/Web3Status/index.tsx:137
 msgid "Pending"
 msgstr "处理中"
 

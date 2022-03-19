@@ -144,6 +144,7 @@
     ]
   },
   "dependencies": {
+    "@mistswapdex/sdk": "^0.0.15",
     "@types/big.js": "^6.1.1",
     "axios": "^0.21.1",
     "big.js": "^6.1.1",

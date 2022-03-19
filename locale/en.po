@@ -1667,7 +1667,7 @@ msgstr "Pay"
 msgid "Pay from:"
 msgstr "Pay from:"
 
-#: src/components/Web3Status/index.tsx:133
+#: src/components/Web3Status/index.tsx:137
 msgid "Pending"
 msgstr "Pending"
 
