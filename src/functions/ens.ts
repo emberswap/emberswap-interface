@@ -1,7 +1,6 @@
 import { Contract } from '@ethersproject/contracts'
 import { Provider } from '@ethersproject/abstract-provider'
 import { namehash } from 'ethers/lib/utils'
-import { ENS_REGISTRAR_ADDRESS } from '@mistswapdex/sdk'
 
 const REGISTRAR_ABI = [
   {
@@ -24,6 +23,8 @@ const REGISTRAR_ABI = [
     type: 'function',
   },
 ]
+const REGISTRAR_ADDRESS = '0xCfb86556760d03942EBf1ba88a9870e67D77b627'
+
 
 const RESOLVER_ABI = [
   {
@@ -60,8 +61,7 @@ function resolverContract(resolverAddress: string, provider: Provider): Contract
  * @param provider provider to use to fetch the data
  */
 export async function resolveENSContentHash(ensName: string, provider: Provider): Promise<string> {
-  const chainId = (await provider.getNetwork()).chainId
-  const ensRegistrarContract = new Contract(ENS_REGISTRAR_ADDRESS[chainId], REGISTRAR_ABI, provider)  
+  const ensRegistrarContract = new Contract(REGISTRAR_ADDRESS, REGISTRAR_ABI, provider)
   const hash = namehash(ensName)
   const resolverAddress = await ensRegistrarContract.resolver(hash)
   return resolverContract(resolverAddress, provider).contenthash(hash)

@@ -12,9 +12,6 @@ import {
   ZAPPER_ADDRESS,
 } from '../constants/addresses'
 import {
-  ENS_REGISTRAR_ADDRESS,
-} from '@mistswapdex/sdk'
-import {
   ARGENT_WALLET_DETECTOR_ABI,
   ARGENT_WALLET_DETECTOR_MAINNET_ADDRESS,
 } from '../constants/abis/argent-wallet-detector'
@@ -137,7 +134,7 @@ export function useENSRegistrarContract(withSignerIfPossible?: boolean): Contrac
       case ChainId.ROPSTEN:
       case ChainId.RINKEBY:
       case ChainId.SMARTBCH:
-        address = ENS_REGISTRAR_ADDRESS[chainId]
+        address = '0xCfb86556760d03942EBf1ba88a9870e67D77b627'
         break
     }
   }
