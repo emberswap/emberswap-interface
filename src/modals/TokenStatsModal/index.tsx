@@ -79,7 +79,7 @@ export default function TokenStatsModal({ token }: { token: any }) {
 
   if (token.symbol == 'BCH') tokenInfo = { circulatingSupply: '19000000', burnt: '0', totalSupply: '0', vaults: '0' }
 
-  const price = formatNumberScale(priceData?.[token.symbol.toLowerCase()], true, 2)
+  const price = formatNumberScale(priceData?.[token.symbol.toLowerCase()], true, 3)
 
   const modalOpen = useModalOpen(token.symbol == 'EMBER' ? ApplicationModal.EMBER_STATS : ApplicationModal.BCH_STATS)
 

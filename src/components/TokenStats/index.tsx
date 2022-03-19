@@ -45,7 +45,7 @@ function TokenStatusInner({ token }) {
         />
       )}
       <div className="px-3 py-2 text-primary text-bold">
-        {formatNumberScale(priceData?.[token.symbol.toLowerCase()], true, 2)}
+        {formatNumberScale(priceData?.[token.symbol.toLowerCase()], true, 3)}
       </div>
     </div>
   )
