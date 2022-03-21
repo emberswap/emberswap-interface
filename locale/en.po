@@ -261,7 +261,7 @@ msgstr "Approve Limit Order"
 #: src/features/limit-order/LimitOrderButton.tsx:160
 #: src/pages/exchange/add/[[...tokens]].tsx:464
 #: src/pages/exchange/add/[[...tokens]].tsx:481
-#: src/pages/exchange/swap/[[...tokens]].tsx:536
+#: src/pages/exchange/swap/[[...tokens]].tsx:535
 msgid "Approve {0}"
 msgstr "Approve {0}"
 
@@ -1180,7 +1180,7 @@ msgstr "Input is estimated. You will sell at most"
 #~ msgid "Insufficient WETH balance"
 #~ msgstr "Insufficient WETH balance"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:521
+#: src/pages/exchange/swap/[[...tokens]].tsx:520
 msgid "Insufficient liquidity for this trade"
 msgstr "Insufficient liquidity for this trade"
 
@@ -1755,12 +1755,12 @@ msgstr "Powered by Anyswap Network"
 msgid "Price Impact"
 msgstr "Price Impact"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:566
+#: src/pages/exchange/swap/[[...tokens]].tsx:565
 msgid "Price Impact High"
 msgstr "Price Impact High"
 
 #: src/features/swap/SwapModalFooter.tsx:113
-#: src/pages/exchange/swap/[[...tokens]].tsx:595
+#: src/pages/exchange/swap/[[...tokens]].tsx:594
 msgid "Price Impact Too High"
 msgstr "Price Impact Too High"
 
@@ -2090,14 +2090,14 @@ msgstr "Supplying {0} {1} and {2} {3}"
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/Header/index.tsx:35
 #: src/components/Header/index.tsx:155
-#: src/pages/exchange/swap/[[...tokens]].tsx:569
-#: src/pages/exchange/swap/[[...tokens]].tsx:598
+#: src/pages/exchange/swap/[[...tokens]].tsx:568
+#: src/pages/exchange/swap/[[...tokens]].tsx:597
 msgid "Swap"
 msgstr "Swap"
 
 #: src/features/swap/SwapModalFooter.tsx:115
-#: src/pages/exchange/swap/[[...tokens]].tsx:568
-#: src/pages/exchange/swap/[[...tokens]].tsx:597
+#: src/pages/exchange/swap/[[...tokens]].tsx:567
+#: src/pages/exchange/swap/[[...tokens]].tsx:596
 msgid "Swap Anyway"
 msgstr "Swap Anyway"
 
@@ -2314,7 +2314,7 @@ msgstr "Transaction deadline"
 #~ msgid "Transactions"
 #~ msgstr "Transactions"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:522
+#: src/pages/exchange/swap/[[...tokens]].tsx:521
 msgid "Try enabling multi-hop trades"
 msgstr "Try enabling multi-hop trades"
 
@@ -2348,11 +2348,11 @@ msgstr "Unstake"
 #~ msgstr "Unstaked"
 
 #: src/pages/exchange/add/[[...tokens]].tsx:434
-#: src/pages/exchange/swap/[[...tokens]].tsx:500
+#: src/pages/exchange/swap/[[...tokens]].tsx:499
 msgid "Unsupported Asset"
 msgstr "Unsupported Asset"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:516
+#: src/pages/exchange/swap/[[...tokens]].tsx:515
 msgid "Unwrap"
 msgstr "Unwrap"
 
@@ -2513,7 +2513,7 @@ msgstr "Withdraw from locker {id}"
 #~ msgid "Withdraw {assetSymbol}"
 #~ msgstr "Withdraw {assetSymbol}"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:514
+#: src/pages/exchange/swap/[[...tokens]].tsx:513
 msgid "Wrap"
 msgstr "Wrap"
 

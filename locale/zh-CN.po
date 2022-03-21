@@ -258,7 +258,7 @@ msgstr "授权限价订单"
 #: src/features/limit-order/LimitOrderButton.tsx:160
 #: src/pages/exchange/add/[[...tokens]].tsx:464
 #: src/pages/exchange/add/[[...tokens]].tsx:481
-#: src/pages/exchange/swap/[[...tokens]].tsx:536
+#: src/pages/exchange/swap/[[...tokens]].tsx:535
 msgid "Approve {0}"
 msgstr "批准{0}"
 
@@ -1097,7 +1097,7 @@ msgstr "预估输入 你最多卖出"
 #~ msgid "Insufficient WETH balance"
 #~ msgstr "WETH余额不足"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:521
+#: src/pages/exchange/swap/[[...tokens]].tsx:520
 msgid "Insufficient liquidity for this trade"
 msgstr "该交易的流动性不足"
 
@@ -1639,12 +1639,12 @@ msgstr ""
 msgid "Price Impact"
 msgstr "价格影响"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:566
+#: src/pages/exchange/swap/[[...tokens]].tsx:565
 msgid "Price Impact High"
 msgstr "价格影响高"
 
 #: src/features/swap/SwapModalFooter.tsx:113
-#: src/pages/exchange/swap/[[...tokens]].tsx:595
+#: src/pages/exchange/swap/[[...tokens]].tsx:594
 msgid "Price Impact Too High"
 msgstr "价格影响过高"
 
@@ -1962,14 +1962,14 @@ msgstr "提供{0} {1}和{2} {3}"
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/Header/index.tsx:35
 #: src/components/Header/index.tsx:155
-#: src/pages/exchange/swap/[[...tokens]].tsx:569
-#: src/pages/exchange/swap/[[...tokens]].tsx:598
+#: src/pages/exchange/swap/[[...tokens]].tsx:568
+#: src/pages/exchange/swap/[[...tokens]].tsx:597
 msgid "Swap"
 msgstr "兑换"
 
 #: src/features/swap/SwapModalFooter.tsx:115
-#: src/pages/exchange/swap/[[...tokens]].tsx:568
-#: src/pages/exchange/swap/[[...tokens]].tsx:597
+#: src/pages/exchange/swap/[[...tokens]].tsx:567
+#: src/pages/exchange/swap/[[...tokens]].tsx:596
 msgid "Swap Anyway"
 msgstr "仍要交换"
 
@@ -2173,7 +2173,7 @@ msgstr "交易期限"
 #~ msgid "Transactions"
 #~ msgstr "交易"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:522
+#: src/pages/exchange/swap/[[...tokens]].tsx:521
 msgid "Try enabling multi-hop trades"
 msgstr "尝试启用多跳交易"
 
@@ -2207,11 +2207,11 @@ msgstr "解除抵押"
 #~ msgstr "解除质押"
 
 #: src/pages/exchange/add/[[...tokens]].tsx:434
-#: src/pages/exchange/swap/[[...tokens]].tsx:500
+#: src/pages/exchange/swap/[[...tokens]].tsx:499
 msgid "Unsupported Asset"
 msgstr "不支持的资产"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:516
+#: src/pages/exchange/swap/[[...tokens]].tsx:515
 msgid "Unwrap"
 msgstr "解开"
 
@@ -2363,7 +2363,7 @@ msgstr "从锁定{id}中取款"
 #~ msgid "Withdraw {assetSymbol}"
 #~ msgstr "提现{assetSymbol}"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:514
+#: src/pages/exchange/swap/[[...tokens]].tsx:513
 msgid "Wrap"
 msgstr "包裹"
 
