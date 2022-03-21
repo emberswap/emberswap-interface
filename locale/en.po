@@ -66,7 +66,7 @@ msgstr "- Locker contract address: {0}"
 msgid "- You will not be able to withdraw your tokens before the unlock time"
 msgstr "- You will not be able to withdraw your tokens before the unlock time"
 
-#: src/features/farm/FarmListItem2.tsx:129
+#: src/features/farm/FarmListItem2.tsx:139
 #: src/features/vault/VaultListItem.tsx:123
 msgid "/ DAY"
 msgstr "/ DAY"
@@ -2711,7 +2711,7 @@ msgstr "Your transactions will appear here..."
 #~ msgid "above"
 #~ msgstr "above"
 
-#: src/features/farm/FarmListItem2.tsx:149
+#: src/features/farm/FarmListItem2.tsx:159
 #: src/features/vault/VaultListItem.tsx:141
 msgid "annualized"
 msgstr "annualized"
