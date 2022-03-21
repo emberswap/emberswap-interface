@@ -59,10 +59,20 @@ const VaultListItem = ({ farm, ...rest }) => {
 
   const tvl = getTvl()
 
-  const roiPerBlock =
+  var roiPerBlock
+  
+  if (tvl < 1000){
+    roiPerBlock =
+    farm?.rewards?.reduce((previousValue, currentValue) => {
+      return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
+    }, 0) / 1000
+  }
+  else{
+    roiPerBlock =
     farm?.rewards?.reduce((previousValue, currentValue) => {
       return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
     }, 0) / tvl
+  }
 
   const roiPerHour = roiPerBlock * farm.blocksPerHour
   const roiPerDay = roiPerHour * 24

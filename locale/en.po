@@ -67,7 +67,7 @@ msgid "- You will not be able to withdraw your tokens before the unlock time"
 msgstr "- You will not be able to withdraw your tokens before the unlock time"
 
 #: src/features/farm/FarmListItem2.tsx:139
-#: src/features/vault/VaultListItem.tsx:123
+#: src/features/vault/VaultListItem.tsx:133
 msgid "/ DAY"
 msgstr "/ DAY"
 
@@ -2712,7 +2712,7 @@ msgstr "Your transactions will appear here..."
 #~ msgstr "above"
 
 #: src/features/farm/FarmListItem2.tsx:159
-#: src/features/vault/VaultListItem.tsx:141
+#: src/features/vault/VaultListItem.tsx:151
 msgid "annualized"
 msgstr "annualized"
 

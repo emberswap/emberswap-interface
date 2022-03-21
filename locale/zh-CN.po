@@ -69,7 +69,7 @@ msgid "- You will not be able to withdraw your tokens before the unlock time"
 msgstr "- 在锁定时间之前，你将无法提取你的代币"
 
 #: src/features/farm/FarmListItem2.tsx:139
-#: src/features/vault/VaultListItem.tsx:123
+#: src/features/vault/VaultListItem.tsx:133
 msgid "/ DAY"
 msgstr "/ 天"
 
@@ -2555,7 +2555,7 @@ msgstr "你的交易将在这里显示"
 #~ msgstr ""
 
 #: src/features/farm/FarmListItem2.tsx:159
-#: src/features/vault/VaultListItem.tsx:141
+#: src/features/vault/VaultListItem.tsx:151
 msgid "annualized"
 msgstr "年化"
 
