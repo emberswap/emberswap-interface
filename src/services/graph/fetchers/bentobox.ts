@@ -13,7 +13,7 @@ export const BENTOBOX = {
   [ChainId.BSC]: 'sushiswap/bsc-bentobox',
 }
 export const fetcher = async (chainId = ChainId.MAINNET, query, variables) =>
-  request(`${GRAPH_HOST[chainId]}/subgraphs/name/${BENTOBOX[chainId]}`, query)
+request(`${GRAPH_HOST[chainId]}/subgraphs/name/${BENTOBOX[chainId]}`, query)
 
 export const getKashiPairs = async (chainId = ChainId.MAINNET, variables = undefined) => {
   const { kashiPairs } = await fetcher(chainId, kashiPairsQuery, variables)
