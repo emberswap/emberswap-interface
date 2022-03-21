@@ -148,7 +148,7 @@ export default function Farm(): JSX.Element {
       farm.pair.token1?.symbol == 'FLEXUSD' || 
       farm.pair.token0?.symbol == 'lawUSD' ||
       farm.pair.token1?.symbol == 'lawUSD' ,
-    past: (farm) => farm.allocPoint == 0,
+    past: (farm) => farm.allocPoint == 0 && farm?.amount && !farm.amount.isZero(),
 
   }
 
