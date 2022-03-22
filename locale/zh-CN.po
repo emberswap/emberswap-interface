@@ -2580,8 +2580,8 @@ msgid "home page"
 msgstr "主页"
 
 #: src/modals/SearchModal/ManageLists.tsx:326
-msgid "https:// or ipfs:// or ENS name"
-msgstr "https:// 或 ipfs:// 或 ENS name"
+msgid "https:// or ipfs:// or LNS name"
+msgstr "https:// 或 ipfs:// 或 LNS name"
 
 #: src/pages/Positions/LiquidityPositions.tsx:43
 #~ msgid "import it"

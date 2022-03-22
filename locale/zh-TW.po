@@ -2399,7 +2399,7 @@ msgid "home page"
 msgstr ""
 
 #: src/modals/SearchModal/ManageLists.tsx:325
-msgid "https:// or ipfs:// or ENS name"
+msgid "https:// or ipfs:// or LNS name"
 msgstr ""
 
 #: src/pages/Positions/LiquidityPositions.tsx:43

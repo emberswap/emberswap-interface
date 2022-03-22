@@ -323,7 +323,7 @@ function ManageLists({
       <input
         id="list-add-input"
         type="text"
-        placeholder={i18n._(t`https:// or ipfs:// or ENS name`)}
+        placeholder={i18n._(t`https:// or ipfs:// or LNS name`)}
         className="mt-4 w-full bg-dark-900 border border-dark-800 focus:border-transparent focus:border-gradient-r-yellow-dark-900 rounded placeholder-secondary focus:placeholder-primary font-bold text-base px-6 py-3.5 appearance-none"
         value={listUrlInput}
         onChange={handleInput}

@@ -25,8 +25,8 @@ export async function getTokenList(
     try {
       contentHashUri = await resolveENSContentHash(parsedENS.ensName)
     } catch (error) {
-      console.debug(`Failed to resolve ENS name: ${parsedENS.ensName}`, error)
-      throw new Error(`Failed to resolve ENS name: ${parsedENS.ensName}`)
+      console.debug(`Failed to resolve LNS name: ${parsedENS.ensName}`, error)
+      throw new Error(`Failed to resolve LNS name: ${parsedENS.ensName}`)
     }
     let translatedUri
     try {

@@ -2737,8 +2737,8 @@ msgid "home page"
 msgstr "home page"
 
 #: src/modals/SearchModal/ManageLists.tsx:326
-msgid "https:// or ipfs:// or ENS name"
-msgstr "https:// or ipfs:// or ENS name"
+msgid "https:// or ipfs:// or LNS name"
+msgstr "https:// or ipfs:// or LNS name"
 
 #: src/pages/Positions/LiquidityPositions.tsx:43
 #~ msgid "import it"
