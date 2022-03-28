@@ -511,7 +511,7 @@ msgstr "Change"
 msgid "Chinese"
 msgstr "Chinese"
 
-#: src/modals/TokenStatsModal/index.tsx:151
+#: src/modals/TokenStatsModal/index.tsx:156
 msgid "Circulating Supply"
 msgstr "Circulating Supply"
 
@@ -1413,7 +1413,7 @@ msgstr "Manage this pool"
 #~ msgid "Market"
 #~ msgstr "Market"
 
-#: src/modals/TokenStatsModal/index.tsx:199
+#: src/modals/TokenStatsModal/index.tsx:204
 msgid "Market Cap"
 msgstr "Market Cap"
 
@@ -2054,7 +2054,7 @@ msgstr "Status"
 #~ msgid "Submit Tool"
 #~ msgstr "Submit Tool"
 
-#: src/modals/TokenStatsModal/index.tsx:145
+#: src/modals/TokenStatsModal/index.tsx:150
 msgid "Supply & Market Cap"
 msgstr "Supply & Market Cap"
 
@@ -2413,7 +2413,7 @@ msgstr "Vaults"
 #~ msgid "Vietnamese"
 #~ msgstr "Vietnamese"
 
-#: src/modals/TokenStatsModal/index.tsx:132
+#: src/modals/TokenStatsModal/index.tsx:137
 msgid "View Contract"
 msgstr "View Contract"
 
@@ -2785,7 +2785,7 @@ msgstr "or the transaction will revert."
 #~ msgid "{0, plural, one {Token} many {Tokens}}"
 #~ msgstr "{0, plural, one {Token} many {Tokens}}"
 
-#: src/modals/TokenStatsModal/index.tsx:105
+#: src/modals/TokenStatsModal/index.tsx:110
 msgid "{0}"
 msgstr "{0}"
 

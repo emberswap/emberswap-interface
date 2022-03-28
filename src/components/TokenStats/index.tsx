@@ -30,7 +30,11 @@ interface TokenStatsProps {
 function TokenStatusInner({ token }) {
   const toggleModal = useTokenStatsModalToggle(token)
 
-  const priceData = useContext(PriceContext)
+  var priceData = useContext(PriceContext)
+  var tokenstats = formatNumberScale(priceData?.[token.symbol.toLowerCase()], true, 2)
+  if (priceData?.ember < 0.1 && token.symbol == 'EMBER') tokenstats = formatNumberScale(priceData?.ember, true, 3)
+  if (priceData?.ember < 0.01 && token.symbol == 'EMBER') tokenstats = formatNumberScale(priceData?.ember, true, 4)
+  if (priceData?.ember < 0.001 && token.symbol == 'EMBER') tokenstats = formatNumberScale(priceData?.ember, true, 5)
 
   return (
     <div className="flex pl-2" onClick={toggleModal}>
@@ -45,7 +49,7 @@ function TokenStatusInner({ token }) {
         />
       )}
       <div className="px-3 py-2 text-primary text-bold">
-        {formatNumberScale(priceData?.[token.symbol.toLowerCase()], true, 3)}
+        {tokenstats}
       </div>
     </div>
   )

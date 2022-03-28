@@ -77,9 +77,14 @@ export default function TokenStatsModal({ token }: { token: any }) {
   const priceData = useContext(PriceContext)
   let tokenInfo = useTokenInfo(useEmberContract())
 
-  if (token.symbol == 'BCH') tokenInfo = { circulatingSupply: '19000000', burnt: '0', totalSupply: '0', vaults: '0' }
+  var price = formatNumberScale(priceData?.[token.symbol.toLowerCase()], true, 2)
 
-  const price = formatNumberScale(priceData?.[token.symbol.toLowerCase()], true, 3)
+  if (token.symbol == 'BCH') tokenInfo = { circulatingSupply: '19000000', burnt: '0', totalSupply: '0', vaults: '0' }
+  if (priceData.ember < 0.1 && token.symbol == 'EMBER') price = formatNumberScale(priceData?.ember, true, 3)
+  if (priceData.ember < 0.01 && token.symbol == 'EMBER') price = formatNumberScale(priceData?.ember, true, 4)
+  if (priceData.ember < 0.001 && token.symbol == 'EMBER') price = formatNumberScale(priceData?.ember, true, 5)
+
+
 
   const modalOpen = useModalOpen(token.symbol == 'EMBER' ? ApplicationModal.EMBER_STATS : ApplicationModal.BCH_STATS)
 
