@@ -28,3 +28,6 @@ public/workbox*.js.map
 .env.local
 
 lokalise.yaml
+
+# Sentry
+.sentryclirc

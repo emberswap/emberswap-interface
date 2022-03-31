@@ -67,11 +67,14 @@ function AppBar(): JSX.Element {
                           {i18n._(t`Locker`)}
                         </a>
                       </NavLink>
-                      <NavLink href={'/governance'}>
-                        <a className="p-2 text-base text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap">
-                          {i18n._(t`Governance`)}
-                        </a>
-                      </NavLink>
+                      <NavLink href={'/vote'}>
+                          <a
+                            id={`governance-nav-link`}
+                            className="p-2 text-base text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
+                          >
+                            {i18n._(t`Governance`)}
+                          </a>
+                        </NavLink>
                       <NavLink href="/analytics">
                         <a
                          // target="_blank"
@@ -187,11 +190,14 @@ function AppBar(): JSX.Element {
                     {i18n._(t`Locker`)}
                   </a>
                 </Link>
-                <Link href={'/governance'}>
-                  <a className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap">
-                    {i18n._(t`Governance`)}
-                  </a>
-                </Link>
+                <Link href={'/vote'}>
+                          <a
+                            id={`governance-nav-link`}
+                            className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                          >
+                            {i18n._(t`Governance`)}
+                          </a>
+                        </Link>
                 <Link href="/analytics">
                   <a
                    // target="_blank"

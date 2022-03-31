@@ -26,5 +26,7 @@ export default async function handler(req, res) {
   ret['fire'] = fireBCHPrice * bchFLEXUSDPrice
   ret['flexusd'] = 1
 
+  if (fireBCHPrice == 0) {window.location.reload(false);}
+
   res.status(200).json(ret)
 }

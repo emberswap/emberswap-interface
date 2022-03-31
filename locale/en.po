@@ -168,6 +168,10 @@ msgstr "Add"
 msgid "Add Liquidity"
 msgstr "Add Liquidity"
 
+#: src/components/Header/More.tsx:32
+msgid "Submit Proposal"
+msgstr "Submit Proposal"
+
 #: src/components/Header/index.tsx:171
 #~ msgid "Add SUSHI to your MetaMask wallet"
 #~ msgstr "Add SUSHI to your MetaMask wallet"
@@ -175,6 +179,10 @@ msgstr "Add Liquidity"
 #: src/components/AppBar.tsx:138
 #~ msgid "Add Sushi to your Metamask wallet"
 #~ msgstr "Add Sushi to your Metamask wallet"
+
+#: src/components/Header/More.tsx:33
+msgid "Add a Proposal through our Governance Portal"
+msgstr "Add a Proposal through our Governance Portal"
 
 #: src/pages/kashi/borrow/[pair].tsx:175
 #~ msgid "Add collateral in order to borrow assets"
@@ -237,8 +245,8 @@ msgstr "Amount to Remove"
 msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 msgstr "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 
-#: src/components/Header/index.tsx:81
-#: src/components/Header/index.tsx:200
+#: src/components/Header/index.tsx:84
+#: src/components/Header/index.tsx:206
 msgid "Analytics"
 msgstr "Analytics"
 
@@ -740,7 +748,7 @@ msgstr "Disable Multihops"
 msgid "Disconnect"
 msgstr "Disconnect"
 
-#: src/components/Header/More.tsx:32
+#: src/components/Header/More.tsx:38
 #: src/components/Menu.tsx:31
 msgid "Discord"
 msgstr "Discord"
@@ -749,12 +757,12 @@ msgstr "Discord"
 msgid "Dismiss"
 msgstr "Dismiss"
 
-#: src/components/Header/More.tsx:44
+#: src/components/Header/More.tsx:50
 #: src/components/Menu.tsx:43
 msgid "Disperse"
 msgstr "Disperse"
 
-#: src/components/Header/More.tsx:45
+#: src/components/Header/More.tsx:51
 #: src/components/Menu.tsx:44
 msgid "Distribute BCH or tokens to multiple addresses"
 msgstr "Distribute BCH or tokens to multiple addresses"
@@ -910,7 +918,7 @@ msgid "Expired"
 msgstr "Expired"
 
 #: src/components/Header/index.tsx:51
-#: src/components/Header/index.tsx:171
+#: src/components/Header/index.tsx:174
 msgid "Farm"
 msgstr "Farm"
 
@@ -939,7 +947,7 @@ msgstr "Filled"
 msgid "Find Pool"
 msgstr "Find Pool"
 
-#: src/components/Header/More.tsx:39
+#: src/components/Header/More.tsx:45
 #: src/components/Menu.tsx:38
 msgid "Follow us on Twitter"
 msgstr "Follow us on Twitter"
@@ -1030,8 +1038,8 @@ msgstr "Give me some BCH"
 msgid "Go Back"
 msgstr "Go Back"
 
-#: src/components/Header/index.tsx:72
-#: src/components/Header/index.tsx:192
+#: src/components/Header/index.tsx:75
+#: src/components/Header/index.tsx:198
 msgid "Governance"
 msgstr "Governance"
 
@@ -1113,12 +1121,12 @@ msgstr "Harvest {0} EMBER"
 msgid "History"
 msgstr "History"
 
-#: src/components/Header/More.tsx:50
+#: src/components/Header/More.tsx:56
 #: src/components/Menu.tsx:49
 msgid "Home"
 msgstr "Home"
 
-#: src/components/Header/More.tsx:51
+#: src/components/Header/More.tsx:57
 #: src/components/Menu.tsx:50
 msgid "Hosted by the Incinerate Protocol"
 msgstr "Hosted by the Incinerate Protocol"
@@ -1216,7 +1224,7 @@ msgstr "Invalid recipient"
 #~ msgid "Japanese"
 #~ msgstr "Japanese"
 
-#: src/components/Header/More.tsx:33
+#: src/components/Header/More.tsx:39
 #: src/components/Menu.tsx:32
 msgid "Join the community on Discord"
 msgstr "Join the community on Discord"
@@ -1363,7 +1371,7 @@ msgid "Lock"
 msgstr "Lock"
 
 #: src/components/Header/index.tsx:67
-#: src/components/Header/index.tsx:187
+#: src/components/Header/index.tsx:190
 msgid "Locker"
 msgstr "Locker"
 
@@ -1570,6 +1578,10 @@ msgstr "No pool found"
 msgid "No results found"
 msgstr "No results found"
 
+#: src/pages/governance/proposal/[proposalId].tsx:180
+msgid "No votes yet"
+msgstr "No votes yet"
+
 #: src/pages/exchange/migrate/index.tsx:131
 #~ msgid "Non-hardware Wallet"
 #~ msgstr "Non-hardware Wallet"
@@ -1600,7 +1612,7 @@ msgstr "Open Orders"
 #~ msgid "Open Source"
 #~ msgstr "Open Source"
 
-#: src/components/Header/index.tsx:115
+#: src/components/Header/index.tsx:118
 msgid "Open main menu"
 msgstr "Open main menu"
 
@@ -1696,7 +1708,7 @@ msgid "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 msgstr "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 
 #: src/components/Header/index.tsx:43
-#: src/components/Header/index.tsx:163
+#: src/components/Header/index.tsx:166
 #: src/pages/exchange/pool/index.tsx:95
 msgid "Pool"
 msgstr "Pool"
@@ -1767,6 +1779,10 @@ msgstr "Price Impact Too High"
 #: src/features/swap/SwapModalHeader.tsx:89
 msgid "Price Updated"
 msgstr "Price Updated"
+
+#: src/pages/governance/proposal/[proposalId].tsx:117
+msgid "Proposal {proposalId} not found"
+msgstr "Proposal {proposalId} not found"
 
 #: src/components/YieldDetails/index.tsx:100
 msgid "ROI"
@@ -1897,6 +1913,10 @@ msgstr "Routing through these tokens resulted in the best price for your trade."
 #: src/pages/Yield/components/Search.tsx:6
 #~ msgid "Search by name, symbol, address"
 #~ msgstr "Search by name, symbol, address"
+
+#: src/pages/governance/index.tsx:110
+msgid "Search by proposal title"
+msgstr "Search by proposal title"
 
 #: src/pages/locker/create/index.tsx:151
 #: src/pages/locker/index.tsx:86
@@ -2045,6 +2065,11 @@ msgstr "Stake"
 #~ msgid "Staking APR"
 #~ msgstr "Staking APR"
 
+#: src/features/governance/ProposalList.tsx:42
+msgid "Start/End Block"
+msgstr "Start/End Block"
+
+#: src/features/governance/ProposalList.tsx:33
 #: src/pages/bridge/history/index.tsx:161
 #: src/pages/bridge/history/index.tsx:308
 msgid "Status"
@@ -2089,7 +2114,7 @@ msgstr "Supplying {0} {1} and {2} {3}"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/Header/index.tsx:35
-#: src/components/Header/index.tsx:155
+#: src/components/Header/index.tsx:158
 #: src/pages/exchange/swap/[[...tokens]].tsx:568
 #: src/pages/exchange/swap/[[...tokens]].tsx:597
 msgid "Swap"
@@ -2223,6 +2248,10 @@ msgstr "Tip to encourage miners to select this transaction."
 msgid "Tip: Custom tokens are stored locally in your browser"
 msgstr "Tip: Custom tokens are stored locally in your browser"
 
+#: src/features/governance/ProposalList.tsx:23
+msgid "Title"
+msgstr "Title"
+
 #: src/pages/bridge/history/index.tsx:153
 #: src/pages/bridge/history/index.tsx:307
 msgid "To"
@@ -2277,6 +2306,10 @@ msgstr ""
 #~ msgid "Total"
 #~ msgstr "Total"
 
+#: src/pages/governance/proposal/[proposalId].tsx:147
+msgid "Total votes: {0}"
+msgstr "Total votes: {0}"
+
 #: src/pages/Trade/index.tsx:8
 #~ msgid "Trade"
 #~ msgstr "Trade"
@@ -2322,7 +2355,7 @@ msgstr "Try enabling multi-hop trades"
 msgid "Turn On Expert Mode"
 msgstr "Turn On Expert Mode"
 
-#: src/components/Header/More.tsx:38
+#: src/components/Header/More.tsx:44
 #: src/components/Menu.tsx:37
 msgid "Twitter"
 msgstr "Twitter"
@@ -2393,7 +2426,7 @@ msgstr "Unwrap"
 #~ msgstr "VFAT FARMING CALCULATOR"
 
 #: src/components/Header/index.tsx:59
-#: src/components/Header/index.tsx:179
+#: src/components/Header/index.tsx:182
 msgid "Vaults"
 msgstr "Vaults"
 
@@ -2448,6 +2481,22 @@ msgstr "View on explorer"
 #~ msgid "View pair analytics"
 #~ msgstr "View pair analytics"
 
+#: src/features/governance/ProposalListItemDetails.tsx:63
+msgid "View proposal details"
+msgstr "View proposal details"
+
+#: src/pages/governance/index.tsx:98
+msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
+msgstr "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
+
+#: src/pages/governance/index.tsx:98
+#~ msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal.\\n \\n ´{0}´Click  to submit a proposal"
+#~ msgstr "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal.\\n \\n ´{0}´Click  to submit a proposal"
+
+#: src/pages/governance/index.tsx:97
+#~ msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
+#~ msgstr "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
+
 #: src/pages/bridge/history/index.tsx:282
 msgid "View the history of all your bridge interactions"
 msgstr "View the history of all your bridge interactions"
@@ -2459,6 +2508,18 @@ msgstr "View transaction on explorer"
 #: src/pages/SushiBar/legacy/index.tsx:34
 #~ msgid "View your SushiBar Portfolio"
 #~ msgstr "View your SushiBar Portfolio"
+
+#: src/pages/governance/proposal/[proposalId].tsx:171
+msgid "Vote"
+msgstr "Vote"
+
+#: src/pages/governance/index.tsx:94
+msgid "Vote using EMBER on community created proposals."
+msgstr "Vote using EMBER on community created proposals."
+
+#: src/pages/governance/proposal/[proposalId].tsx:125
+msgid "Voting proposal"
+msgstr "Voting proposal"
 
 #: src/modals/TransactionConfirmationModal/index.tsx:42
 msgid "Waiting for Confirmation"
@@ -2711,6 +2772,12 @@ msgstr "Your transactions will appear here..."
 #~ msgid "above"
 #~ msgstr "above"
 
+#: src/pages/governance/index.tsx:40
+#: src/pages/governance/proposal/[proposalId].tsx:51
+#: src/pages/governance/proposal/[proposalId].tsx:131
+msgid "active"
+msgstr "active"
+
 #: src/features/farm/FarmListItem2.tsx:159
 #: src/features/vault/VaultListItem.tsx:151
 msgid "annualized"
@@ -2719,6 +2786,15 @@ msgstr "annualized"
 #: src/pages/exchange/limit-order/[[...tokens]].tsx:165
 #~ msgid "below"
 #~ msgstr "below"
+
+#: src/pages/governance/index.tsx:39
+#: src/pages/governance/proposal/[proposalId].tsx:50
+msgid "closed"
+msgstr "closed"
+
+#: src/pages/governance/proposal/[proposalId].tsx:132
+msgid "ends at block {0} ({1})"
+msgstr "ends at block {0} ({1})"
 
 #: src/components/Gas/index.tsx:14
 msgid "failed to load"
@@ -2824,6 +2900,16 @@ msgstr "{0} {1} per {2}"
 #: src/pages/exchange/remove/[[...tokens]].tsx:640
 msgid "{0}/{1} Burned"
 msgstr "{0}/{1} Burned"
+
+#: src/pages/governance/index.tsx:42
+#: src/pages/governance/proposal/[proposalId].tsx:53
+msgid "{expireTime} ago"
+msgstr "{expireTime} ago"
+
+#: src/pages/governance/index.tsx:43
+#: src/pages/governance/proposal/[proposalId].tsx:54
+msgid "{expireTime} left"
+msgstr "{expireTime} left"
 
 #: src/components/ChainSelect/index.tsx:63
 msgid "{label}"

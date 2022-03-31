@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer className="flex-shrink-0 w-full mt-8 sm:mt-0">
       <div className="flex items-center justify-between h-20 px-4 ">
-       
+      <Polling />
       </div>
     </footer>
   )

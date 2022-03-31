@@ -29,6 +29,12 @@ const items = (i18n: I18n) => [
     external: true,
   },
   {
+    name: i18n._(t`Submit Proposal`),
+    description: i18n._(t`Add a Proposal through our Governance Portal`),
+    href: 'https://github.com/emberswap/emberswap-governance',
+    external: true,
+  },
+  {
     name: i18n._(t`Discord`),
     description: i18n._(t`Join the community on Discord`),
     href: 'https://discord.gg/x3TsF9MBrq',
