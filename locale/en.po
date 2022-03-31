@@ -168,10 +168,6 @@ msgstr "Add"
 msgid "Add Liquidity"
 msgstr "Add Liquidity"
 
-#: src/components/Header/More.tsx:32
-msgid "Submit Proposal"
-msgstr "Submit Proposal"
-
 #: src/components/Header/index.tsx:171
 #~ msgid "Add SUSHI to your MetaMask wallet"
 #~ msgstr "Add SUSHI to your MetaMask wallet"
@@ -2075,6 +2071,10 @@ msgstr "Start/End Block"
 msgid "Status"
 msgstr "Status"
 
+#: src/components/Header/More.tsx:32
+msgid "Submit Proposal"
+msgstr "Submit Proposal"
+
 #: src/pages/Tools/index.tsx:112
 #~ msgid "Submit Tool"
 #~ msgstr "Submit Tool"
@@ -2492,10 +2492,6 @@ msgstr "View proposals and vote on them using your EMBER. The amount of EMBER yo
 #: src/pages/governance/index.tsx:98
 #~ msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal.\\n \\n ´{0}´Click  to submit a proposal"
 #~ msgstr "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal.\\n \\n ´{0}´Click  to submit a proposal"
-
-#: src/pages/governance/index.tsx:97
-#~ msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
-#~ msgstr "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
 
 #: src/pages/bridge/history/index.tsx:282
 msgid "View the history of all your bridge interactions"

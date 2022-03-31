@@ -166,8 +166,8 @@ msgid "Add Liquidity"
 msgstr "添加流动性"
 
 #: src/components/Header/More.tsx:32
-msgid "Add Proposal"
-msgstr ""
+#~ msgid "Add Proposal"
+#~ msgstr ""
 
 #: src/components/Header/index.tsx:171
 #~ msgid "Add SUSHI to your MetaMask wallet"
@@ -1949,6 +1949,10 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
+#: src/components/Header/More.tsx:32
+msgid "Submit Proposal"
+msgstr ""
+
 #: src/pages/Tools/index.tsx:112
 #~ msgid "Submit Tool"
 #~ msgstr "提交工具"
@@ -2346,10 +2350,6 @@ msgstr ""
 
 #: src/pages/governance/index.tsx:98
 #~ msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal.\\n \\n ´{0}´Click  to submit a proposal"
-#~ msgstr ""
-
-#: src/pages/governance/index.tsx:97
-#~ msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
 #~ msgstr ""
 
 #: src/pages/bridge/history/index.tsx:282
