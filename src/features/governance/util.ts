@@ -1,6 +1,6 @@
 import millify from "millify"
 
-export const VOTING_API_URL = "http://199.192.18.169:3000"
+export const VOTING_API_URL = "https://emberswap.org"
 
 export const formatEmber = (amount: string) => {
   if (!amount)
