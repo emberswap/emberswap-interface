@@ -60,6 +60,7 @@ export default function Vote() {
     data,
     options,
   })
+  
   return (
     <Container id="vote-page" className="py-4 md:py-8 lg:py-12" maxWidth="full">
       <Head>
@@ -96,7 +97,8 @@ export default function Vote() {
             </div>
             <div className="max-w-lg pr-3 mb-2 text-sm leading-5 text-gray-500 md:text-base md:mb-4 md:pr-0">
               {i18n._(t`View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal.`)}
-            </div>
+              <p>{i18n._(t`To make a proposal click`)}
+              <Link href={'https://github.com/emberswap/emberswap-governance'} ><a target="_blank" className="white-space: pre-wrap"><b>&nbsp;{i18n._(t` here!`)}</b></a></Link></p></div>
           </div>
           <div className="hidden px-4 ml-1 md:block w-48">
             <Image src="/images/governance/emberswap-governance.png" alt="EmberSwap Governance" width="100%" height="100%" layout="responsive" />

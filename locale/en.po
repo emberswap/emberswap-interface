@@ -13,6 +13,10 @@ msgstr ""
 "POT-Creation-Date: \n"
 "Plural-Forms: \n"
 
+#: src/pages/governance/index.tsx:100
+#~ msgid " here!"
+#~ msgstr " here!"
+
 #: src/pages/vesting/index.tsx:236
 #~ msgid ""
 #~ "(COMING SOON) Accrue automatic yield through flash loans and\n"
@@ -1910,7 +1914,7 @@ msgstr "Routing through these tokens resulted in the best price for your trade."
 #~ msgid "Search by name, symbol, address"
 #~ msgstr "Search by name, symbol, address"
 
-#: src/pages/governance/index.tsx:110
+#: src/pages/governance/index.tsx:112
 msgid "Search by proposal title"
 msgstr "Search by proposal title"
 
@@ -2261,6 +2265,10 @@ msgstr "To"
 #~ msgid "To (estimated)"
 #~ msgstr "To (estimated)"
 
+#: src/pages/governance/index.tsx:100
+msgid "To make a proposal click"
+msgstr "To make a proposal click"
+
 #: src/pages/Saave/index.tsx:69
 #~ msgid "To withdraw into SUSHI, go to Aave and remove axSUSHI as collateral and then to SushiBar to unstake. A full unwind will be avaialble soon."
 #~ msgstr "To withdraw into SUSHI, go to Aave and remove axSUSHI as collateral and then to SushiBar to unstake. A full unwind will be avaialble soon."
@@ -2485,9 +2493,17 @@ msgstr "View on explorer"
 msgid "View proposal details"
 msgstr "View proposal details"
 
-#: src/pages/governance/index.tsx:98
+#: src/pages/governance/index.tsx:99
 msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
 msgstr "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
+
+#: src/pages/governance/index.tsx:98
+#~ msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal. Click {0} to add a Proposal"
+#~ msgstr "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal. Click {0} to add a Proposal"
+
+#: src/pages/governance/index.tsx:99
+#~ msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal. To make a proposal click"
+#~ msgstr "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal. To make a proposal click"
 
 #: src/pages/governance/index.tsx:98
 #~ msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal.\\n \\n ´{0}´Click  to submit a proposal"
@@ -2509,7 +2525,7 @@ msgstr "View transaction on explorer"
 msgid "Vote"
 msgstr "Vote"
 
-#: src/pages/governance/index.tsx:94
+#: src/pages/governance/index.tsx:95
 msgid "Vote using EMBER on community created proposals."
 msgstr "Vote using EMBER on community created proposals."
 
@@ -2803,6 +2819,10 @@ msgstr "failed to load"
 #: src/pages/vesting/index.tsx:131
 #~ msgid "forum discussion"
 #~ msgstr "forum discussion"
+
+#: src/pages/governance/index.tsx:101
+msgid "here!"
+msgstr "here!"
 
 #: src/guards/Network/index.tsx:24
 msgid "home page"
