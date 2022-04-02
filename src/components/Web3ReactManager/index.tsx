@@ -75,7 +75,7 @@ export default function Web3ReactManager({ children }: { children: JSX.Element }
       }
     } else {
     }
-  }, [])
+  }, [router.route])
 
   // after eagerly trying injected, if the network connect ever isn't active or in an error state, activate itd
   useEffect(() => {
