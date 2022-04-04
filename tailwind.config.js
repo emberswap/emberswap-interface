@@ -70,6 +70,8 @@ module.exports = {
         },
       },
       colors: {
+        'bubble-gum': 'var(--color-light)',
+        'bermuda': 'var(--color-black)',
         'light-purple': 'var(--color-light-purple)',
         purple: 'var(--color-purple)',
         'dark-purple': 'var(--color-dark-purple)',
@@ -102,8 +104,7 @@ module.exports = {
         'low-emphesis': 'var(--color-low-emphesis)',
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
-        'high-emphesis': 'var(--color-high-emphesis)',
-        light: 'var(--color-light)',
+        'high-emphesis': 'var(--color-high-emphesis)',     
       },
       lineHeight: {
         '48px': '48px',

@@ -28,8 +28,8 @@ const ProposalVoteOption = ({ proposal, index }) => {
           <span className="float-right">{proposal?.weightedHistogram[index]}%</span>
         </div>
         <div className="relative flex h-2 mb-3 overflow-hidden rounded-full">
-          <div className="absolute w-full h-full bg-black z-5"></div>
-          <div className="z-10 h-full bg-primary" style={{width: `${proposal?.weightedHistogram[index]}%`}}></div>
+          <div className="absolute w-full h-full bg-bermuda z-5"></div>
+          <div className="z-10 h-full bg-bubble-gum" style={{width: `${proposal?.weightedHistogram[index]}%`}}></div>
         </div>
       </div>
     </>
