@@ -136,7 +136,7 @@ function Web3StatusInner() {
               <div className="pr-2">
                 {pending?.length} {i18n._(t`Pending`)}
               </div>{' '}
-              <Loader stroke="white" />
+              <Loader/>
             </div>
           ) : (
           <div className="flex items-center gap-2">

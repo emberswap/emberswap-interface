@@ -23,6 +23,7 @@ import { Provider as ReduxProvider } from 'react-redux'
 import TransactionUpdater from '../state/transactions/updater'
 import UserUpdater from '../state/user/updater'
 import Web3ReactManager from '../components/Web3ReactManager'
+import { ThemeProvider } from '../components/ThemeSwitch'
 import { createWeb3ReactRoot, Web3ReactProvider } from '@web3-react/core'
 import dynamic from 'next/dynamic'
 import getLibrary from '../functions/getLibrary'
@@ -147,11 +148,13 @@ function MyApp({
                       <MulticallUpdater />
                     </>
                     <Provider>
+                      <ThemeProvider>
                       <Layout>
                         <Guard>
                           <Component {...pageProps} />
                         </Guard>
                       </Layout>
+                      </ThemeProvider>
                     </Provider>
                   </PriceProvider>
                 </ReduxProvider>

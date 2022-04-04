@@ -46,7 +46,7 @@ export default function Farm(): JSX.Element {
   updateFarmFilter(type)
   const positions = usePositions()
 
-  const farms = useFarms()
+  let farms = useFarms()
   const vaults = useVaults()
 
   const distributorInfo = useDistributorInfo()
@@ -187,6 +187,7 @@ export default function Farm(): JSX.Element {
   }, 0)
 
   const { harvest } = useMasterChef()
+  farms = farms.sort((a, b) => b.allocPoint - a.allocPoint);
 
   return (
     <>

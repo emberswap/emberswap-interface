@@ -246,8 +246,8 @@ msgstr "移除数量"
 msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 msgstr "在试图执行该交换时发生了错误。你可能需要增加你的滑点容忍度。如果这不起作用，可能与你交易的代币不兼容。注意转移和重新安置代币的费用与Uniswap V3不兼容。"
 
-#: src/components/Header/index.tsx:84
-#: src/components/Header/index.tsx:206
+#: src/components/Header/index.tsx:85
+#: src/components/Header/index.tsx:208
 msgid "Analytics"
 msgstr "分析界面"
 
@@ -270,7 +270,7 @@ msgstr "授权限价订单"
 #: src/features/limit-order/LimitOrderButton.tsx:160
 #: src/pages/exchange/add/[[...tokens]].tsx:464
 #: src/pages/exchange/add/[[...tokens]].tsx:481
-#: src/pages/exchange/swap/[[...tokens]].tsx:535
+#: src/pages/exchange/swap/[[...tokens]].tsx:538
 msgid "Approve {0}"
 msgstr "批准{0}"
 
@@ -778,7 +778,7 @@ msgstr ""
 msgid "Ember Vault is a set of high incentivized pools. Long term supporters can choose to lock EMBER for a determined period for higher rewards."
 msgstr ""
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:369
+#: src/pages/exchange/swap/[[...tokens]].tsx:372
 msgid "EmberSwap"
 msgstr "EmberSwap"
 
@@ -863,8 +863,8 @@ msgstr "过期是指订单失效的时间"
 msgid "Expired"
 msgstr "过期"
 
-#: src/components/Header/index.tsx:51
-#: src/components/Header/index.tsx:174
+#: src/components/Header/index.tsx:52
+#: src/components/Header/index.tsx:176
 msgid "Farm"
 msgstr "农耕"
 
@@ -961,8 +961,8 @@ msgstr ""
 msgid "Go Back"
 msgstr "返回"
 
-#: src/components/Header/index.tsx:75
-#: src/components/Header/index.tsx:198
+#: src/components/Header/index.tsx:76
+#: src/components/Header/index.tsx:200
 msgid "Governance"
 msgstr ""
 
@@ -977,7 +977,7 @@ msgstr ""
 #: src/features/farm/FarmListItem.tsx:97
 #: src/features/farm/FarmListItemDetails.tsx:236
 #: src/features/vault/VaultListItemDetails.tsx:294
-#: src/pages/farm/index.tsx:246
+#: src/pages/farm/index.tsx:247
 msgid "Harvest"
 msgstr "收获"
 
@@ -1109,7 +1109,7 @@ msgstr "预估输入 你最多卖出"
 #~ msgid "Insufficient WETH balance"
 #~ msgstr "WETH余额不足"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:520
+#: src/pages/exchange/swap/[[...tokens]].tsx:523
 msgid "Insufficient liquidity for this trade"
 msgstr "该交易的流动性不足"
 
@@ -1282,8 +1282,8 @@ msgstr "加载余额"
 msgid "Lock"
 msgstr "锁定"
 
-#: src/components/Header/index.tsx:67
-#: src/components/Header/index.tsx:190
+#: src/components/Header/index.tsx:68
+#: src/components/Header/index.tsx:192
 msgid "Locker"
 msgstr "锁"
 
@@ -1516,7 +1516,7 @@ msgstr "打开订单"
 #~ msgid "Open Source"
 #~ msgstr "开源"
 
-#: src/components/Header/index.tsx:118
+#: src/components/Header/index.tsx:120
 msgid "Open main menu"
 msgstr "打开主菜单"
 
@@ -1602,8 +1602,8 @@ msgstr "请输入“确认”以开启专家模式。"
 msgid "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 msgstr ""
 
-#: src/components/Header/index.tsx:43
-#: src/components/Header/index.tsx:166
+#: src/components/Header/index.tsx:44
+#: src/components/Header/index.tsx:168
 #: src/pages/exchange/pool/index.tsx:95
 msgid "Pool"
 msgstr "资金池"
@@ -1655,12 +1655,12 @@ msgstr ""
 msgid "Price Impact"
 msgstr "价格影响"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:565
+#: src/pages/exchange/swap/[[...tokens]].tsx:568
 msgid "Price Impact High"
 msgstr "价格影响高"
 
 #: src/features/swap/SwapModalFooter.tsx:113
-#: src/pages/exchange/swap/[[...tokens]].tsx:594
+#: src/pages/exchange/swap/[[...tokens]].tsx:597
 msgid "Price Impact Too High"
 msgstr "价格影响过高"
 
@@ -1724,7 +1724,7 @@ msgstr "删除流动金"
 msgid "Remove liquidity of EmberSwap"
 msgstr "从EmberSwap中移除流动性"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:458
+#: src/pages/exchange/swap/[[...tokens]].tsx:461
 msgid "Remove recipient"
 msgstr "移除接收人"
 
@@ -1993,32 +1993,32 @@ msgstr "提供{0} {1}和{2} {3}"
 #~ msgstr ""
 
 #: src/components/ExchangeHeader.tsx:42
-#: src/components/Header/index.tsx:35
-#: src/components/Header/index.tsx:158
-#: src/pages/exchange/swap/[[...tokens]].tsx:568
-#: src/pages/exchange/swap/[[...tokens]].tsx:597
+#: src/components/Header/index.tsx:36
+#: src/components/Header/index.tsx:160
+#: src/pages/exchange/swap/[[...tokens]].tsx:571
+#: src/pages/exchange/swap/[[...tokens]].tsx:600
 msgid "Swap"
 msgstr "兑换"
 
 #: src/features/swap/SwapModalFooter.tsx:115
-#: src/pages/exchange/swap/[[...tokens]].tsx:567
-#: src/pages/exchange/swap/[[...tokens]].tsx:596
+#: src/pages/exchange/swap/[[...tokens]].tsx:570
+#: src/pages/exchange/swap/[[...tokens]].tsx:599
 msgid "Swap Anyway"
 msgstr "仍要交换"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:409
+#: src/pages/exchange/swap/[[...tokens]].tsx:412
 msgid "Swap From (est.):"
 msgstr "交换自（估计）："
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:409
+#: src/pages/exchange/swap/[[...tokens]].tsx:412
 msgid "Swap From:"
 msgstr "交换自："
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:468
+#: src/pages/exchange/swap/[[...tokens]].tsx:471
 msgid "Swap To (est.):"
 msgstr "交换至（估算）："
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:468
+#: src/pages/exchange/swap/[[...tokens]].tsx:471
 msgid "Swap To:"
 msgstr "交换至："
 
@@ -2218,7 +2218,7 @@ msgstr "交易期限"
 #~ msgid "Transactions"
 #~ msgstr "交易"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:521
+#: src/pages/exchange/swap/[[...tokens]].tsx:524
 msgid "Try enabling multi-hop trades"
 msgstr "尝试启用多跳交易"
 
@@ -2252,11 +2252,11 @@ msgstr "解除抵押"
 #~ msgstr "解除质押"
 
 #: src/pages/exchange/add/[[...tokens]].tsx:434
-#: src/pages/exchange/swap/[[...tokens]].tsx:499
+#: src/pages/exchange/swap/[[...tokens]].tsx:502
 msgid "Unsupported Asset"
 msgstr "不支持的资产"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:515
+#: src/pages/exchange/swap/[[...tokens]].tsx:518
 msgid "Unwrap"
 msgstr "解开"
 
@@ -2292,8 +2292,8 @@ msgstr "解开"
 #~ msgid "V2 Rewarder"
 #~ msgstr "V2奖励器"
 
-#: src/components/Header/index.tsx:59
-#: src/components/Header/index.tsx:182
+#: src/components/Header/index.tsx:60
+#: src/components/Header/index.tsx:184
 msgid "Vaults"
 msgstr ""
 
@@ -2440,7 +2440,7 @@ msgstr "从锁定{id}中取款"
 #~ msgid "Withdraw {assetSymbol}"
 #~ msgstr "提现{assetSymbol}"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:513
+#: src/pages/exchange/swap/[[...tokens]].tsx:516
 msgid "Wrap"
 msgstr "包裹"
 

@@ -245,8 +245,8 @@ msgstr "Amount to Remove"
 msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 msgstr "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 
-#: src/components/Header/index.tsx:84
-#: src/components/Header/index.tsx:206
+#: src/components/Header/index.tsx:85
+#: src/components/Header/index.tsx:208
 msgid "Analytics"
 msgstr "Analytics"
 
@@ -269,7 +269,7 @@ msgstr "Approve Limit Order"
 #: src/features/limit-order/LimitOrderButton.tsx:160
 #: src/pages/exchange/add/[[...tokens]].tsx:464
 #: src/pages/exchange/add/[[...tokens]].tsx:481
-#: src/pages/exchange/swap/[[...tokens]].tsx:535
+#: src/pages/exchange/swap/[[...tokens]].tsx:538
 msgid "Approve {0}"
 msgstr "Approve {0}"
 
@@ -828,7 +828,7 @@ msgstr "Ember Vault"
 msgid "Ember Vault is a set of high incentivized pools. Long term supporters can choose to lock EMBER for a determined period for higher rewards."
 msgstr "Ember Vault is a set of high incentivized pools. Long term supporters can choose to lock EMBER for a determined period for higher rewards."
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:369
+#: src/pages/exchange/swap/[[...tokens]].tsx:372
 msgid "EmberSwap"
 msgstr "EmberSwap"
 
@@ -917,8 +917,8 @@ msgstr "Expiration is the time at which the order will become invalid"
 msgid "Expired"
 msgstr "Expired"
 
-#: src/components/Header/index.tsx:51
-#: src/components/Header/index.tsx:174
+#: src/components/Header/index.tsx:52
+#: src/components/Header/index.tsx:176
 msgid "Farm"
 msgstr "Farm"
 
@@ -1038,8 +1038,8 @@ msgstr "Give me some BCH"
 msgid "Go Back"
 msgstr "Go Back"
 
-#: src/components/Header/index.tsx:75
-#: src/components/Header/index.tsx:198
+#: src/components/Header/index.tsx:76
+#: src/components/Header/index.tsx:200
 msgid "Governance"
 msgstr "Governance"
 
@@ -1054,7 +1054,7 @@ msgstr "Governance"
 #: src/features/farm/FarmListItem.tsx:97
 #: src/features/farm/FarmListItemDetails.tsx:236
 #: src/features/vault/VaultListItemDetails.tsx:294
-#: src/pages/farm/index.tsx:246
+#: src/pages/farm/index.tsx:247
 msgid "Harvest"
 msgstr "Harvest"
 
@@ -1188,7 +1188,7 @@ msgstr "Input is estimated. You will sell at most"
 #~ msgid "Insufficient WETH balance"
 #~ msgstr "Insufficient WETH balance"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:520
+#: src/pages/exchange/swap/[[...tokens]].tsx:523
 msgid "Insufficient liquidity for this trade"
 msgstr "Insufficient liquidity for this trade"
 
@@ -1370,8 +1370,8 @@ msgstr "Loading balance"
 msgid "Lock"
 msgstr "Lock"
 
-#: src/components/Header/index.tsx:67
-#: src/components/Header/index.tsx:190
+#: src/components/Header/index.tsx:68
+#: src/components/Header/index.tsx:192
 msgid "Locker"
 msgstr "Locker"
 
@@ -1612,7 +1612,7 @@ msgstr "Open Orders"
 #~ msgid "Open Source"
 #~ msgstr "Open Source"
 
-#: src/components/Header/index.tsx:118
+#: src/components/Header/index.tsx:120
 msgid "Open main menu"
 msgstr "Open main menu"
 
@@ -1707,8 +1707,8 @@ msgstr "Please type the word \"confirm\" to enable expert mode."
 msgid "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 msgstr "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 
-#: src/components/Header/index.tsx:43
-#: src/components/Header/index.tsx:166
+#: src/components/Header/index.tsx:44
+#: src/components/Header/index.tsx:168
 #: src/pages/exchange/pool/index.tsx:95
 msgid "Pool"
 msgstr "Pool"
@@ -1767,12 +1767,12 @@ msgstr "Powered by Anyswap Network"
 msgid "Price Impact"
 msgstr "Price Impact"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:565
+#: src/pages/exchange/swap/[[...tokens]].tsx:568
 msgid "Price Impact High"
 msgstr "Price Impact High"
 
 #: src/features/swap/SwapModalFooter.tsx:113
-#: src/pages/exchange/swap/[[...tokens]].tsx:594
+#: src/pages/exchange/swap/[[...tokens]].tsx:597
 msgid "Price Impact Too High"
 msgstr "Price Impact Too High"
 
@@ -1836,7 +1836,7 @@ msgstr "Remove Liquidity"
 msgid "Remove liquidity of EmberSwap"
 msgstr "Remove liquidity of EmberSwap"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:458
+#: src/pages/exchange/swap/[[...tokens]].tsx:461
 msgid "Remove recipient"
 msgstr "Remove recipient"
 
@@ -2117,32 +2117,32 @@ msgstr "Supplying {0} {1} and {2} {3}"
 #~ msgstr "SushiSwap"
 
 #: src/components/ExchangeHeader.tsx:42
-#: src/components/Header/index.tsx:35
-#: src/components/Header/index.tsx:158
-#: src/pages/exchange/swap/[[...tokens]].tsx:568
-#: src/pages/exchange/swap/[[...tokens]].tsx:597
+#: src/components/Header/index.tsx:36
+#: src/components/Header/index.tsx:160
+#: src/pages/exchange/swap/[[...tokens]].tsx:571
+#: src/pages/exchange/swap/[[...tokens]].tsx:600
 msgid "Swap"
 msgstr "Swap"
 
 #: src/features/swap/SwapModalFooter.tsx:115
-#: src/pages/exchange/swap/[[...tokens]].tsx:567
-#: src/pages/exchange/swap/[[...tokens]].tsx:596
+#: src/pages/exchange/swap/[[...tokens]].tsx:570
+#: src/pages/exchange/swap/[[...tokens]].tsx:599
 msgid "Swap Anyway"
 msgstr "Swap Anyway"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:409
+#: src/pages/exchange/swap/[[...tokens]].tsx:412
 msgid "Swap From (est.):"
 msgstr "Swap From (est.):"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:409
+#: src/pages/exchange/swap/[[...tokens]].tsx:412
 msgid "Swap From:"
 msgstr "Swap From:"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:468
+#: src/pages/exchange/swap/[[...tokens]].tsx:471
 msgid "Swap To (est.):"
 msgstr "Swap To (est.):"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:468
+#: src/pages/exchange/swap/[[...tokens]].tsx:471
 msgid "Swap To:"
 msgstr "Swap To:"
 
@@ -2355,7 +2355,7 @@ msgstr "Transaction deadline"
 #~ msgid "Transactions"
 #~ msgstr "Transactions"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:521
+#: src/pages/exchange/swap/[[...tokens]].tsx:524
 msgid "Try enabling multi-hop trades"
 msgstr "Try enabling multi-hop trades"
 
@@ -2389,11 +2389,11 @@ msgstr "Unstake"
 #~ msgstr "Unstaked"
 
 #: src/pages/exchange/add/[[...tokens]].tsx:434
-#: src/pages/exchange/swap/[[...tokens]].tsx:499
+#: src/pages/exchange/swap/[[...tokens]].tsx:502
 msgid "Unsupported Asset"
 msgstr "Unsupported Asset"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:515
+#: src/pages/exchange/swap/[[...tokens]].tsx:518
 msgid "Unwrap"
 msgstr "Unwrap"
 
@@ -2433,8 +2433,8 @@ msgstr "Unwrap"
 #~ msgid "VFAT FARMING CALCULATOR"
 #~ msgstr "VFAT FARMING CALCULATOR"
 
-#: src/components/Header/index.tsx:59
-#: src/components/Header/index.tsx:182
+#: src/components/Header/index.tsx:60
+#: src/components/Header/index.tsx:184
 msgid "Vaults"
 msgstr "Vaults"
 
@@ -2586,7 +2586,7 @@ msgstr "Withdraw from locker {id}"
 #~ msgid "Withdraw {assetSymbol}"
 #~ msgstr "Withdraw {assetSymbol}"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:513
+#: src/pages/exchange/swap/[[...tokens]].tsx:516
 msgid "Wrap"
 msgstr "Wrap"
 

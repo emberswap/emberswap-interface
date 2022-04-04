@@ -34,6 +34,7 @@ import { computeFiatValuePriceImpact } from '../../../functions/trade'
 import confirmPriceImpactWithoutFee from '../../../features/swap/confirmPriceImpactWithoutFee'
 import { maxAmountSpend } from '../../../functions/currency'
 import swapArrowsAnimationData from '../../../animation/swap-arrows.json'
+import swapArrowsLightAnimationData from '../../../animation/swap-arrows-light.json'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import { useActiveWeb3React } from '../../../hooks/useActiveWeb3React'
@@ -47,10 +48,12 @@ import { warningSeverity } from '../../../functions/prices'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
 import Image from 'next/image'
 import EmberswapLogo from '../../../components/EmberswapLogo'
+import { useTheme } from '../../../components/ThemeSwitch'
 import Alert from '../../../components/Alert'
 
 export default function Swap() {
   const { i18n } = useLingui()
+  const { theme } = useTheme();
 
   const loadedUrlParams = useDefaultsFromURLSearch()
 
@@ -435,7 +438,7 @@ export default function Swap() {
                       onMouseLeave={() => setAnimateSwapArrows(false)}
                     >
                       <Lottie
-                        animationData={swapArrowsAnimationData}
+                        animationData={theme ==='light' ? swapArrowsLightAnimationData : swapArrowsAnimationData}
                         autoplay={animateSwapArrows}
                         loop={false}
                         style={{ width: 32, height: 32 }}
@@ -529,7 +532,7 @@ export default function Swap() {
                   >
                     {approvalState === ApprovalState.PENDING ? (
                       <AutoRow gap="6px" justify="center">
-                        Approving <Loader stroke="white" />
+                        Approving <Loader/>
                       </AutoRow>
                     ) : (
                       i18n._(t`Approve ${currencies[Field.INPUT]?.symbol}`)

@@ -10,6 +10,7 @@ import Web3Status from '../Web3Status'
 import { t } from '@lingui/macro'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
 import { useLingui } from '@lingui/react'
+import ThemeSwitch from '../ThemeSwitch'
 import TokenStats from '../TokenStats'
 import LanguageSwitch from '../LanguageSwitch'
 
@@ -106,6 +107,7 @@ function AppBar(): JSX.Element {
                     <div className="hidden md:block">
                       <LanguageSwitch />
                     </div>
+                    <ThemeSwitch/>
                     <More />
                   </div>
                 </div>

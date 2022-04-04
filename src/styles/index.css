@@ -35,7 +35,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #1B1F26;
+  background-color: var(--bg-primary); /*#1B1F26;*/
   color: var(--text-primary);
 }
 
@@ -51,7 +51,7 @@ body {
 }
 
 a {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: var(--tap-highlight-color);
 }
 
 button:focus {
@@ -76,15 +76,15 @@ input:focus {
 }
 
 *::-webkit-scrollbar-thumb {
-  border: 3px solid rgba(0, 0, 0, 0);
+  border: 3px solid var(--scroll-bar-border);
   background-clip: padding-box;
   border-radius: 9999px;
-  background-color: #bfbfbf8a;
+  background-color: var(--scroll-bar-background);
 } 
 
 .rdtPicker {
-  background-color: #1f242c !important;
-  border: 1px solid #2a2f36 !important;
+  background-color: var(--rdt-background-color) !important;
+  border: 1px solid var(--rdt-border) !important;
   border-radius: 5px !important;
   margin-top: 6px !important;
   min-width: 280px !important;
@@ -92,17 +92,17 @@ input:focus {
 
 .rdtPicker td.rdtActive, .rdtPicker td.rdtActive:hover{
   background-color: transparent !important;
-  color: #580e09 !important;
+  color: var(--rdtPickercolor) !important;
 }
 
 .rdtPicker td.rdtDay:hover, .rdtPicker td.rdtHour:hover, .rdtPicker td.rdtMinute:hover, .rdtPicker td.rdtSecond:hover {
   background-color: transparent !important;
-  color:  #fff !important;
+  color: var(--rdtHovercolor) !important;
 }
 
 .rdtPicker thead tr:first-of-type th:hover {
   background-color: transparent !important;
-  color:  #fff !important;
+  color: var(--rdtFirst) !important;
 }
 
 .rdtPicker thead tr th {
@@ -114,12 +114,12 @@ input:focus {
 }
 
 .rdtPicker td.rdtToday:before{  
-  border-bottom: 7px solid #580e09 !important;
+  border-bottom: 7px solid var(--rdt-border-bottom) !important;
 }
 
 .rdtCounter .rdtBtn:hover {
   background-color: transparent !important;
-  color: #fff !important;
+  color: var(--rdtCounterColor) !important;
 }
 
 .rdtPicker .rdtSwitch{
@@ -128,7 +128,7 @@ input:focus {
 
 
 .rdtPicker .rdtSwitch:hover{
-  color: #fff !important;
+  color: var(--rdtPickerSwitchColor) !important;
   cursor:pointer
 }
 
@@ -141,22 +141,22 @@ input:focus {
 .rdtPicker .rdtTimeToggle:hover{
   background-color: transparent !important;
   border: 0px !important;
-  color: #fff !important;
+  color: var(--rdtTimeToggle) !important;
   font-weight: bold;
 
 }
 
 .rdtPicker tfoot {
-  border-top: 1px solid #631121 !important;
+  border-top: 1px solid var(--tfoot-bordertop) !important;
 }
 
 .rdtPicker thead tr:first-child th {
-  border-bottom: 1px solid #631121 !important;
+  border-bottom: 1px solid var(--tfoot-borderbottom) !important;
 }
 
 td.rdtMonth:hover, td.rdtYear:hover {
   background-color: transparent !important;
-  color: #fff !important;
+  color: var(--rdtMonth) !important;
 }
 /* 
 main:after {
