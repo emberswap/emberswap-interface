@@ -386,7 +386,7 @@ export default function Swap() {
       <EmberswapLogo />
 
       <DoubleGlowShadow opacity="0.6">
-        <div id="swap-page" className="w-full max-w-2xl p-4 space-y-4 rounded bg-dark-900 z-1">
+        <div id="swap-page" className="w-full max-w-2xl p-4 space-y-4 rounded backdrop-blur-md	bg-dark-900-custom z-1">
           <SwapHeader
             input={currencies[Field.INPUT]}
             output={currencies[Field.OUTPUT]}
@@ -431,7 +431,7 @@ export default function Swap() {
                     onSwitchTokens()
                   }}
                 >
-                  <div className="rounded-full bg-dark-900 p-3px">
+                  <div className="rounded-full backdrop-blur-md	bg-dark-900-custom p-3px">
                     <div
                       className="p-3 rounded-full bg-dark-800 hover:bg-dark-700"
                       onMouseEnter={() => setAnimateSwapArrows(true)}
@@ -484,7 +484,7 @@ export default function Swap() {
                     price={trade?.executionPrice}
                     showInverted={showInverted}
                     setShowInverted={setShowInverted}
-                    className="bg-dark-900"
+                    className="backdrop-blur-md	bg-dark-900-custom"
                     trade={trade}
                   />
                 </div>

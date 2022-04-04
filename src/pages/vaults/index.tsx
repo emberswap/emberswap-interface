@@ -184,7 +184,7 @@ export default function Vault(): JSX.Element {
                       )}
                     </div>
                   </div>
-                  <div className={`col-span-12 md:col-span-9 bg-dark-800  py-4 md:px-6 md:py-4 rounded`}>
+                  <div className={`col-span-12 md:col-span-9 py-4 md:px-6 md:py-4 rounded`}>
                     <VaultList farms={data} />
                   </div>
                 </div>
