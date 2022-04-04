@@ -86,7 +86,7 @@ const FarmListItem = ({ farm }) => {
             )}
             <div className="relative flex items-center w-full mb-4">
               <NumericalInput
-                className="w-full px-4 py-4 pr-20 rounded bg-dark-7000 focus:ring focus:ring-dark-purple"
+                className="w-full px-4 py-4 pr-20 rounded bg-darker focus:ring focus:ring-dark-purple"
                 value={depositValue}
                 onUserInput={setDepositValue}
               />
@@ -172,7 +172,7 @@ const FarmListItem = ({ farm }) => {
             )}
             <div className="relative flex items-center w-full mb-4">
               <NumericalInput
-                className="w-full px-4 py-4 pr-20 rounded bg-dark-7000 focus:ring focus:ring-light-purple"
+                className="w-full px-4 py-4 pr-20 rounded bg-darker focus:ring focus:ring-light-purple"
                 value={withdrawValue}
                 onUserInput={setWithdrawValue}
               />

@@ -61,8 +61,8 @@
     --color-dark-850:#101010;
     --color-dark-800:#101010;
     --color-dark-800-custom:#ffffff17;
-    --colour-dark-7000:#151515;
     --color-dark-700:#151515;
+    --color-darker:#151515!important;
     --color-dark-600:#303030;
     --color-dark-500:#404040;
     --color-low-emphesis:#575757;
@@ -71,6 +71,7 @@
     --color-high-emphesis: #E3E3E3;
     --color-light:#c8bc05;
     --color-black:#330606;
+    --dark-800-buffer:#101010;
 }
 .dark:root {
     --primary: #bfe70a;
@@ -136,7 +137,7 @@
     --color-dark-800:#bebebe;
     --color-dark-800-custom:#bebebe17;
     --color-dark-700:#bebebe;
-    --color-dark-7000:#e5e5ea;
+    --color-darker:#e5e5ea!important;
     --color-dark-600:#a7adba;
     --color-dark-500:#c0c5ce;
     --color-low-emphesis:#ECEEEE;
@@ -145,4 +146,5 @@
     --color-high-emphesis:#222425;
     --color-light:#c8bc05;
     --color-black:#330606;
+    --dark-800-buffer:#ffffff00; 
 }
