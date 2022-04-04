@@ -4,7 +4,7 @@ import { useActiveWeb3React, useFuse } from '../../hooks'
 import FarmList from '../../features/farm/FarmList'
 import Head from 'next/head'
 import Menu from '../../features/farm/FarmMenu'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { formatNumberScale } from '../../functions'
 import { usePositions, useFarms, useDistributorInfo } from '../../features/farm/hooks'
 import { useRouter } from 'next/router'
@@ -24,6 +24,8 @@ import { useTVL } from '../../hooks/useV2Pairs'
 import { getAddress } from '@ethersproject/address'
 import { useVaults } from '../../features/vault/hooks'
 import Search from '../../components/Search'
+import { updateUserFarmFilter } from '../../state/user/actions'
+import { getFarmFilter, useUpdateFarmFilter } from '../../state/user/hooks'
 
 export default function Farm(): JSX.Element {
   const { i18n } = useLingui()
@@ -34,6 +36,14 @@ export default function Farm(): JSX.Element {
 
   const type = router.query.filter as string
 
+  const savedFilter = getFarmFilter()
+
+  if (!type && savedFilter) {
+    router.push(`/farm?filter=${savedFilter}`)
+  }
+
+  const updateFarmFilter = useUpdateFarmFilter()
+  updateFarmFilter(type)
   const positions = usePositions()
 
   const farms = useFarms()

@@ -848,7 +848,7 @@ msgstr "English"
 #~ msgstr "Enter Amount"
 
 #: src/state/limit-order/hooks.ts:177
-#: src/state/swap/hooks.ts:201
+#: src/state/swap/hooks.ts:202
 msgid "Enter a recipient"
 msgstr "Enter a recipient"
 
@@ -860,7 +860,7 @@ msgstr "Enter a valid slippage percentage"
 #: src/state/burn/hooks.ts:138
 #: src/state/limit-order/hooks.ts:168
 #: src/state/mint/hooks.ts:202
-#: src/state/swap/hooks.ts:192
+#: src/state/swap/hooks.ts:193
 msgid "Enter an amount"
 msgstr "Enter an amount"
 
@@ -1054,7 +1054,7 @@ msgstr "Governance"
 #: src/features/farm/FarmListItem.tsx:97
 #: src/features/farm/FarmListItemDetails.tsx:236
 #: src/features/vault/VaultListItemDetails.tsx:294
-#: src/pages/farm/index.tsx:236
+#: src/pages/farm/index.tsx:246
 msgid "Harvest"
 msgstr "Harvest"
 
@@ -1195,7 +1195,7 @@ msgstr "Insufficient liquidity for this trade"
 #: src/state/limit-order/hooks.ts:199
 #: src/state/mint/hooks.ts:208
 #: src/state/mint/hooks.ts:212
-#: src/state/swap/hooks.ts:218
+#: src/state/swap/hooks.ts:219
 msgid "Insufficient {0} balance"
 msgstr "Insufficient {0} balance"
 
@@ -1208,7 +1208,7 @@ msgstr "Interface Settings"
 msgid "Invalid pair"
 msgstr "Invalid pair"
 
-#: src/state/swap/hooks.ts:208
+#: src/state/swap/hooks.ts:209
 msgid "Invalid recipient"
 msgstr "Invalid recipient"
 
@@ -1950,7 +1950,7 @@ msgstr "Select a rate"
 #: src/modals/SearchModal/CurrencySearch.tsx:192
 #: src/modals/SelectTokenModal/TokenList.tsx:50
 #: src/state/limit-order/hooks.ts:172
-#: src/state/swap/hooks.ts:196
+#: src/state/swap/hooks.ts:197
 msgid "Select a token"
 msgstr "Select a token"
 

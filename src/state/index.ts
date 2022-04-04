@@ -15,7 +15,7 @@ import { updateVersion } from './global/actions'
 import user from './user/reducer'
 import zap from './zap/reducer'
 
-const PERSISTED_KEYS: string[] = ['user', 'transactions', 'lists', 'bridgeTransactions']
+const PERSISTED_KEYS: string[] = ['user', 'transactions', 'lists', 'bridgeTransactions', 'swap']
 
 const reducer = combineReducers({
   application,

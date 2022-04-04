@@ -1,5 +1,6 @@
 import { Field, replaceSwapState, selectCurrency, setRecipient, switchCurrencies, typeInput } from './actions'
-
+import { ChainId } from '../../sdk'
+import { EMBER_ADDRESS } from '../../constants'
 import { createReducer } from '@reduxjs/toolkit'
 
 export interface SwapState {
@@ -19,10 +20,10 @@ const initialState: SwapState = {
   independentField: Field.INPUT,
   typedValue: '',
   [Field.INPUT]: {
-    currencyId: '',
+    currencyId: 'ETH',
   },
   [Field.OUTPUT]: {
-    currencyId: '',
+    currencyId: EMBER_ADDRESS[ChainId.SMARTBCH],
   },
   recipient: null,
 }

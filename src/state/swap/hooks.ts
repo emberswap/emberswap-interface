@@ -31,7 +31,8 @@ import {
 } from '../user/hooks'
 
 import { ParsedQs } from 'qs'
-import { SwapState } from './reducer'
+import { SwapState} from './reducer'
+import initialState from "./reducer"
 import { t } from '@lingui/macro'
 import { tryParseAmount } from '../../functions/parse'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
@@ -299,7 +300,7 @@ export function useDerivedSwapInfo(doArcher = false): {
     if (doArcher && v2Trade && swapCalls && !userTipManualOverride) {
       estimateGas()
     }
-  }, [doArcher, v2Trade, swapCalls, userTipManualOverride, library, setUserGasEstimate])
+  }, [account, doArcher, v2Trade, swapCalls, userTipManualOverride, library, setUserGasEstimate])
 
   return {
     currencies,
@@ -386,10 +387,22 @@ export function useDefaultsFromURLSearch():
     | undefined
   >()
 
-  useEffect(() => {
-    if (!chainId) return
-    const parsed = queryParametersToSwapState(parsedQs, chainId)
+if (!chainId) return
+function defaultSwapState(): SwapState {
+  return queryParametersToSwapState(initialState);
+}
+  const defaultState = defaultSwapState()
+  const hadQuery = Object.keys(parsedQs).length
+  const parsed = queryParametersToSwapState(parsedQs, chainId)
 
+if (!hadQuery && JSON.stringify(parsed) === JSON.stringify(defaultState)) {
+  return {
+    inputCurrencyId: defaultState[Field.INPUT].currencyId,
+    outputCurrencyId: defaultState[Field.OUTPUT].currencyId,
+  };
+}
+
+  useEffect(() => {
     dispatch(
       replaceSwapState({
         typedValue: parsed.typedValue,

@@ -798,7 +798,7 @@ msgstr "英文"
 #~ msgstr "输入金额"
 
 #: src/state/limit-order/hooks.ts:177
-#: src/state/swap/hooks.ts:201
+#: src/state/swap/hooks.ts:202
 msgid "Enter a recipient"
 msgstr "输入接收人"
 
@@ -810,7 +810,7 @@ msgstr "输入有效的滑点百分比"
 #: src/state/burn/hooks.ts:138
 #: src/state/limit-order/hooks.ts:168
 #: src/state/mint/hooks.ts:202
-#: src/state/swap/hooks.ts:192
+#: src/state/swap/hooks.ts:193
 msgid "Enter an amount"
 msgstr "输入金额"
 
@@ -977,7 +977,7 @@ msgstr ""
 #: src/features/farm/FarmListItem.tsx:97
 #: src/features/farm/FarmListItemDetails.tsx:236
 #: src/features/vault/VaultListItemDetails.tsx:294
-#: src/pages/farm/index.tsx:236
+#: src/pages/farm/index.tsx:246
 msgid "Harvest"
 msgstr "收获"
 
@@ -1116,7 +1116,7 @@ msgstr "该交易的流动性不足"
 #: src/state/limit-order/hooks.ts:199
 #: src/state/mint/hooks.ts:208
 #: src/state/mint/hooks.ts:212
-#: src/state/swap/hooks.ts:218
+#: src/state/swap/hooks.ts:219
 msgid "Insufficient {0} balance"
 msgstr "代币{0}余额不足"
 
@@ -1129,7 +1129,7 @@ msgstr "交互设置"
 msgid "Invalid pair"
 msgstr "无效的代币对"
 
-#: src/state/swap/hooks.ts:208
+#: src/state/swap/hooks.ts:209
 msgid "Invalid recipient"
 msgstr "无效接收人"
 
@@ -1838,7 +1838,7 @@ msgstr "选择比率"
 #: src/modals/SearchModal/CurrencySearch.tsx:192
 #: src/modals/SelectTokenModal/TokenList.tsx:50
 #: src/state/limit-order/hooks.ts:172
-#: src/state/swap/hooks.ts:196
+#: src/state/swap/hooks.ts:197
 msgid "Select a token"
 msgstr "选择通证"
 
