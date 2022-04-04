@@ -1484,7 +1484,7 @@ msgstr "未找到池"
 msgid "No results found"
 msgstr "未找到结果"
 
-#: src/pages/governance/proposal/[proposalId].tsx:180
+#: src/pages/governance/proposal/[proposalId].tsx:182
 msgid "No votes yet"
 msgstr ""
 
@@ -1668,7 +1668,7 @@ msgstr "价格影响过高"
 msgid "Price Updated"
 msgstr "价格更新"
 
-#: src/pages/governance/proposal/[proposalId].tsx:117
+#: src/pages/governance/proposal/[proposalId].tsx:119
 msgid "Proposal {proposalId} not found"
 msgstr ""
 
@@ -1802,7 +1802,7 @@ msgstr "路由经过这些代币将给您的交易带来最好的价格。"
 #~ msgid "Search by name, symbol, address"
 #~ msgstr "通过名字、代号或地址搜索"
 
-#: src/pages/governance/index.tsx:112
+#: src/pages/governance/index.tsx:117
 msgid "Search by proposal title"
 msgstr ""
 
@@ -2131,7 +2131,7 @@ msgstr "到"
 #~ msgid "To (estimated)"
 #~ msgstr "至(估计)"
 
-#: src/pages/governance/index.tsx:100
+#: src/pages/governance/index.tsx:103
 msgid "To make a proposal click"
 msgstr ""
 
@@ -2177,7 +2177,7 @@ msgstr ""
 #~ msgid "Total"
 #~ msgstr "总数"
 
-#: src/pages/governance/proposal/[proposalId].tsx:147
+#: src/pages/governance/proposal/[proposalId].tsx:149
 msgid "Total votes: {0}"
 msgstr ""
 
@@ -2352,7 +2352,7 @@ msgstr "在浏览器查看"
 msgid "View proposal details"
 msgstr ""
 
-#: src/pages/governance/index.tsx:99
+#: src/pages/governance/index.tsx:102
 msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
 msgstr ""
 
@@ -2380,15 +2380,15 @@ msgstr "在区块浏览器上查看交易"
 #~ msgid "View your SushiBar Portfolio"
 #~ msgstr "查看您的SushiBar组合"
 
-#: src/pages/governance/proposal/[proposalId].tsx:171
+#: src/pages/governance/proposal/[proposalId].tsx:173
 msgid "Vote"
 msgstr ""
 
-#: src/pages/governance/index.tsx:95
+#: src/pages/governance/index.tsx:98
 msgid "Vote using EMBER on community created proposals."
 msgstr ""
 
-#: src/pages/governance/proposal/[proposalId].tsx:125
+#: src/pages/governance/proposal/[proposalId].tsx:127
 msgid "Voting proposal"
 msgstr ""
 
@@ -2631,9 +2631,9 @@ msgstr "你的交易将在这里显示"
 #~ msgid "above"
 #~ msgstr ""
 
-#: src/pages/governance/index.tsx:40
-#: src/pages/governance/proposal/[proposalId].tsx:51
-#: src/pages/governance/proposal/[proposalId].tsx:131
+#: src/pages/governance/index.tsx:41
+#: src/pages/governance/proposal/[proposalId].tsx:52
+#: src/pages/governance/proposal/[proposalId].tsx:133
 msgid "active"
 msgstr ""
 
@@ -2646,12 +2646,12 @@ msgstr "年化"
 #~ msgid "below"
 #~ msgstr ""
 
-#: src/pages/governance/index.tsx:39
-#: src/pages/governance/proposal/[proposalId].tsx:50
+#: src/pages/governance/index.tsx:40
+#: src/pages/governance/proposal/[proposalId].tsx:51
 msgid "closed"
 msgstr ""
 
-#: src/pages/governance/proposal/[proposalId].tsx:132
+#: src/pages/governance/proposal/[proposalId].tsx:134
 msgid "ends at block {0} ({1})"
 msgstr ""
 
@@ -2667,7 +2667,7 @@ msgstr "加载失败"
 #~ msgid "forum discussion"
 #~ msgstr ""
 
-#: src/pages/governance/index.tsx:101
+#: src/pages/governance/index.tsx:104
 msgid "here!"
 msgstr ""
 
@@ -2759,13 +2759,13 @@ msgstr "{0} {1} 每 {2}"
 msgid "{0}/{1} Burned"
 msgstr "{0}/{1} 销毁"
 
-#: src/pages/governance/index.tsx:42
-#: src/pages/governance/proposal/[proposalId].tsx:53
+#: src/pages/governance/index.tsx:43
+#: src/pages/governance/proposal/[proposalId].tsx:54
 msgid "{expireTime} ago"
 msgstr ""
 
-#: src/pages/governance/index.tsx:43
-#: src/pages/governance/proposal/[proposalId].tsx:54
+#: src/pages/governance/index.tsx:44
+#: src/pages/governance/proposal/[proposalId].tsx:55
 msgid "{expireTime} left"
 msgstr ""
 

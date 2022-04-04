@@ -146,11 +146,11 @@ export default function Vault(): JSX.Element {
         <DoubleGlowShadow maxWidth={false} opacity={'0.4'}>
           <div className={`grid grid-cols-12 gap-2 min-h-1/2`}>
             <div className={`col-span-12`}>
-              <Card className="bg-dark-900 z-4">
+              <Card className="bg-dark-900-custom backdrop-blur-md	z-4">
                 <div className={`grid grid-cols-12 md:space-x-4 space-y-4 md:space-y-0 `}>
                   <div className={`col-span-12 md:col-span-3 space-y-4`}>
                     <div className={`hidden md:block`}>
-                      <div className={`col-span-12 md:col-span-4 bg-dark-800 px-6 py-4 rounded`}>
+                      <div className={`col-span-12 md:col-span-4 bg-dark-800-custom backdrop-blur-md px-6 py-4 rounded`}>
                         <div className="mb-2 text-2xl text-emphesis">{i18n._(t`Ember Vault`)}</div>
                         <div className="mb-4 text-base text-secondary">
                           <p>

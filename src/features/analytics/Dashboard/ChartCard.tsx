@@ -65,7 +65,7 @@ export default function ChartCard(props: ChartCardProps): JSX.Element {
   )
 
   return (
-    <div className="w-full font-bold rounded bg-dark-900">
+    <div className="w-full font-bold rounded bg-dark-900-custom backdrop-blur-md">
       <div className="p-4">
         <div className="text-lg text-primary">{type.header}</div>
         <div className="text-2xl text-high-emphesis">{formatNumber(data.figure, true, false)}</div>

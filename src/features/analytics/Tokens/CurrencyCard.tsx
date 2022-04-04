@@ -10,7 +10,7 @@ export default function CurrencyCard({ token, symbol }: CurrencyCardProps): JSX.
   const currency = useCurrency(token)
 
   return (
-    <div className="rounded bg-dark-900 w-full p-3">
+    <div className="rounded bg-dark-900-custom backdrop-blur-md	w-full p-3">
       <div className="flex flex-row items-center space-x-4">
         <CurrencyLogo currency={currency} size={40} />
         <div className="text-high-emphesis text-lg font-bold">{symbol}</div>

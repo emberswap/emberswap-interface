@@ -43,7 +43,7 @@ const LimitPriceInputPanel: FC<LimitPriceInputPanelProps> = ({ onBlur }) => {
           {i18n._(t`Current`)}
         </span>
       </div>
-      <div className="flex bg-dark-900 pl-4 pr-5 w-full h-full border-2 border-dark-800 rounded md:rounded-r items-center gap-3">
+      <div className="flex bg-dark-900-custom backdrop-blur-md	pl-4 pr-5 w-full h-full border-2 border-dark-800 rounded md:rounded-r items-center gap-3">
         <NumericalInput
           disabled={disabled}
           className="w-full bg-transparent font-medium text-2xl"

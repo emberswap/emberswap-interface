@@ -22,7 +22,7 @@ export default function Toggle({ id, isActive, toggle }: ToggleProps) {
       <span
         className={classNames(
           isActive ? 'translate-x-5' : 'translate-x-0',
-          'pointer-events-none relative inline-block h-5 w-5 rounded-full bg-dark-900 shadow transform ring-0 transition ease-in-out duration-200'
+          'pointer-events-none relative inline-block h-5 w-5 rounded-full bg-dark-900-custom backdrop-blur-md	shadow transform ring-0 transition ease-in-out duration-200'
         )}
       >
         <span

@@ -16,6 +16,7 @@ import { VOTING_API_URL } from '../../features/governance/util'
 import { useWeb3React } from '@web3-react/core'
 import moment from 'moment'
 import Link from 'next/link'
+import DoubleGlowShadow from '../../components/DoubleGlowShadow'
 
 export default function Vote() {
   const { i18n } = useLingui()
@@ -62,8 +63,9 @@ export default function Vote() {
   })
   
   return (
-    <Container id="vote-page" className="py-4 md:py-8 lg:py-12" maxWidth="full">
-      <Head>
+    <Container id="vote-page" className="py-4 md:py-8 lg:py-12" maxWidth="full">          
+      
+        <Head>
         <title key="title">Governance | EmberSwap</title>
         <meta
           key="description"
@@ -89,6 +91,7 @@ export default function Vote() {
       </Head>
       <div className="flex flex-col w-full min-h-full">
         <div className="flex justify-center mb-6">
+       
           <div className="flex flex-col w-full max-w-xl mt-auto mb-2">
             <div className="flex max-w-lg">
               <div className="self-end mb-3 text-lg font-bold md:text-2xl text-high-emphesis md:mb-7">
@@ -103,8 +106,10 @@ export default function Vote() {
           <div className="hidden px-4 ml-1 md:block w-48">
             <Image src="/images/governance/emberswap-governance.png" alt="EmberSwap Governance" width="100%" height="100%" layout="responsive" />
           </div>
-        </div>
-        <div className="flex justify-center mb-6">
+        </div> 
+        <div className="flex justify-center mb-6">    
+            <DoubleGlowShadow>
+
           <div className="flex flex-col w-full mt-auto mb-4 max-w-7xl">
             <div className={classNames('space-y-6 col-span-4 lg:col-span-3')}>
               <Search
@@ -125,9 +130,10 @@ export default function Vote() {
 
               <ProposalList proposals={result} term={term} />
             </div>
-          </div>
-        </div>
+          </div>    
+        </DoubleGlowShadow>
       </div>
-    </Container>
+    </div>            
+  </Container>
   )
 }

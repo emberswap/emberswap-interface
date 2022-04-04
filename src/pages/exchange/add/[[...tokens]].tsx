@@ -352,7 +352,7 @@ export default function Add() {
       <EmberswapLogo />
       <Container id="remove-liquidity-page" maxWidth="2xl" className="space-y-4">
         <DoubleGlowShadow>
-          <div className="p-4 space-y-4 rounded bg-dark-900" style={{ zIndex: 1 }}>
+          <div className="p-4 space-y-4 rounded backdrop-blur-md	bg-dark-900-custom" style={{ zIndex: 1 }}>
             <ExchangeHeader
               input={currencies[Field.CURRENCY_A]}
               output={currencies[Field.CURRENCY_B]}
@@ -395,7 +395,7 @@ export default function Add() {
 
                 <AutoColumn justify="space-between" className="py-2.5">
                   <AutoRow justify={isExpertMode ? 'space-between' : 'flex-start'} style={{ padding: '0 1rem' }}>
-                    <button className="z-10 -mt-6 -mb-6 rounded-full cursor-default bg-dark-900 p-3px">
+                    <button className="z-10 -mt-6 -mb-6 rounded-full cursor-default backdrop-blur-md	bg-dark-900-custom p-3px">
                       <div className="p-3 rounded-full bg-dark-800">
                         <Plus size="32" />
                       </div>
@@ -424,7 +424,7 @@ export default function Add() {
                     price={price}
                     noLiquidity={noLiquidity}
                     poolTokenPercentage={poolTokenPercentage}
-                    className="bg-dark-900"
+                    className="backdrop-blur-md	bg-dark-900-custom"
                   />
                 </div>
               )}

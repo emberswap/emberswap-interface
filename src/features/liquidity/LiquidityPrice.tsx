@@ -23,7 +23,7 @@ export default function LiquidityPrice({
 }): JSX.Element {
   const { i18n } = useLingui()
   return (
-    <div className={classNames('flex justify-between items-center rounded py-2 px-4 bg-dark-900', className)}>
+    <div className={classNames('flex justify-between items-center rounded py-2 px-4 bg-dark-900-custom backdrop-blur-md', className)}>
       <div className="flex flex-col w-full text-secondary">
         <Typography variant="sm" className="select-none">
           {i18n._(

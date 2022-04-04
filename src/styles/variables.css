@@ -57,8 +57,11 @@
     --color-dark-blue:#0F182A;
     --color-dark-1000:#000000;
     --color-dark-900:#080808;
+    --color-dark-900-custom:#0808086b;
     --color-dark-850:#101010;
     --color-dark-800:#101010;
+    --color-dark-800-custom:#ffffff17;
+    --colour-dark-7000:#151515;
     --color-dark-700:#151515;
     --color-dark-600:#303030;
     --color-dark-500:#404040;
@@ -128,9 +131,12 @@
     --color-dark-blue:#Bdc5d8;
     --color-dark-1000:#fff;
     --color-dark-900:#a0a1a2;
+    --color-dark-900-custom:#a0a1a224;
     --color-dark-850:#65737e;
     --color-dark-800:#bebebe;
+    --color-dark-800-custom:#bebebe17;
     --color-dark-700:#bebebe;
+    --color-dark-7000:#e5e5ea;
     --color-dark-600:#a7adba;
     --color-dark-500:#c0c5ce;
     --color-low-emphesis:#ECEEEE;

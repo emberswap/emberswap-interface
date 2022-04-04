@@ -76,7 +76,7 @@ const PoolList = () => {
       </Head>
       <div className="container max-w-2xl px-0 mx-auto sm:px-4">
         <Card
-          className="h-full rounded bg-dark-900"
+          className="h-full rounded bg-dark-900-custom backdrop-blur-md"
           header={
             <CardHeader className="flex items-center justify-between bg-dark-800">
               <div className="flex flex-col items-center justify-between w-full">

@@ -97,7 +97,7 @@ export default function Locker(): JSX.Element {
               </NavLink>
             </div>
             <div className={`col-span-12`} style={{ minHeight: '35rem' }}>
-              <Card className="h-full bg-dark-900 z-4">
+              <Card className="h-full bg-dark-900-custom backdrop-blur-md	z-4">
                 <Search
                   placeholder={'Search by name, symbol or address'}
                   term={tokenAddress}

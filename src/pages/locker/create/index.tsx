@@ -162,7 +162,7 @@ export default function CreateLocker(): JSX.Element {
               </NavLink>
             </div>
             <div className={`col-span-12`} style={{ minHeight: '30rem' }}>
-              <Card className="h-full bg-dark-900 z-4">
+              <Card className="h-full bg-dark-900-custom backdrop-blur-md	z-4">
                 <div className={`grid grid-cols-12 gap-4`}>
                   <div className={`col-span-12 md:col-span-8 bg-dark-800 px-6 py-4 rounded`}>
                     <div className={'px-4 py-2 rounded bg-dark-800'}>
@@ -172,9 +172,9 @@ export default function CreateLocker(): JSX.Element {
                             <div className="text-base font-medium text-secondary whitespace-nowrap">Token Address</div>
                           </div>
                         </div>
-                        <div className={'flex items-center w-full space-x-3 rounded bg-dark-900 focus:bg-dark-700 p-3'}>
+                        <div className={'flex items-center w-full space-x-3 rounded bg-dark-900-custom backdrop-blur-md	focus:bg-dark-700 p-3'}>
                           <input
-                            className="p-3 w-full flex overflow-ellipsis font-bold recipient-address-input bg-dark-900 h-full w-full rounded placeholder-low-emphesis"
+                            className="p-3 w-full flex overflow-ellipsis font-bold recipient-address-input bg-dark-900-custom backdrop-blur-md	h-full w-full rounded placeholder-low-emphesis"
                             type="text"
                             autoComplete="off"
                             autoCorrect="off"
@@ -194,7 +194,7 @@ export default function CreateLocker(): JSX.Element {
                             <div className="text-base font-medium text-secondary whitespace-nowrap">Amount</div>
                           </div>
                         </div>
-                        <div className={'flex items-center w-full space-x-3 rounded bg-dark-900 focus:bg-dark-700 p-3'}>
+                        <div className={'flex items-center w-full space-x-3 rounded bg-dark-900-custom backdrop-blur-md	focus:bg-dark-700 p-3'}>
                           <NumericalInput
                             className={'p-3 text-base bg-transparent'}
                             id="token-amount-input"
@@ -223,10 +223,10 @@ export default function CreateLocker(): JSX.Element {
                             <div className="text-base font-medium text-secondary whitespace-nowrap">Withdrawer</div>
                           </div>
                         </div>
-                        <div className={'flex items-center w-full space-x-3 rounded bg-dark-900 focus:bg-dark-700 p-3'}>
+                        <div className={'flex items-center w-full space-x-3 rounded bg-dark-900-custom backdrop-blur-md	focus:bg-dark-700 p-3'}>
                           <>
                             <input
-                              className="p-3 w-full flex overflow-ellipsis font-bold recipient-address-input bg-dark-900 h-full w-full rounded placeholder-low-emphesis"
+                              className="p-3 w-full flex overflow-ellipsis font-bold recipient-address-input bg-dark-900-custom backdrop-blur-md	backdrop-blur-md	h-full w-full rounded placeholder-low-emphesis"
                               type="text"
                               autoComplete="off"
                               autoCorrect="off"
@@ -256,7 +256,7 @@ export default function CreateLocker(): JSX.Element {
                             <div className="text-base font-medium text-secondary whitespace-nowrap">Unlock date</div>
                           </div>
                         </div>
-                        <div className={'flex items-center w-full space-x-3 rounded bg-dark-900 focus:bg-dark-700 p-3'}>
+                        <div className={'flex items-center w-full space-x-3 rounded bg-dark-900-custom backdrop-blur-md	focus:bg-dark-700 p-3'}>
                           <>
                             <Datetime
                               value={unlockDate}
@@ -266,7 +266,7 @@ export default function CreateLocker(): JSX.Element {
                               onChange={(e) => setUnlockDate(moment.default(e))}
                               inputProps={{
                                 className:
-                                  'p-3 w-full flex overflow-ellipsis font-bold recipient-address-input bg-dark-900 h-full w-full rounded placeholder-low-emphesis',
+                                  'p-3 w-full flex overflow-ellipsis font-bold recipient-address-input bg-dark-900-custom backdrop-blur-md	h-full w-full rounded placeholder-low-emphesis',
                               }}
                             />
                           </>

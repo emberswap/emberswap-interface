@@ -21,6 +21,7 @@ import { castVote, formatEmber, VOTING_API_URL } from '../../../features/governa
 import Button from '../../../components/Button'
 import Web3Connect from '../../../components/Web3Connect'
 import moment from 'moment'
+import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
 
 export default function Proposal() {
   const { i18n } = useLingui()
@@ -73,6 +74,7 @@ export default function Proposal() {
 
   return (
     <Container id="vote-page" className="py-4 space-y-6 md:py-8 lg:py-12" maxWidth="2xl">
+      <DoubleGlowShadow>
       <Head>
         <title key="title">Governance | EmberSwap</title>
         <meta
@@ -110,7 +112,7 @@ export default function Proposal() {
           )}
         </Typography>
       </div>
-      <div className="p-4 space-y-4 rounded bg-dark-900">
+      <div className="p-4 space-y-4 rounded bg-dark-900-custom backdrop-blur-md">
         <div className="grid grid-flow-row gap-3">
           {!proposal && (
             <div>
@@ -200,6 +202,7 @@ export default function Proposal() {
           )}
         </div>
       </div>
+      </DoubleGlowShadow>
     </Container>
   )
 }

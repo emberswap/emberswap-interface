@@ -23,7 +23,7 @@ const FarmListItem = ({ farm, ...rest }) => {
           <Disclosure.Panel
             className={classNames(
               open && 'rounded-b-none',
-              'px-6 py-6 flex flex-col w-full text-left rounded bg-dark-900 text-primary text-sm md:text-lg'
+              'px-6 py-6 flex flex-col w-full text-left rounded bg-dark-900-custom backdrop-blur-md text-primary text-sm md:text-lg'
             )}
             static
           >

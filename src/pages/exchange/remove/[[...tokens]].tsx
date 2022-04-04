@@ -719,7 +719,7 @@ export default function Remove() {
 
       <Container id="remove-liquidity-page" maxWidth="2xl" className="space-y-4">
         <DoubleGlowShadow>
-          <div className="p-4 space-y-4 rounded bg-dark-900" style={{ zIndex: 1 }}>          
+          <div className="p-4 space-y-4 rounded backdrop-blur-md	bg-dark-900-custom" style={{ zIndex: 1 }}>          
             <Header input={currencyA} output={currencyB} allowedSlippage={allowedSlippage} />
             <div>
               <TransactionConfirmationModal
@@ -749,7 +749,7 @@ export default function Remove() {
 
                   <AutoColumn justify="space-between" className="py-2.5">
                     <AutoRow justify={'flex-start'} style={{ padding: '0 1rem' }}>
-                      <button className="z-10 -mt-6 -mb-6 rounded-full cursor-default bg-dark-900 p-3px">
+                      <button className="z-10 -mt-6 -mb-6 rounded-full cursor-default backdrop-blur-md	bg-dark-900-custom p-3px">
                         <div className="p-3 rounded-full bg-dark-800">
                           <ArrowDownIcon width="32px" height="32px" />
                         </div>
@@ -791,14 +791,14 @@ export default function Remove() {
                       </div>
 
                       <div className="flex flex-col space-y-3 md:flex-row md:space-x-6 md:space-y-0">
-                        <div className="flex flex-row items-center w-full p-3 pr-8 space-x-3 rounded bg-dark-900">
+                        <div className="flex flex-row items-center w-full p-3 pr-8 space-x-3 rounded backdrop-blur-md	bg-dark-900-custom backdrop-blur-md">
                           <CurrencyLogo currency={currencyA} size="46px" />
                           <AutoColumn>
                             <div className="text-white">{formattedAmounts[Field.CURRENCY_A] || '-'}</div>
                             <div className="text-sm">{currencyA?.symbol}</div>
                           </AutoColumn>
                         </div>
-                        <div className="flex flex-row items-center w-full p-3 pr-8 space-x-3 rounded bg-dark-900">
+                        <div className="flex flex-row items-center w-full p-3 pr-8 space-x-3 rounded backdrop-blur-md	bg-dark-900-custom backdrop-blur-md">
                           <CurrencyLogo currency={currencyB} size="46px" />
                           <AutoColumn>
                             <div className="text-white">{formattedAmounts[Field.CURRENCY_B] || '-'}</div>
