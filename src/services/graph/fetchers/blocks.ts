@@ -2,7 +2,7 @@ import { getUnixTime, startOfHour, startOfMinute, startOfSecond, subDays, subHou
 
 import { ChainId } from '../../../sdk'
 import { GRAPH_HOST } from '../constants'
-import { blocksQuery } from '../queries'
+import { blocksQuery, blockQuery } from '../queries'
 import { request } from 'graphql-request'
 
 export const BLOCKS = {
@@ -25,6 +25,23 @@ export const getBlocks = async (chainId = ChainId.MAINNET, start, end) => {
     end,
   })
   return blocks
+}
+
+export const getBlock = async (chainId = ChainId.SMARTBCH, timestamp: number) => {
+  const { blocks } = await fetcher(
+    chainId,
+    blockQuery,
+    timestamp
+      ? {
+          where: {
+            timestamp_gt: timestamp - 600,
+            timestamp_lt: timestamp,
+          },
+        }
+      : {}
+  )
+
+  return Number(blocks?.[0]?.number)
 }
 
 export const getOneDayBlock = async (chainId = ChainId.MAINNET) => {

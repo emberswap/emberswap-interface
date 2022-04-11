@@ -7,7 +7,8 @@ import {
   getMaticPrice,
   getOnePrice,
   getStakePrice,
-  getSushiPrice,
+  getEmberPrice,
+  getNativePrice,
   getTokens,
   getDayData,
   getFactory,
@@ -17,10 +18,11 @@ import {
 } from '../fetchers'
 import { getEthPrice, getPairs } from '../fetchers'
 import useSWR, { SWRConfiguration } from 'swr'
-
+import { useBlock } from './blocks'
 import { ChainId } from '../../../sdk'
 import { ethPriceQuery } from '../queries'
 import { useActiveWeb3React } from '../../../hooks'
+import { first } from 'lodash'
 
 export function useExchange(variables = undefined, query = undefined, swrConfig: SWRConfiguration = undefined) {
   const { chainId } = useActiveWeb3React()
@@ -42,13 +44,37 @@ export function useFactory(variables = undefined, swrConfig: SWRConfiguration = 
   return data
 }
 
-export function useEthPrice(variables = undefined, swrConfig: SWRConfiguration = undefined) {
-  const { chainId } = useActiveWeb3React()
+interface useNativePriceProps {
+  timestamp?: number
+  block?: number
+  chainId?: number
+  shouldFetch?: boolean
+}
+
+export function useNativePrice(
+  { timestamp, block, chainId = useActiveWeb3React().chainId, shouldFetch = true }: useNativePriceProps = {},
+  swrConfig: SWRConfiguration = undefined
+) {
+  const blockFetched = useBlock({ timestamp, chainId, shouldFetch: shouldFetch && !!timestamp })
+  block = block ?? (timestamp ? blockFetched : undefined)
+
+  shouldFetch = shouldFetch && !!chainId
+
+  const variables = {
+    block: block ? { number: block } : undefined,
+  }
+
   const { data } = useSWR(
-    chainId ? ['ethPrice', JSON.stringify(variables)] : null,
-    () => getEthPrice(chainId, variables),
+    shouldFetch ? ['nativePrice', chainId, JSON.stringify(variables)] : null,
+    () => getNativePrice(chainId, variables),
     swrConfig
   )
+
+  return data
+}
+
+export function useEthPrice(variables = undefined, swrConfig: SWRConfiguration = undefined) {
+  const { data } = useSWR(['ethPrice', JSON.stringify(variables)], () => getEthPrice(variables), swrConfig)
   return data
 }
 
@@ -84,8 +110,8 @@ export function useMaticPrice(swrConfig: SWRConfiguration = undefined) {
   return data
 }
 
-export function useSushiPrice(swrConfig: SWRConfiguration = undefined) {
-  const { data } = useSWR('sushiPrice', () => getSushiPrice(), swrConfig)
+export function useEmberPrice(swrConfig: SWRConfiguration = undefined) {
+  const { data } = useSWR('emberPrice', () => getEmberPrice(), swrConfig)
   return data
 }
 
@@ -114,7 +140,7 @@ export function useSushiPairs(variables = undefined, query = undefined, swrConfi
   const { chainId } = useActiveWeb3React()
   const shouldFetch = chainId
   const { data } = useSWR(
-    shouldFetch ? ['sushiPairs', chainId, JSON.stringify(variables)] : null,
+    shouldFetch ? ['emberPairs', chainId, JSON.stringify(variables)] : null,
     (_, chainId) => getPairs(chainId, variables, query),
     swrConfig
   )

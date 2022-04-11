@@ -56,16 +56,22 @@ export const getTokenPrices = async (chainId = ChainId.MAINNET, variables) => {
   return tokens.map((token) => token?.derivedETH)
 }
 
-export const getTokenPrice = async (chainId = ChainId.MAINNET, query, variables) => {
-  const ethPrice = await getEthPrice(chainId)
+export const getTokenPrice = async (chainId = ChainId.SMARTBCH, query, variables) => {
+  // console.log('getTokenPrice')
+  const nativePrice = await getNativePrice(chainId)
 
   const { token } = await exchange(chainId, query, variables)
-  return token?.derivedETH * ethPrice
+  return token?.derivedETH * nativePrice
 }
 
-export const getEthPrice = async (chainId = ChainId.MAINNET, variables = undefined) => {
+export const getNativePrice = async (chainId = ChainId.SMARTBCH, variables = undefined) => {
+  // console.log('getEthPrice')
   const data = await getBundle(chainId, undefined, variables)
-  return data?.bundles?.[0]?.ethPrice
+  return data?.bundles[0]?.ethPrice
+}
+
+export const getEthPrice = async (variables = undefined) => {
+  return getNativePrice(ChainId.SMARTBCH, variables)
 }
 
 export const getCvxPrice = async () => {
@@ -86,9 +92,9 @@ export const getAlcxPrice = async () => {
   })
 }
 
-export const getSushiPrice = async () => {
-  return getTokenPrice(ChainId.MAINNET, tokenPriceQuery, {
-    id: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
+export const getEmberPrice = async () => {
+  return getTokenPrice(ChainId.SMARTBCH, tokenPriceQuery, {
+    id: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
   })
 }
 

@@ -88,7 +88,7 @@ export function useFarms(swrConfig: SWRConfiguration = undefined) {
 
 export function useMasterChefV1PairAddresses() {
   const { chainId } = useActiveWeb3React()
-  const shouldFetch = chainId && chainId === ChainId.MAINNET
+  const shouldFetch = chainId && chainId === ChainId.SMARTBCH
   const { data } = useSWR(shouldFetch ? ['masterChefV1PairAddresses', chainId] : null, (_) =>
     getMasterChefV1PairAddreses()
   )
@@ -100,7 +100,7 @@ export function useMasterChefV1PairAddresses() {
 
 export function useMasterChefV2PairAddresses() {
   const { chainId } = useActiveWeb3React()
-  const shouldFetch = chainId && chainId === ChainId.MAINNET
+  const shouldFetch = chainId && chainId === ChainId.SMARTBCH
   const { data } = useSWR(shouldFetch ? ['masterChefV2PairAddresses', chainId] : null, (_) =>
     getMasterChefV2PairAddreses()
   )

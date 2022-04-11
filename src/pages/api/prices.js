@@ -8,17 +8,17 @@ export default async function handler(req, res) {
   let bchFLEXUSDContract = await new web3.eth.Contract(IUniswapV2PairABI, '0xfAe17176ACc70D8B3D51EE6B1978889A0fb6bBd4')
   const bchFLEXUSDReserves = await bchFLEXUSDContract.methods.getReserves().call()
 
-  const bchFLEXUSDPrice = (Number(bchFLEXUSDReserves.reserve1) / Number(bchFLEXUSDReserves.reserve0) ) / 1e18
+  const bchFLEXUSDPrice = await (Number(bchFLEXUSDReserves.reserve1) / Number(bchFLEXUSDReserves.reserve0) ) / 1e18
 
   let emberBCHContract = await new web3.eth.Contract(IUniswapV2PairABI, '0x52c656FaF57DCbDdDd47BCbA7b2ab79e4c232C28')
   const emberBCHReserves = await emberBCHContract.methods.getReserves().call()
 
-  const emberBCHPrice = Number(emberBCHReserves.reserve1) / Number(emberBCHReserves.reserve0)
+  const emberBCHPrice = await Number(emberBCHReserves.reserve1) / Number(emberBCHReserves.reserve0)
 
   let fireBCHContract = await new web3.eth.Contract(IUniswapV2PairABI, '0x31361009c8b43Bc44721dc38699511122436b55B')
   const fireBCHReserves = await fireBCHContract.methods.getReserves().call()
 
-  const fireBCHPrice = Number(fireBCHReserves.reserve0) / Number(fireBCHReserves.reserve1)
+  const fireBCHPrice = await Number(fireBCHReserves.reserve0) / Number(fireBCHReserves.reserve1)
 
   let ret = {}
   ret['bch'] = bchFLEXUSDPrice
@@ -26,7 +26,6 @@ export default async function handler(req, res) {
   ret['fire'] = fireBCHPrice * bchFLEXUSDPrice
   ret['flexusd'] = 1
 
-  if (fireBCHPrice == 0) {window.location.reload(false);}
 
   res.status(200).json(ret)
 }

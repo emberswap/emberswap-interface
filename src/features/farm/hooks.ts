@@ -11,7 +11,7 @@ import {
   useBCHFlexUSDContract,
   useFireBCHContract,
 } from '../../hooks'
-
+import { ChainId } from '../../sdk'
 import { Contract } from '@ethersproject/contracts'
 import { Zero } from '@ethersproject/constants'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
@@ -86,7 +86,7 @@ export function usePendingEmber(farm) {
     return [String(farm.id), String(account)]
   }, [farm, account])
 
-  const result = useSingleCallResult(args ? contract : null, 'pendingTokens', args)?.result
+  const result = useSingleCallResult(args ? contract : null, 'pendingTokens', args)?.result || 0
 
   const value = result?.[3]?.[0]
 
@@ -132,17 +132,14 @@ export function useEmberPositions(contract?: Contract | null) {
   const userInfo = useSingleContractMultipleData(args ? contract : null, 'userInfo', args)
 
   return useMemo(() => {
-    if (!pendingEmber || !userInfo) {
-      return []
-    }
     return zip(pendingEmber, userInfo)
       .map((data, i) => ({
         id: args[i][0],
-        pendingEmber: data[0].result?.[3]?.[0] || Zero,
+        pendingEmber: (data[0].result?.[3]?.[0]) || Zero,
         amount: data[1].result?.[0] || Zero,
       }))
       .filter(({ pendingEmber, amount }) => {
-        return (pendingEmber && !pendingEmber.isZero()) || (amount && !amount.isZero())
+        return (pendingEmber) || (amount)
       })
   }, [args, pendingEmber, userInfo])
 }

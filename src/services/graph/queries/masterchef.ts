@@ -6,19 +6,27 @@ export const poolsQuery = gql`
     $skip: Int! = 0
     $orderBy: String! = "id"
     $orderDirection: String! = "desc"
-    $where: Pool_filter! = { allocPoint_gt: 0, accSushiPerShare_gt: 0 }
+    $block: Block_height
+    $where: Pool_filter! = { allocPoint_gt: 0, accEmberPerShare_gt: 0 }
   ) {
-    pools(first: $first, skip: $skip, orderBy: $orderBy, orderDirection: $orderDirection, where: $where) {
+    pools(
+      first: $first
+      skip: $skip
+      orderBy: $orderBy
+      orderDirection: $orderDirection
+      block: $block
+      where: $where
+    ) {
       id
       pair
       allocPoint
-      lastRewardTimestamp
-      accSushiPerShare
+      lastRewardBlock
+      accEmberPerShare
       balance
       userCount
       owner {
         id
-        sushiPerBlock
+        emberPerBlock
         totalAllocPoint
       }
     }

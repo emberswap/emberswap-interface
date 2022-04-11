@@ -4,7 +4,9 @@ import { BigNumber } from '@ethersproject/bignumber'
 
 export enum SortableOptions {
   'tvl' = 'TVL',
-  'roiPerYear' = 'APY',
+  'roiPerYear' = 'APR',
+  'allocPoint' = 'Allocation',
+  'pendingEmber' = 'Pending',
 }
 
 function getNested(theObject: any, path: string, separator = '.') {
@@ -41,6 +43,10 @@ const useSortableData = (
             if (aValue.gt(bValue)) {
               return sortConfig.direction === 'ascending' ? 1 : -1
             }
+          } else if (aValue === Infinity) {
+            return sortConfig.direction === 'ascending' ? -1 : 1
+          } else if (bValue === Infinity) {
+            return sortConfig.direction === 'ascending' ? 1 : -1
           } else {
             if (aValue < bValue) {
               return sortConfig.direction === 'ascending' ? -1 : 1
@@ -57,13 +63,13 @@ const useSortableData = (
     return []
   }, [items, sortConfig])
 
-  const requestSort = (key: any, direction = 'descending') => {
+  const requestSort = (key: any, direction = 'ascending') => {
     if (sortConfig && sortConfig.key === key && sortConfig.direction === 'ascending') {
       direction = 'descending'
     } else if (sortConfig && sortConfig.key === key && sortConfig.direction === 'descending') {
       direction = 'ascending'
     }
-    setSortConfig({ key, direction, value: SortableOptions[key] })
+    setSortConfig({ key, direction, value: SortableOptions[key]  })
   }
 
   return { items: sortedItems, requestSort, sortConfig, SortableOptions }

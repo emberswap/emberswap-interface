@@ -72,8 +72,8 @@ msgstr "- 锁定合约地址: {0}"
 msgid "- You will not be able to withdraw your tokens before the unlock time"
 msgstr "- 在锁定时间之前，你将无法提取你的代币"
 
-#: src/features/farm/FarmListItem2.tsx:139
-#: src/features/vault/VaultListItem.tsx:133
+#: src/features/farm/FarmListItem2.tsx:137
+#: src/features/vault/VaultListItem.tsx:140
 msgid "/ DAY"
 msgstr "/ 天"
 
@@ -131,8 +131,8 @@ msgstr "每笔交易的一部分（0.25%）会进入EmberSwap金库"
 msgid "A portion of each trade (0.25%) goes to liquidity providers as a protocol incentive."
 msgstr "每笔交易的0.25%都会分给协议的流动性提供者。"
 
-#: src/features/farm/FarmList.tsx:58
-#: src/features/vault/VaultList.tsx:16
+#: src/features/farm/FarmList.tsx:78
+#: src/features/vault/VaultList.tsx:72
 msgid "APR"
 msgstr "APR"
 
@@ -225,8 +225,8 @@ msgstr "已添加"
 msgid "All Farms"
 msgstr ""
 
-#: src/features/farm/FarmList.tsx:55
-#: src/features/vault/VaultList.tsx:15
+#: src/features/farm/FarmList.tsx:68
+#: src/features/vault/VaultList.tsx:63
 msgid "Allocation"
 msgstr "分配"
 
@@ -425,6 +425,10 @@ msgstr ""
 #: src/features/transak/index.tsx:68
 msgid "Buy"
 msgstr "购买"
+
+#: src/features/vault/VaultListItem.tsx:182
+msgid "Buy EMBER to Stake"
+msgstr ""
 
 #: src/pages/exchange/add/[[...tokens]].tsx:350
 #~ msgid ""
@@ -977,7 +981,7 @@ msgstr ""
 #: src/features/farm/FarmListItem.tsx:97
 #: src/features/farm/FarmListItemDetails.tsx:236
 #: src/features/vault/VaultListItemDetails.tsx:294
-#: src/pages/farm/index.tsx:247
+#: src/pages/farm/index.tsx:265
 msgid "Harvest"
 msgstr "收获"
 
@@ -1251,8 +1255,8 @@ msgstr "清单"
 
 #: src/components/PositionCard/index.tsx:170
 #: src/components/TransactionList.tsx:40
-#: src/features/farm/FarmList.tsx:73
-#: src/features/vault/VaultList.tsx:28
+#: src/features/farm/FarmList.tsx:104
+#: src/features/vault/VaultList.tsx:99
 #: src/pages/exchange/find/index.tsx:171
 #: src/pages/exchange/pool/index.tsx:127
 msgid "Loading"
@@ -1287,7 +1291,7 @@ msgstr "锁定"
 msgid "Locker"
 msgstr "锁"
 
-#: src/features/vault/VaultList.tsx:13
+#: src/features/vault/VaultList.tsx:44
 msgid "Lockup"
 msgstr ""
 
@@ -1451,7 +1455,7 @@ msgstr "刚接触数字货币？"
 #~ msgid "No Liquidity found"
 #~ msgstr "没有发现流动性"
 
-#: src/features/farm/FarmList.tsx:73
+#: src/features/farm/FarmList.tsx:104
 msgid "No Results"
 msgstr "未找到结果"
 
@@ -1535,6 +1539,11 @@ msgstr "订单已失效"
 msgid "Order History"
 msgstr "订单历史"
 
+#: src/features/farm/FarmList.tsx:33
+#: src/features/vault/VaultList.tsx:21
+msgid "Order by"
+msgstr ""
+
 #: src/pages/exchange/add/[[...tokens]].tsx:276
 msgid ""
 "Output is estimated. If the price changes by more than {0}% your transaction\n"
@@ -1575,6 +1584,8 @@ msgid "Pay from:"
 msgstr "支付自"
 
 #: src/components/Web3Status/index.tsx:137
+#: src/features/farm/FarmList.tsx:88
+#: src/features/vault/VaultList.tsx:82
 msgid "Pending"
 msgstr "处理中"
 
@@ -1798,7 +1809,7 @@ msgstr "路由经过这些代币将给您的交易带来最好的价格。"
 #~ msgid "SUSHI {0}/{1} Burned"
 #~ msgstr "SUSHI {0} / {1}被销毁"
 
-#: src/pages/Yield/components/Search.tsx:6
+#: src/pages/farm/index.tsx:618
 #~ msgid "Search by name, symbol, address"
 #~ msgstr "通过名字、代号或地址搜索"
 
@@ -1885,7 +1896,7 @@ msgstr "可容忍滑点"
 msgid "Something went wrong during signing of the approval. This is expected for hardware wallets, such as Trezor and Ledger. Click again and the fallback method will be used"
 msgstr "在签署批准时出现错误。可能是硬件钱包例如Trezor和Ledger。再次点击，将使用倒退的办法。"
 
-#: src/features/farm/FarmList.tsx:23
+#: src/features/farm/FarmList.tsx:28
 msgid "Soon"
 msgstr "马上"
 
@@ -1898,12 +1909,16 @@ msgstr "马上"
 #~ msgid "Stack Yields with SAAVE"
 #~ msgstr "使用SAAVE叠加收益"
 
-#: src/features/farm/FarmList.tsx:41
+#: src/features/farm/FarmList.tsx:48
 #: src/features/farm/FarmListItemDetails.tsx:157
-#: src/features/vault/VaultList.tsx:12
+#: src/features/vault/VaultList.tsx:35
 #: src/features/vault/VaultListItemDetails.tsx:200
 msgid "Stake"
 msgstr "质押"
+
+#: src/features/farm/FarmListItem2.tsx:181
+msgid "Stake LP to Farm"
+msgstr ""
 
 #: src/pages/bar/index.tsx:268 src/pages/bar/index.tsx:286
 #~ msgid "Stake SUSHI"
@@ -2029,8 +2044,8 @@ msgstr "交换至："
 msgid "Swapping {0} {1} for {2} {3}"
 msgstr "将{0} {1}换成{2} {3}"
 
-#: src/features/farm/FarmList.tsx:48
-#: src/features/vault/VaultList.tsx:14
+#: src/features/farm/FarmList.tsx:58
+#: src/features/vault/VaultList.tsx:53
 msgid "TVL"
 msgstr "TVL"
 
@@ -2637,8 +2652,8 @@ msgstr "你的交易将在这里显示"
 msgid "active"
 msgstr ""
 
-#: src/features/farm/FarmListItem2.tsx:159
-#: src/features/vault/VaultListItem.tsx:151
+#: src/features/farm/FarmListItem2.tsx:157
+#: src/features/vault/VaultListItem.tsx:158
 msgid "annualized"
 msgstr "年化"
 
@@ -2776,3 +2791,8 @@ msgstr ""
 #: src/features/farm/FarmMenu.tsx:18
 #~ msgid "{title}"
 #~ msgstr "{标题}"
+
+#: src/features/farm/FarmList.tsx:38
+#: src/features/vault/VaultList.tsx:26
+msgid "{v}"
+msgstr ""

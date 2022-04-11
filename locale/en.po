@@ -70,8 +70,8 @@ msgstr "- Locker contract address: {0}"
 msgid "- You will not be able to withdraw your tokens before the unlock time"
 msgstr "- You will not be able to withdraw your tokens before the unlock time"
 
-#: src/features/farm/FarmListItem2.tsx:139
-#: src/features/vault/VaultListItem.tsx:133
+#: src/features/farm/FarmListItem2.tsx:137
+#: src/features/vault/VaultListItem.tsx:140
 msgid "/ DAY"
 msgstr "/ DAY"
 
@@ -134,8 +134,8 @@ msgstr "A portion of each trade (0.25%) goes EmberSwap Treasury."
 msgid "A portion of each trade (0.25%) goes to liquidity providers as a protocol incentive."
 msgstr "A portion of each trade (0.25%) goes to liquidity providers as a protocol incentive."
 
-#: src/features/farm/FarmList.tsx:58
-#: src/features/vault/VaultList.tsx:16
+#: src/features/farm/FarmList.tsx:78
+#: src/features/vault/VaultList.tsx:72
 msgid "APR"
 msgstr "APR"
 
@@ -224,8 +224,8 @@ msgstr "Added"
 msgid "All Farms"
 msgstr "All Farms"
 
-#: src/features/farm/FarmList.tsx:55
-#: src/features/vault/VaultList.tsx:15
+#: src/features/farm/FarmList.tsx:68
+#: src/features/vault/VaultList.tsx:63
 msgid "Allocation"
 msgstr "Allocation"
 
@@ -436,6 +436,10 @@ msgstr "Bridge {0}"
 #: src/features/transak/index.tsx:68
 msgid "Buy"
 msgstr "Buy"
+
+#: src/features/vault/VaultListItem.tsx:182
+msgid "Buy EMBER to Stake"
+msgstr "Buy EMBER to Stake"
 
 #: src/pages/exchange/add/[[...tokens]].tsx:350
 #~ msgid ""
@@ -1054,7 +1058,7 @@ msgstr "Governance"
 #: src/features/farm/FarmListItem.tsx:97
 #: src/features/farm/FarmListItemDetails.tsx:236
 #: src/features/vault/VaultListItemDetails.tsx:294
-#: src/pages/farm/index.tsx:247
+#: src/pages/farm/index.tsx:265
 msgid "Harvest"
 msgstr "Harvest"
 
@@ -1339,8 +1343,8 @@ msgstr "Lists"
 
 #: src/components/PositionCard/index.tsx:170
 #: src/components/TransactionList.tsx:40
-#: src/features/farm/FarmList.tsx:73
-#: src/features/vault/VaultList.tsx:28
+#: src/features/farm/FarmList.tsx:104
+#: src/features/vault/VaultList.tsx:99
 #: src/pages/exchange/find/index.tsx:171
 #: src/pages/exchange/pool/index.tsx:127
 msgid "Loading"
@@ -1375,7 +1379,7 @@ msgstr "Lock"
 msgid "Locker"
 msgstr "Locker"
 
-#: src/features/vault/VaultList.tsx:13
+#: src/features/vault/VaultList.tsx:44
 msgid "Lockup"
 msgstr "Lockup"
 
@@ -1545,7 +1549,7 @@ msgstr "New to Crypto?"
 #~ msgid "No Liquidity found"
 #~ msgstr "No Liquidity found"
 
-#: src/features/farm/FarmList.tsx:73
+#: src/features/farm/FarmList.tsx:104
 msgid "No Results"
 msgstr "No Results"
 
@@ -1634,9 +1638,10 @@ msgstr "Order Expiration"
 msgid "Order History"
 msgstr "Order History"
 
-#: src/features/farm/FarmList.tsx:22
-#~ msgid "Order by"
-#~ msgstr "Order by"
+#: src/features/farm/FarmList.tsx:33
+#: src/features/vault/VaultList.tsx:21
+msgid "Order by"
+msgstr "Order by"
 
 #: src/pages/exchange/add/[[...tokens]].tsx:276
 msgid ""
@@ -1680,6 +1685,8 @@ msgid "Pay from:"
 msgstr "Pay from:"
 
 #: src/components/Web3Status/index.tsx:137
+#: src/features/farm/FarmList.tsx:88
+#: src/features/vault/VaultList.tsx:82
 msgid "Pending"
 msgstr "Pending"
 
@@ -1910,7 +1917,7 @@ msgstr "Routing through these tokens resulted in the best price for your trade."
 #~ msgid "SUSHI {0}/{1} Burned"
 #~ msgstr "SUSHI {0}/{1} Burned"
 
-#: src/pages/Yield/components/Search.tsx:6
+#: src/pages/farm/index.tsx:618
 #~ msgid "Search by name, symbol, address"
 #~ msgstr "Search by name, symbol, address"
 
@@ -2002,7 +2009,7 @@ msgstr "Slippage tolerance"
 msgid "Something went wrong during signing of the approval. This is expected for hardware wallets, such as Trezor and Ledger. Click again and the fallback method will be used"
 msgstr "Something went wrong during signing of the approval. This is expected for hardware wallets, such as Trezor and Ledger. Click again and the fallback method will be used"
 
-#: src/features/farm/FarmList.tsx:23
+#: src/features/farm/FarmList.tsx:28
 msgid "Soon"
 msgstr "Soon"
 
@@ -2015,12 +2022,16 @@ msgstr "Soon"
 #~ msgid "Stack Yields with SAAVE"
 #~ msgstr "Stack Yields with SAAVE"
 
-#: src/features/farm/FarmList.tsx:41
+#: src/features/farm/FarmList.tsx:48
 #: src/features/farm/FarmListItemDetails.tsx:157
-#: src/features/vault/VaultList.tsx:12
+#: src/features/vault/VaultList.tsx:35
 #: src/features/vault/VaultListItemDetails.tsx:200
 msgid "Stake"
 msgstr "Stake"
+
+#: src/features/farm/FarmListItem2.tsx:181
+msgid "Stake LP to Farm"
+msgstr "Stake LP to Farm"
 
 #: src/pages/bar/index.tsx:268
 #: src/pages/bar/index.tsx:286
@@ -2158,8 +2169,8 @@ msgstr "Swapping {0} {1} for {2} {3}"
 #~ msgid "Swapping {0}) {1} for {2} {3}"
 #~ msgstr "Swapping {0}) {1} for {2} {3}"
 
-#: src/features/farm/FarmList.tsx:48
-#: src/features/vault/VaultList.tsx:14
+#: src/features/farm/FarmList.tsx:58
+#: src/features/vault/VaultList.tsx:53
 msgid "TVL"
 msgstr "TVL"
 
@@ -2790,8 +2801,8 @@ msgstr "Your transactions will appear here..."
 msgid "active"
 msgstr "active"
 
-#: src/features/farm/FarmListItem2.tsx:159
-#: src/features/vault/VaultListItem.tsx:151
+#: src/features/farm/FarmListItem2.tsx:157
+#: src/features/vault/VaultListItem.tsx:158
 msgid "annualized"
 msgstr "annualized"
 
@@ -2935,6 +2946,7 @@ msgstr "{label}"
 #~ msgid "{title}"
 #~ msgstr "{title}"
 
-#: src/features/farm/FarmList.tsx:27
-#~ msgid "{v}"
-#~ msgstr "{v}"
+#: src/features/farm/FarmList.tsx:38
+#: src/features/vault/VaultList.tsx:26
+msgid "{v}"
+msgstr "{v}"

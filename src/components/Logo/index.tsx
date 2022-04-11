@@ -23,7 +23,7 @@ const Logo: FC<LogoProps> = ({ srcs, width, height, style, alt = '', className, 
   return (
     <div className="rounded" style={{ width, height }}>
       <Image
-        src={src || 'https://raw.githubusercontent.com/sushiswap/icons/master/token/unknown.png'}
+        src={src || 'https://raw.githubusercontent.com/emberswap/emberswap-interface/main/public/images/tokens/unknown.png'}
         width={width}
         height={height}
         alt={alt}

@@ -4,7 +4,7 @@ import { useActiveWeb3React, useFuse } from '../../hooks'
 import FarmList from '../../features/farm/FarmList'
 import Head from 'next/head'
 import Menu from '../../features/farm/FarmMenu'
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect, useMemo } from 'react'
 import { formatNumberScale } from '../../functions'
 import { usePositions, useFarms, useDistributorInfo } from '../../features/farm/hooks'
 import { useRouter } from 'next/router'
@@ -14,19 +14,22 @@ import Button from '../../components/Button'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import DoubleGlowShadow from '../../components/DoubleGlowShadow'
-import { EMBER_ADDRESS, AVERAGE_BLOCK_TIME, WNATIVE } from '../../constants'
+import { EMBER_ADDRESS, AVERAGE_BLOCK_TIME } from '../../constants'
 import { POOLS } from '../../constants/farms'
 import EmberswapLogo from '../../components/EmberswapLogo'
 import { PriceContext } from '../../contexts/priceContext'
 import useMasterChef from '../../features/farm/useMasterChef'
 import { useTransactionAdder } from '../../state/transactions/hooks'
-import { useTVL } from '../../hooks/useV2Pairs'
+import { useTVL, useV2PairsWithPrice } from '../../hooks/useV2Pairs'
 import { getAddress } from '@ethersproject/address'
 import { useVaults } from '../../features/vault/hooks'
 import Search from '../../components/Search'
 import { updateUserFarmFilter } from '../../state/user/actions'
 import { getFarmFilter, useUpdateFarmFilter } from '../../state/user/hooks'
-
+import FarmListItem2 from '../../features/farm/FarmListItem2'
+import { useCurrency, useToken } from '../../hooks/Tokens'
+import { Currency, NATIVE, Token, currencyEquals, ChainId  } from '../../sdk'
+import { WNATIVE } from '../../constants'
 export default function Farm(): JSX.Element {
   const { i18n } = useLingui()
   const router = useRouter()
@@ -51,12 +54,13 @@ export default function Farm(): JSX.Element {
 
   const distributorInfo = useDistributorInfo()
 
+  const tvlInfo = useTVL()
   const priceData = useContext(PriceContext)
 
   const emberPrice = priceData?.['ember']
   const bchPrice = priceData?.['bch']
 
-  const tvlInfo = useTVL()
+  const firePrice = priceData?.['fire']
 
   const farmingPools = Object.keys(POOLS[chainId]).map((key) => {
     return { ...POOLS[chainId][key], lpToken: key }
@@ -75,10 +79,45 @@ export default function Farm(): JSX.Element {
   const map = (pool) => {
     pool.owner = 'Ember'
     pool.balance = 0
-
-    const pair = POOLS[chainId][pool.lpToken]
-
+    function getTvl() {
+      let lpPrice
+      let decimals = 18
+      if (pool.lpToken.toLowerCase() == EMBER_ADDRESS[chainId].toLowerCase()) {
+        lpPrice = emberPrice
+        decimals = pool.pair.token0?.decimals
+      } else if (pool.lpToken.toLowerCase() == WNATIVE[chainId].toLowerCase()) {
+        lpPrice = bchPrice
+      } else if (pool.lpToken.toLowerCase() == '0x225FCa2A940cd5B18DFb168cD9B7f921C63d7B6E'.toLowerCase()) {
+        lpPrice = firePrice
+      } else {
+        lpPrice = lpPrice
+      }
+  
+      pool.lpPrice = lpPrice
+      pool.emberPrice = emberPrice
+  
+      return Number(pool.totalLp / 10 ** decimals) * lpPrice
+    }
+    const tvl = getTvl()
+    var roiPerBlock
+    if (tvl < 1000){
+      roiPerBlock =
+      pool?.rewards?.reduce((previousValue, currentValue) => {
+        return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
+      }, 0) / 1000
+    }
+    else{
+      roiPerBlock =
+      pool?.rewards?.reduce((previousValue, currentValue) => {
+        return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
+      }, 0) / tvl
+    }
     const blocksPerHour = 3600 / AVERAGE_BLOCK_TIME[chainId]
+    const roiPerHour = roiPerBlock * blocksPerHour
+    const roiPerDay = roiPerHour * 24
+    const roiPerMonth = roiPerDay * 30
+    const roiPerYear = roiPerDay * 365
+    const pair = POOLS[chainId][pool.lpToken]
 
     function getRewards() {
       const rewardPerBlock =
@@ -97,35 +136,14 @@ export default function Farm(): JSX.Element {
       return defaultRewards
     }
 
-    //Fix this asap later
-    function getTvl(pool) {
-      let lpPrice = 0
-      let decimals = 18
-      if (pool.lpToken == EMBER_ADDRESS[chainId]) {
-        lpPrice = emberPrice
-        decimals = pair.token0?.decimals
-      } else if (pool.lpToken.toLowerCase() == WNATIVE[chainId].toLowerCase()) {
-        lpPrice = bchPrice
-      } else {
-        lpPrice = 0
-      }
 
-      return Number(pool.totalLp / 10 ** decimals) * lpPrice
-    }
+
+
 
     const rewards = getRewards()
 
-    const tvl = getTvl(pool)
 
-    const roiPerBlock =
-      rewards.reduce((previousValue, currentValue) => {
-        return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
-      }, 0) / tvl
 
-    const roiPerHour = roiPerBlock * blocksPerHour
-    const roiPerDay = roiPerHour * 24
-    const roiPerMonth = roiPerDay * 30
-    const roiPerYear = roiPerDay * 365
 
     const position = positions.find((position) => position.id === pool.id)
 

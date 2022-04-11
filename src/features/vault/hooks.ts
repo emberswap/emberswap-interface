@@ -59,7 +59,7 @@ export function usePendingEmber(farm) {
     return [String(farm.id), String(account)]
   }, [farm, account])
 
-  const result = useSingleCallResult(args ? contract : null, 'pendingEmber', args)?.result
+  const result = useSingleCallResult(args ? contract : null, 'pendingEmber', args)?.result || 0
 
   const value = result?.[0]
 
@@ -105,9 +105,6 @@ export function useEmberPositions(contract?: Contract | null) {
   const userLockedUntil = useSingleContractMultipleData(args ? contract : null, 'userLockedUntil', args)
 
   return useMemo(() => {
-    if (!pendingEmber || !userInfo || !userLockedUntil) {
-      return []
-    }
     return zip(pendingEmber, userInfo, userLockedUntil)
       .map((data, i) => ({
         id: args[i][0],
@@ -116,7 +113,7 @@ export function useEmberPositions(contract?: Contract | null) {
         lockedUntil: data[2].result?.[0] || Zero,
       }))
       .filter(({ pendingEmber, amount }) => {
-        return (pendingEmber && !pendingEmber.isZero()) || (amount && !amount.isZero())
+        return (pendingEmber) || (amount)
       })
   }, [args, pendingEmber, userInfo, userLockedUntil])
 }

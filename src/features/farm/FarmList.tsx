@@ -7,11 +7,16 @@ import useSortableData from '../../hooks/useSortableData'
 import { useRouter } from 'next/router'
 import { FixedSizeList } from 'react-window'
 import AutoSizer from 'react-virtualized-auto-sizer'
+import InfiniteScroll from 'react-infinite-scroll-component'
+import { useInfiniteScroll } from '../governance/hooks'
+import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline'
+import NeonSelect, { NeonSelectItem } from '../../components/Select'
 
 const FarmList = ({ farms, term, filter }) => {
   const { asPath, pathname, route, query, basePath } = useRouter()
   const { items, requestSort, sortConfig, SortableOptions } = useSortableData(farms)
   const { i18n } = useLingui()
+  const [numDisplayed, setNumDisplayed] = useInfiniteScroll(items)
 
   const isBeefy = query['filter'] == 'beefy'
 
@@ -23,7 +28,7 @@ const FarmList = ({ farms, term, filter }) => {
     <div className="w-full py-6 text-center">{i18n._(t`Soon`)}</div>
   ) : items ? (
     <>
-      {/* <div className="flex items-center justify-end	 text-secondary gap-3 cursor-pointer">
+      { <div className="flex items-center justify-end	 text-secondary gap-3 cursor-pointer">
         <div className="flex flex-row items-center">
           <span className="text-sm">{i18n._(t`Order by`)}:</span>
         </div>
@@ -34,39 +39,65 @@ const FarmList = ({ farms, term, filter }) => {
             </NeonSelectItem>
           ))}
         </NeonSelect>
-      </div> */}
-
-      <div className="grid grid-cols-4 text-base font-bold text-primary">
-        <div className="flex items-center col-span-2 px-4 cursor-pointer md:col-span-1">
+      </div> }
+      <div className="grid grid-cols-5 text-base font-bold text-primary">
+        <div 
+          className="flex items-center col-span-2 px-4 cursor-pointer md:col-span-1" 
+          onClick={() => requestSort('symbol')}
+        >
           <div className="hover:text-high-emphesis">{i18n._(t`Stake`)}</div>
-          {/* {sortConfig &&
+           {sortConfig &&
             sortConfig.key === 'symbol' &&
             ((sortConfig.direction === 'ascending' && <ChevronUpIcon width={12} height={12} />) ||
-              (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))} */}
+              (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))} 
         </div>
-        <div className="flex items-center px-2 cursor-pointer hover:text-high-emphesis">
+        <div 
+          className="flex items-center px-4 cursor-pointer hover:text-high-emphesis"
+          onClick={() => requestSort('tvl')}
+        >
           {i18n._(t`TVL`)}
-          {/* {sortConfig &&
+          {sortConfig &&
             sortConfig.key === 'tvl' &&
             ((sortConfig.direction === 'ascending' && <ChevronUpIcon width={12} height={12} />) ||
-              (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))} */}
+              (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))}
         </div>
-        <div className="items-center justify-start hidden px-2 md:flex hover:text-high-emphesis">
+        <div 
+          className="items-center text-justify-center hidden px-4 md:flex hover:text-high-emphesis"
+          onClick={() => requestSort('allocPoint')}
+        >
           {i18n._(t`Allocation`)}
+          {sortConfig &&
+            sortConfig.key === 'allocPoint' &&
+            ((sortConfig.direction === 'ascending' && <ChevronUpIcon width={12} height={12} />) ||
+              (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))}
         </div>
-        <div className="flex items-center justify-end px-4 cursor-pointer hover:text-high-emphesis">
+        <div 
+          className="flex items-center text-justify-center px-4"
+          onClick={() => requestSort('roiPerYear')}
+        >
           {i18n._(t`APR`)}
-          {/* {sortConfig &&
+          {sortConfig &&
             sortConfig.key === 'roiPerYear' &&
             ((sortConfig.direction === 'ascending' && <ChevronUpIcon width={12} height={12} />) ||
-              (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))} */}
+              (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))}
+        </div>
+        <div
+          className="items-center text-justify-center px-4 cursor-pointer md:flex hover:text-high-emphesis"
+          onClick={() => requestSort('pendingEmber')}
+        >
+          {i18n._(t`Pending`)}
+          {sortConfig &&
+            sortConfig.key === 'pendingEmber' &&
+            ((sortConfig.direction === 'ascending' && <ChevronUpIcon width={12} height={12} />) ||
+              (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))}
         </div>
       </div>
-      <div className="flex-col mt-2">
-        {pools.map((farm, index) => (
-          <FarmListItem2 key={index} farm={farm} />
-        ))}
-      </div>
+
+        <div className="space-y-4">
+          {items.slice(0, numDisplayed).map((farm, index) => (
+            <FarmListItem2 key={index} farm={farm} />
+          ))}
+        </div>
     </>
   ) : (
     <div className="w-full py-6 text-center">
