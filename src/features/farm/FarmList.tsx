@@ -72,7 +72,7 @@ const FarmList = ({ farms, term, filter }) => {
               (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))}
         </div>
         <div 
-          className="flex items-center text-justify-center px-4"
+          className="flex items-center justify-end text-justify-center px-4"
           onClick={() => requestSort('roiPerYear')}
         >
           {i18n._(t`APR`)}

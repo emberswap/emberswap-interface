@@ -66,7 +66,7 @@ const VaultList = ({ farms }) => {
           ((sortConfig.direction === 'ascending' && <ChevronUpIcon width={12} height={12} />) ||
           (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))}
           </div>
-        <div className="flex items-center text-justify-center flex px-4 cursor-pointer hover:text-high-emphesis"
+        <div className="flex items-center text-justify-end justify-end flex px-4 cursor-pointer hover:text-high-emphesis"
               onClick={() => requestSort('roiPerYear')}
         >
           {i18n._(t`APR`)}
