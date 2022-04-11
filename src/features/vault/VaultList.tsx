@@ -76,7 +76,7 @@ const VaultList = ({ farms }) => {
           (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))}
           </div>
           <div
-          className="items-center text-justify-end px-4 cursor-pointer md:flex hover:text-high-emphesis"
+          className="items-end text-justify-end justify-end px-4 cursor-pointer md:flex hover:text-high-emphesis"
           onClick={() => requestSort('pendingEmber')}
           >
           {i18n._(t`Pending`)}
