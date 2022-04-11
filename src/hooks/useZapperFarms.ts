@@ -16,7 +16,7 @@ const useZapperFarms = () => {
   const boringHelperContract = useBoringHelperContract()
 
   const fetchAllFarms = useCallback(async () => {
-    let [pools, liquidityPositions, averageBlockTime, sushiPrice, kashiPairs, sushiPairs, masterChef] =
+    let [pools, liquidityPositions, averageBlockTime, sushiPrice, kashiPairs, emberPairs, masterChef] =
       await Promise.all([
         sushiData.masterchef.pools(),
         sushiData.exchange_v1.userPositions({
@@ -36,7 +36,7 @@ const useZapperFarms = () => {
       .sort()
 
     kashiPairs = kashiPairs.filter((result) => result !== undefined) // filter out undefined (not in onsen) from all kashiPairs
-    sushiPairs = sushiPairs.filter((pair) => pairAddresses.includes(pair.id))
+    emberPairs = emberPairs.filter((pair) => pairAddresses.includes(pair.id))
 
     const KASHI_PAIRS = range(190, 230, 1) // kashiPair pids 189-229
 
@@ -45,7 +45,7 @@ const useZapperFarms = () => {
         // console.log(KASHI_PAIRS.includes(Number(pool.id)), pool, Number(pool.id))
         return (
           !POOL_DENY.includes(pool?.id) &&
-          (sushiPairs.find((pair: any) => pair?.id === pool?.pair) || KASHI_PAIRS.includes(Number(pool?.id)))
+          (emberPairs.find((pair: any) => pair?.id === pool?.pair) || KASHI_PAIRS.includes(Number(pool?.id)))
         )
       })
       .map((pool) => {
@@ -76,7 +76,7 @@ const useZapperFarms = () => {
             tvl: pair?.balanceUSD ? pair?.balanceUSD : 0,
           }
         } else {
-          const pair = sushiPairs.find((pair) => pair.id === pool.pair)
+          const pair = emberPairs.find((pair) => pair.id === pool.pair)
           const liquidityPosition = liquidityPositions.find(
             (liquidityPosition: any) => liquidityPosition.pair.id === pair.id
           )

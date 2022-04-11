@@ -69,7 +69,7 @@
             { "indexed": true, "internalType": "uint256", "name": "pid", "type": "uint256" },
             { "indexed": false, "internalType": "uint64", "name": "lastRewardBlock", "type": "uint64" },
             { "indexed": false, "internalType": "uint256", "name": "lpSupply", "type": "uint256" },
-            { "indexed": false, "internalType": "uint256", "name": "accSushiPerShare", "type": "uint256" }
+            { "indexed": false, "internalType": "uint256", "name": "accEmberPerShare", "type": "uint256" }
         ],
         "name": "LogUpdatePool",
         "type": "event"
@@ -257,7 +257,7 @@
         "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
         "name": "poolInfo",
         "outputs": [
-            { "internalType": "uint128", "name": "accSushiPerShare", "type": "uint128" },
+            { "internalType": "uint128", "name": "accEmberPerShare", "type": "uint128" },
             { "internalType": "uint64", "name": "lastRewardBlock", "type": "uint64" },
             { "internalType": "uint64", "name": "allocPoint", "type": "uint64" }
         ],
@@ -299,7 +299,7 @@
     },
     {
         "inputs": [],
-        "name": "sushiPerBlock",
+        "name": "emberPerBlock",
         "outputs": [{ "internalType": "uint256", "name": "amount", "type": "uint256" }],
         "stateMutability": "view",
         "type": "function"
@@ -328,7 +328,7 @@
         "outputs": [
             {
                 "components": [
-                    { "internalType": "uint128", "name": "accSushiPerShare", "type": "uint128" },
+                    { "internalType": "uint128", "name": "accEmberPerShare", "type": "uint128" },
                     { "internalType": "uint64", "name": "lastRewardBlock", "type": "uint64" },
                     { "internalType": "uint64", "name": "allocPoint", "type": "uint64" }
                 ],

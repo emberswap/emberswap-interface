@@ -45,9 +45,9 @@ export const miniChef = async (query, chainId = ChainId.SMARTBCH) =>
   
   export const getMasterChefV1SushiPerBlock = async () => {
     const {
-      masterChef: { sushiPerBlock },
+      masterChef: { emberPerBlock },
     } = await masterChefV1(masterChefV1SushiPerBlockQuery)
-    return sushiPerBlock / 1e18
+    return emberPerBlock / 1e18
   }
   
   export const getMasterChefV1Farms = async (variables = undefined) => {

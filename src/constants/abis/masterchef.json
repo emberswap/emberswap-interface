@@ -162,7 +162,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "accSushiPerShare",
+        "name": "accEmberPerShare",
         "type": "uint256"
       }
     ],
@@ -210,7 +210,7 @@
   },
   {
     "inputs": [],
-    "name": "sushiPerBlock",
+    "name": "emberPerBlock",
     "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
     "stateMutability": "view",
     "type": "function"

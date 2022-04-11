@@ -6,7 +6,7 @@ import Head from 'next/head'
 import Menu from '../../features/farm/FarmMenu'
 import React, { useContext, useState, useEffect, useMemo } from 'react'
 import { formatNumberScale } from '../../functions'
-import { usePositions, useFarms, useDistributorInfo } from '../../features/farm/hooks'
+import { usePositions, useFarms, useDistributorInfo, usePPositions } from '../../features/farm/hooks'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Card from '../../components/Card'
@@ -48,7 +48,7 @@ export default function Farm(): JSX.Element {
   const updateFarmFilter = useUpdateFarmFilter()
   updateFarmFilter(type)
   const positions = usePositions()
-
+  const ppositions = usePPositions()
   let farms = useFarms()
   const vaults = useVaults()
 
@@ -145,7 +145,7 @@ export default function Farm(): JSX.Element {
 
 
 
-    const position = positions.find((position) => position.id === pool.id)
+    const position = ppositions.find((position) => position.id === pool.id)
 
     return {
       ...pool,

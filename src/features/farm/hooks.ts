@@ -114,7 +114,7 @@ export function usePendingToken(farm, contract) {
   return useMemo(() => pendingTokens, [pendingTokens])
 }
 
-export function useEmberPositions(contract?: Contract | null) {
+export function useEmberPPositions(contract?: Contract | null) {
   const { account } = useActiveWeb3React()
 
   const numberOfPools = useSingleCallResult(contract ? contract : null, 'poolLength', undefined, NEVER_RELOAD)
@@ -135,19 +135,53 @@ export function useEmberPositions(contract?: Contract | null) {
     return zip(pendingEmber, userInfo)
       .map((data, i) => ({
         id: args[i][0],
-        pendingEmber: (data[0].result?.[3]?.[0]) || Zero,
-        amount: data[1].result?.[0] || Zero,
+        pendingEmber: (data[0].result?.[3]?.[0]) || 0,
+        amount: data[1].result?.[0] || 0,
       }))
       .filter(({ pendingEmber, amount }) => {
         return (pendingEmber) || (amount)
       })
   }, [args, pendingEmber, userInfo])
 }
+export function useEmberPositions(contract?: Contract | null) {
+  const { account } = useActiveWeb3React()
 
+  const numberOfPools = useSingleCallResult(contract ? contract : null, 'poolLength', undefined, NEVER_RELOAD)
+    ?.result?.[0]
+
+  const args = useMemo(() => {
+    if (!account || !numberOfPools) {
+      return
+    }
+    return [...Array(numberOfPools.toNumber()).keys()].map((pid) => [String(pid), String(account)])
+  }, [numberOfPools, account])
+
+  const pendingEmber = useSingleContractMultipleData(args ? contract : null, 'pendingTokens', args)
+
+  const userInfo = useSingleContractMultipleData(args ? contract : null, 'userInfo', args)
+
+  return useMemo(() => {
+    if (!pendingEmber || !userInfo) {
+      return []
+    }
+    return zip(pendingEmber, userInfo)
+      .map((data, i) => ({
+        id: args[i][0],
+        pendingEmber: (data[0].result?.[3]?.[0]) || Zero,
+        amount: data[1].result?.[0] || Zero,
+      }))
+      .filter(({ pendingEmber, amount }) => {
+        return (pendingEmber && !pendingEmber.isZero()) || (amount && !amount.isZero())
+      })
+  }, [args, pendingEmber, userInfo])
+}
 export function usePositions() {
   return useEmberPositions(useEmberDistributorContract())
 }
 
+export function usePPositions() {
+  return useEmberPPositions(useEmberDistributorContract())
+}
 export function useEmberFarms(contract?: Contract | null) {
   const { account } = useActiveWeb3React()
 

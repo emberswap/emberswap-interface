@@ -18,7 +18,7 @@ export const miniChefPoolsQuery = gql`
       }
       allocPoint
       lastRewardTime
-      accSushiPerShare
+      accEmberPerShare
       slpBalance
       userCount
       miniChef {
@@ -41,7 +41,7 @@ export const miniChefPairAddressesQuery = gql`
     pools(first: $first, skip: $skip, orderBy: $orderBy, orderDirection: $orderDirection, where: $where) {
       id
       allocPoint
-      accSushiPerShare
+      accEmberPerShare
       pair {
         id
       }

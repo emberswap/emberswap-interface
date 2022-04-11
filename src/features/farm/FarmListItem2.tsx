@@ -29,7 +29,10 @@ const FarmListItem2 = ({ farm, ...rest }) => {
   let token1 = useCurrency(farm.pair.token1?.id)
 
   const priceData = useContext(PriceContext)
-  const pendingEmber = usePendingEmber(farm)
+  var pendingEmber = usePendingEmber(farm)
+  if (pendingEmber == undefined) {
+    let pendingEmber = 0
+  }
   const emberPrice = priceData?.['ember']
   const bchPrice = priceData?.['bch']
   const firePrice = priceData?.['fire']

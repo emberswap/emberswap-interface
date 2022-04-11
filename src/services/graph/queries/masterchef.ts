@@ -44,7 +44,7 @@ export const masterChefV1PairAddressesQuery = gql`
     pools(first: $first, skip: $skip, orderBy: $orderBy, orderDirection: $orderDirection, where: $where) {
       id
       allocPoint
-      accSushiPerShare
+      accEmberPerShare
       pair {
         id
       }
@@ -65,7 +65,7 @@ export const masterChefV1SushiPerBlockQuery = gql`
   query masterChefV1SushiPerBlock($id: String! = "0xc2edad668740f1aa35e4d8f227fb8e17dca888cd") {
     masterChef(id: $id) {
       id
-      sushiPerBlock
+      emberPerBlock
     }
   }
 `

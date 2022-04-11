@@ -70,7 +70,7 @@ msgstr "- Locker contract address: {0}"
 msgid "- You will not be able to withdraw your tokens before the unlock time"
 msgstr "- You will not be able to withdraw your tokens before the unlock time"
 
-#: src/features/farm/FarmListItem2.tsx:137
+#: src/features/farm/FarmListItem2.tsx:140
 #: src/features/vault/VaultListItem.tsx:140
 msgid "/ DAY"
 msgstr "/ DAY"
@@ -2029,7 +2029,7 @@ msgstr "Soon"
 msgid "Stake"
 msgstr "Stake"
 
-#: src/features/farm/FarmListItem2.tsx:181
+#: src/features/farm/FarmListItem2.tsx:184
 msgid "Stake LP to Farm"
 msgstr "Stake LP to Farm"
 
@@ -2801,7 +2801,7 @@ msgstr "Your transactions will appear here..."
 msgid "active"
 msgstr "active"
 
-#: src/features/farm/FarmListItem2.tsx:157
+#: src/features/farm/FarmListItem2.tsx:160
 #: src/features/vault/VaultListItem.tsx:158
 msgid "annualized"
 msgstr "annualized"
