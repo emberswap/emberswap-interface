@@ -135,7 +135,7 @@ msgid "A portion of each trade (0.25%) goes to liquidity providers as a protocol
 msgstr "A portion of each trade (0.25%) goes to liquidity providers as a protocol incentive."
 
 #: src/features/farm/FarmList.tsx:78
-#: src/features/vault/VaultList.tsx:72
+#: src/features/vault/VaultList.tsx:66
 msgid "APR"
 msgstr "APR"
 
@@ -225,7 +225,7 @@ msgid "All Farms"
 msgstr "All Farms"
 
 #: src/features/farm/FarmList.tsx:68
-#: src/features/vault/VaultList.tsx:63
+#: src/features/vault/VaultList.tsx:57
 msgid "Allocation"
 msgstr "Allocation"
 
@@ -1344,7 +1344,7 @@ msgstr "Lists"
 #: src/components/PositionCard/index.tsx:170
 #: src/components/TransactionList.tsx:40
 #: src/features/farm/FarmList.tsx:104
-#: src/features/vault/VaultList.tsx:99
+#: src/features/vault/VaultList.tsx:93
 #: src/pages/exchange/find/index.tsx:171
 #: src/pages/exchange/pool/index.tsx:127
 msgid "Loading"
@@ -1379,7 +1379,7 @@ msgstr "Lock"
 msgid "Locker"
 msgstr "Locker"
 
-#: src/features/vault/VaultList.tsx:44
+#: src/features/vault/VaultList.tsx:38
 msgid "Lockup"
 msgstr "Lockup"
 
@@ -1686,7 +1686,7 @@ msgstr "Pay from:"
 
 #: src/components/Web3Status/index.tsx:137
 #: src/features/farm/FarmList.tsx:88
-#: src/features/vault/VaultList.tsx:82
+#: src/features/vault/VaultList.tsx:76
 msgid "Pending"
 msgstr "Pending"
 
@@ -2024,7 +2024,7 @@ msgstr "Soon"
 
 #: src/features/farm/FarmList.tsx:48
 #: src/features/farm/FarmListItemDetails.tsx:157
-#: src/features/vault/VaultList.tsx:35
+#: src/features/vault/VaultList.tsx:33
 #: src/features/vault/VaultListItemDetails.tsx:200
 msgid "Stake"
 msgstr "Stake"
@@ -2170,7 +2170,7 @@ msgstr "Swapping {0} {1} for {2} {3}"
 #~ msgstr "Swapping {0}) {1} for {2} {3}"
 
 #: src/features/farm/FarmList.tsx:58
-#: src/features/vault/VaultList.tsx:53
+#: src/features/vault/VaultList.tsx:47
 msgid "TVL"
 msgstr "TVL"
 
@@ -2854,6 +2854,10 @@ msgstr "loading..."
 #: src/components/TransactionSettings/index.tsx:205
 msgid "minutes"
 msgstr "minutes"
+
+#: src/features/farm/FarmListItemDetails.tsx:177
+#~ msgid "of pool"
+#~ msgstr "of pool"
 
 #: src/features/swap/SwapModalHeader.tsx:103
 #: src/features/swap/SwapModalHeader.tsx:111

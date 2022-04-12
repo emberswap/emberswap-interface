@@ -12,7 +12,7 @@ import { useActiveWeb3React } from '../../hooks'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import CurrencyLogo from '../../components/CurrencyLogo'
-import { isMobile } from 'react-device-detect'
+import { isMobile, isDesktop } from 'react-device-detect'
 import YieldDetails from '../../components/YieldDetails'
 import IconWrapper from '../../components/IconWrapper'
 import { WNATIVE } from '../../constants'
@@ -111,12 +111,12 @@ const FarmListItem2 = ({ farm, ...rest }) => {
                     </div>
                   )}
 
-                  <div className={`flex flex-col justify-center ${token1 ? 'md:flex-row' : ''}`}>
+                  {isDesktop && (<div className={`flex flex-col justify-center ${token1 ? 'md:flex-row' : ''}`}>
                     <div>
                       <span className="flex font-bold">{farm?.pair?.token0?.symbol}</span>
                       {token1 && <span className="flex font-bold">{farm?.pair?.token1?.symbol}</span>}
                     </div>
-                  </div>
+                  </div>)}
                 </div>
                 <div className="flex flex-col justify-center font-bold">{formatNumberScale(tvl, true, 2)}</div>
                 <div className="flex-row items-center hidden space-x-4 md:flex">
@@ -179,7 +179,7 @@ const FarmListItem2 = ({ farm, ...rest }) => {
                     </div>
                   </div>
               </div>
-              ) : (
+              ) : isDesktop && (
                 <div className="flex-row items-center justify-center flex pl-3 font-bold text-sm">
                   {i18n._(t`Stake LP to Farm`)}
                 </div>

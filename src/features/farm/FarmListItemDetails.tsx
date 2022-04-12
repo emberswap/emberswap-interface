@@ -21,7 +21,7 @@ import usePendingReward from './usePendingReward'
 import { useTokenBalance } from '../../state/wallet/hooks'
 import { useTransactionAdder } from '../../state/transactions/hooks'
 import { useToken } from '../../hooks/Tokens'
-import { isMobile } from 'react-device-detect'
+import { isMobile, isDesktop } from 'react-device-detect'
 
 const FarmListItem = ({ farm }) => {
   const { i18n } = useLingui()

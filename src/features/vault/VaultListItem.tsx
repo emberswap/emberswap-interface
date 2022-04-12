@@ -12,7 +12,7 @@ import { useActiveWeb3React } from '../../hooks'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import CurrencyLogo from '../../components/CurrencyLogo'
-import { isMobile } from 'react-device-detect'
+import { isDesktop, isMobile } from 'react-device-detect'
 import YieldDetails from '../../components/YieldDetails'
 import IconWrapper from '../../components/IconWrapper'
 import { WNATIVE } from '../../constants'
@@ -99,8 +99,8 @@ const VaultListItem = ({ farm, ...rest }) => {
                 'w-full px-4 py-6 text-left rounded cursor-pointer select-none bg-darker  text-primary text-sm md:text-lg'
               )}
             >
-              <div className="grid grid-cols-6 ">
-                <div className="flex col-span-2 space-x-4 lg:col-span-1">
+              <div className={isDesktop ?"grid grid-cols-6 " : "grid grid-cols-5"}>
+                <div className={isDesktop?"flex col-span-2 space-x-4 lg:col-span-1" : "flex col-span-1 space-x-4 lg:col-span-1"} >
                   {token1 ? (
                     <DoubleLogo currency0={token0} currency1={token1} size={isMobile ? 32 : 40} />
                   ) : (
@@ -108,12 +108,12 @@ const VaultListItem = ({ farm, ...rest }) => {
                       <CurrencyLogo currency={token0} size={isMobile ? 40 : 50} />
                     </div>
                   )}
-                  <div className={`flex flex-col justify-center ${token1 ? 'md:flex-row' : ''}`}>
+                  {isDesktop && (<div className={`flex flex-col justify-center ${token1 ? 'md:flex-row' : ''}`}>
                     <div>
                       <span className="flex font-bold">{farm?.pair?.token0?.symbol}</span>
                       {token1 && <span className="flex font-bold">{farm?.pair?.token1?.symbol}</span>}
                     </div>
-                  </div>
+                  </div>)}
                 </div>
                 <div className="flex flex-col justify-center font-bold">
                   {farm?.lockupDuration == 0 ? 'No lockup' : `${farm?.lockupDuration / 86400} days`}
@@ -177,7 +177,7 @@ const VaultListItem = ({ farm, ...rest }) => {
                     </div>
                   </div>
               </div>
-              ) : (
+              ) : isDesktop && (
                 <div className="flex-row items-center justify-center flex pl-3 font-bold text-sm">
                   {i18n._(t`Buy EMBER to Stake`)}
                 </div>

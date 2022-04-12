@@ -29,14 +29,8 @@ const VaultList = ({ farms }) => {
         </NeonSelect>
       </div> }
       <div className="grid grid-cols-6 text-base font-bold text-primary">
-        <div className="flex items-center col-span-2 px-4 lg:col-span-1 cursor-pointer hover:text-high-emphesis"
-              onClick={() => requestSort('tvl')}
-        >
+        <div className="flex items-center col-span-2 px-4 lg:col-span-1 cursor-pointer hover:text-high-emphesis">
           {i18n._(t`Stake`)}
-          {sortConfig &&
-          sortConfig.key === 'tvl' &&
-          ((sortConfig.direction === 'ascending' && <ChevronUpIcon width={12} height={12} />) ||
-          (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))}
           </div>
         <div className="flex items-center px-2 cursor-pointer hover:text-high-emphesis"
               onClick={() => requestSort('allocPoint')}
