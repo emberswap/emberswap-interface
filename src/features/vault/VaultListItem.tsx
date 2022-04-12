@@ -12,7 +12,7 @@ import { useActiveWeb3React } from '../../hooks'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import CurrencyLogo from '../../components/CurrencyLogo'
-import { isDesktop, isMobile } from 'react-device-detect'
+import { isMobile } from 'react-device-detect'
 import YieldDetails from '../../components/YieldDetails'
 import IconWrapper from '../../components/IconWrapper'
 import { WNATIVE } from '../../constants'
@@ -99,8 +99,8 @@ const VaultListItem = ({ farm, ...rest }) => {
                 'w-full px-4 py-6 text-left rounded cursor-pointer select-none bg-darker  text-primary text-sm md:text-lg'
               )}
             >
-              <div className={isDesktop ?"grid grid-cols-6 " : "grid grid-cols-5"}>
-                <div className={isDesktop?"flex col-span-2 space-x-4 lg:col-span-1" : "flex col-span-1 space-x-2 lg:col-span-1"} >
+              <div className={!isMobile ?"grid grid-cols-6 " : "grid grid-cols-5"}>
+                <div className={!isMobile?"flex col-span-2 space-x-4 lg:col-span-1" : "flex col-span-1 space-x-2 lg:col-span-1"} >
                   {token1 ? (
                     <DoubleLogo currency0={token0} currency1={token1} size={isMobile ? 32 : 40} />
                   ) : (
@@ -108,17 +108,17 @@ const VaultListItem = ({ farm, ...rest }) => {
                       <CurrencyLogo currency={token0} size={isMobile ? 40 : 50} />
                     </div>
                   )}
-                  {isDesktop && (<div className={`flex flex-col justify-center ${token1 ? 'md:flex-row' : ''}`}>
+                  {!isMobile && (<div className={`flex flex-col justify-center ${token1 ? 'md:flex-row' : ''}`}>
                     <div>
                       <span className="flex font-bold">{farm?.pair?.token0?.symbol}</span>
                       {token1 && <span className="flex font-bold">{farm?.pair?.token1?.symbol}</span>}
                     </div>
                   </div>)}
                 </div>
-                <div className={isDesktop ?"flex flex-col justify-center font-bold" : "flex flex-col justify-left relative -left-5 text-left font-bold"}>
+                <div className={!isMobile ?"flex flex-col justify-center font-bold" : "flex flex-col justify-left relative -left-5 text-left font-bold"}>
                   {farm?.lockupDuration == 0 ? 'No lockup' : `${farm?.lockupDuration / 86400} days`}
                 </div>
-                <div className={isDesktop ?"flex flex-col justify-center font-bold": "flex flex-col justify-left relative -left-5 font-bold"}>{formatNumberScale(tvl, true, 2)}</div>
+                <div className={!isMobile ?"flex flex-col justify-center font-bold": "flex flex-col justify-left relative -left-5 font-bold"}>{formatNumberScale(tvl, true, 2)}</div>
                 <div className="flex-row items-center hidden space-x-4 lg:flex">
                   <div className="flex items-center space-x-2">
                     {farm?.rewards?.map((reward, i) => (
@@ -177,7 +177,7 @@ const VaultListItem = ({ farm, ...rest }) => {
                     </div>
                   </div>
               </div>
-              ) : isDesktop && (
+              ) : !isMobile && (
                 <div className="flex-row items-center justify-center flex pl-3 font-bold text-sm">
                   {i18n._(t`Buy EMBER to Stake`)}
                 </div>
