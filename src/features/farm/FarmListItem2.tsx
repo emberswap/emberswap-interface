@@ -101,8 +101,8 @@ const FarmListItem2 = ({ farm, ...rest }) => {
                 'w-full px-4 py-6 text-left rounded cursor-pointer select-none bg-darker  text-primary text-sm md:text-lg'
               )}
             >
-              <div className="grid grid-cols-5 ">
-                <div className="flex col-span-2 space-x-4 md:col-span-1">
+              <div className={isDesktop ?"grid grid-cols-5 " :"grid grid-cols-4" }>
+                <div className={isDesktop ?"flex col-span-2 space-x-4 md:col-span-1": "flex col-span-1 space-x-1"}>
                   {token1 ? (
                     <DoubleLogo currency0={token0} currency1={token1} size={isMobile ? 24 : 40} />
                   ) : (

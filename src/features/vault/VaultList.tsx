@@ -7,6 +7,7 @@ import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline'
 import useSortableData from '../../hooks/useSortableData'
 import { useInfiniteScroll } from '../governance/hooks'
 import NeonSelect, { NeonSelectItem } from '../../components/Select'
+import { isDesktop } from 'react-device-detect'
 
 
 const VaultList = ({ farms }) => {
@@ -28,11 +29,11 @@ const VaultList = ({ farms }) => {
           ))}
         </NeonSelect>
       </div> }
-      <div className="grid grid-cols-6 text-base font-bold text-primary">
-        <div className="flex items-center col-span-2 px-4 lg:col-span-1 cursor-pointer hover:text-high-emphesis">
+      <div className={isDesktop ? "grid grid-cols-6 text-base font-bold text-primary" : "grid grid-cols-5 text-base font-bold text-primary"}>
+        {isDesktop &&(<div className="flex items-center col-span-2 px-4 lg:col-span-1 cursor-pointer hover:text-high-emphesis">
           {i18n._(t`Stake`)}
-          </div>
-        <div className="flex items-center px-2 cursor-pointer hover:text-high-emphesis"
+          </div>)}
+        <div className={isDesktop ? "flex items-center px-2 cursor-pointer hover:text-high-emphesis" : "flex items-center col-span-2 px-4 lg:col-span-1 relative -right-4 cursor-pointer hover:text-high-emphesis"}
               onClick={() => requestSort('allocPoint')}
         >
           {i18n._(t`Lockup`)}
@@ -41,7 +42,7 @@ const VaultList = ({ farms }) => {
           ((sortConfig.direction === 'ascending' && <ChevronUpIcon width={12} height={12} />) ||
           (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))}
           </div>
-        <div className="flex items-center px-2 cursor-pointer hover:text-high-emphesis"
+        <div className={isDesktop? "flex items-center px-2 cursor-pointer hover:text-high-emphesis" : "flex items-center px-2 cursor-pointer relative -left-3 hover:text-high-emphesis"}
               onClick={() => requestSort('tvl')}
         >
           {i18n._(t`TVL`)}
@@ -70,7 +71,7 @@ const VaultList = ({ farms }) => {
           (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))}
           </div>
           <div
-          className="items-end text-justify-end justify-end px-4 cursor-pointer md:flex hover:text-high-emphesis"
+          className={isDesktop ? "items-end text-justify-end justify-end px-4 cursor-pointer md:flex hover:text-high-emphesis" : "items-end text-justify-end justify-end px-4 cursor-pointer relative -left-3 md:flex hover:text-high-emphesis"}
           onClick={() => requestSort('pendingEmber')}
           >
           {i18n._(t`Pending`)}

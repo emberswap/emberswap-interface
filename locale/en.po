@@ -134,8 +134,8 @@ msgstr "A portion of each trade (0.25%) goes EmberSwap Treasury."
 msgid "A portion of each trade (0.25%) goes to liquidity providers as a protocol incentive."
 msgstr "A portion of each trade (0.25%) goes to liquidity providers as a protocol incentive."
 
-#: src/features/farm/FarmList.tsx:78
-#: src/features/vault/VaultList.tsx:66
+#: src/features/farm/FarmList.tsx:79
+#: src/features/vault/VaultList.tsx:67
 msgid "APR"
 msgstr "APR"
 
@@ -224,8 +224,8 @@ msgstr "Added"
 msgid "All Farms"
 msgstr "All Farms"
 
-#: src/features/farm/FarmList.tsx:68
-#: src/features/vault/VaultList.tsx:57
+#: src/features/farm/FarmList.tsx:69
+#: src/features/vault/VaultList.tsx:58
 msgid "Allocation"
 msgstr "Allocation"
 
@@ -1343,8 +1343,8 @@ msgstr "Lists"
 
 #: src/components/PositionCard/index.tsx:170
 #: src/components/TransactionList.tsx:40
-#: src/features/farm/FarmList.tsx:104
-#: src/features/vault/VaultList.tsx:93
+#: src/features/farm/FarmList.tsx:105
+#: src/features/vault/VaultList.tsx:94
 #: src/pages/exchange/find/index.tsx:171
 #: src/pages/exchange/pool/index.tsx:127
 msgid "Loading"
@@ -1379,7 +1379,7 @@ msgstr "Lock"
 msgid "Locker"
 msgstr "Locker"
 
-#: src/features/vault/VaultList.tsx:38
+#: src/features/vault/VaultList.tsx:39
 msgid "Lockup"
 msgstr "Lockup"
 
@@ -1549,7 +1549,7 @@ msgstr "New to Crypto?"
 #~ msgid "No Liquidity found"
 #~ msgstr "No Liquidity found"
 
-#: src/features/farm/FarmList.tsx:104
+#: src/features/farm/FarmList.tsx:105
 msgid "No Results"
 msgstr "No Results"
 
@@ -1638,8 +1638,8 @@ msgstr "Order Expiration"
 msgid "Order History"
 msgstr "Order History"
 
-#: src/features/farm/FarmList.tsx:33
-#: src/features/vault/VaultList.tsx:21
+#: src/features/farm/FarmList.tsx:34
+#: src/features/vault/VaultList.tsx:22
 msgid "Order by"
 msgstr "Order by"
 
@@ -1685,8 +1685,8 @@ msgid "Pay from:"
 msgstr "Pay from:"
 
 #: src/components/Web3Status/index.tsx:137
-#: src/features/farm/FarmList.tsx:88
-#: src/features/vault/VaultList.tsx:76
+#: src/features/farm/FarmList.tsx:89
+#: src/features/vault/VaultList.tsx:77
 msgid "Pending"
 msgstr "Pending"
 
@@ -2009,7 +2009,7 @@ msgstr "Slippage tolerance"
 msgid "Something went wrong during signing of the approval. This is expected for hardware wallets, such as Trezor and Ledger. Click again and the fallback method will be used"
 msgstr "Something went wrong during signing of the approval. This is expected for hardware wallets, such as Trezor and Ledger. Click again and the fallback method will be used"
 
-#: src/features/farm/FarmList.tsx:28
+#: src/features/farm/FarmList.tsx:29
 msgid "Soon"
 msgstr "Soon"
 
@@ -2022,9 +2022,9 @@ msgstr "Soon"
 #~ msgid "Stack Yields with SAAVE"
 #~ msgstr "Stack Yields with SAAVE"
 
-#: src/features/farm/FarmList.tsx:48
+#: src/features/farm/FarmList.tsx:49
 #: src/features/farm/FarmListItemDetails.tsx:157
-#: src/features/vault/VaultList.tsx:33
+#: src/features/vault/VaultList.tsx:34
 #: src/features/vault/VaultListItemDetails.tsx:200
 msgid "Stake"
 msgstr "Stake"
@@ -2169,8 +2169,8 @@ msgstr "Swapping {0} {1} for {2} {3}"
 #~ msgid "Swapping {0}) {1} for {2} {3}"
 #~ msgstr "Swapping {0}) {1} for {2} {3}"
 
-#: src/features/farm/FarmList.tsx:58
-#: src/features/vault/VaultList.tsx:47
+#: src/features/farm/FarmList.tsx:59
+#: src/features/vault/VaultList.tsx:48
 msgid "TVL"
 msgstr "TVL"
 
@@ -2950,7 +2950,7 @@ msgstr "{label}"
 #~ msgid "{title}"
 #~ msgstr "{title}"
 
-#: src/features/farm/FarmList.tsx:38
-#: src/features/vault/VaultList.tsx:26
+#: src/features/farm/FarmList.tsx:39
+#: src/features/vault/VaultList.tsx:27
 msgid "{v}"
 msgstr "{v}"

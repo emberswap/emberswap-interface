@@ -100,7 +100,7 @@ const VaultListItem = ({ farm, ...rest }) => {
               )}
             >
               <div className={isDesktop ?"grid grid-cols-6 " : "grid grid-cols-5"}>
-                <div className={isDesktop?"flex col-span-2 space-x-4 lg:col-span-1" : "flex col-span-1 space-x-4 lg:col-span-1"} >
+                <div className={isDesktop?"flex col-span-2 space-x-4 lg:col-span-1" : "flex col-span-1 space-x-2 lg:col-span-1"} >
                   {token1 ? (
                     <DoubleLogo currency0={token0} currency1={token1} size={isMobile ? 32 : 40} />
                   ) : (
@@ -115,10 +115,10 @@ const VaultListItem = ({ farm, ...rest }) => {
                     </div>
                   </div>)}
                 </div>
-                <div className="flex flex-col justify-center font-bold">
+                <div className={isDesktop ?"flex flex-col justify-center font-bold" : "flex flex-col justify-left relative -left-5 text-left font-bold"}>
                   {farm?.lockupDuration == 0 ? 'No lockup' : `${farm?.lockupDuration / 86400} days`}
                 </div>
-                <div className="flex flex-col justify-center font-bold">{formatNumberScale(tvl, true, 2)}</div>
+                <div className={isDesktop ?"flex flex-col justify-center font-bold": "flex flex-col justify-left relative -left-5 font-bold"}>{formatNumberScale(tvl, true, 2)}</div>
                 <div className="flex-row items-center hidden space-x-4 lg:flex">
                   <div className="flex items-center space-x-2">
                     {farm?.rewards?.map((reward, i) => (

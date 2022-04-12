@@ -11,6 +11,7 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 import { useInfiniteScroll } from '../governance/hooks'
 import { ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/outline'
 import NeonSelect, { NeonSelectItem } from '../../components/Select'
+import { isDesktop } from 'react-device-detect'
 
 const FarmList = ({ farms, term, filter }) => {
   const { asPath, pathname, route, query, basePath } = useRouter()
@@ -40,9 +41,9 @@ const FarmList = ({ farms, term, filter }) => {
           ))}
         </NeonSelect>
       </div> }
-      <div className="grid grid-cols-5 text-base font-bold text-primary">
+      <div className={isDesktop ? "grid grid-cols-5 text-base font-bold text-primary" : "grid grid-cols-4 text-base font-bold text-primary"}>
         <div 
-          className="flex items-center col-span-2 px-4 cursor-pointer md:col-span-1" 
+          className={isDesktop ? "flex items-center col-span-2 px-4 cursor-pointer md:col-span-1" : "flex items-center px-4 cursor-pointer col-span-1"}
           onClick={() => requestSort('symbol')}
         >
           <div className="hover:text-high-emphesis">{i18n._(t`Stake`)}</div>
