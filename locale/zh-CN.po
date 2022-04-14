@@ -981,7 +981,7 @@ msgstr ""
 #: src/features/farm/FarmListItem.tsx:97
 #: src/features/farm/FarmListItemDetails.tsx:236
 #: src/features/vault/VaultListItemDetails.tsx:294
-#: src/pages/farm/index.tsx:252
+#: src/pages/farm/index.tsx:249
 msgid "Harvest"
 msgstr "收获"
 
