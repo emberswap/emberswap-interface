@@ -25,7 +25,7 @@ function getNested(theObject: any, path: string, separator = '.') {
 
 const useSortableData = (
   items: any,
-  config: any = { key: 'allocPoint', direction: 'descending', value: SortableOptions.allocPoint }
+  config: any = { key: 'roiPerYear', direction: 'descending', value: SortableOptions.roiPerYear }
 ) => {
   const [sortConfig, setSortConfig] = useState(config)
 
