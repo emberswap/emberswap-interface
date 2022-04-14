@@ -6,7 +6,7 @@ import FarmListItemDetails from './FarmListItemDetails'
 import Image from '../../components/Image'
 import React, { useContext, useState } from 'react'
 import { useCurrency } from '../../hooks/Tokens'
-import { useV2PairsWithPrice } from '../../hooks/useV2Pairs'
+import { useTVL, useV2PairsWithPrice } from '../../hooks/useV2Pairs'
 import { EMBER_ADDRESS } from '../../constants/tokens'
 import { useActiveWeb3React } from '../../hooks'
 import { t } from '@lingui/macro'
@@ -24,15 +24,13 @@ import { ZERO } from '../../sdk'
 
 const FarmListItem2 = ({ farm, ...rest }) => {
   const { chainId } = useActiveWeb3React()
+  const tvlInfo = useTVL()
 
   let token0 = useCurrency(farm.pair.token0?.id)
   let token1 = useCurrency(farm.pair.token1?.id)
 
   const priceData = useContext(PriceContext)
   var pendingEmber = usePendingEmber(farm)
-  if (pendingEmber == undefined) {
-    let pendingEmber = 0
-  }
   const emberPrice = priceData?.['ember']
   const bchPrice = priceData?.['bch']
   const firePrice = priceData?.['fire']
@@ -42,28 +40,9 @@ const FarmListItem2 = ({ farm, ...rest }) => {
   let [data] = useV2PairsWithPrice([[token0, token1]])
   let [state, pair, pairPrice] = data
 
-  function getTvl() {
-    let lpPrice = 0
-    let decimals = 18
-    if (farm.lpToken.toLowerCase() == EMBER_ADDRESS[chainId].toLowerCase()) {
-      lpPrice = emberPrice
-      decimals = farm.pair.token0?.decimals
-    } else if (farm.lpToken.toLowerCase() == WNATIVE[chainId].toLowerCase()) {
-      lpPrice = bchPrice
-    } else if (farm.lpToken.toLowerCase() == '0x225FCa2A940cd5B18DFb168cD9B7f921C63d7B6E'.toLowerCase()) {
-      lpPrice = firePrice
-    } else {
-      lpPrice = pairPrice
-    }
-
-    farm.lpPrice = lpPrice
-    farm.emberPrice = emberPrice
-
-    return Number(farm.totalLp / 10 ** decimals) * lpPrice
-  }
-
-  const tvl = getTvl()
-  farm.tvl = tvl
+  let tvl = 0
+  let tvlMap = tvlInfo.map(( tvlInfo, id ) => tvlInfo.tvl)
+  tvl = tvlMap[farm.id]
 
   var roiPerBlock
   if (tvl < 1000){

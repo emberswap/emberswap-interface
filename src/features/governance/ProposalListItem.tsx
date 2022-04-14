@@ -11,10 +11,7 @@ import { useCurrency } from '../../hooks/Tokens'
 import { isMobile } from 'react-device-detect'
 
 const ProposalListItem = ({ proposal, ...rest }) => {
-  // const token0 = useCurrency(farm.pair.token0.id)
-  // const token1 = useCurrency(farm.pair.token1.id)
 
-  // const pendingSushi = usePendingSushi(farm)
 
   const { i18n } = useLingui()
 

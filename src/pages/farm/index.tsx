@@ -79,45 +79,11 @@ export default function Farm(): JSX.Element {
   const map = (pool) => {
     pool.owner = 'Ember'
     pool.balance = 0
-    function getTvl() {
-      let lpPrice
-      let decimals = 18
-      if (pool.lpToken.toLowerCase() == EMBER_ADDRESS[chainId].toLowerCase()) {
-        lpPrice = emberPrice
-        decimals = pool.pair.token0?.decimals
-      } else if (pool.lpToken.toLowerCase() == WNATIVE[chainId].toLowerCase()) {
-        lpPrice = bchPrice
-      } else if (pool.lpToken.toLowerCase() == '0x225FCa2A940cd5B18DFb168cD9B7f921C63d7B6E'.toLowerCase()) {
-        lpPrice = firePrice
-      } else {
-        lpPrice = lpPrice
-      }
   
-      pool.lpPrice = lpPrice
-      pool.emberPrice = emberPrice
-  
-      return Number(pool.totalLp / 10 ** decimals) * lpPrice
-    }
-    const tvl = getTvl()
-    var roiPerBlock
-    if (tvl < 1000){
-      roiPerBlock =
-      pool?.rewards?.reduce((previousValue, currentValue) => {
-        return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
-      }, 0) / 1000
-    }
-    else{
-      roiPerBlock =
-      pool?.rewards?.reduce((previousValue, currentValue) => {
-        return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
-      }, 0) / tvl
-    }
-    const blocksPerHour = 3600 / AVERAGE_BLOCK_TIME[chainId]
-    const roiPerHour = roiPerBlock * blocksPerHour
-    const roiPerDay = roiPerHour * 24
-    const roiPerMonth = roiPerDay * 30
-    const roiPerYear = roiPerDay * 365
-    const pair = POOLS[chainId][pool.lpToken]
+      let tvl = 0
+      let tvlMap = tvlInfo.map(( tvlInfo, id ) => tvlInfo.tvl)
+      tvl = tvlMap[pool.id]
+
 
     function getRewards() {
       const rewardPerBlock =
@@ -137,12 +103,30 @@ export default function Farm(): JSX.Element {
     }
 
 
-
-
-
     const rewards = getRewards()
 
+    var roiPerBlock
 
+    if (tvl < 1000){
+      roiPerBlock =
+      rewards?.reduce((previousValue, currentValue) => {
+        return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
+      }, 0) / 1000
+    }
+    else{
+      roiPerBlock =
+      rewards?.reduce((previousValue, currentValue) => {
+        return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
+      }, 0) / tvl
+    }
+
+    const blocksPerHour = 3600 / AVERAGE_BLOCK_TIME[chainId]
+    const pair = POOLS[chainId][pool.lpToken]
+    var roiPerBlock
+    const roiPerHour = roiPerBlock * blocksPerHour
+    const roiPerDay = roiPerHour * 24
+    const roiPerMonth = roiPerDay * 30
+    const roiPerYear = roiPerDay * 365
 
 
     const position = ppositions.find((position) => position.id === pool.id)
