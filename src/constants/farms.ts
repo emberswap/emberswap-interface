@@ -329,5 +329,39 @@ export const POOLS: AddressMap = {
       name: 'Ember-LP',
       symbol: 'EMBER-LP',
     },
+    '0xAa4D901dcda2098496e91b5F2b82F077D90E40B6': {
+      id: 18,
+      token0: {
+        id: '0x35b3Ee79E1A7775cE0c11Bd8cd416630E07B0d6f',
+        name: 'Bitcoin Cash Name Service',
+        symbol: 'LNS',
+        decimals: 18,
+      },
+      token1: {
+        id: '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04',
+        name: 'BCH',
+        symbol: 'BCH',
+        decimals: 18,
+      },
+      name: 'Ember-LP',
+      symbol: 'EMBER-LP',
+    },
+    '0xa968d4831a1ea4150621361c9A02c0Ad81A024a5': {
+      id: 19,
+      token0: {
+        id: '0x288B6Ca2eFCF39C9B68052B0088A0cB3f3D3B5f2',
+        name: 'PandaToken',
+        symbol: 'PDA',
+        decimals: 18,
+      },
+      token1: {
+        id: '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04',
+        name: 'BCH',
+        symbol: 'BCH',
+        decimals: 18,
+      },
+      name: 'Ember-LP',
+      symbol: 'EMBER-LP',
+    },
   },
 }
