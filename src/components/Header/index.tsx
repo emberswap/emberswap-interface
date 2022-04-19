@@ -44,7 +44,7 @@ function AppBar(): JSX.Element {
                           {i18n._(t`Pool`)}
                         </a>
                       </NavLink>
-                      <NavLink href={'/farm?filter=all'}>
+                      <NavLink href={'/farm'}>
                         <a
                           id={`farm-nav-link`}
                           className="p-2 text-base text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
@@ -168,7 +168,7 @@ function AppBar(): JSX.Element {
                     {i18n._(t`Pool`)}
                   </a>
                 </Link>
-                <Link href={'/farm?filter=all'}>
+                <Link href={'/farm'}>
                   <a
                     id={`farm-nav-link`}
                     className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"

@@ -8,14 +8,24 @@ import useSortableData from '../../hooks/useSortableData'
 import { useInfiniteScroll } from '../governance/hooks'
 import NeonSelect, { NeonSelectItem } from '../../components/Select'
 import { isMobile } from 'react-device-detect'
+import { useRouter } from 'next/router'
 
 
-const VaultList = ({ farms }) => {
+const VaultList = ({ farms, term, filter }) => {
+  const { asPath, pathname, route, query, basePath } = useRouter()
   const { items, requestSort, sortConfig, SortableOptions } = useSortableData(farms)
   const { i18n } = useLingui()
   const [numDisplayed, setNumDisplayed] = useInfiniteScroll(items)
 
-  return farms ? (
+  const isBeefy = query['filter'] == 'beefy'
+
+  const singlePools = items.filter((i) => i.pair.token1).sort((a, b) => b.allocPoint - a.allocPoint)
+  const liquidityPools = items.filter((i) => !i.pair.token1).sort((a, b) => b.allocPoint - a.allocPoint)
+  const pools = singlePools.concat(liquidityPools)
+
+  return isBeefy ? (
+    <div className="w-full py-6 text-center">{i18n._(t`Soon`)}</div>
+  ) : items ? (
     <>
     { <div className="flex items-center justify-end	 text-secondary gap-3 cursor-pointer">
         <div className="flex flex-row items-center">
@@ -91,7 +101,7 @@ const VaultList = ({ farms }) => {
     </>
   ) : (
     <div className="w-full py-6 text-center">
-      <Dots>{i18n._(t`Loading`)}</Dots>
+      {term ? <span>{i18n._(t`No Results`)}</span> : <Dots>{i18n._(t`Loading`)}</Dots>}
     </div>
   )
 }

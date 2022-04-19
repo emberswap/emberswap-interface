@@ -16,6 +16,7 @@ export interface SerializedPair {
 export const updateMatchesDarkMode = createAction<{ matchesDarkMode: boolean }>('user/updateMatchesDarkMode')
 export const updateUserDarkMode = createAction<{ userDarkMode: boolean }>('user/updateUserDarkMode')
 export const updateUserFarmFilter = createAction<{ userFarmFilter: string }>('user/updateUserFarmFilter')
+export const updateUserVaultFilter = createAction<{ userVaultFilter: string }>('user/updateUserVaultFilter')
 export const updateUserExpertMode = createAction<{ userExpertMode: boolean }>('user/updateUserExpertMode')
 export const updateUserSingleHopOnly = createAction<{
   userSingleHopOnly: boolean

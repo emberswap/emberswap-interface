@@ -23,6 +23,7 @@ import {
   updateUserDeadline,
   updateUserExpertMode,
   updateUserFarmFilter,
+  updateUserVaultFilter,
   updateUserSingleHopOnly,
   updateUserSlippageTolerance,
 } from './actions'
@@ -38,6 +39,7 @@ export interface UserState {
 
   userDarkMode: boolean | null // the user's choice for dark mode or light mode
   userFarmFilter: string | null // ther user's last active farm filter
+  userVaultFilter: string | null // ther user's last active vault filter
   matchesDarkMode: boolean // whether the dark mode media query matches
 
   userExpertMode: boolean
@@ -80,6 +82,7 @@ function pairKey(token0Address: string, token1Address: string) {
 export const initialState: UserState = {
   userDarkMode: null,
   userFarmFilter: 'all',
+  userVaultFilter: 'all',
   matchesDarkMode: false,
   userExpertMode: false,
   userSingleHopOnly: false,
@@ -127,6 +130,10 @@ export default createReducer(initialState, (builder) =>
     })
     .addCase(updateUserFarmFilter,  (state, action) => {
       state.userFarmFilter = action.payload.userFarmFilter
+      state.timestamp = currentTimestamp()
+    })
+    .addCase(updateUserVaultFilter,  (state, action) => {
+      state.userVaultFilter = action.payload.userVaultFilter
       state.timestamp = currentTimestamp()
     })
     .addCase(updateUserSlippageTolerance, (state, action) => {

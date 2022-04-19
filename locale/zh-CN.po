@@ -132,7 +132,7 @@ msgid "A portion of each trade (0.25%) goes to liquidity providers as a protocol
 msgstr "每笔交易的0.25%都会分给协议的流动性提供者。"
 
 #: src/features/farm/FarmList.tsx:79
-#: src/features/vault/VaultList.tsx:67
+#: src/features/vault/VaultList.tsx:77
 msgid "APR"
 msgstr "APR"
 
@@ -225,8 +225,12 @@ msgstr "已添加"
 msgid "All Farms"
 msgstr ""
 
+#: src/features/vault/VaultMenu.tsx:33
+msgid "All Vaults"
+msgstr ""
+
 #: src/features/farm/FarmList.tsx:69
-#: src/features/vault/VaultList.tsx:58
+#: src/features/vault/VaultList.tsx:68
 msgid "Allocation"
 msgstr "分配"
 
@@ -615,7 +619,7 @@ msgid "Connected with {name}"
 msgstr "与{name}链接"
 
 #: src/pages/locker/create/index.tsx:352
-#: src/pages/vaults/index.tsx:167
+#: src/pages/vaults/index.tsx:199
 msgid "Considerations"
 msgstr "考虑因素"
 
@@ -774,11 +778,11 @@ msgstr "要么返回到{链接}， 要么换到一个可用的网络。"
 #~ msgid "Ember Bridge"
 #~ msgstr ""
 
-#: src/pages/vaults/index.tsx:154
+#: src/pages/vaults/index.tsx:186
 msgid "Ember Vault"
 msgstr ""
 
-#: src/pages/vaults/index.tsx:158
+#: src/pages/vaults/index.tsx:190
 msgid "Ember Vault is a set of high incentivized pools. Long term supporters can choose to lock EMBER for a determined period for higher rewards."
 msgstr ""
 
@@ -832,7 +836,7 @@ msgid "Error connecting. Try refreshing the page."
 msgstr "连接错误 尝试刷新网络"
 
 #: src/features/vault/VaultListItemDetails.tsx:77
-#: src/pages/vaults/index.tsx:169
+#: src/pages/vaults/index.tsx:201
 msgid "Everytime you stake or claim rewards your lock time renews."
 msgstr ""
 
@@ -1256,7 +1260,7 @@ msgstr "清单"
 #: src/components/PositionCard/index.tsx:170
 #: src/components/TransactionList.tsx:40
 #: src/features/farm/FarmList.tsx:105
-#: src/features/vault/VaultList.tsx:94
+#: src/features/vault/VaultList.tsx:104
 #: src/pages/exchange/find/index.tsx:171
 #: src/pages/exchange/pool/index.tsx:127
 msgid "Loading"
@@ -1291,7 +1295,7 @@ msgstr "锁定"
 msgid "Locker"
 msgstr "锁"
 
-#: src/features/vault/VaultList.tsx:39
+#: src/features/vault/VaultList.tsx:49
 msgid "Lockup"
 msgstr ""
 
@@ -1429,6 +1433,10 @@ msgstr "我的订单"
 #~ msgid "My SUSHI"
 #~ msgstr ""
 
+#: src/features/vault/VaultMenu.tsx:34
+msgid "My Vault"
+msgstr ""
+
 #: src/components/Header/index.tsx:80
 #: src/components/Header/index.tsx:196
 #~ msgid "NFT Launchpad"
@@ -1456,6 +1464,7 @@ msgstr "刚接触数字货币？"
 #~ msgstr "没有发现流动性"
 
 #: src/features/farm/FarmList.tsx:105
+#: src/features/vault/VaultList.tsx:104
 msgid "No Results"
 msgstr "未找到结果"
 
@@ -1540,7 +1549,7 @@ msgid "Order History"
 msgstr "订单历史"
 
 #: src/features/farm/FarmList.tsx:34
-#: src/features/vault/VaultList.tsx:22
+#: src/features/vault/VaultList.tsx:32
 msgid "Order by"
 msgstr ""
 
@@ -1574,6 +1583,10 @@ msgstr "输出将发送到"
 msgid "Past Farms"
 msgstr ""
 
+#: src/features/vault/VaultMenu.tsx:35
+msgid "Past Vaults"
+msgstr ""
+
 #: src/features/open-order/CompletedOrders.tsx:35
 #: src/features/open-order/OpenOrders.tsx:63
 msgid "Pay"
@@ -1585,7 +1598,7 @@ msgstr "支付自"
 
 #: src/components/Web3Status/index.tsx:137
 #: src/features/farm/FarmList.tsx:89
-#: src/features/vault/VaultList.tsx:77
+#: src/features/vault/VaultList.tsx:87
 msgid "Pending"
 msgstr "处理中"
 
@@ -1897,6 +1910,7 @@ msgid "Something went wrong during signing of the approval. This is expected for
 msgstr "在签署批准时出现错误。可能是硬件钱包例如Trezor和Ledger。再次点击，将使用倒退的办法。"
 
 #: src/features/farm/FarmList.tsx:29
+#: src/features/vault/VaultList.tsx:27
 msgid "Soon"
 msgstr "马上"
 
@@ -1911,7 +1925,7 @@ msgstr "马上"
 
 #: src/features/farm/FarmList.tsx:49
 #: src/features/farm/FarmListItemDetails.tsx:157
-#: src/features/vault/VaultList.tsx:34
+#: src/features/vault/VaultList.tsx:44
 #: src/features/vault/VaultListItemDetails.tsx:200
 msgid "Stake"
 msgstr "质押"
@@ -2045,7 +2059,7 @@ msgid "Swapping {0} {1} for {2} {3}"
 msgstr "将{0} {1}换成{2} {3}"
 
 #: src/features/farm/FarmList.tsx:59
-#: src/features/vault/VaultList.tsx:48
+#: src/features/vault/VaultList.tsx:58
 msgid "TVL"
 msgstr "TVL"
 
@@ -2080,7 +2094,7 @@ msgstr "输入代币不能被转移。 输入代币可能有问题。"
 msgid "The output token cannot be transferred. There may be an issue with the output token."
 msgstr "输出代币不能被转移。输出代币可能有问题。"
 
-#: src/pages/vaults/index.tsx:163
+#: src/pages/vaults/index.tsx:195
 msgid "The participants receive higher rewards according to lock duration."
 msgstr ""
 
@@ -2797,6 +2811,6 @@ msgstr ""
 #~ msgstr "{标题}"
 
 #: src/features/farm/FarmList.tsx:39
-#: src/features/vault/VaultList.tsx:27
+#: src/features/vault/VaultList.tsx:37
 msgid "{v}"
 msgstr ""

@@ -15,6 +15,7 @@ import {
   updateUserArcherUseRelay,
   updateUserDarkMode,
   updateUserFarmFilter,
+  updateUserVaultFilter,
   updateUserDeadline,
   updateUserExpertMode,
   updateUserSingleHopOnly,
@@ -76,6 +77,10 @@ export function getFarmFilter(): string {
   return useAppSelector((state) => state.user.userFarmFilter)
 }
 
+export function getVaultFilter(): string {
+  return useAppSelector((state) => state.user.userVaultFilter)
+}
+
 export function useUpdateFarmFilter(): (filter: string) => void {
   // const dispatch = useAppDispatch()
   // dispatch(updateUserFarmFilter({ userFarmFilter: filter }))
@@ -83,6 +88,18 @@ export function useUpdateFarmFilter(): (filter: string) => void {
   return useCallback(
     (filter: string) => {
       dispatch(updateUserFarmFilter({ userFarmFilter: filter }))
+    },
+    [dispatch]
+  )
+}
+
+export function useUpdateVaultFilter(): (filter: string) => void {
+  // const dispatch = useAppDispatch()
+  // dispatch(updateUserVaultFilter({ userVaultFilter: filter }))
+  const dispatch = useDispatch<AppDispatch>()
+  return useCallback(
+    (filter: string) => {
+      dispatch(updateUserVaultFilter({ userVaultFilter: filter }))
     },
     [dispatch]
   )

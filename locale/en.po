@@ -135,7 +135,7 @@ msgid "A portion of each trade (0.25%) goes to liquidity providers as a protocol
 msgstr "A portion of each trade (0.25%) goes to liquidity providers as a protocol incentive."
 
 #: src/features/farm/FarmList.tsx:79
-#: src/features/vault/VaultList.tsx:67
+#: src/features/vault/VaultList.tsx:77
 msgid "APR"
 msgstr "APR"
 
@@ -224,8 +224,12 @@ msgstr "Added"
 msgid "All Farms"
 msgstr "All Farms"
 
+#: src/features/vault/VaultMenu.tsx:33
+msgid "All Vaults"
+msgstr "All Vaults"
+
 #: src/features/farm/FarmList.tsx:69
-#: src/features/vault/VaultList.tsx:58
+#: src/features/vault/VaultList.tsx:68
 msgid "Allocation"
 msgstr "Allocation"
 
@@ -653,7 +657,7 @@ msgid "Connected with {name}"
 msgstr "Connected with {name}"
 
 #: src/pages/locker/create/index.tsx:352
-#: src/pages/vaults/index.tsx:167
+#: src/pages/vaults/index.tsx:199
 msgid "Considerations"
 msgstr "Considerations"
 
@@ -824,11 +828,11 @@ msgstr "Either return to the {link}, or change to an available network."
 #~ msgid "Ember Bridge"
 #~ msgstr "Ember Bridge"
 
-#: src/pages/vaults/index.tsx:154
+#: src/pages/vaults/index.tsx:186
 msgid "Ember Vault"
 msgstr "Ember Vault"
 
-#: src/pages/vaults/index.tsx:158
+#: src/pages/vaults/index.tsx:190
 msgid "Ember Vault is a set of high incentivized pools. Long term supporters can choose to lock EMBER for a determined period for higher rewards."
 msgstr "Ember Vault is a set of high incentivized pools. Long term supporters can choose to lock EMBER for a determined period for higher rewards."
 
@@ -882,7 +886,7 @@ msgid "Error connecting. Try refreshing the page."
 msgstr "Error connecting. Try refreshing the page."
 
 #: src/features/vault/VaultListItemDetails.tsx:77
-#: src/pages/vaults/index.tsx:169
+#: src/pages/vaults/index.tsx:201
 msgid "Everytime you stake or claim rewards your lock time renews."
 msgstr "Everytime you stake or claim rewards your lock time renews."
 
@@ -1344,7 +1348,7 @@ msgstr "Lists"
 #: src/components/PositionCard/index.tsx:170
 #: src/components/TransactionList.tsx:40
 #: src/features/farm/FarmList.tsx:105
-#: src/features/vault/VaultList.tsx:94
+#: src/features/vault/VaultList.tsx:104
 #: src/pages/exchange/find/index.tsx:171
 #: src/pages/exchange/pool/index.tsx:127
 msgid "Loading"
@@ -1379,7 +1383,7 @@ msgstr "Lock"
 msgid "Locker"
 msgstr "Locker"
 
-#: src/features/vault/VaultList.tsx:39
+#: src/features/vault/VaultList.tsx:49
 msgid "Lockup"
 msgstr "Lockup"
 
@@ -1523,6 +1527,10 @@ msgstr "My Orders"
 #~ msgid "My SUSHI"
 #~ msgstr "My SUSHI"
 
+#: src/features/vault/VaultMenu.tsx:34
+msgid "My Vault"
+msgstr "My Vault"
+
 #: src/components/Header/index.tsx:80
 #: src/components/Header/index.tsx:196
 #~ msgid "NFT Launchpad"
@@ -1550,6 +1558,7 @@ msgstr "New to Crypto?"
 #~ msgstr "No Liquidity found"
 
 #: src/features/farm/FarmList.tsx:105
+#: src/features/vault/VaultList.tsx:104
 msgid "No Results"
 msgstr "No Results"
 
@@ -1639,7 +1648,7 @@ msgid "Order History"
 msgstr "Order History"
 
 #: src/features/farm/FarmList.tsx:34
-#: src/features/vault/VaultList.tsx:22
+#: src/features/vault/VaultList.tsx:32
 msgid "Order by"
 msgstr "Order by"
 
@@ -1675,6 +1684,10 @@ msgstr "Output will be sent to"
 msgid "Past Farms"
 msgstr "Past Farms"
 
+#: src/features/vault/VaultMenu.tsx:35
+msgid "Past Vaults"
+msgstr "Past Vaults"
+
 #: src/features/open-order/CompletedOrders.tsx:35
 #: src/features/open-order/OpenOrders.tsx:63
 msgid "Pay"
@@ -1686,7 +1699,7 @@ msgstr "Pay from:"
 
 #: src/components/Web3Status/index.tsx:137
 #: src/features/farm/FarmList.tsx:89
-#: src/features/vault/VaultList.tsx:77
+#: src/features/vault/VaultList.tsx:87
 msgid "Pending"
 msgstr "Pending"
 
@@ -2010,6 +2023,7 @@ msgid "Something went wrong during signing of the approval. This is expected for
 msgstr "Something went wrong during signing of the approval. This is expected for hardware wallets, such as Trezor and Ledger. Click again and the fallback method will be used"
 
 #: src/features/farm/FarmList.tsx:29
+#: src/features/vault/VaultList.tsx:27
 msgid "Soon"
 msgstr "Soon"
 
@@ -2024,7 +2038,7 @@ msgstr "Soon"
 
 #: src/features/farm/FarmList.tsx:49
 #: src/features/farm/FarmListItemDetails.tsx:157
-#: src/features/vault/VaultList.tsx:34
+#: src/features/vault/VaultList.tsx:44
 #: src/features/vault/VaultListItemDetails.tsx:200
 msgid "Stake"
 msgstr "Stake"
@@ -2170,7 +2184,7 @@ msgstr "Swapping {0} {1} for {2} {3}"
 #~ msgstr "Swapping {0}) {1} for {2} {3}"
 
 #: src/features/farm/FarmList.tsx:59
-#: src/features/vault/VaultList.tsx:48
+#: src/features/vault/VaultList.tsx:58
 msgid "TVL"
 msgstr "TVL"
 
@@ -2205,7 +2219,7 @@ msgstr "The input token cannot be transferred. There may be an issue with the in
 msgid "The output token cannot be transferred. There may be an issue with the output token."
 msgstr "The output token cannot be transferred. There may be an issue with the output token."
 
-#: src/pages/vaults/index.tsx:163
+#: src/pages/vaults/index.tsx:195
 msgid "The participants receive higher rewards according to lock duration."
 msgstr "The participants receive higher rewards according to lock duration."
 
@@ -2951,6 +2965,6 @@ msgstr "{label}"
 #~ msgstr "{title}"
 
 #: src/features/farm/FarmList.tsx:39
-#: src/features/vault/VaultList.tsx:27
+#: src/features/vault/VaultList.tsx:37
 msgid "{v}"
 msgstr "{v}"

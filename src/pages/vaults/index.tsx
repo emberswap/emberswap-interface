@@ -19,12 +19,25 @@ import useMasterChef from '../../features/farm/useMasterChef'
 import { useTVL } from '../../hooks/useV2Pairs'
 import { getAddress } from '@ethersproject/address'
 import VaultList from '../../features/vault/VaultList'
+import Menu from '../../features/vault/VaultMenu'
+import { updateUserVaultFilter } from '../../state/user/actions'
+import { getVaultFilter, useUpdateVaultFilter } from '../../state/user/hooks'
 
 export default function Vault(): JSX.Element {
   const { i18n } = useLingui()
   const router = useRouter()
   const { chainId } = useActiveWeb3React()
 
+  const type = router.query.filter as string
+
+  const savedFilter = getVaultFilter()
+
+  if (!type && savedFilter) {
+    router.push(`/vaults?filter=${savedFilter}`)
+  }
+
+  const updateVaultFilter = useUpdateVaultFilter()
+  updateVaultFilter(type)
   const positions = usePositions()
 
   const vaults = useVaults()
@@ -122,7 +135,26 @@ export default function Vault(): JSX.Element {
       blocksPerHour,
     }
   }
-  const data = vaults.map(map)
+
+  const FILTER = {
+    all: (farm) => farm.allocPoint > 0,
+    my: (farm) => farm?.amount && !farm.amount.isZero(),
+    past: (farm) => farm.allocPoint == 0,
+  }
+
+  const data = vaults.map(map).filter((farm) => {
+    return type in FILTER ? FILTER[type](farm) : true
+  })
+
+  const options = {
+    keys: ['pair.id', 'pair.token0.symbol', 'pair.token1.symbol', 'pair.token0.name', 'pair.token1.name'],
+    threshold: 0.4,
+  }
+
+  const { result, term, search } = useFuse({
+    data,
+    options,
+  })
 
   const valueStaked = positions.reduce((previousValue, currentValue) => {
     return previousValue + (currentValue.amount / 1e18) * emberPrice
@@ -138,7 +170,7 @@ export default function Vault(): JSX.Element {
       <div className="container px-0 mx-auto pb-6">
         <div className={`mb-2 pb-4 grid grid-cols-12 gap-4`}>
           <div className="flex justify-center items-center col-span-12 lg:justify">
-            <Link href="/farm?filter=all">
+            <Link href="/vault?filter=all">
               <EmberswapLogo />
             </Link>
           </div>
@@ -183,9 +215,18 @@ export default function Vault(): JSX.Element {
                         </div>
                       )}
                     </div>
+                    <div>
+                      <Menu
+                        term={term}
+                        onSearch={(value) => {
+                          search(value)
+                        }}
+                        positionsLength={positions.length}
+                      />
+                    </div>
                   </div>
                   <div className={`col-span-12 md:col-span-9 py-4 md:px-6 bg-dark-800-buffer md:py-4 rounded`}>
-                    <VaultList farms={data} />
+                    <VaultList farms={result} term={term} filter={FILTER}/>
                   </div>
                 </div>
               </Card>
