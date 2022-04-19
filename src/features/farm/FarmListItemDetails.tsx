@@ -95,7 +95,7 @@ const FarmListItem = ({ farm }) => {
                   variant="outlined"
                   color="light-green"
                   size="xs"
-                  disabled={farm?.allocPoint === 0}
+                  disabled={farm.allocPoint == 0}
                   onClick={() => {
                     if (!balance.equalTo(ZERO)) {
                       if (liquidityToken?.symbol == 'EMBER') {
@@ -134,7 +134,7 @@ const FarmListItem = ({ farm }) => {
                 size="sm"
                 variant="outlined"
                 color="gradient"
-               disabled={pendingTx || !typedDepositValue || balance.lessThan(typedDepositValue) || farm?.allocPoint === '0'}
+               disabled={pendingTx || !typedDepositValue || balance.lessThan(typedDepositValue) || farm.allocPoint == 0}
                 onClick={async () => {
                   setPendingTx(true)
                   try {

@@ -137,6 +137,7 @@ const VaultListItem = ({ farm }) => {
                     variant="outlined"
                     color="light-green"
                     size="xs"
+                    disabled={farm.allocPoint == 0}
                     onClick={() => {
                       if (!balance.equalTo(ZERO)) {
                         setDepositValue(balance.toFixed(liquidityToken?.decimals))
@@ -165,7 +166,7 @@ const VaultListItem = ({ farm }) => {
                   size="sm"
                   variant="outlined"
                   color="gradient"
-                  disabled={pendingTx || !typedDepositValue || balance.lessThan(typedDepositValue)}
+                  disabled={pendingTx || !typedDepositValue || balance.lessThan(typedDepositValue) || farm.allocPoint == 0}
                   onClick={async () => {
                     const fn = async () => {
                       setPendingTx(true)
