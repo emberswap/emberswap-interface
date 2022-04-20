@@ -1471,8 +1471,13 @@ msgstr "Me"
 
 #: src/components/Web3Connect/index.tsx:136
 #: src/components/Web3Connect/index.tsx:144
-msgid "MetaMask App"
-msgstr "MetaMask App"
+msgid "MetaMask"
+msgstr "MetaMask"
+
+#: src/components/Web3Connect/index.tsx:136
+#: src/components/Web3Connect/index.tsx:144
+#~ msgid "MetaMask App"
+#~ msgstr "MetaMask App"
 
 #: src/pages/exchange/pool/index.tsx:167
 msgid "Migrate"
@@ -2783,6 +2788,10 @@ msgstr "Your Staked"
 #~ msgid "Your Yields"
 #~ msgstr "Your Yields"
 
+#: src/components/Web3Connect/index.tsx:133
+msgid "Your browser is supported, but first you need to install"
+msgstr "Your browser is supported, but first you need to install"
+
 #: src/components/PositionCard/index.tsx:82
 #: src/components/PositionCard/index.tsx:233
 msgid "Your pool share"
@@ -2963,8 +2972,8 @@ msgstr "{0} is not supported"
 #~ msgstr "{0} is supported, but first you need to install"
 
 #: src/components/Web3Connect/index.tsx:133
-msgid "{0} is supported, but first you need to install the"
-msgstr "{0} is supported, but first you need to install the"
+#~ msgid "{0} is supported, but first you need to install the"
+#~ msgstr "{0} is supported, but first you need to install the"
 
 #: src/pages/AddLiquidity/PoolPriceBar.tsx:20
 #: src/pages/AddLiquidity/PoolPriceBar.tsx:26

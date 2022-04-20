@@ -72,7 +72,7 @@ export default function Web3Connect({ color = 'gray', size = 'sm', className = '
   const pluginSupportInfo = useMemo(() => {
     if (!deviceInfo.isDesktop) {
       if (deviceInfo.isAndroid) {
-        return { url: 'https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US' }
+        return { url: 'https://play.google.com/store/apps/details?id=io.metamask' }
       }
       if (deviceInfo.isIOS) {
         return { url: 'https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202' }
@@ -130,18 +130,18 @@ export default function Web3Connect({ color = 'gray', size = 'sm', className = '
             {pluginSupportInfo ? (
               <>
                 <p>
-                  {i18n._(t`${deviceInfo.browserName} is supported, but first you need to install the`)}
+                  {i18n._(t`Your browser is supported, but first you need to install`)}
                   <a className="text-blue" href={pluginSupportInfo.url} rel="noreferrer" target="_blank">
                     {' '}
-                    {t`MetaMask App`}
+                    {t`MetaMask`}
                   </a>
                 </p>
               </>
             ) : (
               <>
-                {i18n._(t`${deviceInfo.browserName} is not supported`)}, {i18n._(t`Please install`)}{' '}
+                {i18n._(t`Your browser is not supported, please install`)}{' '}
                 <a className="text-blue" href="https://metamask.io/">
-                  {i18n._(t`MetaMask App`)}
+                  {i18n._(t`MetaMask`)}
                 </a>
               </>
             )}

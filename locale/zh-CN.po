@@ -1382,8 +1382,13 @@ msgstr "我"
 
 #: src/components/Web3Connect/index.tsx:136
 #: src/components/Web3Connect/index.tsx:144
-msgid "MetaMask App"
+msgid "MetaMask"
 msgstr ""
+
+#: src/components/Web3Connect/index.tsx:136
+#: src/components/Web3Connect/index.tsx:144
+#~ msgid "MetaMask App"
+#~ msgstr ""
 
 #: src/pages/exchange/pool/index.tsx:167
 msgid "Migrate"
@@ -2638,6 +2643,10 @@ msgstr "您在流动性池的占比"
 #~ msgid "Your Yields"
 #~ msgstr "您的收益"
 
+#: src/components/Web3Connect/index.tsx:133
+msgid "Your browser is supported, but first you need to install"
+msgstr ""
+
 #: src/components/PositionCard/index.tsx:82
 #: src/components/PositionCard/index.tsx:233
 msgid "Your pool share"
@@ -2813,8 +2822,8 @@ msgstr ""
 #~ msgstr ""
 
 #: src/components/Web3Connect/index.tsx:133
-msgid "{0} is supported, but first you need to install the"
-msgstr ""
+#~ msgid "{0} is supported, but first you need to install the"
+#~ msgstr ""
 
 #: src/pages/AddLiquidity/PoolPriceBar.tsx:20
 #: src/pages/AddLiquidity/PoolPriceBar.tsx:26
