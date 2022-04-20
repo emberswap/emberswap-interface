@@ -2,7 +2,7 @@ import Button, { ButtonProps } from '../Button'
 import { UnsupportedChainIdError, useWeb3React } from '@web3-react/core'
 
 import { Activity } from 'react-feather'
-import React from 'react'
+import React, { useCallback, useMemo } from 'react'
 import styled from 'styled-components'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
@@ -12,6 +12,9 @@ import { SUPPORTED_NETWORKS } from '../../modals/ChainModal'
 import { ChainId } from '../../sdk'
 import cookie from 'cookie-cutter'
 import { useActiveWeb3React } from '../../hooks'
+import * as deviceInfo from 'react-device-detect'
+import useInstructionModal from '../../modals/InstructionModal/useInstuctionModal'
+import InstructionModal from '../../modals/InstructionModal'
 
 const NetworkIcon = styled(Activity)`
   width: 16px;
@@ -55,6 +58,42 @@ export default function Web3Connect({ color = 'gray', size = 'sm', className = '
   const { error } = useWeb3React()
   const { route } = useRouter();
   
+  const { isInstructionModalOpen, setInstructionModalOpen, onInstructionModalDismiss } = useInstructionModal()
+
+  const handleConnectBtnClick = useCallback(() => {
+    if (!window.ethereum) {
+      setInstructionModalOpen(true)
+      return
+    }
+
+    toggleWalletModal()
+  }, [setInstructionModalOpen, toggleWalletModal])
+
+  const pluginSupportInfo = useMemo(() => {
+    if (!deviceInfo.isDesktop) {
+      if (deviceInfo.isAndroid) {
+        return { url: 'https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US' }
+      }
+      if (deviceInfo.isIOS) {
+        return { url: 'https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202' }
+      }
+      return null
+        }
+
+    if (deviceInfo.isFirefox) {
+      return { url: 'https://addons.mozilla.org/en-US/firefox/addon/ether-metamask/' }
+    }
+
+    if (deviceInfo.isChrome) {
+      return { url: 'https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn' }
+    }
+
+    if (deviceInfo.isEdge) {
+      return { url: 'https://microsoftedge.microsoft.com/addons/detail/metamask/ejbalbakoplchlghecdalmeeeajnimhm' }
+    }
+    return null
+  }, [])
+
   return error ?  (
        <div> 
 <Button
@@ -71,16 +110,44 @@ export default function Web3Connect({ color = 'gray', size = 'sm', className = '
     {i18n._(t`Switch to SmartBCH`)}
   </Button></div>
   ) : (
-    <Button
-      id="connect-wallet"
-      onClick={toggleWalletModal}
-      variant="outlined"
-      color={color}
-      className={className}
-      size={size}
-      {...rest}
-    >
-      {i18n._(t`Connect to a wallet`)}
-    </Button>
+<>
+      <Button
+        id="connect-wallet"
+        onClick={handleConnectBtnClick}
+        variant="outlined"
+        color={color}
+        className={className}
+        size={size}
+        {...rest}
+      >
+        {i18n._(t`Connect to a wallet`)}
+      </Button>
+      <InstructionModal
+        isOpen={isInstructionModalOpen}
+        onDismiss={onInstructionModalDismiss}
+        instruction={
+          <div>
+            {pluginSupportInfo ? (
+              <>
+                <p>
+                  {i18n._(t`${deviceInfo.browserName} is supported, but first you need to install the`)}
+                  <a className="text-blue" href={pluginSupportInfo.url} rel="noreferrer" target="_blank">
+                    {' '}
+                    {t`MetaMask App`}
+                  </a>
+                </p>
+              </>
+            ) : (
+              <>
+                {i18n._(t`${deviceInfo.browserName} is not supported`)}, {i18n._(t`Please install`)}{' '}
+                <a className="text-blue" href="https://metamask.io/">
+                  {i18n._(t`MetaMask App`)}
+                </a>
+              </>
+            )}
+          </div>
+        }
+      />
+    </>
   )
 }

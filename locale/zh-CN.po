@@ -592,7 +592,7 @@ msgstr ""
 msgid "Connect Wallet"
 msgstr "连接钱包"
 
-#: src/components/Web3Connect/index.tsx:83
+#: src/components/Web3Connect/index.tsx:123
 #: src/modals/WalletModal/index.tsx:358
 msgid "Connect to a wallet"
 msgstr "连接钱包"
@@ -1380,6 +1380,11 @@ msgstr "最大可发送"
 msgid "Me"
 msgstr "我"
 
+#: src/components/Web3Connect/index.tsx:136
+#: src/components/Web3Connect/index.tsx:144
+msgid "MetaMask App"
+msgstr ""
+
 #: src/pages/exchange/pool/index.tsx:167
 msgid "Migrate"
 msgstr "迁移"
@@ -1620,6 +1625,10 @@ msgstr ""
 #: src/features/meowshi/MeowshiButton.tsx:96
 #~ msgid "Please enter an amount"
 #~ msgstr ""
+
+#: src/components/Web3Connect/index.tsx:142
+msgid "Please install"
+msgstr ""
 
 #: src/pages/vesting/index.tsx:129
 #~ msgid "Please refer to the"
@@ -2065,7 +2074,7 @@ msgstr "交换至："
 msgid "Swapping {0} {1} for {2} {3}"
 msgstr "将{0} {1}换成{2} {3}"
 
-#: src/components/Web3Connect/index.tsx:71
+#: src/components/Web3Connect/index.tsx:110
 #: src/modals/WalletModal/index.tsx:332
 msgid "Switch to SmartBCH"
 msgstr ""
@@ -2736,6 +2745,10 @@ msgstr "https:// 或 ipfs:// 或 LNS name"
 msgid "loading..."
 msgstr "载入中..."
 
+#: src/components/Web3Connect/index.tsx:131
+#~ msgid "metamask extension"
+#~ msgstr ""
+
 #: src/components/TransactionSettings/index.tsx:205
 msgid "minutes"
 msgstr "分钟"
@@ -2790,6 +2803,18 @@ msgstr "{0}存入的"
 #: src/pages/kashi/borrow/[pair].tsx:231 src/pages/kashi/lend/[pair].tsx:202
 #~ msgid "{0} Strategy"
 #~ msgstr "{0}策略"
+
+#: src/components/Web3Connect/index.tsx:142
+msgid "{0} is not supported"
+msgstr ""
+
+#: src/components/Web3Connect/index.tsx:128
+#~ msgid "{0} is supported, but first you need to install"
+#~ msgstr ""
+
+#: src/components/Web3Connect/index.tsx:133
+msgid "{0} is supported, but first you need to install the"
+msgstr ""
 
 #: src/pages/AddLiquidity/PoolPriceBar.tsx:20
 #: src/pages/AddLiquidity/PoolPriceBar.tsx:26
