@@ -988,13 +988,13 @@ msgstr ""
 
 #: src/features/farm/FarmListItem.tsx:97
 #: src/features/farm/FarmListItemDetails.tsx:257
-#: src/features/vault/VaultListItemDetails.tsx:295
+#: src/features/vault/VaultListItemDetails.tsx:296
 #: src/pages/farm/index.tsx:253
 msgid "Harvest"
 msgstr "收获"
 
 #: src/features/farm/FarmListItemDetails.tsx:269
-#: src/features/vault/VaultListItemDetails.tsx:319
+#: src/features/vault/VaultListItemDetails.tsx:320
 msgid "Harvest {0} EMBER"
 msgstr "收获 {0} EMBER"
 
@@ -1307,7 +1307,7 @@ msgstr ""
 #: src/features/farm/FarmListItemDetails.tsx:134
 #: src/features/farm/FarmListItemDetails.tsx:212
 #: src/features/vault/VaultListItemDetails.tsx:148
-#: src/features/vault/VaultListItemDetails.tsx:235
+#: src/features/vault/VaultListItemDetails.tsx:236
 msgid "MAX"
 msgstr "最大数量"
 
@@ -2280,7 +2280,7 @@ msgid "Unlock date"
 msgstr "解锁日期"
 
 #: src/features/farm/FarmListItemDetails.tsx:241
-#: src/features/vault/VaultListItemDetails.tsx:278
+#: src/features/vault/VaultListItemDetails.tsx:279
 msgid "Unstake"
 msgstr "解除抵押"
 
@@ -2465,7 +2465,7 @@ msgstr ""
 #~ msgstr "当创建一个交易对时，您是第一个流动性提供者。您添加的代币比例将决定这个池子的价格。一旦您对该比率满意，点击供应进行查看"
 
 #: src/features/farm/FarmListItemDetails.tsx:228
-#: src/features/vault/VaultListItemDetails.tsx:258
+#: src/features/vault/VaultListItemDetails.tsx:259
 msgid "Withdraw"
 msgstr "提取"
 
@@ -2729,6 +2729,7 @@ msgid "minutes"
 msgstr "分钟"
 
 #: src/features/farm/FarmListItemDetails.tsx:187
+#: src/features/vault/VaultListItemDetails.tsx:212
 msgid "of pool"
 msgstr ""
 

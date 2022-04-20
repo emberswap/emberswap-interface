@@ -1065,13 +1065,13 @@ msgstr "Governance"
 
 #: src/features/farm/FarmListItem.tsx:97
 #: src/features/farm/FarmListItemDetails.tsx:257
-#: src/features/vault/VaultListItemDetails.tsx:295
+#: src/features/vault/VaultListItemDetails.tsx:296
 #: src/pages/farm/index.tsx:253
 msgid "Harvest"
 msgstr "Harvest"
 
 #: src/features/farm/FarmListItemDetails.tsx:269
-#: src/features/vault/VaultListItemDetails.tsx:319
+#: src/features/vault/VaultListItemDetails.tsx:320
 msgid "Harvest {0} EMBER"
 msgstr "Harvest {0} EMBER"
 
@@ -1395,7 +1395,7 @@ msgstr "Lockup"
 #: src/features/farm/FarmListItemDetails.tsx:134
 #: src/features/farm/FarmListItemDetails.tsx:212
 #: src/features/vault/VaultListItemDetails.tsx:148
-#: src/features/vault/VaultListItemDetails.tsx:235
+#: src/features/vault/VaultListItemDetails.tsx:236
 msgid "MAX"
 msgstr "MAX"
 
@@ -2413,7 +2413,7 @@ msgid "Unlock date"
 msgstr "Unlock date"
 
 #: src/features/farm/FarmListItemDetails.tsx:241
-#: src/features/vault/VaultListItemDetails.tsx:278
+#: src/features/vault/VaultListItemDetails.tsx:279
 msgid "Unstake"
 msgstr "Unstake"
 
@@ -2607,7 +2607,7 @@ msgstr "We're supporters of Open Source"
 #~ msgstr "When creating a pair you are the first liquidity provider. The ratio of tokens you add will set the price of this pool. Once you are happy with the rate, click supply to review"
 
 #: src/features/farm/FarmListItemDetails.tsx:228
-#: src/features/vault/VaultListItemDetails.tsx:258
+#: src/features/vault/VaultListItemDetails.tsx:259
 msgid "Withdraw"
 msgstr "Withdraw"
 
@@ -2878,6 +2878,7 @@ msgid "minutes"
 msgstr "minutes"
 
 #: src/features/farm/FarmListItemDetails.tsx:187
+#: src/features/vault/VaultListItemDetails.tsx:212
 msgid "of pool"
 msgstr "of pool"
 
