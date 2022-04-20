@@ -43,28 +43,36 @@ export function useV2TradeExactIn(
   return useMemo(() => {
     if (currencyAmountIn && currencyOut && allowedPairs.length > 0) {
       if (maxHops === 1) {
-        return (
-          Trade.bestTradeExactIn(allowedPairs, currencyAmountIn, currencyOut, {
+      let trade: Trade<Currency, Currency, TradeType.EXACT_INPUT> | null;
+        try {
+          trade = Trade.bestTradeExactIn(allowedPairs, currencyAmountIn, currencyOut, {
             maxHops: 1,
             maxNumResults: 1,
           })[0] ?? null
-        )
+        } catch {
+          trade = null;
+        }
+        return ( trade )
       }
       // search through trades with varying hops, find best trade out of them
       let bestTradeSoFar: Trade<Currency, Currency, TradeType.EXACT_INPUT> | null = null
       for (let i = 1; i <= maxHops; i++) {
-        const currentTrade: Trade<Currency, Currency, TradeType.EXACT_INPUT> | null =
-          Trade.bestTradeExactIn(allowedPairs, currencyAmountIn, currencyOut, {
-            maxHops: i,
-            maxNumResults: 1,
-          })[0] ?? null
-        // if current trade is best yet, save it
-        if (isTradeBetter(bestTradeSoFar, currentTrade, BETTER_TRADE_LESS_HOPS_THRESHOLD)) {
+        let currentTrade: Trade<Currency, Currency, TradeType.EXACT_INPUT> | null;
+          try {
+            currentTrade = Trade.bestTradeExactIn(allowedPairs, currencyAmountIn, currencyOut, {
+              maxHops: i,
+              maxNumResults: 1,
+            })[0] ?? null;
+          } catch {
+              currentTrade = null;
+            }  // if current trade is best yet, save it
+          if (isTradeBetter(bestTradeSoFar, currentTrade, BETTER_TRADE_LESS_HOPS_THRESHOLD)) 
+          {
           bestTradeSoFar = currentTrade
-        }
+          }
       }
       return bestTradeSoFar
-    }
+  }
 
     return null
   }, [allowedPairs, currencyAmountIn, currencyOut, maxHops])
