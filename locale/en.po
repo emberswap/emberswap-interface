@@ -1728,10 +1728,6 @@ msgstr "Please connect to the appropriate network."
 #~ msgid "Please enter an amount"
 #~ msgstr "Please enter an amount"
 
-#: src/components/Web3Connect/index.tsx:142
-msgid "Please install"
-msgstr "Please install"
-
 #: src/pages/vesting/index.tsx:129
 #~ msgid "Please refer to the"
 #~ msgstr "Please refer to the"
@@ -2788,6 +2784,10 @@ msgstr "Your Staked"
 #~ msgid "Your Yields"
 #~ msgstr "Your Yields"
 
+#: src/components/Web3Connect/index.tsx:142
+msgid "Your browser is not supported, please install"
+msgstr "Your browser is not supported, please install"
+
 #: src/components/Web3Connect/index.tsx:133
 msgid "Your browser is supported, but first you need to install"
 msgstr "Your browser is supported, but first you need to install"
@@ -2962,10 +2962,6 @@ msgstr "{0} Deposited"
 #: src/pages/kashi/lend/[pair].tsx:202
 #~ msgid "{0} Strategy"
 #~ msgstr "{0} Strategy"
-
-#: src/components/Web3Connect/index.tsx:142
-msgid "{0} is not supported"
-msgstr "{0} is not supported"
 
 #: src/components/Web3Connect/index.tsx:128
 #~ msgid "{0} is supported, but first you need to install"
