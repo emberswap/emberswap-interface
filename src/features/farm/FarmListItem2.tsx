@@ -57,6 +57,8 @@ const FarmListItem2 = ({ farm, ...rest }) => {
       return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
     }, 0) / tvl
   }
+  const lpPrice = pairPrice
+  farm.lpPrice = lpPrice
   farm.roiPerBlock = roiPerBlock
   const roiPerHour = roiPerBlock * farm.blocksPerHour
   farm.roiPerHour = roiPerHour
