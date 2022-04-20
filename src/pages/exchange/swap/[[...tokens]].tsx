@@ -27,7 +27,7 @@ import ProgressSteps from '../../../components/ProgressSteps'
 import ReactGA from 'react-ga'
 import SwapHeader from '../../../components/ExchangeHeader'
 import TokenWarningModal from '../../../modals/TokenWarningModal'
-import TradePrice from '../../../features/swap/TradePrice'
+import  { default as TradePrice, GetRateText } from '../../../features/swap/TradePrice'
 import UnsupportedCurrencyFooter from '../../../features/swap/UnsupportedCurrencyFooter'
 import Web3Connect from '../../../components/Web3Connect'
 import { computeFiatValuePriceImpact } from '../../../functions/trade'
@@ -369,7 +369,7 @@ export default function Swap() {
   return (
     <>
       <Head>
-        <title>{i18n._(t`EmberSwap`)}</title>
+      <title>{GetRateText({price: trade?.executionPrice, showInverted}) || i18n._(t`Exchange`)} | EmberSwap</title>
         <meta
           key="description"
           name="description"

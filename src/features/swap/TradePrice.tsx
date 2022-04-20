@@ -15,16 +15,15 @@ interface TradePriceProps {
   className?: string
   trade?: V2Trade<Currency, Currency, TradeType>
 }
-
-export default function TradePrice({ price, showInverted, setShowInverted, className, trade }: TradePriceProps) {
-  const { i18n } = useLingui()
+export function GetRateText({ price, showInverted }) {
+  if (!price) {
+    return "";
+  }
 
   let formattedPrice: string
 
   try {
-    formattedPrice = showInverted
-      ? formatNumberScale(price.toSignificant(4))
-      : formatNumberScale(price.invert()?.toSignificant(4))
+    formattedPrice = showInverted ? price.toSignificant(4) : price.invert()?.toSignificant(4)
   } catch (error) {
     formattedPrice = '0'
   }
@@ -33,9 +32,18 @@ export default function TradePrice({ price, showInverted, setShowInverted, class
 
   const labelInverted = showInverted ? `${price.baseCurrency?.symbol} ` : `${price.quoteCurrency?.symbol}`
 
-  const flipPrice = useCallback(() => setShowInverted(!showInverted), [setShowInverted, showInverted])
 
   const text = `${'1 ' + labelInverted + ' = ' + formattedPrice ?? '-'} ${label}`
+
+  return text;
+}
+export default function TradePrice({ price, showInverted, setShowInverted, className, trade }: TradePriceProps) {
+  const { i18n } = useLingui()
+
+ 
+  const flipPrice = useCallback(() => setShowInverted(!showInverted), [setShowInverted, showInverted])
+
+  const text = GetRateText({price, showInverted});
 
   const { realizedLPFee, priceImpact } = useMemo(() => {
     if (!trade) return { realizedLPFee: undefined, priceImpact: undefined }
@@ -96,3 +104,4 @@ export default function TradePrice({ price, showInverted, setShowInverted, class
     </div>
   )
 }
+

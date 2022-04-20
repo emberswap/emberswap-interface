@@ -837,8 +837,8 @@ msgid "Ember Vault is a set of high incentivized pools. Long term supporters can
 msgstr "Ember Vault is a set of high incentivized pools. Long term supporters can choose to lock EMBER for a determined period for higher rewards."
 
 #: src/pages/exchange/swap/[[...tokens]].tsx:372
-msgid "EmberSwap"
-msgstr "EmberSwap"
+#~ msgid "EmberSwap"
+#~ msgstr "EmberSwap"
 
 #: src/components/LanguageSwitch/index.tsx:16
 msgid "English"
@@ -890,7 +890,11 @@ msgstr "Error connecting. Try refreshing the page."
 msgid "Everytime you stake or claim rewards your lock time renews."
 msgstr "Everytime you stake or claim rewards your lock time renews."
 
-#: src/features/swap/TradePrice.tsx:62
+#: src/pages/exchange/swap/[[...tokens]].tsx:372
+msgid "Exchange"
+msgstr "Exchange"
+
+#: src/features/swap/TradePrice.tsx:70
 msgid "Exchange Rate"
 msgstr "Exchange Rate"
 
@@ -1787,7 +1791,7 @@ msgstr "Powered by Anyswap Network"
 #~ msgstr "Price"
 
 #: src/features/lending/TradeReview.tsx:59
-#: src/features/swap/TradePrice.tsx:87
+#: src/features/swap/TradePrice.tsx:95
 msgid "Price Impact"
 msgstr "Price Impact"
 
@@ -2202,7 +2206,7 @@ msgid "The Uniswap invariant x*y=k was not satisfied by the swap. This usually m
 msgstr "The Uniswap invariant x*y=k was not satisfied by the swap. This usually means one of the tokens you are swapping incorporates custom behavior on transfer."
 
 #: src/features/lending/TradeReview.tsx:61
-#: src/features/swap/TradePrice.tsx:89
+#: src/features/swap/TradePrice.tsx:97
 msgid "The difference between the market price and estimated price due to trade size."
 msgstr "The difference between the market price and estimated price due to trade size."
 

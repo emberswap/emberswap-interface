@@ -787,8 +787,8 @@ msgid "Ember Vault is a set of high incentivized pools. Long term supporters can
 msgstr ""
 
 #: src/pages/exchange/swap/[[...tokens]].tsx:372
-msgid "EmberSwap"
-msgstr "EmberSwap"
+#~ msgid "EmberSwap"
+#~ msgstr "EmberSwap"
 
 #: src/components/LanguageSwitch/index.tsx:16
 msgid "English"
@@ -840,7 +840,11 @@ msgstr "连接错误 尝试刷新网络"
 msgid "Everytime you stake or claim rewards your lock time renews."
 msgstr ""
 
-#: src/features/swap/TradePrice.tsx:62
+#: src/pages/exchange/swap/[[...tokens]].tsx:372
+msgid "Exchange"
+msgstr ""
+
+#: src/features/swap/TradePrice.tsx:70
 msgid "Exchange Rate"
 msgstr "交换比率"
 
@@ -1679,7 +1683,7 @@ msgstr ""
 #~ msgstr "价格"
 
 #: src/features/lending/TradeReview.tsx:59
-#: src/features/swap/TradePrice.tsx:87
+#: src/features/swap/TradePrice.tsx:95
 msgid "Price Impact"
 msgstr "价格影响"
 
@@ -2077,7 +2081,7 @@ msgid "The Uniswap invariant x*y=k was not satisfied by the swap. This usually m
 msgstr "Uniswap不变式x*y=k没有被交换所满足。这通常意味着你正在交换的其中一个令牌在转移时包含了自定义行为。"
 
 #: src/features/lending/TradeReview.tsx:61
-#: src/features/swap/TradePrice.tsx:89
+#: src/features/swap/TradePrice.tsx:97
 msgid "The difference between the market price and estimated price due to trade size."
 msgstr "因为交易规模所导致的市场价格和预计价格之间的差距。"
 
