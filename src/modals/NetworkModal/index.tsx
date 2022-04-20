@@ -181,25 +181,6 @@ export default function NetworkModal(): JSX.Element | null {
           // ChainId.CELO,
           ChainId.SMARTBCH
         ].map((key: ChainId, i: number) => {
-          if (chainId === key) {
-            return (
-              <button
-                key={i}
-                className="w-full col-span-1 p-px rounded bg-gradient-to-r from-yellow to-yellow"
-              >
-                <div className="flex items-center w-full h-full p-3 space-x-3 rounded bg-dark-1000">
-                  <Image
-                    src={NETWORK_ICON[key]}
-                    alt={`Switch to ${NETWORK_LABEL[key]} Network`}
-                    className="rounded-md"
-                    width="32px"
-                    height="32px"
-                  />
-                  <div className="font-bold text-primary">{NETWORK_LABEL[key]}</div>
-                </div>
-              </button>
-            )
-          }
           return (
             <button
               key={i}
@@ -207,8 +188,8 @@ export default function NetworkModal(): JSX.Element | null {
                 toggleNetworkModal()
                 const params = SUPPORTED_NETWORKS[key]
                 cookie.set('chainId', key)
-                if (key === ChainId.MAINNET) {
-                  library?.send('wallet_switchEthereumChain', [{ chainId: '0x1' }, account])
+                if (key === ChainId.SMARTBCH) {
+                  library?.send('wallet_switchEthereumChain', [{ chainId: params.chainId }, account])
                 } else {
                   library?.send('wallet_addEthereumChain', [params, account])
                 }

@@ -8,11 +8,46 @@ import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import { useWalletModalToggle } from '../../state/application/hooks'
 import { useRouter } from 'next/router'
+import { SUPPORTED_NETWORKS } from '../../modals/ChainModal'
+import { ChainId } from '../../sdk'
+import cookie from 'cookie-cutter'
+import { useActiveWeb3React } from '../../hooks'
 
 const NetworkIcon = styled(Activity)`
   width: 16px;
   height: 16px;
 `
+const SwitchNetworkTo = async () => {
+  // `library` context here is invalid, we use the direct communiaction with Metamask via window.ethereum
+  const params = SUPPORTED_NETWORKS[ChainId.SMARTBCH]
+  cookie.set('chainId', ChainId.SMARTBCH)
+
+  const ethereum = window.ethereum as any;
+  try {
+    await ethereum.request({
+      method: "wallet_switchEthereumChain",
+      params: [ { chainId: params.chainId } ],
+    });
+  } catch (switchError: any) {
+    console.log(switchError);
+    // This error code indicates that the chain has not been added to MetaMask.
+    if (switchError.code === 4902) {
+      try {
+        await ethereum.request({
+          method: "wallet_addEthereumChain",
+          params: [ params ],
+        });
+      } catch (addError) {
+        console.log(addError);
+        // handle adding network error
+        throw addError;
+      }
+    } else {
+      // handle other "switch" errors
+      throw switchError;
+    }
+  }
+}
 
 export default function Web3Connect({ color = 'gray', size = 'sm', className = '', ...rest }: ButtonProps) {
   const { i18n } = useLingui()
@@ -21,15 +56,20 @@ export default function Web3Connect({ color = 'gray', size = 'sm', className = '
   const { route } = useRouter();
   
   return error ?  (
-    <div
-      className="flex items-center w-full justify-center px-4 py-2 font-semibold text-white border rounded bg-opacity-80 border-red bg-red hover:bg-opacity-100"
-      onClick={toggleWalletModal}
-    >
-      <div className="mr-1">
-        <NetworkIcon />
-      </div>
-      {error instanceof UnsupportedChainIdError ? i18n._(t`You are on the wrong network`) : i18n._(t`Error`)}
-    </div>
+       <div> 
+<Button
+    variant="outlined"
+    color="gradient"            
+    onClick={SwitchNetworkTo}   
+    className="flex items-center w-full text-sm justify-center px-4 py-2 text-black bg-opacity-80 hover:bg-opacity-100"
+    size={size}
+    {...rest}
+  >
+  <div className="mr-1">
+    <NetworkIcon />
+  </div>
+    {i18n._(t`Switch to SmartBCH`)}
+  </Button></div>
   ) : (
     <Button
       id="connect-wallet"

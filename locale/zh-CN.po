@@ -592,8 +592,8 @@ msgstr ""
 msgid "Connect Wallet"
 msgstr "连接钱包"
 
-#: src/components/Web3Connect/index.tsx:43
-#: src/modals/WalletModal/index.tsx:307
+#: src/components/Web3Connect/index.tsx:83
+#: src/modals/WalletModal/index.tsx:358
 msgid "Connect to a wallet"
 msgstr "连接钱包"
 
@@ -709,7 +709,7 @@ msgid "Disable Multihops"
 msgstr "禁用Multihops"
 
 #: src/components/AccountDetails/index.tsx:121
-#: src/modals/WalletModal/index.tsx:285
+#: src/modals/WalletModal/index.tsx:336
 msgid "Disconnect"
 msgstr "断开连接"
 
@@ -818,16 +818,15 @@ msgstr "输入有效的滑点百分比"
 msgid "Enter an amount"
 msgstr "输入金额"
 
-#: src/components/Web3Connect/index.tsx:31
 #: src/modals/TransactionConfirmationModal/index.tsx:146
 msgid "Error"
 msgstr "错误"
 
-#: src/modals/WalletModal/index.tsx:275
+#: src/modals/WalletModal/index.tsx:315
 msgid "Error connecting"
 msgstr "连接错误"
 
-#: src/modals/WalletModal/index.tsx:281
+#: src/modals/WalletModal/index.tsx:321
 msgid "Error connecting. Try refreshing the page."
 msgstr "连接错误 尝试刷新网络"
 
@@ -1187,7 +1186,7 @@ msgstr ""
 #~ msgid "LTV"
 #~ msgstr ""
 
-#: src/modals/WalletModal/index.tsx:325
+#: src/modals/WalletModal/index.tsx:376
 msgid "Learn more about wallets"
 msgstr "了解更多关于钱包的信息"
 
@@ -1459,7 +1458,7 @@ msgstr "从不"
 #~ msgid "New network, new features"
 #~ msgstr "新网络，新功能"
 
-#: src/modals/WalletModal/index.tsx:323
+#: src/modals/WalletModal/index.tsx:374
 msgid "New to Crypto?"
 msgstr "刚接触数字货币？"
 
@@ -1610,9 +1609,13 @@ msgstr "处理中"
 #~ msgid "Pending Treasury Transfer"
 #~ msgstr "等待金库转账"
 
-#: src/modals/WalletModal/index.tsx:279
-msgid "Please connect to the appropriate Ethereum network."
-msgstr "请链接正确的以太坊网络"
+#: src/modals/WalletModal/index.tsx:314
+#~ msgid "Please connect to the appropriate Ethereum network."
+#~ msgstr "请链接正确的以太坊网络"
+
+#: src/modals/WalletModal/index.tsx:319
+msgid "Please connect to the appropriate network."
+msgstr ""
 
 #: src/features/meowshi/MeowshiButton.tsx:96
 #~ msgid "Please enter an amount"
@@ -1843,7 +1846,7 @@ msgstr "查询锁仓"
 msgid "Search name or paste address"
 msgstr "搜索名称或粘贴地址"
 
-#: src/modals/WalletModal/index.tsx:304
+#: src/modals/WalletModal/index.tsx:355
 msgid "Select a Wallet"
 msgstr "选择钱包"
 
@@ -2061,6 +2064,19 @@ msgstr "交换至："
 #: src/features/swap/ConfirmSwapModal.tsx:97
 msgid "Swapping {0} {1} for {2} {3}"
 msgstr "将{0} {1}换成{2} {3}"
+
+#: src/components/Web3Connect/index.tsx:71
+#: src/modals/WalletModal/index.tsx:332
+msgid "Switch to SmartBCH"
+msgstr ""
+
+#: src/modals/WalletModal/index.tsx:320
+#~ msgid "Switch to SmartBch Network"
+#~ msgstr ""
+
+#: src/modals/WalletModal/index.tsx:325
+#~ msgid "Switch to smartBCH Network"
+#~ msgstr ""
 
 #: src/features/farm/FarmList.tsx:59
 #: src/features/vault/VaultList.tsx:58
@@ -2477,7 +2493,7 @@ msgstr "从锁定{id}中取款"
 msgid "Wrap"
 msgstr "包裹"
 
-#: src/modals/WalletModal/index.tsx:275
+#: src/modals/WalletModal/index.tsx:315
 msgid "Wrong Network"
 msgstr "错误的网络"
 
@@ -2513,9 +2529,9 @@ msgstr "你将收到"
 msgid "You are creating a pool"
 msgstr "您正在创建一个池"
 
-#: src/components/Web3Connect/index.tsx:31
-msgid "You are on the wrong network"
-msgstr "网络错误"
+#: src/components/Web3Connect/index.tsx:68
+#~ msgid "You are on the wrong network"
+#~ msgstr "网络错误"
 
 #: src/pages/bridge/index.tsx:447
 msgid "You are sending {0} {1} from {2}"

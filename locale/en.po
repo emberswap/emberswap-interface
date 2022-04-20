@@ -625,8 +625,8 @@ msgstr "Confirm {0}"
 msgid "Connect Wallet"
 msgstr "Connect Wallet"
 
-#: src/components/Web3Connect/index.tsx:43
-#: src/modals/WalletModal/index.tsx:307
+#: src/components/Web3Connect/index.tsx:83
+#: src/modals/WalletModal/index.tsx:358
 msgid "Connect to a wallet"
 msgstr "Connect to a wallet"
 
@@ -744,7 +744,7 @@ msgid "Disable Multihops"
 msgstr "Disable Multihops"
 
 #: src/components/AccountDetails/index.tsx:121
-#: src/modals/WalletModal/index.tsx:285
+#: src/modals/WalletModal/index.tsx:336
 msgid "Disconnect"
 msgstr "Disconnect"
 
@@ -864,16 +864,15 @@ msgstr "Enter a valid slippage percentage"
 msgid "Enter an amount"
 msgstr "Enter an amount"
 
-#: src/components/Web3Connect/index.tsx:31
 #: src/modals/TransactionConfirmationModal/index.tsx:146
 msgid "Error"
 msgstr "Error"
 
-#: src/modals/WalletModal/index.tsx:275
+#: src/modals/WalletModal/index.tsx:315
 msgid "Error connecting"
 msgstr "Error connecting"
 
-#: src/modals/WalletModal/index.tsx:281
+#: src/modals/WalletModal/index.tsx:321
 msgid "Error connecting. Try refreshing the page."
 msgstr "Error connecting. Try refreshing the page."
 
@@ -1263,7 +1262,7 @@ msgstr "Join the community on Telegram"
 #~ msgid "LTV"
 #~ msgstr "LTV"
 
-#: src/modals/WalletModal/index.tsx:325
+#: src/modals/WalletModal/index.tsx:376
 msgid "Learn more about wallets"
 msgstr "Learn more about wallets"
 
@@ -1549,7 +1548,7 @@ msgstr "Never"
 #~ msgid "New network, new features"
 #~ msgstr "New network, new features"
 
-#: src/modals/WalletModal/index.tsx:323
+#: src/modals/WalletModal/index.tsx:374
 msgid "New to Crypto?"
 msgstr "New to Crypto?"
 
@@ -1707,9 +1706,13 @@ msgstr "Pending"
 #~ msgid "Pending Treasury Transfer"
 #~ msgstr "Pending Treasury Transfer"
 
-#: src/modals/WalletModal/index.tsx:279
-msgid "Please connect to the appropriate Ethereum network."
-msgstr "Please connect to the appropriate Ethereum network."
+#: src/modals/WalletModal/index.tsx:314
+#~ msgid "Please connect to the appropriate Ethereum network."
+#~ msgstr "Please connect to the appropriate Ethereum network."
+
+#: src/modals/WalletModal/index.tsx:319
+msgid "Please connect to the appropriate network."
+msgstr "Please connect to the appropriate network."
 
 #: src/features/meowshi/MeowshiButton.tsx:96
 #~ msgid "Please enter an amount"
@@ -1947,7 +1950,7 @@ msgstr "Search lockers"
 msgid "Search name or paste address"
 msgstr "Search name or paste address"
 
-#: src/modals/WalletModal/index.tsx:304
+#: src/modals/WalletModal/index.tsx:355
 msgid "Select a Wallet"
 msgstr "Select a Wallet"
 
@@ -2182,6 +2185,19 @@ msgstr "Swapping {0} {1} for {2} {3}"
 #: src/features/swap/ConfirmSwapModal.tsx:97
 #~ msgid "Swapping {0}) {1} for {2} {3}"
 #~ msgstr "Swapping {0}) {1} for {2} {3}"
+
+#: src/components/Web3Connect/index.tsx:71
+#: src/modals/WalletModal/index.tsx:332
+msgid "Switch to SmartBCH"
+msgstr "Switch to SmartBCH"
+
+#: src/modals/WalletModal/index.tsx:320
+#~ msgid "Switch to SmartBch Network"
+#~ msgstr "Switch to SmartBch Network"
+
+#: src/modals/WalletModal/index.tsx:325
+#~ msgid "Switch to smartBCH Network"
+#~ msgstr "Switch to smartBCH Network"
 
 #: src/features/farm/FarmList.tsx:59
 #: src/features/vault/VaultList.tsx:58
@@ -2615,7 +2631,7 @@ msgstr "Withdraw from locker {id}"
 msgid "Wrap"
 msgstr "Wrap"
 
-#: src/modals/WalletModal/index.tsx:275
+#: src/modals/WalletModal/index.tsx:315
 msgid "Wrong Network"
 msgstr "Wrong Network"
 
@@ -2653,9 +2669,9 @@ msgstr "You Will Receive"
 msgid "You are creating a pool"
 msgstr "You are creating a pool"
 
-#: src/components/Web3Connect/index.tsx:31
-msgid "You are on the wrong network"
-msgstr "You are on the wrong network"
+#: src/components/Web3Connect/index.tsx:68
+#~ msgid "You are on the wrong network"
+#~ msgstr "You are on the wrong network"
 
 #: src/pages/bridge/index.tsx:447
 msgid "You are sending {0} {1} from {2}"
