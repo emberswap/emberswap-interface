@@ -118,17 +118,9 @@ msgstr "30 Days"
 #~ msgid "<0>Your</0> Positions"
 #~ msgstr "<0>Your</0> Positions"
 
-#: src/features/swap/AdvancedSwapDetails.tsx:94
-#~ msgid "A portion of each trade (0.05%) goes to xSUSHI holders as a protocol incentive."
-#~ msgstr "A portion of each trade (0.05%) goes to xSUSHI holders as a protocol incentive."
-
 #: src/features/swap/AdvancedSwapDetails.tsx:92
-#~ msgid "A portion of each trade (0.20%) goes EmberSwap Treasury."
-#~ msgstr "A portion of each trade (0.20%) goes EmberSwap Treasury."
-
-#: src/features/swap/AdvancedSwapDetails.tsx:92
-msgid "A portion of each trade (0.25%) goes EmberSwap Treasury."
-msgstr "A portion of each trade (0.25%) goes EmberSwap Treasury."
+msgid "A portion of each trade (0.20%) goes to Liquidity Providers and (0.05%) goes to EmberSwap Treasury"
+msgstr "A portion of each trade (0.20%) goes to Liquidity Providers and (0.05%) goes to EmberSwap Treasury"
 
 #: src/features/lending/TradeReview.tsx:72
 msgid "A portion of each trade (0.25%) goes to liquidity providers as a protocol incentive."

@@ -114,11 +114,11 @@ msgstr ""
 #~ msgstr "<0>您的</0>倉位"
 
 #: src/features/swap/AdvancedSwapDetails.tsx:94
-#~ msgid "A portion of each trade (0.05%) goes to xSUSHI holders as a protocol incentive."
+#~ msgid "A portion of each trade (0.20%) goes to Liquidity Providers and (0.05%) goes to EmberSwap Treasury"
 #~ msgstr ""
 
 #: src/features/swap/AdvancedSwapDetails.tsx:92
-msgid "A portion of each trade (0.25%) goes EmberSwap Treasury."
+msgid "A portion of each trade (0.20%) goes to Liquidity Providers and (0.05%) goes to EmberSwap Treasury"
 msgstr ""
 
 #: src/features/lending/TradeReview.tsx:72
