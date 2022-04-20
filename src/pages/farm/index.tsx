@@ -30,6 +30,7 @@ import FarmListItem2 from '../../features/farm/FarmListItem2'
 import { useCurrency, useToken } from '../../hooks/Tokens'
 import { Currency, NATIVE, Token, currencyEquals, ChainId  } from '../../sdk'
 import { WNATIVE } from '../../constants'
+import useTokenBalance from '../../hooks/useTokenBalance'
 export default function Farm(): JSX.Element {
   const { i18n } = useLingui()
   const router = useRouter()
@@ -83,6 +84,9 @@ export default function Farm(): JSX.Element {
       let tvl = 0
       let tvlMap = tvlInfo.map(( tvlInfo, id ) => tvlInfo.tvl)
       tvl = tvlMap[pool.id]
+      let totalLp= 0
+      const TotalLp = farms.map((farms) => farms.totalLp)
+      totalLp = TotalLp[pool.id]
 
 
     function getRewards() {
@@ -128,7 +132,6 @@ export default function Farm(): JSX.Element {
     const roiPerMonth = roiPerDay * 30
     const roiPerYear = roiPerDay * 365
 
-
     const position = ppositions.find((position) => position.id === pool.id)
 
     return {
@@ -138,6 +141,7 @@ export default function Farm(): JSX.Element {
         ...pair,
         decimals: 18,
       },
+      totalLp,
       roiPerBlock,
       roiPerHour,
       roiPerDay,

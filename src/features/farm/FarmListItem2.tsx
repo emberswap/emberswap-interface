@@ -21,6 +21,7 @@ import { Info } from 'react-feather'
 import Link from 'next/link'
 import { usePendingEmber, useUserInfo } from './hooks'
 import { ZERO } from '../../sdk'
+import usePool from '../../hooks/usePool'
 
 const FarmListItem2 = ({ farm, ...rest }) => {
   const { chainId } = useActiveWeb3React()
@@ -57,6 +58,8 @@ const FarmListItem2 = ({ farm, ...rest }) => {
       return previousValue + currentValue.rewardPerBlock * currentValue.rewardPrice
     }, 0) / tvl
   }
+  const usePools= usePool(farm.lpToken)
+  farm.pool = usePools
   const lpPrice = pairPrice
   farm.lpPrice = lpPrice
   farm.roiPerBlock = roiPerBlock

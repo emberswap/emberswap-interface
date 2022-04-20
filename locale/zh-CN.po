@@ -72,7 +72,7 @@ msgstr "- 锁定合约地址: {0}"
 msgid "- You will not be able to withdraw your tokens before the unlock time"
 msgstr "- 在锁定时间之前，你将无法提取你的代币"
 
-#: src/features/farm/FarmListItem2.tsx:121
+#: src/features/farm/FarmListItem2.tsx:124
 #: src/features/vault/VaultListItem.tsx:140
 msgid "/ DAY"
 msgstr "/ 天"
@@ -255,7 +255,7 @@ msgstr "在试图执行该交换时发生了错误。你可能需要增加你的
 msgid "Analytics"
 msgstr "分析界面"
 
-#: src/features/farm/FarmListItemDetails.tsx:129
+#: src/features/farm/FarmListItemDetails.tsx:147
 #: src/features/lending/Button.tsx:64
 #: src/features/vault/VaultListItemDetails.tsx:161
 #: src/pages/exchange/remove/[[...tokens]].tsx:828
@@ -673,12 +673,12 @@ msgstr "目前"
 msgid "Date"
 msgstr ""
 
-#: src/features/farm/FarmListItemDetails.tsx:145
+#: src/features/farm/FarmListItemDetails.tsx:163
 #: src/features/vault/VaultListItemDetails.tsx:178
 msgid "Deposit"
 msgstr "存款"
 
-#: src/features/farm/FarmListItemDetails.tsx:75
+#: src/features/farm/FarmListItemDetails.tsx:85
 #: src/features/vault/VaultListItemDetails.tsx:117
 msgid "Deposit Fee"
 msgstr "存款费用"
@@ -983,13 +983,13 @@ msgstr ""
 #~ msgstr ""
 
 #: src/features/farm/FarmListItem.tsx:97
-#: src/features/farm/FarmListItemDetails.tsx:236
+#: src/features/farm/FarmListItemDetails.tsx:257
 #: src/features/vault/VaultListItemDetails.tsx:295
-#: src/pages/farm/index.tsx:249
+#: src/pages/farm/index.tsx:253
 msgid "Harvest"
 msgstr "收获"
 
-#: src/features/farm/FarmListItemDetails.tsx:248
+#: src/features/farm/FarmListItemDetails.tsx:269
 #: src/features/vault/VaultListItemDetails.tsx:319
 msgid "Harvest {0} EMBER"
 msgstr "收获 {0} EMBER"
@@ -1300,8 +1300,8 @@ msgid "Lockup"
 msgstr ""
 
 #: src/components/PercentInputPanel/index.tsx:22
-#: src/features/farm/FarmListItemDetails.tsx:116
-#: src/features/farm/FarmListItemDetails.tsx:191
+#: src/features/farm/FarmListItemDetails.tsx:134
+#: src/features/farm/FarmListItemDetails.tsx:212
 #: src/features/vault/VaultListItemDetails.tsx:148
 #: src/features/vault/VaultListItemDetails.tsx:235
 msgid "MAX"
@@ -1928,13 +1928,13 @@ msgstr "马上"
 #~ msgstr "使用SAAVE叠加收益"
 
 #: src/features/farm/FarmList.tsx:49
-#: src/features/farm/FarmListItemDetails.tsx:157
+#: src/features/farm/FarmListItemDetails.tsx:175
 #: src/features/vault/VaultList.tsx:44
 #: src/features/vault/VaultListItemDetails.tsx:201
 msgid "Stake"
 msgstr "质押"
 
-#: src/features/farm/FarmListItem2.tsx:165
+#: src/features/farm/FarmListItem2.tsx:168
 msgid "Stake LP to Farm"
 msgstr ""
 
@@ -2275,7 +2275,7 @@ msgstr "未知错误{0} 试着增加你的滑点"
 msgid "Unlock date"
 msgstr "解锁日期"
 
-#: src/features/farm/FarmListItemDetails.tsx:220
+#: src/features/farm/FarmListItemDetails.tsx:241
 #: src/features/vault/VaultListItemDetails.tsx:278
 msgid "Unstake"
 msgstr "解除抵押"
@@ -2433,7 +2433,7 @@ msgstr "等待确认"
 msgid "Wallet"
 msgstr "钱包"
 
-#: src/features/farm/FarmListItemDetails.tsx:81
+#: src/features/farm/FarmListItemDetails.tsx:98
 #: src/features/vault/VaultListItemDetails.tsx:122
 msgid "Wallet Balance"
 msgstr "钱包余额"
@@ -2460,7 +2460,7 @@ msgstr ""
 #~ msgid "When creating a pair you are the first liquidity provider. The ratio of tokens you add will set the price of this pool. Once you are happy with the rate, click supply to review"
 #~ msgstr "当创建一个交易对时，您是第一个流动性提供者。您添加的代币比例将决定这个池子的价格。一旦您对该比率满意，点击供应进行查看"
 
-#: src/features/farm/FarmListItemDetails.tsx:207
+#: src/features/farm/FarmListItemDetails.tsx:228
 #: src/features/vault/VaultListItemDetails.tsx:258
 msgid "Withdraw"
 msgstr "提取"
@@ -2587,7 +2587,7 @@ msgstr ""
 msgid "Your Position"
 msgstr "你的仓位"
 
-#: src/features/farm/FarmListItemDetails.tsx:167
+#: src/features/farm/FarmListItemDetails.tsx:186
 #: src/features/vault/VaultListItemDetails.tsx:211
 msgid "Your Staked"
 msgstr "您在流动性池的占比"
@@ -2670,7 +2670,7 @@ msgstr "你的交易将在这里显示"
 msgid "active"
 msgstr ""
 
-#: src/features/farm/FarmListItem2.tsx:141
+#: src/features/farm/FarmListItem2.tsx:144
 #: src/features/vault/VaultListItem.tsx:158
 msgid "annualized"
 msgstr "年化"
@@ -2724,9 +2724,9 @@ msgstr "载入中..."
 msgid "minutes"
 msgstr "分钟"
 
-#: src/features/farm/FarmListItemDetails.tsx:173
-#~ msgid "of pool"
-#~ msgstr ""
+#: src/features/farm/FarmListItemDetails.tsx:187
+msgid "of pool"
+msgstr ""
 
 #: src/features/swap/SwapModalHeader.tsx:103
 #: src/features/swap/SwapModalHeader.tsx:111

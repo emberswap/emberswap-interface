@@ -1,5 +1,5 @@
 import { ApprovalState, useApproveCallback } from '../../hooks/useApproveCallback'
-import { ChainId, MASTERCHEF_ADDRESS, Token, ZERO } from '../../sdk'
+import { ChainId, CurrencyAmount, JSBI, MASTERCHEF_ADDRESS, Token, ZERO } from '../../sdk'
 import { Chef, PairType } from './enum'
 import { Disclosure, Transition } from '@headlessui/react'
 import React, { useState } from 'react'
@@ -22,6 +22,7 @@ import { useTokenBalance } from '../../state/wallet/hooks'
 import { useTransactionAdder } from '../../state/transactions/hooks'
 import { useToken } from '../../hooks/Tokens'
 import { isMobile, isDesktop } from 'react-device-detect'
+import { BigNumber } from 'ethers'
 
 const FarmListItem = ({ farm }) => {
   const { i18n } = useLingui()
@@ -58,6 +59,15 @@ const FarmListItem = ({ farm }) => {
 
   const { deposit, withdraw, harvest } = useMasterChef()
 
+  const poolFraction = (Number.parseFloat(amount?.toFixed()) / (farm.totalLp / 1e18)) || 0
+  const farmAllocation = ((farm.totalLp / 1e18) / (farm.pool.totalSupply / 1e18));
+  const token0Reserve = farm.pool.reserves ? (farm.pool.reserves.reserve0 as BigNumber).toString() : 0
+  const token0Amount = CurrencyAmount.fromRawAmount(farm.pair.token0, JSBI.BigInt(token0Reserve)).multiply(Math.round(poolFraction * farmAllocation * 1e10)).divide(1e10)
+  const token1Reserve = farm.pool.reserves ? (farm.pool.reserves.reserve1 as BigNumber).toString() : 0
+  const token1Amount = CurrencyAmount.fromRawAmount(farm.pair.token1, JSBI.BigInt(token1Reserve)).multiply(Math.round(poolFraction * farmAllocation * 1e10)).divide(1e10)
+  const token0Name = farm.pool.token0 === farm.pair.token0.id ? farm.pair.token0.symbol : farm.pair.token1.symbol
+  const token1Name = farm.pool.token1 === farm.pair.token1.id ? farm.pair.token1.symbol : farm.pair.token0.symbol
+
   return (
     <Transition
       show={true}
@@ -77,11 +87,19 @@ const FarmListItem = ({ farm }) => {
               )}`}</div>
             )}
             {account && (
+              <div>
+                 {isMobile && (<div>
+                  &nbsp;
+                </div>)}
+                    {!isMobile && (<div className="pr-4 mb-2 text-left cursor-pointer text-secondary">
+                  &nbsp;
+                </div>)}
               <div className="pr-4 mb-2 text-left cursor-pointer text-secondary">
                 {i18n._(t`Wallet Balance`)}: {formatNumberScale(balance?.toSignificant(4, undefined, 2) ?? 0, false, 4)}
                 {farm.lpPrice && balance
                   ? ` (` + formatNumberScale(farm.lpPrice * Number(balance?.toFixed(18) ?? 0), true, 2) + `)`
                   : ``}
+              </div>
               </div>
             )}
             <div className="relative flex items-center w-full mb-4">
@@ -163,11 +181,14 @@ const FarmListItem = ({ farm }) => {
               <div className="pr-4 mb-2 text-left cursor-pointer text-secondary" style={{ height: '24px' }} />
             )}
             {account && (
-              <div className="pr-4 mb-2 text-left cursor-pointer text-secondary">
-                {i18n._(t`Your Staked`)}: {formatNumberScale(amount?.toSignificant(6)) ?? 0}
-                {farm.lpPrice && amount
-                  ? ` (` + formatNumberScale(farm.lpPrice * Number(amount?.toSignificant(18) ?? 0), true, 2) + `)`
-                  : ``}
+              <div>
+                <div className="pr-4 mb-2 text-left cursor-pointer text-secondary">
+                  {i18n._(t`Your Staked`)}: {formatNumber(amount?.toSignificant(6)) ?? 0} {farm.type}
+                  {amount && farm.pool ? `(${formatPercent(Math.min(Number.parseFloat(amount?.toFixed()) / (farm.totalLp / 1e18) * 100, 100)).toString()} ` + i18n._(t`of pool`) + `)` : ''}
+                </div>
+                <div className="pr-4 mb-2 text-left cursor-pointer text-secondary">
+                  {token0Amount.toFixed(token0Amount.currency.decimals > 2 ? 2 : undefined)} {token0Name} + {token1Amount.toFixed(token1Amount.currency.decimals > 2 ? 2 : undefined)} {token1Name} ({formatNumber(poolFraction * farm.tvl, true)})
+                </div>
               </div>
             )}
             <div className="relative flex items-center w-full mb-4">
