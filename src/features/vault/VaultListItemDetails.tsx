@@ -120,7 +120,7 @@ const VaultListItem = ({ farm }) => {
               {account && (
                 <div className="pr-4 mb-2 text-left cursor-pointer text-secondary">
                   {i18n._(t`Wallet Balance`)}:{' '}
-                  {formatNumberScale(balance?.toSignificant(4, undefined, 2) ?? 0, false, 4)}
+                  {formatNumberScale(balance?.toSignificant(4, undefined, 2) ?? 0, false, 4) + ` ` + `EMBER`}
                   {farm.lpPrice && balance
                     ? ` (` + formatNumberScale(farm.lpPrice * Number(balance?.toFixed(18) ?? 0), true, 2) + `)`
                     : ``}
@@ -208,7 +208,7 @@ const VaultListItem = ({ farm }) => {
               )}
               {account && (
                 <div className="pr-4 mb-2 text-left cursor-pointer text-secondary">
-                  {i18n._(t`Your Staked`)}: {formatNumberScale(amount?.toSignificant(6)) ?? 0}
+                  {i18n._(t`Your Staked`)}: {formatNumberScale(amount?.toSignificant(6)) + ` ` + `EMBER`?? 0 + ` ` + `EMBER`}
                 <span className="font-bold">{amount && farm.totalLp ? ` - ` + `${formatPercent(Math.min(Number.parseFloat(amount?.toFixed()) / (farm.totalLp / 1e18) * 100, 100)).toString()} ` + i18n._(t`of pool`) + ` ` : ' '}</span>
 {farm.lpPrice && amount
                     ? ` (` + formatNumberScale(farm.lpPrice * Number(amount?.toSignificant(18) ?? 0), true, 2) + `)`

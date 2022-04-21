@@ -115,11 +115,11 @@ export function formatNumberScale(number: any, usd = false, decimals = 2) {
   const wholeNumberLength = fullNum.length
 
   if (wholeNumberLength >= 19) return usd ? '> $1000 Q' : '> 1000 Q'
-  if (wholeNumberLength >= 16) return (usd ? '$' : '') + (num / Math.pow(10, 15)).toFixed(decimals) + ' Q'
-  if (wholeNumberLength >= 13) return (usd ? '$' : '') + (num / Math.pow(10, 12)).toFixed(decimals) + ' T'
-  if (wholeNumberLength >= 10) return (usd ? '$' : '') + (num / Math.pow(10, 9)).toFixed(decimals) + ' B'
-  if (wholeNumberLength >= 7) return (usd ? '$' : '') + (num / Math.pow(10, 6)).toFixed(decimals) + ' M'
-  if (wholeNumberLength >= 4) return (usd ? '$' : '') + (num / Math.pow(10, 3)).toFixed(decimals) + ' K'
+  if (wholeNumberLength >= 16) return (usd ? '$' : '') + (num / Math.pow(10, 15)).toFixed(decimals) + 'Q'
+  if (wholeNumberLength >= 13) return (usd ? '$' : '') + (num / Math.pow(10, 12)).toFixed(decimals) + 'T'
+  if (wholeNumberLength >= 10) return (usd ? '$' : '') + (num / Math.pow(10, 9)).toFixed(decimals) + 'B'
+  if (wholeNumberLength >= 7) return (usd ? '$' : '') + (num / Math.pow(10, 6)).toFixed(decimals) + 'M'
+  if (wholeNumberLength >= 4) return (usd ? '$' : '') + (num / Math.pow(10, 3)).toFixed(decimals) + 'K'
 
   if (num < 0.0001 && num > 0) {
     return usd ? '< $0.0001' : '< 0.0001'
