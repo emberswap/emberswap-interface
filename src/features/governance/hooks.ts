@@ -6,7 +6,7 @@ import { Dispatch, useEffect, useState } from 'react'
   items and passes this to <InfiniteScroll> component.
 */
 export function useInfiniteScroll(items: any[]): [number, Dispatch<number>] {
-  const [itemsDisplayed, setItemsDisplayed] = useState(20)
-  useEffect(() => setItemsDisplayed(20), [items.length])
+  const [itemsDisplayed, setItemsDisplayed] = useState(30)
+  useEffect(() => setItemsDisplayed(30), [items.length])
   return [itemsDisplayed, setItemsDisplayed]
 }
