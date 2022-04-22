@@ -246,7 +246,7 @@ msgstr "An error occurred when trying to execute this swap. You may need to incr
 msgid "Analytics"
 msgstr "Analytics"
 
-#: src/features/farm/FarmListItemDetails.tsx:146
+#: src/features/farm/FarmListItemDetails.tsx:149
 #: src/features/lending/Button.tsx:64
 #: src/features/vault/VaultListItemDetails.tsx:161
 #: src/pages/exchange/remove/[[...tokens]].tsx:828
@@ -703,12 +703,12 @@ msgstr "Current"
 msgid "Date"
 msgstr "Date"
 
-#: src/features/farm/FarmListItemDetails.tsx:162
+#: src/features/farm/FarmListItemDetails.tsx:165
 #: src/features/vault/VaultListItemDetails.tsx:178
 msgid "Deposit"
 msgstr "Deposit"
 
-#: src/features/farm/FarmListItemDetails.tsx:88
+#: src/features/farm/FarmListItemDetails.tsx:89
 #: src/features/vault/VaultListItemDetails.tsx:117
 msgid "Deposit Fee"
 msgstr "Deposit Fee"
@@ -1055,13 +1055,13 @@ msgstr "Governance"
 #~ msgstr "Harmony Bridge"
 
 #: src/features/farm/FarmListItem.tsx:97
-#: src/features/farm/FarmListItemDetails.tsx:256
+#: src/features/farm/FarmListItemDetails.tsx:261
 #: src/features/vault/VaultListItemDetails.tsx:296
 #: src/pages/farm/index.tsx:253
 msgid "Harvest"
 msgstr "Harvest"
 
-#: src/features/farm/FarmListItemDetails.tsx:268
+#: src/features/farm/FarmListItemDetails.tsx:273
 #: src/features/vault/VaultListItemDetails.tsx:320
 msgid "Harvest {0} EMBER"
 msgstr "Harvest {0} EMBER"
@@ -1383,8 +1383,8 @@ msgid "Lockup"
 msgstr "Lockup"
 
 #: src/components/PercentInputPanel/index.tsx:22
-#: src/features/farm/FarmListItemDetails.tsx:133
-#: src/features/farm/FarmListItemDetails.tsx:211
+#: src/features/farm/FarmListItemDetails.tsx:136
+#: src/features/farm/FarmListItemDetails.tsx:216
 #: src/features/vault/VaultListItemDetails.tsx:148
 #: src/features/vault/VaultListItemDetails.tsx:236
 msgid "MAX"
@@ -2050,7 +2050,7 @@ msgstr "Soon"
 #~ msgstr "Stack Yields with SAAVE"
 
 #: src/features/farm/FarmList.tsx:49
-#: src/features/farm/FarmListItemDetails.tsx:174
+#: src/features/farm/FarmListItemDetails.tsx:177
 #: src/features/vault/VaultList.tsx:44
 #: src/features/vault/VaultListItemDetails.tsx:201
 msgid "Stake"
@@ -2430,7 +2430,7 @@ msgstr "Unknown error{0}. Try increasing your slippage tolerance."
 msgid "Unlock date"
 msgstr "Unlock date"
 
-#: src/features/farm/FarmListItemDetails.tsx:240
+#: src/features/farm/FarmListItemDetails.tsx:245
 #: src/features/vault/VaultListItemDetails.tsx:279
 msgid "Unstake"
 msgstr "Unstake"
@@ -2592,7 +2592,7 @@ msgstr "Waiting for Confirmation"
 msgid "Wallet"
 msgstr "Wallet"
 
-#: src/features/farm/FarmListItemDetails.tsx:95
+#: src/features/farm/FarmListItemDetails.tsx:96
 #: src/features/vault/VaultListItemDetails.tsx:122
 msgid "Wallet Balance"
 msgstr "Wallet Balance"
@@ -2624,7 +2624,7 @@ msgstr "We're supporters of Open Source"
 #~ msgid "When creating a pair you are the first liquidity provider. The ratio of tokens you add will set the price of this pool. Once you are happy with the rate, click supply to review"
 #~ msgstr "When creating a pair you are the first liquidity provider. The ratio of tokens you add will set the price of this pool. Once you are happy with the rate, click supply to review"
 
-#: src/features/farm/FarmListItemDetails.tsx:227
+#: src/features/farm/FarmListItemDetails.tsx:232
 #: src/features/vault/VaultListItemDetails.tsx:259
 msgid "Withdraw"
 msgstr "Withdraw"
@@ -2758,7 +2758,7 @@ msgstr "You will receive {0} {1} on {2}"
 msgid "Your Position"
 msgstr "Your Position"
 
-#: src/features/farm/FarmListItemDetails.tsx:185
+#: src/features/farm/FarmListItemDetails.tsx:188
 #: src/features/vault/VaultListItemDetails.tsx:211
 msgid "Your Staked"
 msgstr "Your Staked"
@@ -2907,8 +2907,8 @@ msgstr "loading..."
 msgid "minutes"
 msgstr "minutes"
 
-#: src/features/farm/FarmListItemDetails.tsx:96
-#: src/features/farm/FarmListItemDetails.tsx:186
+#: src/features/farm/FarmListItemDetails.tsx:97
+#: src/features/farm/FarmListItemDetails.tsx:189
 #: src/features/vault/VaultListItemDetails.tsx:212
 msgid "of pool"
 msgstr "of pool"
