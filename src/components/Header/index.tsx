@@ -44,7 +44,7 @@ function AppBar(): JSX.Element {
                           {i18n._(t`Pool`)}
                         </a>
                       </NavLink>
-                      <NavLink href={'/farm'}>
+                      <NavLink href={'/farm?filter=all'}>
                         <a
                           id={`farm-nav-link`}
                           className="p-2 text-base text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
@@ -52,7 +52,7 @@ function AppBar(): JSX.Element {
                           {i18n._(t`Farm`)}
                         </a>
                       </NavLink>
-                      <NavLink href={'/vaults'}>
+                      <NavLink href={'/vaults?filter=all'}>
                         <a
                           id={`vaults-nav-link`}
                           className="p-2 text-base text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
@@ -168,7 +168,7 @@ function AppBar(): JSX.Element {
                     {i18n._(t`Pool`)}
                   </a>
                 </Link>
-                <Link href={'/farm'}>
+                <Link href={'/farm?filter=all'}>
                   <a
                     id={`farm-nav-link`}
                     className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
@@ -176,7 +176,7 @@ function AppBar(): JSX.Element {
                     {i18n._(t`Farm`)}
                   </a>
                 </Link>
-                <Link href={'/vaults'}>
+                <Link href={'/vaults?filter=all'}>
                   <a
                     id={`vaults-nav-link`}
                     className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
