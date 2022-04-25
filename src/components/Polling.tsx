@@ -14,7 +14,7 @@ export default function Polling() {
 
   useEffect(
     () => {
-      const timer1 = setTimeout(() => setIsMounted(true), 1000)
+      const timer1 = setTimeout(() => setIsMounted(true), 458)
 
       // this will clear Timeout when component unmount like in willComponentUnmount
       return () => {
