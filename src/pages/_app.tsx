@@ -107,12 +107,12 @@ function MyApp({
         />
         <title key="title">EmberSwap</title>
 
-        <meta key="description" name="description" content="EmberSwap - AMM on SmartBCH." />
+        <meta key="description" name="description" content="The official home of EmberSwap. EmberSwap is a community governed decentralized exchange, providing liquidity and enabling peer-to-peer transactions on the smartBCH Network. Whether you want to swap, farm, stake or just hold, EmberSwap is the DEX for you. EmberSwap breaks up and delivers the mostefficent route for any financial instrument on smartBCH.." />
 
-        <meta name="application-name" content="EmberSwap - DeFi on SmartBCH" />
+        <meta name="application-name" content="The official home of EmberSwap. EmberSwap is a community governed decentralized exchange, providing liquidity and enabling peer-to-peer transactions on the smartBCH Network. Whether you want to swap, farm, stake or just hold, EmberSwap is the DEX for you. EmberSwap breaks up and delivers the mostefficent route for any financial instrument on smartBCH." />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <meta name="apple-mobile-web-app-title" content="EmberSwap - DeFi on SmartBCH" />
+        <meta name="apple-mobile-web-app-title" content="The official home of EmberSwap. EmberSwap is a community governed decentralized exchange, providing liquidity and enabling peer-to-peer transactions on the smartBCH Network. Whether you want to swap, farm, stake or just hold, EmberSwap is the DEX for you. EmberSwap breaks up and delivers the mostefficent route for any financial instrument on smartBCH." />
         <meta name="keywords" content="incinerate,fire,ember,emberswap,burnomics,bitcoin,dogecoin,bch,sbch,smartbch,evm,cash,doge,defi,coinbase,coinmarketcap,coinmarket,smartscan,whitebit,coingecko,cryptocurrency,crypto,pancakeswap,dex,etherium,eth,btc" />
 
         <meta name="format-detection" content="telephone=no" />
@@ -122,16 +122,16 @@ function MyApp({
         <meta name="theme-color" content="#F338C3" />
 
         <meta key="twitter:card" name="twitter:card" content="app" />
-        <meta key="twitter:title" name="twitter:title" content="EmberSwap - DeFi on SmartBCH" />
+        <meta key="twitter:title" name="twitter:title" content="The official home of EmberSwap. EmberSwap is a community governed decentralized exchange, providing liquidity and enabling peer-to-peer transactions on the smartBCH Network. Whether you want to swap, farm, stake or just hold, EmberSwap is the DEX for you. EmberSwap breaks up and delivers the mostefficent route for any financial instrument on smartBCH." />
         <meta key="twitter:url" name="twitter:url" content="https://emberswap.com" />
-        <meta key="twitter:description" name="twitter:description" content="EmberSwap - AMM on SmartBCH." />
+        <meta key="twitter:description" name="twitter:description" content="The official home of EmberSwap. EmberSwap is a community governed decentralized exchange, providing liquidity and enabling peer-to-peer transactions on the smartBCH Network. Whether you want to swap, farm, stake or just hold, EmberSwap is the DEX for you. EmberSwap breaks up and delivers the mostefficent route for any financial instrument on smartBCH.." />
         <meta key="twitter:image" name="twitter:image" content="https://incinerate.cash/img/ex_icons/emberswap.png" />
         <meta key="twitter:creator" name="twitter:creator" content="@EmberSwapDEX" />
         <meta key="og:type" property="og:type" content="website" />
-        <meta key="og:site_name" property="og:site_name" content="EmberSwap - DeFi on SmartBCH" />
+        <meta key="og:site_name" property="og:site_name" content="The official home of EmberSwap. EmberSwap is a community governed decentralized exchange, providing liquidity and enabling peer-to-peer transactions on the smartBCH Network. Whether you want to swap, farm, stake or just hold, EmberSwap is the DEX for you. EmberSwap breaks up and delivers the mostefficent route for any financial instrument on smartBCH." />
         <meta key="og:url" property="og:url" content="https://emberswap.com" />
         <meta key="og:image" property="og:image" content="https://incinerate.cash/img/ex_icons/emberswap.png" />
-        <meta key="og:description" property="og:description" content="EmberSwap - AMM on SmartBCH." />
+        <meta key="og:description" property="og:description" content="The official home of EmberSwap. EmberSwap is a community governed decentralized exchange, providing liquidity and enabling peer-to-peer transactions on the smartBCH Network. Whether you want to swap, farm, stake or just hold, EmberSwap is the DEX for you. EmberSwap breaks up and delivers the mostefficent route for any financial instrument on smartBCH.." />
       </Head>
 
       <I18nProvider i18n={i18n} forceRenderOnLocaleChange={false}>
