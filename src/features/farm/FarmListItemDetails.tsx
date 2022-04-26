@@ -37,7 +37,7 @@ const FarmListItem = ({ farm }) => {
   const liquidityToken = new Token(
     chainId,
     getAddress(farm.lpToken),
-    farm.pair.token1 ? 18 : farm.pair.token0 ? farm.pair.token0.decimals : 18,
+    farm.pair.token1 ? farm.pair.token1.decimals : farm.pair.token0 ? farm.pair.token0.decimals : 18,
     farm.pair.token1 ? farm.pair.symbol : farm.pair.token0.symbol,
     farm.pair.token1 ? farm.pair.name : farm.pair.token0.name
   )
@@ -64,11 +64,26 @@ const FarmListItem = ({ farm }) => {
   const balanceFraction = balanceFractions == Infinity ? 100 : (Number.parseFloat(balance?.toFixed()) / (farm.totalLp / 1e18)) || 0
   const farmAllocation = ((farm.totalLp / 1e18) / (farm.pool.totalSupply / 1e18));
   const token0Reserve = farm.pool.reserves ? (farm.pool.reserves.reserve0 as BigNumber).toString() : 0
-  const token0Amount = CurrencyAmount.fromRawAmount(farm.pair.token0, JSBI.BigInt(token0Reserve)).multiply(Math.round(poolFraction * farmAllocation * 1e10)).divide(1e10)
-  const token0AmountB = CurrencyAmount.fromRawAmount(farm.pair.token0, JSBI.BigInt(token0Reserve)).multiply(Math.round(balanceFraction * farmAllocation * 1e10)).divide(1e10)
   const token1Reserve = farm.pool.reserves ? (farm.pool.reserves.reserve1 as BigNumber).toString() : 0
-  const token1Amount = CurrencyAmount.fromRawAmount(farm.pair.token1, JSBI.BigInt(token1Reserve)).multiply(Math.round(poolFraction * farmAllocation * 1e10)).divide(1e10)
-  const token1AmountB = CurrencyAmount.fromRawAmount(farm.pair.token1, JSBI.BigInt(token1Reserve)).multiply(Math.round(balanceFraction * farmAllocation * 1e10)).divide(1e10)
+  let token0Amount = CurrencyAmount.fromRawAmount(farm.pair.token0, JSBI.BigInt(token0Reserve)).multiply(Math.round(poolFraction * farmAllocation * 1e10)).divide(1e10)
+  let token0AmountB = CurrencyAmount.fromRawAmount(farm.pair.token0, JSBI.BigInt(token0Reserve)).multiply(Math.round(balanceFraction * farmAllocation * 1e10)).divide(1e10)
+  let token1Amount = CurrencyAmount.fromRawAmount(farm.pair.token1, JSBI.BigInt(token1Reserve)).multiply(Math.round(poolFraction * farmAllocation * 1e10)).divide(1e10)
+  let token1AmountB = CurrencyAmount.fromRawAmount(farm.pair.token1, JSBI.BigInt(token1Reserve)).multiply(Math.round(balanceFraction * farmAllocation * 1e10)).divide(1e10)
+  if (farm.pair.token0.decimals == 2){
+    token0Amount = CurrencyAmount.fromRawAmount(farm.pair.token0, JSBI.BigInt(token0Reserve)).multiply(Math.round(poolFraction * farmAllocation * 1e10)).divide(1e26)
+    token0AmountB = CurrencyAmount.fromRawAmount(farm.pair.token0, JSBI.BigInt(token0Reserve)).multiply(Math.round(balanceFraction * farmAllocation * 1e10)).divide(1e26)
+    token1Amount = CurrencyAmount.fromRawAmount(farm.pair.token1, JSBI.BigInt(token1Reserve)).multiply(Math.round(poolFraction * farmAllocation * 1e10)).multiply(1e6)
+    token1AmountB = CurrencyAmount.fromRawAmount(farm.pair.token1, JSBI.BigInt(token1Reserve)).multiply(Math.round(balanceFraction * farmAllocation * 1e10)).multiply(1e6)
+  }  
+  
+  if (farm.pair.token1.decimals == 2){
+    token1Amount = CurrencyAmount.fromRawAmount(farm.pair.token1, JSBI.BigInt(token1Reserve)).multiply(Math.round(poolFraction * farmAllocation * 1e10)).divide(1e26)
+    token1AmountB = CurrencyAmount.fromRawAmount(farm.pair.token1, JSBI.BigInt(token1Reserve)).multiply(Math.round(balanceFraction * farmAllocation * 1e10)).divide(1e26)
+    token0Amount = CurrencyAmount.fromRawAmount(farm.pair.token0, JSBI.BigInt(token0Reserve)).multiply(Math.round(poolFraction * farmAllocation * 1e10)).multiply(1e6)
+    token0AmountB = CurrencyAmount.fromRawAmount(farm.pair.token0, JSBI.BigInt(token0Reserve)).multiply(Math.round(balanceFraction * farmAllocation * 1e10)).multiply(1e6)
+  
+  
+    }
   const token0Name = farm.pool.token0 === farm.pair.token0.id ? farm.pair.token0.symbol : farm.pair.token1.symbol
   const token1Name = farm.pool.token1 === farm.pair.token1.id ? farm.pair.token1.symbol : farm.pair.token0.symbol
 
