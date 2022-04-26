@@ -321,6 +321,11 @@ msgstr "可用网络"
 #~ msgid "Back to Limit Orders"
 #~ msgstr ""
 
+#: src/components/Header/More.tsx:57
+#: src/components/Menu.tsx:50
+msgid "Back to the landing page"
+msgstr ""
+
 #: src/pages/bar/index.tsx:329 src/pages/bar/index.tsx:387
 #: src/pages/exchange/migrate/index.tsx:221
 #~ msgid "Balance"
@@ -1055,10 +1060,7 @@ msgstr ""
 msgid "Home"
 msgstr ""
 
-#: src/components/Header/More.tsx:57
-#: src/components/Menu.tsx:50
-msgid "Hosted by the Incinerate Protocol"
-msgstr ""
+
 
 #: src/pages/locker/create/index.tsx:338
 msgid "How to use"
@@ -1184,6 +1186,11 @@ msgstr ""
 
 #: src/pages/kashi/borrow/[pair].tsx:194
 #~ msgid "LTV"
+#~ msgstr ""
+
+#: src/components/Header/More.tsx:57
+#: src/components/Menu.tsx:50
+#~ msgid "Landing Page"
 #~ msgstr ""
 
 #: src/modals/WalletModal/index.tsx:376

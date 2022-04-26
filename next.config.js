@@ -51,6 +51,7 @@ const nextConfig = {
       'logos.covalenthq.com', 
       'metadata.bch.domains',
       'emberswap.com',
+      'dex.emberswap.com',
       'incinerate.cash',
       'marketcap.cash',
     ],

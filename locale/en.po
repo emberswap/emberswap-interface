@@ -317,6 +317,11 @@ msgstr "Available Networks"
 #~ msgid "Back to Limit Orders"
 #~ msgstr "Back to Limit Orders"
 
+#: src/components/Header/More.tsx:57
+#: src/components/Menu.tsx:50
+msgid "Back to the landing page"
+msgstr "Back to the landing page"
+
 #: src/pages/bar/index.tsx:329
 #: src/pages/bar/index.tsx:387
 #: src/pages/exchange/migrate/index.tsx:221
@@ -1129,10 +1134,8 @@ msgstr "History"
 msgid "Home"
 msgstr "Home"
 
-#: src/components/Header/More.tsx:57
-#: src/components/Menu.tsx:50
-msgid "Hosted by the Incinerate Protocol"
-msgstr "Hosted by the Incinerate Protocol"
+
+
 
 #: src/pages/locker/create/index.tsx:338
 msgid "How to use"
@@ -1261,6 +1264,11 @@ msgstr "Join the community on Telegram"
 #: src/pages/kashi/borrow/[pair].tsx:194
 #~ msgid "LTV"
 #~ msgstr "LTV"
+
+#: src/components/Header/More.tsx:57
+#: src/components/Menu.tsx:50
+#~ msgid "Landing Page"
+#~ msgstr "Landing Page"
 
 #: src/modals/WalletModal/index.tsx:376
 msgid "Learn more about wallets"

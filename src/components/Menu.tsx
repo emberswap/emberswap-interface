@@ -13,7 +13,7 @@ const items = (i18n: I18n) => [
     name: i18n._(t`Docs`),
     description: i18n._(t`Documentation for EmberSwap users`),
     href: 'https://docs.emberswap.com',
-    external: true,
+    external: false,
   },
   {
     name: i18n._(t`Github`),
@@ -47,9 +47,9 @@ const items = (i18n: I18n) => [
   },
   {
     name: i18n._(t`Home`),
-    description: i18n._(t`Hosted by the Incinerate Protocol`),
-    href: 'https://incinerate.cash',
-    external: true,
+    description: i18n._(t`Back to the landing page`),
+    href: 'https://emberswap.com',
+    external: false,
   },
 ]
 
