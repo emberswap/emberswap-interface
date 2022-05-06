@@ -63,6 +63,11 @@ export default function Web3Connect({ color = 'gray', size = 'sm', className = '
   const handleConnectBtnClick = useCallback(() => {
     if (!window.ethereum) {
       setInstructionModalOpen(true)
+      if (!window.ethereum && deviceInfo.isMobile){
+        setInstructionModalOpen(false)
+        toggleWalletModal()
+        return
+      }
       return
     }
 
@@ -71,12 +76,6 @@ export default function Web3Connect({ color = 'gray', size = 'sm', className = '
 
   const pluginSupportInfo = useMemo(() => {
     if (!deviceInfo.isDesktop) {
-      if (deviceInfo.isAndroid) {
-        return { url: 'https://play.google.com/store/apps/details?id=io.metamask' }
-      }
-      if (deviceInfo.isIOS) {
-        return { url: 'https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202' }
-      }
       return null
         }
 

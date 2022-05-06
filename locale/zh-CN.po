@@ -597,7 +597,7 @@ msgstr ""
 msgid "Connect Wallet"
 msgstr "连接钱包"
 
-#: src/components/Web3Connect/index.tsx:123
+#: src/components/Web3Connect/index.tsx:122
 #: src/modals/WalletModal/index.tsx:358
 msgid "Connect to a wallet"
 msgstr "连接钱包"
@@ -1385,8 +1385,8 @@ msgstr "最大可发送"
 msgid "Me"
 msgstr "我"
 
-#: src/components/Web3Connect/index.tsx:136
-#: src/components/Web3Connect/index.tsx:144
+#: src/components/Web3Connect/index.tsx:135
+#: src/components/Web3Connect/index.tsx:143
 msgid "MetaMask"
 msgstr ""
 
@@ -2080,7 +2080,7 @@ msgstr "交换至："
 msgid "Swapping {0} {1} for {2} {3}"
 msgstr "将{0} {1}换成{2} {3}"
 
-#: src/components/Web3Connect/index.tsx:110
+#: src/components/Web3Connect/index.tsx:109
 #: src/modals/WalletModal/index.tsx:332
 msgid "Switch to SmartBCH"
 msgstr ""
@@ -2644,11 +2644,11 @@ msgstr "您在流动性池的占比"
 #~ msgid "Your Yields"
 #~ msgstr "您的收益"
 
-#: src/components/Web3Connect/index.tsx:142
+#: src/components/Web3Connect/index.tsx:141
 msgid "Your browser is not supported, please install"
 msgstr ""
 
-#: src/components/Web3Connect/index.tsx:133
+#: src/components/Web3Connect/index.tsx:132
 msgid "Your browser is supported, but first you need to install"
 msgstr ""
 

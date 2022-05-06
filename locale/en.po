@@ -630,7 +630,7 @@ msgstr "Confirm {0}"
 msgid "Connect Wallet"
 msgstr "Connect Wallet"
 
-#: src/components/Web3Connect/index.tsx:123
+#: src/components/Web3Connect/index.tsx:122
 #: src/modals/WalletModal/index.tsx:358
 msgid "Connect to a wallet"
 msgstr "Connect to a wallet"
@@ -1474,8 +1474,8 @@ msgstr "Maximum sent"
 msgid "Me"
 msgstr "Me"
 
-#: src/components/Web3Connect/index.tsx:136
-#: src/components/Web3Connect/index.tsx:144
+#: src/components/Web3Connect/index.tsx:135
+#: src/components/Web3Connect/index.tsx:143
 msgid "MetaMask"
 msgstr "MetaMask"
 
@@ -2201,7 +2201,7 @@ msgstr "Swapping {0} {1} for {2} {3}"
 #~ msgid "Swapping {0}) {1} for {2} {3}"
 #~ msgstr "Swapping {0}) {1} for {2} {3}"
 
-#: src/components/Web3Connect/index.tsx:110
+#: src/components/Web3Connect/index.tsx:109
 #: src/modals/WalletModal/index.tsx:332
 msgid "Switch to SmartBCH"
 msgstr "Switch to SmartBCH"
@@ -2789,11 +2789,11 @@ msgstr "Your Staked"
 #~ msgid "Your Yields"
 #~ msgstr "Your Yields"
 
-#: src/components/Web3Connect/index.tsx:142
+#: src/components/Web3Connect/index.tsx:141
 msgid "Your browser is not supported, please install"
 msgstr "Your browser is not supported, please install"
 
-#: src/components/Web3Connect/index.tsx:133
+#: src/components/Web3Connect/index.tsx:132
 msgid "Your browser is supported, but first you need to install"
 msgstr "Your browser is supported, but first you need to install"
 
