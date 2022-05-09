@@ -155,7 +155,7 @@ export default function Farm(): JSX.Element {
 
   const FILTER = {
     all: (farm) => farm.allocPoint > 0,
-    my: (farm) => farm?.amount && !farm.amount.isZero(),
+    my: (farm) => farm?.amount && !farm.amount.isZero() && !farm.allocPoint.isZero(),
     ember: (farm) => farm.pair.token0?.id == EMBER_ADDRESS[chainId] || farm.pair.token1?.id == EMBER_ADDRESS[chainId],
     single: (farm) => !farm.pair.token1,
     bch: (farm) => farm.pair.token0?.id == WNATIVE[chainId] || farm.pair.token1?.id == WNATIVE[chainId],
