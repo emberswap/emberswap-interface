@@ -64,6 +64,10 @@ export const SMARTBCH: { [key: string]: Token } = {
   FIRE: new Token(ChainId.SMARTBCH, '0x225FCa2A940cd5B18DFb168cD9B7f921C63d7B6E', 18, 'FIRE', 'Incinerate'),
 }
 
+export const SMARTBCH_TESTNET: { [key: string]: Token } = {
+  EMBER: new Token(ChainId.SMARTBCH_TESTNET, '0x7f8d9779dD300C635eD4eB5D2EB0Ed14a2DFAa38', 18, 'EMBER', 'Ember'),
+}
+
 export const HECO: { [key: string]: Token } = {
   DAI: new Token(ChainId.HECO, '0x3D760a45D0887DFD89A2F5385a236B29Cb46ED2a', 18, 'DAI', 'Dai Stablecoin'),
   USDC: new Token(ChainId.HECO, '0x9362Bbef4B8313A8Aa9f0c9808B80577Aa26B73B', 18, 'USDC', 'USD Coin'),
@@ -228,10 +232,13 @@ export const EMBER_ADDRESS = {
   [ChainId.PALM_TESTNET]: '',
   [ChainId.MOONRIVER]: '0x6bD193Ee6D2104F14F94E2cA6efefae561A4334B',
   [ChainId.SMARTBCH]: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
+  [ChainId.SMARTBCH_TESTNET]: '0x7f8d9779dD300C635eD4eB5D2EB0Ed14a2DFAa38',
 }
 
 export const EMBER: ChainTokenMap = {
   [ChainId.SMARTBCH]: new Token(ChainId.SMARTBCH, EMBER_ADDRESS[ChainId.SMARTBCH], 18, 'EMBER', 'Ember'),
+  [ChainId.SMARTBCH_TESTNET]: new Token(ChainId.SMARTBCH_TESTNET, EMBER_ADDRESS[ChainId.SMARTBCH_TESTNET], 18, 'EMBER', 'Ember'),
+
 }
 
 export const WETH9_EXTENDED: { [chainId: number]: Token } = {
@@ -239,6 +246,13 @@ export const WETH9_EXTENDED: { [chainId: number]: Token } = {
   [SupportedChainId.SMARTBCH]: new Token(
     ChainId.SMARTBCH,
     '0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04',
+    18,
+    'BCH',
+    'BCH'
+  ),
+  [SupportedChainId.SMARTBCH_TESTNET]: new Token(
+    ChainId.SMARTBCH_TESTNET,
+    '0x17F4FCF5b6E0A95D4eE331c8529041896A073F9b',
     18,
     'BCH',
     'BCH'

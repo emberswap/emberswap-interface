@@ -66,6 +66,8 @@
     --color-darker:#151515!important;
     --color-dark-600:#303030;
     --color-dark-500:#404040;
+    --color-red-900:#403e3e;
+    --color-red-900-custom:#585555;
     --color-low-emphesis:#575757;
     --color-low-emphesis-custom:#575757;
     --color-primary:#BFBFBF;
@@ -143,6 +145,8 @@
     --color-darker:#e5e5ea!important;
     --color-dark-600:#a7adba;
     --color-dark-500:#c0c5ce;
+    --color-red-900:#e2e2e2;
+    --color-red-900-custom:#d4d4d4e0;
     --color-low-emphesis:#ECEEEE;
     --color-low-emphesis-custom:#575757;
     --color-primary:#2a2f31;

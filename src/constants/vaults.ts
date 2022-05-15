@@ -75,4 +75,16 @@ export const VAULTS: AddressMap = {
       },
     }
   },
+  [ChainId.SMARTBCH_TESTNET]: {
+    '':{
+      id: 0,
+      lpToken: '',
+      token0: {
+        id: '',
+        name: '',
+        symbol: '',
+        decimals: 0,
+      },
+    }
+  },
 }

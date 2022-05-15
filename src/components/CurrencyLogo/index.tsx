@@ -18,6 +18,7 @@ const BLOCKCHAIN = {
   [ChainId.XDAI]: 'xdai',
   [ChainId.MOONRIVER]: 'moonriver',
   [ChainId.SMARTBCH]: 'smartbch',
+  [ChainId.SMARTBCH_TESTNET]: 'smartbch',
   // [ChainId.OKEX]: 'okex',
 }
 
@@ -82,6 +83,7 @@ const logo: { readonly [chainId in ChainId]?: string } = {
   [ChainId.CELO]: CeloLogo,
   [ChainId.MOONRIVER]: MoonriverLogo,
   [ChainId.SMARTBCH]: SmartbchLogo,
+  [ChainId.SMARTBCH_TESTNET]: SmartbchLogo,
 }
 
 interface CurrencyLogoProps {

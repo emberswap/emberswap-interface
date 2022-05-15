@@ -22,6 +22,7 @@ export const RPC = {
   [ChainId.MOONBEAM_TESTNET]: 'https://rpc.testnet.moonbeam.network',
   [ChainId.MOONRIVER]: 'https://moonriver-api.bwarelabs.com/0e63ad82-4f98-46f9-8496-f75657e3a8e', //'https://moonriver.api.onfinality.io/public',
   [ChainId.SMARTBCH]: 'https://smartbch.greyh.at', //'https://smartbch.greyh.at',
+  [ChainId.SMARTBCH_TESTNET]: 'https://moeing.tech:9545', //'https://smartbch.greyh.at',
   [ChainId.AVALANCHE]: 'https://api.avax.network/ext/bc/C/rpc',
   [ChainId.AVALANCHE_TESTNET]: 'https://api.avax-test.network/ext/bc/C/rpc',
   [ChainId.HECO]: 'https://http-mainnet.hecochain.com',
@@ -42,6 +43,7 @@ export const AVERAGE_BLOCK_TIME = {
   [ChainId.ROPSTEN]: AVERAGE_BLOCK_TIME_IN_SECS,
   [ChainId.MOONRIVER]: 12,
   [ChainId.SMARTBCH]: 5.5,
+  [ChainId.SMARTBCH_TESTNET]: 5.5,
   [ChainId.BSC]: 3,
 }
 
@@ -287,6 +289,7 @@ export const ANALYTICS_URL: { [chainId in ChainId]?: string } = {
 
 export const LNS_METADATA_URL: { [chainId in ChainId]?: string } = {
   [ChainId.SMARTBCH]: 'https://metadata.bch.domains/smartbch',
+  [ChainId.SMARTBCH_TESTNET]: 'https://metadata.bch.domains/smartbch',
 }
 
 export const EIP_1559_ACTIVATION_BLOCK: { [chainId in ChainId]?: number } = {

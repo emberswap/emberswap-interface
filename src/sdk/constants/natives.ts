@@ -31,6 +31,7 @@ export const NATIVE = {
   [ChainId.BSC_TESTNET]: Binance.onChain(ChainId.BSC_TESTNET),
   [ChainId.MOONRIVER]:Moonriver.onChain(ChainId.MOONRIVER),
   [ChainId.SMARTBCH]:BCH.onChain(ChainId.SMARTBCH),
+  [ChainId.SMARTBCH_TESTNET]:BCH.onChain(ChainId.SMARTBCH_TESTNET),
   [ChainId.AVALANCHE]: Avalanche.onChain(ChainId.AVALANCHE),
   [ChainId.AVALANCHE_TESTNET]: Avalanche.onChain(ChainId.AVALANCHE_TESTNET),
   [ChainId.HECO]: Heco.onChain(ChainId.HECO),

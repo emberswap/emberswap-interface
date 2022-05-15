@@ -105,6 +105,8 @@ module.exports = {
         'darker': 'var(--color-darker)',
         'dark-600': 'var(--color-dark-600)',
         'dark-500': 'var(--color-dark-500)',
+        'red-900': 'var(--color-red-900)',
+        'red-900-custom': 'var(--color-red-900-custom)',
         'low-emphesis': 'var(--color-low-emphesis)',
         'low-emphesis-custom': 'var(--color-low-emphesis-custom)',
         primary: 'var(--color-primary)',

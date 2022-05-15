@@ -46,7 +46,7 @@ export default function Web3ReactManager({ children }: { children: JSX.Element }
   //     route: router.route
   //   })
 
-  //   if (router.route !== '/bridge' && chainId !== ChainId.SMARTBCH) {
+  //   if (router.route !== '/bridge' && chainId !== ChainId.SMARTBCH || ChainId.SMARTBCH_TESTNET) {
   //     setWrongNetwork(true)
   //   } else {
   //     setWrongNetwork(false)
@@ -61,7 +61,7 @@ export default function Web3ReactManager({ children }: { children: JSX.Element }
       const provider: any = window.ethereum
       const params = SUPPORTED_NETWORKS[ChainId.SMARTBCH]
 
-      if (provider) {
+      if (provider && chainId !== 10001) {
         try {
           provider
             .request({

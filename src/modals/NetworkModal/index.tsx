@@ -149,6 +149,17 @@ export const SUPPORTED_NETWORKS: {
     rpcUrls: ['https://smartbch.fountainhead.cash/mainnet','https://smartbch.greyh.at'],
     blockExplorerUrls: ['https://smartscan.cash/'],
   },
+  [ChainId.SMARTBCH_TESTNET]: {
+    chainId: '0x2711',
+    chainName: 'SmartBCH Amber',
+    nativeCurrency: {
+      name: 'BCH',
+      symbol: 'BCH',
+      decimals: 18,
+    },
+    rpcUrls: ['https://moeing.tech:9545', 'http://35.220.203.194:8545'],
+    blockExplorerUrls: ['https://smartscan.cash/'],
+  },
 }
 
 export default function NetworkModal(): JSX.Element | null {
@@ -161,9 +172,8 @@ export default function NetworkModal(): JSX.Element | null {
   return (
     <Modal isOpen={networkModalOpen} onDismiss={toggleNetworkModal} maxWidth={672}>
       <ModalHeader onClose={toggleNetworkModal} title="Select a Network" />
-      <div className="mb-6 text-lg text-primary">
-        You are currently browsing <span className="font-bold text-yellow">EMBER</span>
-        <br /> on the <span className="font-bold text-light-yellow">{NETWORK_LABEL[chainId]}</span> network
+      <div className="mb-6 text-lg text-center text-primary">
+        You are currently browsing <span className="font-bold text-yellow">EmberSwap </span>on <span className="font-bold text-yellow">{NETWORK_LABEL[chainId]}</span> 
       </div>
 
       <div className="grid grid-flow-row-dense grid-cols-1 gap-5 overflow-y-auto md:grid-cols-2">
@@ -179,7 +189,8 @@ export default function NetworkModal(): JSX.Element | null {
           // ChainId.HARMONY,
           // ChainId.AVALANCHE,
           // ChainId.CELO,
-          ChainId.SMARTBCH
+          ChainId.SMARTBCH,
+          ChainId.SMARTBCH_TESTNET
         ].map((key: ChainId, i: number) => {
           return (
             <button
@@ -201,7 +212,7 @@ export default function NetworkModal(): JSX.Element | null {
             </button>
           )
         })}
-        {['Matic'].map((network, i) => (
+        {/*['Matic'].map((network, i) => (
           <button
             key={i}
             className="flex items-center w-full col-span-1 p-3 space-x-3 rounded cursor-pointer bg-dark-800 hover:bg-dark-700"
@@ -215,7 +226,7 @@ export default function NetworkModal(): JSX.Element | null {
             />
             <div className="font-bold text-primary">{network} (Coming Soon)</div>
           </button>
-        ))}
+        ))*/}
       </div>
     </Modal>
   )

@@ -251,6 +251,10 @@ const chains: ChainObject = {
     chainName: '',
     builder: builders.smartscan,
   },
+  [ChainId.SMARTBCH_TESTNET]: {
+    chainName: 'testnet',
+    builder: builders.smartscan,
+  },
   [ChainId.AVALANCHE]: {
     chainName: '',
     builder: builders.avalanche,

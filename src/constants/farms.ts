@@ -619,4 +619,23 @@ export const POOLS: AddressMap = {
       symbol: 'EMBER-LP',
     },
   },
+  [ChainId.SMARTBCH_TESTNET]: {
+    '':{
+      id: 0,
+      token0: {
+        id: '',
+        name: '',
+        symbol: '',
+        decimals: 0,
+      },
+      token1: {
+        id: '',
+        name: '',
+        symbol: '',
+        decimals: 0,
+      },
+      name: '',
+      symbol: '',
+    },
+  },
 }

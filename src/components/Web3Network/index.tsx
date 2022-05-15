@@ -15,12 +15,12 @@ function Web3Network(): JSX.Element | null {
 
   return (
     <div
-      className="flex items-center rounded bg-dark-900-custom backdrop-blur-md hover:bg-dark-800 p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto"
+      className="flex items-center rounded bg-transparent backdrop-blur-md p-0.5 whitespace-nowrap text-sm font-bold cursor-pointer select-none pointer-events-auto"
       onClick={() => toggleNetworkModal()}
     >
-      <div className="grid items-center grid-flow-col px-3 py-2 space-x-2 text-sm rounded-lg pointer-events-auto auto-cols-max bg-dark-1000 text-secondary">
+      <div className="inline-flex justify-center p-2 text-sm font-bold bg-transparent border rounded-full shadow-sm text-primary border-dark-800 hover:bg-dark-900-custom backdrop-blur-md	focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-dark-700 focus:ring-dark-800">
         <Image src={NETWORK_ICON[chainId]} alt="Switch Network" className="rounded-md" width="22px" height="22px" />
-        <div className="text-primary">{NETWORK_LABEL[chainId]}</div>
+        
       </div>
       <NetworkModel />
     </div>

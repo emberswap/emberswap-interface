@@ -35,6 +35,7 @@ export const RPC = {
   [ChainId.ARBITRUM]: 'https://arb1.arbitrum.io/rpc',
   [ChainId.MOONRIVER]: 'https://moonriver-api.bwarelabs.com/0e63ad82-4f98-46f9-8496-f75657e3a8e4', //'https://moonriver.api.onfinality.io/public',
   [ChainId.SMARTBCH]: 'https://smartbch.fountainhead.cash/mainnet', //'https://smartbch.greyh.at',
+  [ChainId.SMARTBCH_TESTNET]: 'https://moeing.tech:9545', //'https://smartbch.greyh.at',
 }
 
 export const network = new NetworkConnector({
@@ -65,6 +66,7 @@ export const injected = new InjectedConnector({
     // 1287, // moonbase
     // 1285, // moonriver
     10000, // smartbch
+    10001, // smartbch testnet
     // 43114, // avalanche
     // 43113, // fuji
     // 128, // heco
@@ -96,6 +98,7 @@ export const bridgeInjected = new InjectedConnector({
     // 1287, // moonbase
     // 1285, // moonriver
     10000, // smartbch
+    10001, // smartbch testnet
     // 43114, // avalanche
     // 43113, // fuji
     // 128, // heco
@@ -132,9 +135,9 @@ export const portis = new PortisConnector({
 
 // mainnet only
 export const walletlink = new WalletLinkConnector({
-  url: RPC[ChainId.MAINNET],
-  appName: 'SushiSwap',
-  appLogoUrl: 'https://raw.githubusercontent.com/sushiswap/art/master/sushi/logo-256x256.png',
+  url: RPC[ChainId.SMARTBCH],
+  appName: 'EmberSwap',
+  appLogoUrl: 'https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D/logo.png',
 })
 
 // mainnet only

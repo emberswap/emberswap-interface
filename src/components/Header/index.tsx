@@ -1,4 +1,4 @@
-import { ChainId } from '../../sdk'
+import { ChainId, Currency, NATIVE} from '../../sdk'
 import React from 'react'
 
 import Image from 'next/image'
@@ -7,16 +7,20 @@ import More from './More'
 import NavLink from '../NavLink'
 import { Popover } from '@headlessui/react'
 import Web3Status from '../Web3Status'
+import Web3Network from '../Web3Network'
 import { t } from '@lingui/macro'
 import { useActiveWeb3React } from '../../hooks/useActiveWeb3React'
+import { useETHBalances } from '../../state/wallet/hooks'
 import { useLingui } from '@lingui/react'
 import ThemeSwitch from '../ThemeSwitch'
 import TokenStats from '../TokenStats'
 import LanguageSwitch from '../LanguageSwitch'
+import { isMobile } from 'react-device-detect'
 
 function AppBar(): JSX.Element {
   const { i18n } = useLingui()
-  const { account, chainId } = useActiveWeb3React()
+  const { account, chainId, library } = useActiveWeb3React()
+  const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
 
   return (
     <header className="flex-shrink-0 w-full">
@@ -91,23 +95,35 @@ function AppBar(): JSX.Element {
 
                 <div className="fixed bottom-0 left-0 z-10 flex flex-row items-center justify-center w-full p-4 lg:w-auto bg-dark-1000 lg:relative lg:p-0 lg:bg-transparent">
                   <div className="flex items-center justify-between w-full space-x-2 sm:justify-end">
-                    {chainId && [ChainId.SMARTBCH].includes(chainId) && (
+                    {chainId && !isMobile && (
                       <div className="w-auto flex items-center rounded mr-1 bg-dark-800 shadow-sm text-primary text-xs hover:bg-dark-700 whitespace-nowrap text-xs font-bold cursor-pointer select-none pointer-events-auto hidden sm:block">
                         <TokenStats token="BCH" />
                       </div>
                     )}
-                    {chainId && [ChainId.SMARTBCH].includes(chainId) && (
+                    {chainId && !isMobile && (
                       <div className="w-auto flex items-center rounded mr-1 bg-dark-800 shadow-sm text-primary text-xs hover:bg-dark-700 whitespace-nowrap text-xs font-bold cursor-pointer select-none pointer-events-auto">
                         <TokenStats token="EMBER" />
                       </div>
                     )}
-                    <div className="w-auto flex items-center rounded bg-transparent shadow-sm text-primary text-xs hover:bg-dark-900 whitespace-nowrap text-xs font-bold cursor-pointer select-none pointer-events-auto">
+                    <div className="w-auto flex items-center rounded bg-red-900 hover:bg-red-900-custom p-0.5 whitespace-nowrap text-xs font-bold cursor-pointer select-none pointer-events-auto">
+                      {account && chainId && userEthBalance && (
+                        <>
+                          <div className="px-3 py-2 text-primary text-bold">
+                            {userEthBalance?.toSignificant(2)} {NATIVE[chainId].symbol}
+                          </div>
+                        </>
+                      )}
                       <Web3Status />
                     </div>
                     <div className="hidden md:block">
                       <LanguageSwitch />
                     </div>
-                    <ThemeSwitch/>
+                    <ThemeSwitch/>                  
+                    {library && library.provider.isMetaMask && !isMobile && (
+                      <div className="hidden sm:inline-block">
+                        <Web3Network />
+                      </div>
+                    )}
                     <More />
                   </div>
                 </div>

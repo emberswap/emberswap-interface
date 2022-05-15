@@ -241,8 +241,8 @@ msgstr "Amount to Remove"
 msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 msgstr "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 
-#: src/components/Header/index.tsx:85
-#: src/components/Header/index.tsx:208
+#: src/components/Header/index.tsx:89
+#: src/components/Header/index.tsx:224
 msgid "Analytics"
 msgstr "Analytics"
 
@@ -925,8 +925,8 @@ msgstr "Expiration is the time at which the order will become invalid"
 msgid "Expired"
 msgstr "Expired"
 
-#: src/components/Header/index.tsx:52
-#: src/components/Header/index.tsx:176
+#: src/components/Header/index.tsx:56
+#: src/components/Header/index.tsx:192
 msgid "Farm"
 msgstr "Farm"
 
@@ -1046,8 +1046,8 @@ msgstr "Give me some BCH"
 msgid "Go Back"
 msgstr "Go Back"
 
-#: src/components/Header/index.tsx:76
-#: src/components/Header/index.tsx:200
+#: src/components/Header/index.tsx:80
+#: src/components/Header/index.tsx:216
 msgid "Governance"
 msgstr "Governance"
 
@@ -1378,8 +1378,8 @@ msgstr "Loading balance"
 msgid "Lock"
 msgstr "Lock"
 
-#: src/components/Header/index.tsx:68
-#: src/components/Header/index.tsx:192
+#: src/components/Header/index.tsx:72
+#: src/components/Header/index.tsx:208
 msgid "Locker"
 msgstr "Locker"
 
@@ -1639,7 +1639,7 @@ msgstr "Open Orders"
 #~ msgid "Open Source"
 #~ msgstr "Open Source"
 
-#: src/components/Header/index.tsx:120
+#: src/components/Header/index.tsx:136
 msgid "Open main menu"
 msgstr "Open main menu"
 
@@ -1745,8 +1745,8 @@ msgstr "Please type the word \"confirm\" to enable expert mode."
 msgid "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 msgstr "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 
-#: src/components/Header/index.tsx:44
-#: src/components/Header/index.tsx:168
+#: src/components/Header/index.tsx:48
+#: src/components/Header/index.tsx:184
 #: src/pages/exchange/pool/index.tsx:95
 msgid "Pool"
 msgstr "Pool"
@@ -2160,8 +2160,8 @@ msgstr "Supplying {0} {1} and {2} {3}"
 #~ msgstr "SushiSwap"
 
 #: src/components/ExchangeHeader.tsx:42
-#: src/components/Header/index.tsx:36
-#: src/components/Header/index.tsx:160
+#: src/components/Header/index.tsx:40
+#: src/components/Header/index.tsx:176
 #: src/pages/exchange/swap/[[...tokens]].tsx:571
 #: src/pages/exchange/swap/[[...tokens]].tsx:600
 msgid "Swap"
@@ -2489,8 +2489,8 @@ msgstr "Unwrap"
 #~ msgid "VFAT FARMING CALCULATOR"
 #~ msgstr "VFAT FARMING CALCULATOR"
 
-#: src/components/Header/index.tsx:60
-#: src/components/Header/index.tsx:184
+#: src/components/Header/index.tsx:64
+#: src/components/Header/index.tsx:200
 msgid "Vaults"
 msgstr "Vaults"
 

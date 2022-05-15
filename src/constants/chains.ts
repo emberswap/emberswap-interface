@@ -16,6 +16,7 @@ export enum SupportedChainId {
   // MOONBEAM_TESTNET = 1287,
   // MOONRIVER = 1285,
      SMARTBCH = 10000,
+     SMARTBCH_TESTNET = 10001,
   // AVALANCHE = 43114,
   // AVALANCHE_TESTNET = 43113,
   // HECO = 128,
