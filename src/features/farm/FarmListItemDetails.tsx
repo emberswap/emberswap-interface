@@ -23,10 +23,11 @@ import { useTransactionAdder } from '../../state/transactions/hooks'
 import { useToken } from '../../hooks/Tokens'
 import { isMobile, isDesktop } from 'react-device-detect'
 import { BigNumber } from 'ethers'
+import { useRouter } from 'next/router'
 
 const FarmListItem = ({ farm }) => {
   const { i18n } = useLingui()
-
+  const router = useRouter()
   const { account, chainId } = useActiveWeb3React()
   const [pendingTx, setPendingTx] = useState(false)
   const [depositValue, setDepositValue] = useState('')
@@ -98,7 +99,20 @@ const FarmListItem = ({ farm }) => {
       leaveTo="opacity-0"
     >
       <Disclosure.Panel className="flex flex-col w-full border-t-0 rounded rounded-t-none bg-dark-800" static>
-        <div className="grid grid-cols-2 gap-4 p-4">
+      <div className="px-4 pb-4 pt-4">
+          <Button
+            variant="outlined"
+            color="light-green"
+            size="xs"            
+            className="border-0 ring ring-light-purple"
+            onClick={async () => {
+              router.push(`/add/${farm.pair.token0.id}/${farm.pair.token1.id}`)
+            }}
+          >
+            {i18n._(t`Get ${farm.pair.token0.symbol}/${farm.pair.token1.symbol} LP for staking`)}
+          </Button>
+        </div>
+        <div className="grid grid-cols-2 gap-4 p-4 pt-0">
           <div className="col-span-2 text-center md:col-span-1">
             {farm.depositFeeBP && (
               <div className="pr-4 mb-2 text-left cursor-pointer text-red">{`${i18n._(t`Deposit Fee`)}: ${formatPercent(

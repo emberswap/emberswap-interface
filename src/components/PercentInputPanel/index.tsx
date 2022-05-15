@@ -19,7 +19,10 @@ export default function PercentInputPanel({ value, onUserInput, id }: PercentInp
           {i18n._(t`Amount to Remove`)}
         </div>
         <div className="flex items-center w-full p-3 space-x-3 text-xl font-bold rounded bg-dark-900 sm:w-3/5">
-          <Button onClick={() => onUserInput('100')}>{i18n._(t`MAX`)}</Button>
+          <Button 
+          onClick={() => onUserInput('100')}
+          className="text-xs font-medium bg-transparent border rounded-full hover:bg-primary border-low-emphesis text-secondary whitespace-nowrap"
+          >{i18n._(t`MAX`)}</Button>
           <PercentInput
             className="token-amount-input"
             value={value}
