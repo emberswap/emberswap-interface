@@ -1011,13 +1011,13 @@ msgstr "Belohnungen für Liquiditätsanbieter"
 msgid ""
 "Liquidity providers earn a 0.25% fee on all trades proportional to their share of\n"
 "the pool. Fees are added to the pool, accrue in real time and can be claimed by\n"
-"withdrawing your liquidity"
+"withdrawing your liquidity."
 msgstr ""
 "Liquiditätsanbieter verdienen 0,25 % Gebühr auf alle Trades proportional zu ihrem Anteil \n"
 " am Pool. Die Gebühren werden dem Pool hinzugefügt, fallen in Echtzeit an und können eingefordert werden, indem Sie Ihre Liquidität \n"
 " entnehmen."
 
-#~ msgid "Liquidity providers earn a 0.25% fee on all trades proportional to their share ofthe pool. Fees are added to the pool, accrue in real time and can be claimed bywithdrawing your liquidity"
+#~ msgid "Liquidity providers earn a 0.25% fee on all trades proportional to their share ofthe pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity."
 #~ msgstr "Liquiditätsanbieter verdienen 0,25 % Gebühr auf alle Trades proportional zu ihrem Anteil am Pool. Die Gebühren werden dem Pool hinzugefügt, fallen in Echtzeit an und können eingefordert werden, indem Sie Ihre Liquidität entnehmen."
 
 #: src/modals/SearchModal/Manage.tsx:58

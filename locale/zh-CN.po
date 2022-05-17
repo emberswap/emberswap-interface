@@ -1256,10 +1256,17 @@ msgid "Liquidity Provider Rewards"
 msgstr "LP奖励"
 
 #: src/pages/exchange/pool/index.tsx:107
+#~ msgid ""
+#~ "Liquidity providers earn a 0.20% fee on all trades proportional to their share of\n"
+#~ "the pool. Fees are added to the pool, accrue in real time and can be claimed by\n"
+#~ "withdrawing your liquidity"
+#~ msgstr ""
+
+#: src/pages/exchange/pool/index.tsx:107
 msgid ""
 "Liquidity providers earn a 0.20% fee on all trades proportional to their share of\n"
 "the pool. Fees are added to the pool, accrue in real time and can be claimed by\n"
-"withdrawing your liquidity"
+"withdrawing your liquidity."
 msgstr ""
 
 #: src/pages/exchange/pool/index.tsx:111
