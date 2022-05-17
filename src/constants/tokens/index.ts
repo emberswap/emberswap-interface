@@ -67,7 +67,7 @@ export const SMARTBCH: { [key: string]: Token } = {
 export const SMARTBCH_TESTNET: { [key: string]: Token } = {
   EMBER: new Token(ChainId.SMARTBCH_TESTNET, '0x217057A8B0bDEb160829c19243A2E03bfe95555a', 18, 'EMBER', 'Ember'),
   FLEXUSD: new Token(ChainId.SMARTBCH_TESTNET, '0xd0526C977374F2501173B6E80E8bC0197e70875F', 18, 'FLEXUSD', 'flexUSD'),
-  FIRE: new Token(ChainId.SMARTBCH_TESTNET, '0x7E79B93B6A3624C9Ae358bFE4bED188fB84aaF1C', 18, 'FIRE', 'Incinerate'),
+  FIRE: new Token(ChainId.SMARTBCH_TESTNET, '0xa10da28C8D63473fD2bE8df9C37A628A188F43ea', 18, 'FIRE', 'Incinerate'),
 
 }
 
