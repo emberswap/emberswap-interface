@@ -15,9 +15,10 @@ import { useTokenInfo } from '../../features/farm/hooks'
 import { formatNumberScale } from '../../functions'
 import { ExternalLink as LinkIcon } from 'react-feather'
 import { PriceContext } from '../../contexts/priceContext'
-import { useEmberContract } from '../../hooks'
+import { useActiveWeb3React, useEmberContract } from '../../hooks'
 import QuestionHelper from '../../components/QuestionHelper'
-
+import { EMBER_ADDRESS } from '../../constants'
+import { ChainId } from '../../sdk'
 const CloseIcon = styled.div`
   position: absolute;
   right: 0;
@@ -73,6 +74,7 @@ const WALLET_VIEWS = {
 
 export default function TokenStatsModal({ token }: { token: any }) {
   const { i18n } = useLingui()
+  const { chainId } = useActiveWeb3React()
 
   const priceData = useContext(PriceContext)
   let tokenInfo = useTokenInfo(useEmberContract())
@@ -102,7 +104,9 @@ export default function TokenStatsModal({ token }: { token: any }) {
       </div>
     )
   }
-
+  const getTokenLogoURL = (address: string) => {
+    return `https://smartscan.cash/address/${EMBER_ADDRESS[chainId]}`
+  }
   function getModalContent() {
     return (
       <div className="space-y-6">
@@ -127,8 +131,9 @@ export default function TokenStatsModal({ token }: { token: any }) {
                 {token?.address && (
                   <ExternalLink
                     href={
-                      'https://smartscan.cash/address/0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D'
+                      `${getTokenLogoURL(token.address)}`
                     }
+                    
                     className="px-3 ring-0 ring-transparent ring-opacity-0"
                     color="light-green"
                     startIcon={<LinkIcon size={16} />}

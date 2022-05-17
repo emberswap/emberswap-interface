@@ -8,6 +8,7 @@ import { classNames } from '../../functions/styling'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import NavLink from '../NavLink'
+import { isMobile } from 'react-device-detect'
 
 const items = (i18n: I18n) => [
   {
@@ -122,25 +123,44 @@ export default function Menu() {
             >
               <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                 <div className="relative grid gap-6 px-5 py-6 bg-dark-900 sm:gap-8 sm:p-8">
-                  {solutions.map((item) =>
+                  {isMobile ? solutions.map((item) =>
                     item.external ? (
                       <ExternalLink
                         key={item.name}
                         href={item.href}
                         className="block p-3 -m-3 transition duration-150 ease-in-out rounded-md hover:bg-dark-800"
                       >
-                        <p className="text-base font-medium text-high-emphesis">{item.name}</p>
-                        <p className="mt-1 text-sm text-secondary">{item.description}</p>
+                        <p className="text-base text-xs text-high-emphesis">{item.name}</p>
+                        <p className="mt-1 text-xs text-secondary">{item.description}</p>
                       </ExternalLink>
                     ) : (
                       <NavLink key={item.name} href={item.href}>
                         <a className="block p-3 -m-3 transition duration-150 ease-in-out rounded-md hover:bg-dark-800">
-                          <p className="text-base font-medium text-high-emphesis">{item.name}</p>
-                          <p className="mt-1 text-sm text-secondary">{item.description}</p>
+                          <p className="text-base text-xs font-medium text-high-emphesis">{item.name}</p>
+                          <p className="mt-1 text-xs text-secondary">{item.description}</p>
                         </a>
                       </NavLink>
                     )
-                  )}
+                  ):
+                  solutions.map((item) =>
+                  item.external ? (
+                    <ExternalLink
+                      key={item.name}
+                      href={item.href}
+                      className="block p-3 -m-3 transition duration-150 ease-in-out rounded-md hover:bg-dark-800"
+                    >
+                      <p className="text-base font-medium text-high-emphesis">{item.name}</p>
+                      <p className="mt-1 text-sm text-secondary">{item.description}</p>
+                    </ExternalLink>
+                  ) : (
+                    <NavLink key={item.name} href={item.href}>
+                      <a className="block p-3 -m-3 transition duration-150 ease-in-out rounded-md hover:bg-dark-800">
+                        <p className="text-base font-medium text-high-emphesis">{item.name}</p>
+                        <p className="mt-1 text-sm text-secondary">{item.description}</p>
+                      </a>
+                    </NavLink>
+                  )
+                )}
                 </div>
               </div>
             </Popover.Panel>

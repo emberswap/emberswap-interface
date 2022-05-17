@@ -19,11 +19,27 @@
       "logoURI": "https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D/logo.png"
     },
     {
+      "name": "Ember",
+      "address": "0x217057A8B0bDEb160829c19243A2E03bfe95555a",
+      "symbol": "EMBER",
+      "decimals": 18,
+      "chainId": 10001,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D/logo.png"
+    },
+    {
       "name": "Incinerate",
       "address": "0x225FCa2A940cd5B18DFb168cD9B7f921C63d7B6E",
       "symbol": "FIRE",
       "decimals": 18,
       "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x225FCa2A940cd5B18DFb168cD9B7f921C63d7B6E/logo.png"
+    },
+    {
+      "name": "Incinerate",
+      "address": "0xa10da28C8D63473fD2bE8df9C37A628A188F43ea",
+      "symbol": "FIRE",
+      "decimals": 18,
+      "chainId": 10001,
       "logoURI": "https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x225FCa2A940cd5B18DFb168cD9B7f921C63d7B6E/logo.png"
     },
     {
@@ -35,11 +51,27 @@
       "logoURI": "https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04/logo.png"
     },
     {
-      "name": "FlexUSD",
+      "name": "Wrapped BCH",
+      "address": "0x17F4FCF5b6E0A95D4eE331c8529041896A073F9b",
+      "symbol": "WBCH",
+      "decimals": 18,
+      "chainId": 10001,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x3743eC0673453E5009310C727Ba4eaF7b3a1cc04/logo.png"
+    },
+    {
+      "name": "flexUSD",
       "address": "0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72",
       "symbol": "FLEXUSD",
       "decimals": 18,
       "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72/logo.png"
+    },
+    {
+      "name": "flexUSD",
+      "address": "0xd0526C977374F2501173B6E80E8bC0197e70875F",
+      "symbol": "FLEXUSD",
+      "decimals": 18,
+      "chainId": 10001,
       "logoURI": "https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72/logo.png"
     },
     {

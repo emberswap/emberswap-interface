@@ -32,6 +32,7 @@
     --dark-1000:#000;
     --dark-900:#111;
     --dark-800:#1d1d1d;
+    --dark-8000:#1d1d1d;
     --dark-pink-red:#4e3034;
     --color-light-purple:#611600;
     --color-purple:#ffc000;
@@ -43,6 +44,7 @@
     --color-yellow:#ffc000;
     --color-lgreen:#f78a22;
     --color-light-green:#f78a22;
+    --transparent-grey:#151515;
     --color-mid-green:#bf5915;
     --color-opaque-green:#e4972e;
     --color-opaque-blue:#d98b20;
@@ -102,6 +104,7 @@
     --colors-pink:#DCAE25;
     --colors-green:#F78A22;
     --colors-yellow:#FFD166;
+    --transparent-grey:#e5e5ea;
     --colors-red:#7C0C1F;
     --colors-brown:#F4A625;
     --colors-yellow-one:#fcbd2c;
@@ -139,6 +142,7 @@
     --color-dark-900-custom:#a0a1a224;
     --color-dark-850:#65737e;
     --color-dark-800:#bebebe;
+    --dark-8000:#e2e2e2;
     --color-dark-800-custom:#bebebe17;
     --color-dark-700:#bebebe;
     --color-dark-700-custom:#e5e5ea;

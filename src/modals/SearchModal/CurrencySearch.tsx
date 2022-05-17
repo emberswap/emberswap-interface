@@ -205,7 +205,7 @@ export function CurrencySearch({
           />
         </div>
       )}
-      {showCommonBases && false && (
+      {showCommonBases  && (
         <div className="mb-4">
           <CommonBases chainId={chainId} onSelect={handleCurrencySelect} selectedCurrency={selectedCurrency} />
         </div>

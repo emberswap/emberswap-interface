@@ -109,7 +109,7 @@ function AppBar(): JSX.Element {
                       {account && chainId && userEthBalance && (
                         <>
                           <div className="px-3 py-2 text-primary text-bold">
-                            {userEthBalance?.toSignificant(2)} {NATIVE[chainId].symbol}
+                            {userEthBalance?.toSignificant(3)} {NATIVE[chainId].symbol}
                           </div>
                         </>
                       )}

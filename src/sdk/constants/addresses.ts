@@ -31,7 +31,7 @@ export const FACTORY_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.PALM_TESTNET]: '',
   [ChainId.MOONRIVER]: '0x049581aEB6Fe262727f290165C29BDAB065a1B68',
   [ChainId.SMARTBCH]: '0xE62983a68679834eD884B9673Fb6aF13db740fF0',
-  [ChainId.SMARTBCH_TESTNET]: '0xE50A8613a4007b28b0fE4A1E161Ca181D4d7092f',
+  [ChainId.SMARTBCH_TESTNET]: '0xa27588D9cff3130AC91C39b1B1c992976d492476',
 }
 
 export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
@@ -65,7 +65,7 @@ export const ROUTER_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.PALM_TESTNET]: '',
   [ChainId.MOONRIVER]: '0xAA30eF758139ae4a7f798112902Bf6d65612045f',
   [ChainId.SMARTBCH]: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
-  [ChainId.SMARTBCH_TESTNET]: '0x28ab7aF40aDBD535B0ba6ED90Cf50F322aa42109',
+  [ChainId.SMARTBCH_TESTNET]: '0xD3f256a03bf7c75ba4d08bf2847Cc7F59168DB45',
 }
 
 export const SUSHI_ADDRESS: { [chainId in ChainId]: string } = {
@@ -118,7 +118,7 @@ export const MASTERCHEF_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MOONBEAM_TESTNET]: '',
   [ChainId.MOONRIVER]: '',
   [ChainId.SMARTBCH]: '0x8ecb32C33AB3f7ee3D6Ce9D4020bC53fecB36Be9',
-  [ChainId.SMARTBCH_TESTNET]: '0xa09f9658Bd2b6EEC1c64f36fA31b6A1D7c4F138C',
+  [ChainId.SMARTBCH_TESTNET]: '0xFFbE92fDA81f853bcf00d3c7686d5DAd5A6600bB',
   [ChainId.AVALANCHE]: '',
   [ChainId.AVALANCHE_TESTNET]: '',
   [ChainId.HECO]: '',
@@ -150,7 +150,7 @@ export const MASTERCHEF_V2_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MOONBEAM_TESTNET]: '',
   [ChainId.MOONRIVER]: '',
   [ChainId.SMARTBCH]: '0x8ecb32C33AB3f7ee3D6Ce9D4020bC53fecB36Be9',
-  [ChainId.SMARTBCH_TESTNET]: '0xa09f9658Bd2b6EEC1c64f36fA31b6A1D7c4F138C',
+  [ChainId.SMARTBCH_TESTNET]: '0xFFbE92fDA81f853bcf00d3c7686d5DAd5A6600bB',
   [ChainId.AVALANCHE]: '',
   [ChainId.AVALANCHE_TESTNET]: '',
   [ChainId.HECO]: '',

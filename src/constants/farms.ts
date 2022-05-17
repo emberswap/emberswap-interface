@@ -78,7 +78,7 @@ export const POOLS: AddressMap = {
       id: 3,
       token0: {
         id: '0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72',
-        name: 'FlexUSD',
+        name: 'flexUSD',
         symbol: 'FLEXUSD',
         decimals: 18,
       },
@@ -95,7 +95,7 @@ export const POOLS: AddressMap = {
       id: 4,
       token0: {
         id: '0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72',
-        name: 'FlexUSD',
+        name: 'flexUSD',
         symbol: 'FLEXUSD',
         decimals: 18,
       },
@@ -118,7 +118,7 @@ export const POOLS: AddressMap = {
       },
       token1: {
         id: '0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72',
-        name: 'FlexUSD',
+        name: 'flexUSD',
         symbol: 'FLEXUSD',
         decimals: 18,
       },
@@ -620,22 +620,90 @@ export const POOLS: AddressMap = {
     },
   },
   [ChainId.SMARTBCH_TESTNET]: {
-    '':{
+    '0x790Fb0Cda5920cAe32afE598fDB3746F8d610f59':{
       id: 0,
       token0: {
-        id: '',
-        name: '',
-        symbol: '',
-        decimals: 0,
+        id: '0xa10da28C8D63473fD2bE8df9C37A628A188F43ea',
+        name: 'Incinerate',
+        symbol: 'FIRE',
+        decimals: 18,
       },
       token1: {
-        id: '',
-        name: '',
-        symbol: '',
-        decimals: 0,
+        id: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+        name: 'Ember',
+        symbol: 'EMBER',
+        decimals: 18,
       },
-      name: '',
-      symbol: '',
+      name: 'Ember-LP',
+      symbol: 'EMBER-LP',
+    },
+    '0xa54324824FCfFc7BE979d0E0baBfD012c01b1BA9':{
+      id: 1,
+      token0: {
+        id: '0x17F4FCF5b6E0A95D4eE331c8529041896A073F9b',
+        name: 'Wrapped BCH',
+        symbol: 'WBCH',
+        decimals: 18,
+      },
+      token1: {
+        id: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+        name: 'Ember',
+        symbol: 'EMBER',
+        decimals: 18,
+      },
+      name: 'Ember-LP',
+      symbol: 'EMBER-LP',
+    },
+    '0x69653965cc6466c21d3a7dD3BD536b732922C9C9':{
+      id: 2,
+      token0: {
+        id: '0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72',
+        name: 'flexUSD',
+        symbol: 'FLEXUSD',
+        decimals: 18,
+      },
+      token1: {
+        id: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+        name: 'Ember',
+        symbol: 'EMBER',
+        decimals: 18,
+      },
+      name: 'Ember-LP',
+      symbol: 'EMBER-LP',
+    },
+    '0x127129A176C9BaB3f3bfe6040aaF2450d19958bB':{
+      id: 3,
+      token0: {
+        id: '0xd0526C977374F2501173B6E80E8bC0197e70875F',
+        name: 'flexUSD',
+        symbol: 'FLEXUSD',
+        decimals: 18,
+      },
+      token1: {
+        id: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+        name: 'Ember',
+        symbol: 'EMBER',
+        decimals: 18,
+      },
+      name: 'Ember-LP',
+      symbol: 'EMBER-LP',
+    },
+    '0x173B094709B232b45234e8e4b25d44ecb19fa717':{
+      id: 4,
+      token0: {
+        id: '0xa10da28C8D63473fD2bE8df9C37A628A188F43ea',
+        name: 'Incinerate',
+        symbol: 'FIRE',
+        decimals: 18,
+      },
+      token1: {
+        id: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+        name: 'Ember',
+        symbol: 'EMBER',
+        decimals: 18,
+      },
+      name: 'Ember-LP',
+      symbol: 'EMBER-LP',
     },
   },
 }

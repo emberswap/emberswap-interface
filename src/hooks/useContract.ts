@@ -136,6 +136,9 @@ export function useENSRegistrarContract(withSignerIfPossible?: boolean): Contrac
       case ChainId.SMARTBCH:
         address = '0xCfb86556760d03942EBf1ba88a9870e67D77b627'
         break
+      case ChainId.SMARTBCH_TESTNET:
+        address = '0x32f1FBE59D771bdB7FB247FE97A635f50659202b'
+        break
     }
   }
   return useContract(address, ENS_ABI, withSignerIfPossible)

@@ -82,9 +82,14 @@ export function useVaultTVL(): TVLInfo[] {
   const bchPrice = priceData?.['bch']
   const firePrice = priceData?.['fire']
 
-  const farmingPools = Object.keys(VAULTS[ChainId.SMARTBCH]).map((key) => {
+  var farmingPools = Object.keys(VAULTS[ChainId.SMARTBCH]).map((key) => {
     return { ...VAULTS[ChainId.SMARTBCH][key] }
   })
+  if (chainId == 10001) {
+     farmingPools = Object.keys(VAULTS[ChainId.SMARTBCH_TESTNET]).map((key) => {
+      return { ...VAULTS[ChainId.SMARTBCH_TESTNET][key] }
+    })
+  }
 
   const singlePools = farmingPools.filter((r) => !r.token1)
   const singleAddresses = singlePools.map((r) => r.lpToken)
@@ -94,12 +99,12 @@ export function useVaultTVL(): TVLInfo[] {
   const results = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'getReserves')
   const totalSupply = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'totalSupply')
   const distributorBalance = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'balanceOf', [
-    EMBER_VAULT_ADDRESS[ChainId.SMARTBCH],
+    EMBER_VAULT_ADDRESS[chainId],
   ])
   const distributorBalanceSingle = useMultipleContractSingleData(singleAddresses, PAIR_INTERFACE, 'balanceOf', [
-    EMBER_VAULT_ADDRESS[ChainId.SMARTBCH],
+    EMBER_VAULT_ADDRESS[chainId],
   ])
-
+/////////////////////////////
   return useMemo(() => {
     function isKnownToken(token: TokenInfo) {
       return (
@@ -215,8 +220,8 @@ export function useTVL(): TVLInfo[] {
   const bchPrice = priceData?.['bch']
   const firePrice = priceData?.['fire']
 
-  const farmingPools = Object.keys(POOLS[ChainId.SMARTBCH]).map((key) => {
-    return { ...POOLS[ChainId.SMARTBCH][key], lpToken: key }
+  const farmingPools = Object.keys(POOLS[chainId]).map((key) => {
+    return { ...POOLS[chainId][key], lpToken: key }
   })
 
   const singlePools = farmingPools.filter((r) => !r.token1)
@@ -227,10 +232,10 @@ export function useTVL(): TVLInfo[] {
   const results = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'getReserves')
   const totalSupply = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'totalSupply')
   const distributorBalance = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'balanceOf', [
-    EMBER_DISTRIBUTOR_ADDRESS[ChainId.SMARTBCH],
+    EMBER_DISTRIBUTOR_ADDRESS[chainId],
   ])
   const distributorBalanceSingle = useMultipleContractSingleData(singleAddresses, PAIR_INTERFACE, 'balanceOf', [
-    EMBER_DISTRIBUTOR_ADDRESS[ChainId.SMARTBCH],
+    EMBER_DISTRIBUTOR_ADDRESS[chainId],
   ])
 
   return useMemo(() => {

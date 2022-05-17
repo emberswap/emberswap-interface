@@ -59,13 +59,16 @@ export const MOONRIVER: { [key: string]: Token } = {
 
 export const SMARTBCH: { [key: string]: Token } = {
   LAWUSD: new Token(ChainId.SMARTBCH, '0xE1E655BE6F50344e6dd708c27BD8D66492d6ecAf', 18, 'lawUSD', 'LAW US Dollar'),
-  FLEXUSD: new Token(ChainId.SMARTBCH, '0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72', 18, 'FLEXUSD', 'FlexUSD'),
+  FLEXUSD: new Token(ChainId.SMARTBCH, '0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72', 18, 'FLEXUSD', 'flexUSD'),
   EMBER: new Token(ChainId.SMARTBCH, '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D', 18, 'EMBER', 'Ember'),
   FIRE: new Token(ChainId.SMARTBCH, '0x225FCa2A940cd5B18DFb168cD9B7f921C63d7B6E', 18, 'FIRE', 'Incinerate'),
 }
 
 export const SMARTBCH_TESTNET: { [key: string]: Token } = {
-  EMBER: new Token(ChainId.SMARTBCH_TESTNET, '0x7f8d9779dD300C635eD4eB5D2EB0Ed14a2DFAa38', 18, 'EMBER', 'Ember'),
+  EMBER: new Token(ChainId.SMARTBCH_TESTNET, '0x217057A8B0bDEb160829c19243A2E03bfe95555a', 18, 'EMBER', 'Ember'),
+  FLEXUSD: new Token(ChainId.SMARTBCH_TESTNET, '0xd0526C977374F2501173B6E80E8bC0197e70875F', 18, 'FLEXUSD', 'flexUSD'),
+  FIRE: new Token(ChainId.SMARTBCH_TESTNET, '0x7E79B93B6A3624C9Ae358bFE4bED188fB84aaF1C', 18, 'FIRE', 'Incinerate'),
+
 }
 
 export const HECO: { [key: string]: Token } = {
@@ -232,7 +235,7 @@ export const EMBER_ADDRESS = {
   [ChainId.PALM_TESTNET]: '',
   [ChainId.MOONRIVER]: '0x6bD193Ee6D2104F14F94E2cA6efefae561A4334B',
   [ChainId.SMARTBCH]: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
-  [ChainId.SMARTBCH_TESTNET]: '0x7f8d9779dD300C635eD4eB5D2EB0Ed14a2DFAa38',
+  [ChainId.SMARTBCH_TESTNET]: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
 }
 
 export const EMBER: ChainTokenMap = {

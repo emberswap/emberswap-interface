@@ -177,7 +177,7 @@ msgstr "添加流动性"
 #~ msgid "Add Sushi to your Metamask wallet"
 #~ msgstr "将Sushi添加到您的Metamask钱包"
 
-#: src/components/Header/More.tsx:33
+#: src/components/Header/More.tsx:34
 msgid "Add a Proposal through our Governance Portal"
 msgstr ""
 
@@ -321,7 +321,7 @@ msgstr "可用网络"
 #~ msgid "Back to Limit Orders"
 #~ msgstr ""
 
-#: src/components/Header/More.tsx:57
+#: src/components/Header/More.tsx:58
 #: src/components/Menu.tsx:50
 msgid "Back to the landing page"
 msgstr ""
@@ -498,7 +498,7 @@ msgstr "改变"
 msgid "Chinese"
 msgstr "中文"
 
-#: src/modals/TokenStatsModal/index.tsx:156
+#: src/modals/TokenStatsModal/index.tsx:161
 msgid "Circulating Supply"
 msgstr "当前供应"
 
@@ -718,7 +718,7 @@ msgstr "禁用Multihops"
 msgid "Disconnect"
 msgstr "断开连接"
 
-#: src/components/Header/More.tsx:38
+#: src/components/Header/More.tsx:39
 #: src/components/Menu.tsx:31
 msgid "Discord"
 msgstr "Discord"
@@ -727,22 +727,22 @@ msgstr "Discord"
 msgid "Dismiss"
 msgstr "解散"
 
-#: src/components/Header/More.tsx:50
+#: src/components/Header/More.tsx:51
 #: src/components/Menu.tsx:43
 msgid "Disperse"
 msgstr ""
 
-#: src/components/Header/More.tsx:51
+#: src/components/Header/More.tsx:52
 #: src/components/Menu.tsx:44
 msgid "Distribute BCH or tokens to multiple addresses"
 msgstr ""
 
-#: src/components/Header/More.tsx:14
+#: src/components/Header/More.tsx:15
 #: src/components/Menu.tsx:13
 msgid "Docs"
 msgstr "文档"
 
-#: src/components/Header/More.tsx:15
+#: src/components/Header/More.tsx:16
 #: src/components/Menu.tsx:14
 msgid "Documentation for EmberSwap users"
 msgstr ""
@@ -905,7 +905,7 @@ msgstr "已填充"
 msgid "Find Pool"
 msgstr "查找池"
 
-#: src/components/Header/More.tsx:45
+#: src/components/Header/More.tsx:46
 #: src/components/Menu.tsx:38
 msgid "Follow us on Twitter"
 msgstr ""
@@ -961,10 +961,14 @@ msgstr "从"
 #~ msgstr ""
 
 #: src/features/farm/FarmListItemDetails.tsx:112
-msgid "Get {0}/{1} LP tokens for staking"
+msgid "Get {0}/{1} LP for staking"
 msgstr ""
 
-#: src/components/Header/More.tsx:20
+#: src/features/farm/FarmListItemDetails.tsx:112
+#~ msgid "Get {0}/{1} LP tokens for staking"
+#~ msgstr ""
+
+#: src/components/Header/More.tsx:21
 #: src/components/Menu.tsx:19
 msgid "Github"
 msgstr "Github"
@@ -1059,7 +1063,7 @@ msgstr "收获 {0} EMBER"
 msgid "History"
 msgstr ""
 
-#: src/components/Header/More.tsx:56
+#: src/components/Header/More.tsx:57
 #: src/components/Menu.tsx:49
 msgid "Home"
 msgstr ""
@@ -1156,7 +1160,7 @@ msgstr "无效接收人"
 #~ msgid "Japanese"
 #~ msgstr ""
 
-#: src/components/Header/More.tsx:39
+#: src/components/Header/More.tsx:40
 #: src/components/Menu.tsx:32
 msgid "Join the community on Discord"
 msgstr ""
@@ -1165,7 +1169,7 @@ msgstr ""
 #~ msgid "Join the community on Discord."
 #~ msgstr "加入Discord社区。"
 
-#: src/components/Header/More.tsx:27
+#: src/components/Header/More.tsx:28
 #: src/components/Menu.tsx:26
 msgid "Join the community on Telegram"
 msgstr ""
@@ -1247,9 +1251,16 @@ msgstr "了解更多关于钱包的信息"
 #~ msgid "Liquidity Provider Fee"
 #~ msgstr "LP奖励"
 
-#: src/pages/exchange/pool/index.tsx:110
-#~ msgid "Liquidity Provider Rewards"
-#~ msgstr "LP奖励"
+#: src/pages/exchange/pool/index.tsx:106
+msgid "Liquidity Provider Rewards"
+msgstr "LP奖励"
+
+#: src/pages/exchange/pool/index.tsx:107
+msgid ""
+"Liquidity providers earn a 0.20% fee on all trades proportional to their share of\n"
+"the pool. Fees are added to the pool, accrue in real time and can be claimed by\n"
+"withdrawing your liquidity"
+msgstr ""
 
 #: src/pages/exchange/pool/index.tsx:111
 #~ msgid ""
@@ -1346,7 +1357,7 @@ msgstr "管理这个池子"
 #~ msgid "Market"
 #~ msgstr ""
 
-#: src/modals/TokenStatsModal/index.tsx:204
+#: src/modals/TokenStatsModal/index.tsx:209
 msgid "Market Cap"
 msgstr "市值"
 
@@ -2008,7 +2019,7 @@ msgstr ""
 msgid "Status"
 msgstr ""
 
-#: src/components/Header/More.tsx:32
+#: src/components/Header/More.tsx:33
 msgid "Submit Proposal"
 msgstr ""
 
@@ -2016,7 +2027,7 @@ msgstr ""
 #~ msgid "Submit Tool"
 #~ msgstr "提交工具"
 
-#: src/modals/TokenStatsModal/index.tsx:150
+#: src/modals/TokenStatsModal/index.tsx:155
 msgid "Supply & Market Cap"
 msgstr "供应和市值"
 
@@ -2102,7 +2113,7 @@ msgstr ""
 msgid "TVL"
 msgstr "TVL"
 
-#: src/components/Header/More.tsx:26
+#: src/components/Header/More.tsx:27
 #: src/components/Menu.tsx:25
 msgid "Telegram"
 msgstr "电报"
@@ -2294,7 +2305,7 @@ msgstr "尝试启用多跳交易"
 msgid "Turn On Expert Mode"
 msgstr "开启专家模式"
 
-#: src/components/Header/More.tsx:44
+#: src/components/Header/More.tsx:45
 #: src/components/Menu.tsx:37
 msgid "Twitter"
 msgstr "推特"
@@ -2381,7 +2392,7 @@ msgstr ""
 #~ msgid "Vietnamese"
 #~ msgstr ""
 
-#: src/modals/TokenStatsModal/index.tsx:137
+#: src/modals/TokenStatsModal/index.tsx:142
 msgid "View Contract"
 msgstr "查看合约"
 
@@ -2473,7 +2484,7 @@ msgstr "钱包"
 msgid "Wallet Balance"
 msgstr "钱包余额"
 
-#: src/components/Header/More.tsx:21
+#: src/components/Header/More.tsx:22
 #: src/components/Menu.tsx:20
 msgid "We're supporters of Open Source"
 msgstr ""
@@ -2806,7 +2817,7 @@ msgstr "否则交易将会被拒绝"
 #~ msgid "{0, plural, one {Token} many {Tokens}}"
 #~ msgstr ""
 
-#: src/modals/TokenStatsModal/index.tsx:110
+#: src/modals/TokenStatsModal/index.tsx:114
 msgid "{0}"
 msgstr "{0}"
 

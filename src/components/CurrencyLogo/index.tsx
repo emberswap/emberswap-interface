@@ -96,7 +96,8 @@ interface CurrencyLogoProps {
 
 const unknown = 'https://raw.githubusercontent.com/sushiswap/icons/master/token/unknown.png'
 const ember = 'https://incinerate.cash/img/ex_icons/emberswap.png'
-
+const fire = 'https://incinerate.cash/img/ex_icons/ember.png'
+const flexusd ='https://raw.githubusercontent.com/emberswap/assets/master/blockchains/smartbch/assets/0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72/logo.png'
 const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({
   currency,
   size = '24px',
@@ -114,6 +115,12 @@ const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({
     }
     if (currency?.symbol == 'EMBER') {
       return [ember]
+    }
+    if (currency?.symbol == 'FIRE') {
+      return [fire]
+    }
+    if (currency?.symbol == 'FLEXUSD') {
+      return [flexusd]
     }
     if (currency.isNative || currency.equals(WNATIVE[currency.chainId])) {
       return [logo[currency.chainId], unknown]

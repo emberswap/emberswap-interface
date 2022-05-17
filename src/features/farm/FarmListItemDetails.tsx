@@ -63,7 +63,7 @@ const FarmListItem = ({ farm }) => {
   const poolFraction = (Number.parseFloat(amount?.toFixed()) / (farm.totalLp / 1e18)) || 0
   const balanceFractions = (Number.parseFloat(balance?.toFixed()) / (farm.totalLp / 1e18)) || 0
   const balanceFraction = balanceFractions == Infinity ? 100 : (Number.parseFloat(balance?.toFixed()) / (farm.totalLp / 1e18)) || 0
-  const farmAllocation = ((farm.totalLp / 1e18) / (farm.pool.totalSupply / 1e18));
+  const farmAllocation = farm.totalLp? ((farm.totalLp / 1e18) / (farm.pool.totalSupply / 1e18)) : 0
   const token0Reserve = farm.pool.reserves ? (farm.pool.reserves.reserve0 as BigNumber).toString() : 0
   const token1Reserve = farm.pool.reserves ? (farm.pool.reserves.reserve1 as BigNumber).toString() : 0
   let token0Amount = CurrencyAmount.fromRawAmount(farm.pair.token0, JSBI.BigInt(token0Reserve)).multiply(Math.round(poolFraction * farmAllocation * 1e10)).divide(1e10)
@@ -123,7 +123,7 @@ const FarmListItem = ({ farm }) => {
               <div>
               <div className="pr-4 mb-2 text-left cursor-pointer text-secondary">
                 {i18n._(t`Wallet Balance`)}: {formatNumberScale(balance?.toSignificant(4, undefined, 2) ?? 0, false, 4)}
-                {balance && farm.pool ? ` `+`(${formatPercent(Math.min(Number.parseFloat(balance?.toFixed()) / (farm.totalLp / 1e18) * 100, 100)).toString()} ` + i18n._(t`of pool`) + `)` : ''}
+                {balance && farm.pool ? ` `+`(${formatPercent(Math.min(Number.parseFloat(balance?.toFixed()) / ((farm.totalLp >= 0 ? farm.totalLp : 0) / 1e18) * 100 , 100)|| 0).toString()} ` + i18n._(t`of pool`) + `)` : ''}
               </div>
               <div className="pr-4 mb-2 text-left cursor-pointer text-secondary">
               {formatNumberScale(token0AmountB.toFixed(token0AmountB.currency.decimals > 2 ? 2 : undefined))} {token0Name} + {formatNumberScale(token1AmountB.toFixed(token1AmountB.currency.decimals > 2 ? 2 : undefined))} {token1Name}

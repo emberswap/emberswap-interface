@@ -60,6 +60,7 @@ module.exports = {
           'dark-1000': 'var(--dark-1000)',
           'dark-900': 'var(--dark-900)',
           'dark-800': 'var(--dark-800)',
+          'dark-8000': 'var(--dark-8000)',
           'dark-pink-red': 'var(--dark-pink-red)',
         },
         border: {
@@ -82,6 +83,7 @@ module.exports = {
         yellow: 'var(--color-yellow)',
         lgreen: 'var(--color-lgreen)',
         'light-green': 'var(--color-light-green)',
+        'transparent-grey': 'var(--transparent-grey)',
         'mid-green': 'var(--color-mid-green)',
         'opaque-green': 'var(--color-opaque-green)',
         'opaque-blue': 'var(--color-opaque-blue)',
@@ -99,6 +101,7 @@ module.exports = {
         'dark-900-custom': 'var(--color-dark-900-custom)',
         'dark-850': 'var(--color-dark-850)',
         'dark-800': 'var(--color-dark-800)',
+        'dark-8000': 'var(--dark-8000)',
         'dark-800-custom': 'var(--color-dark-800-custom)',
         'dark-700': 'var(--color-dark-700)',
         'dark-700-custom': 'var(--color-dark-700-custom)',

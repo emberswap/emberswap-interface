@@ -76,14 +76,54 @@ export const VAULTS: AddressMap = {
     }
   },
   [ChainId.SMARTBCH_TESTNET]: {
-    '':{
+    '0': {
       id: 0,
-      lpToken: '',
+      lpToken: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
       token0: {
-        id: '',
-        name: '',
-        symbol: '',
-        decimals: 0,
+        id: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+        name: 'Ember',
+        symbol: 'EMBER',
+        decimals: 18,
+      },
+    },
+    '1': {
+      id: 1,
+      lpToken: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+      token0: {
+        id: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+        name: 'Ember',
+        symbol: 'EMBER',
+        decimals: 18,
+      },
+    },
+    '2': {
+      id: 2,
+      lpToken: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+      token0: {
+        id: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+        name: 'Ember',
+        symbol: 'EMBER',
+        decimals: 18,
+      },
+    },
+    '3': {
+      id: 3,
+      lpToken: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+      token0: {
+        id: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+        name: 'Ember',
+        symbol: 'EMBER',
+        decimals: 18,
+      },
+    },
+    '4': {
+      id: 4,
+      lpToken: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+      token0: {
+        id: '0x217057A8B0bDEb160829c19243A2E03bfe95555a',
+        name: 'Ember',
+        symbol: 'EMBER',
+        decimals: 18,
       },
     }
   },

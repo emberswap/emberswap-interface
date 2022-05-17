@@ -174,7 +174,10 @@ main:after {
     opacity: 0.3;
     z-index: 0;
 } */
-
+.bg-transparent-grey {
+  background-color: var(--transparent-grey);
+  opacity: 0.55;
+}
 .force-gpu{
 -webkit-backface-visibility: hidden;
 -webkit-perspective: 1000;

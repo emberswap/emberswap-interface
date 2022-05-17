@@ -25,6 +25,8 @@ export const USDC = {
   [ChainId.OKEX]: new Token(ChainId.OKEX, '0xc946DAf81b08146B1C7A8Da2A851Ddf2B3EAaf85', 18, 'USDC', 'USD Coin'),
   [ChainId.XDAI]: new Token(ChainId.XDAI, '0xDDAfbb505ad214D7b80b1f830fcCc89B60fb7A83', 6, 'USDC', 'USD Coin'),
   [ChainId.SMARTBCH]: new Token(ChainId.SMARTBCH, '0x7b2B3C5308ab5b2a1d9a94d20D35CCDf61e05b72', 18, 'FLEXUSD', 'flexUSD'),
+  [ChainId.SMARTBCH_TESTNET]: new Token(ChainId.SMARTBCH_TESTNET, '0xd0526C977374F2501173B6E80E8bC0197e70875F', 18, 'FLEXUSD', 'flexUSD'),
+
 }
 
 // Stablecoin amounts used when calculating spot price for a given currency.
@@ -42,6 +44,7 @@ const STABLECOIN_AMOUNT_OUT: { [chainId: number]: CurrencyAmount<Token> } = {
   [ChainId.OKEX]: CurrencyAmount.fromRawAmount(USDC[ChainId.OKEX], 100_000e18),
   [ChainId.XDAI]: CurrencyAmount.fromRawAmount(USDC[ChainId.XDAI], 100_000e6),
   [ChainId.SMARTBCH]: CurrencyAmount.fromRawAmount(USDC[ChainId.SMARTBCH], 1e18),
+  [ChainId.SMARTBCH_TESTNET]: CurrencyAmount.fromRawAmount(USDC[ChainId.SMARTBCH_TESTNET], 1e18),
   [ChainId.CELO]: undefined,
 }
 

@@ -172,7 +172,7 @@ msgstr "Add Liquidity"
 #~ msgid "Add Sushi to your Metamask wallet"
 #~ msgstr "Add Sushi to your Metamask wallet"
 
-#: src/components/Header/More.tsx:33
+#: src/components/Header/More.tsx:34
 msgid "Add a Proposal through our Governance Portal"
 msgstr "Add a Proposal through our Governance Portal"
 
@@ -317,7 +317,7 @@ msgstr "Available Networks"
 #~ msgid "Back to Limit Orders"
 #~ msgstr "Back to Limit Orders"
 
-#: src/components/Header/More.tsx:57
+#: src/components/Header/More.tsx:58
 #: src/components/Menu.tsx:50
 msgid "Back to the landing page"
 msgstr "Back to the landing page"
@@ -524,7 +524,7 @@ msgstr "Change"
 msgid "Chinese"
 msgstr "Chinese"
 
-#: src/modals/TokenStatsModal/index.tsx:156
+#: src/modals/TokenStatsModal/index.tsx:161
 msgid "Circulating Supply"
 msgstr "Circulating Supply"
 
@@ -753,7 +753,7 @@ msgstr "Disable Multihops"
 msgid "Disconnect"
 msgstr "Disconnect"
 
-#: src/components/Header/More.tsx:38
+#: src/components/Header/More.tsx:39
 #: src/components/Menu.tsx:31
 msgid "Discord"
 msgstr "Discord"
@@ -762,22 +762,22 @@ msgstr "Discord"
 msgid "Dismiss"
 msgstr "Dismiss"
 
-#: src/components/Header/More.tsx:50
+#: src/components/Header/More.tsx:51
 #: src/components/Menu.tsx:43
 msgid "Disperse"
 msgstr "Disperse"
 
-#: src/components/Header/More.tsx:51
+#: src/components/Header/More.tsx:52
 #: src/components/Menu.tsx:44
 msgid "Distribute BCH or tokens to multiple addresses"
 msgstr "Distribute BCH or tokens to multiple addresses"
 
-#: src/components/Header/More.tsx:14
+#: src/components/Header/More.tsx:15
 #: src/components/Menu.tsx:13
 msgid "Docs"
 msgstr "Docs"
 
-#: src/components/Header/More.tsx:15
+#: src/components/Header/More.tsx:16
 #: src/components/Menu.tsx:14
 msgid "Documentation for EmberSwap users"
 msgstr "Documentation for EmberSwap users"
@@ -955,7 +955,7 @@ msgstr "Filled"
 msgid "Find Pool"
 msgstr "Find Pool"
 
-#: src/components/Header/More.tsx:45
+#: src/components/Header/More.tsx:46
 #: src/components/Menu.tsx:38
 msgid "Follow us on Twitter"
 msgstr "Follow us on Twitter"
@@ -1034,10 +1034,14 @@ msgstr "From"
 #~ msgstr "German"
 
 #: src/features/farm/FarmListItemDetails.tsx:112
-msgid "Get {0}/{1} LP tokens for staking"
-msgstr "Get {0}/{1} LP tokens for staking"
+msgid "Get {0}/{1} LP for staking"
+msgstr "Get {0}/{1} LP for staking"
 
-#: src/components/Header/More.tsx:20
+#: src/features/farm/FarmListItemDetails.tsx:112
+#~ msgid "Get {0}/{1} LP tokens for staking"
+#~ msgstr "Get {0}/{1} LP tokens for staking"
+
+#: src/components/Header/More.tsx:21
 #: src/components/Menu.tsx:19
 msgid "Github"
 msgstr "Github"
@@ -1133,7 +1137,7 @@ msgstr "Harvest {0} EMBER"
 msgid "History"
 msgstr "History"
 
-#: src/components/Header/More.tsx:56
+#: src/components/Header/More.tsx:57
 #: src/components/Menu.tsx:49
 msgid "Home"
 msgstr "Home"
@@ -1231,7 +1235,7 @@ msgstr "Invalid recipient"
 #~ msgid "Japanese"
 #~ msgstr "Japanese"
 
-#: src/components/Header/More.tsx:39
+#: src/components/Header/More.tsx:40
 #: src/components/Menu.tsx:32
 msgid "Join the community on Discord"
 msgstr "Join the community on Discord"
@@ -1241,7 +1245,7 @@ msgstr "Join the community on Discord"
 #~ msgid "Join the community on Discord."
 #~ msgstr "Join the community on Discord."
 
-#: src/components/Header/More.tsx:27
+#: src/components/Header/More.tsx:28
 #: src/components/Menu.tsx:26
 msgid "Join the community on Telegram"
 msgstr "Join the community on Telegram"
@@ -1325,9 +1329,19 @@ msgstr "Learn more about wallets"
 #~ msgid "Liquidity Provider Fee"
 #~ msgstr "Liquidity Provider Fee"
 
-#: src/pages/exchange/pool/index.tsx:110
-#~ msgid "Liquidity Provider Rewards"
-#~ msgstr "Liquidity Provider Rewards"
+#: src/pages/exchange/pool/index.tsx:106
+msgid "Liquidity Provider Rewards"
+msgstr "Liquidity Provider Rewards"
+
+#: src/pages/exchange/pool/index.tsx:107
+msgid ""
+"Liquidity providers earn a 0.20% fee on all trades proportional to their share of\n"
+"the pool. Fees are added to the pool, accrue in real time and can be claimed by\n"
+"withdrawing your liquidity"
+msgstr ""
+"Liquidity providers earn a 0.20% fee on all trades proportional to their share of\n"
+"the pool. Fees are added to the pool, accrue in real time and can be claimed by\n"
+"withdrawing your liquidity"
 
 #: src/pages/exchange/pool/index.tsx:111
 #~ msgid ""
@@ -1433,7 +1447,7 @@ msgstr "Manage this pool"
 #~ msgid "Market"
 #~ msgstr "Market"
 
-#: src/modals/TokenStatsModal/index.tsx:204
+#: src/modals/TokenStatsModal/index.tsx:209
 msgid "Market Cap"
 msgstr "Market Cap"
 
@@ -2122,7 +2136,7 @@ msgstr "Start/End Block"
 msgid "Status"
 msgstr "Status"
 
-#: src/components/Header/More.tsx:32
+#: src/components/Header/More.tsx:33
 msgid "Submit Proposal"
 msgstr "Submit Proposal"
 
@@ -2130,7 +2144,7 @@ msgstr "Submit Proposal"
 #~ msgid "Submit Tool"
 #~ msgstr "Submit Tool"
 
-#: src/modals/TokenStatsModal/index.tsx:150
+#: src/modals/TokenStatsModal/index.tsx:155
 msgid "Supply & Market Cap"
 msgstr "Supply & Market Cap"
 
@@ -2223,7 +2237,7 @@ msgstr "Switch to SmartBCH"
 msgid "TVL"
 msgstr "TVL"
 
-#: src/components/Header/More.tsx:26
+#: src/components/Header/More.tsx:27
 #: src/components/Menu.tsx:25
 msgid "Telegram"
 msgstr "Telegram"
@@ -2423,7 +2437,7 @@ msgstr "Try enabling multi-hop trades"
 msgid "Turn On Expert Mode"
 msgstr "Turn On Expert Mode"
 
-#: src/components/Header/More.tsx:44
+#: src/components/Header/More.tsx:45
 #: src/components/Menu.tsx:37
 msgid "Twitter"
 msgstr "Twitter"
@@ -2514,7 +2528,7 @@ msgstr "Vaults"
 #~ msgid "Vietnamese"
 #~ msgstr "Vietnamese"
 
-#: src/modals/TokenStatsModal/index.tsx:137
+#: src/modals/TokenStatsModal/index.tsx:142
 msgid "View Contract"
 msgstr "View Contract"
 
@@ -2606,7 +2620,7 @@ msgstr "Wallet"
 msgid "Wallet Balance"
 msgstr "Wallet Balance"
 
-#: src/components/Header/More.tsx:21
+#: src/components/Header/More.tsx:22
 #: src/components/Menu.tsx:20
 msgid "We're supporters of Open Source"
 msgstr "We're supporters of Open Source"
@@ -2955,7 +2969,7 @@ msgstr "or the transaction will revert."
 #~ msgid "{0, plural, one {Token} many {Tokens}}"
 #~ msgstr "{0, plural, one {Token} many {Tokens}}"
 
-#: src/modals/TokenStatsModal/index.tsx:110
+#: src/modals/TokenStatsModal/index.tsx:114
 msgid "{0}"
 msgstr "{0}"
 
