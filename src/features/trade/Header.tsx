@@ -10,14 +10,6 @@ import { useLingui } from '@lingui/react'
 import { useRouter } from 'next/router'
 import { EMBER_ADDRESS } from '../../constants'
 
-  const getQuery = (input, output) => {
-     if (input && output) {
-        return {
-            inputCurrency: input.address || 'ETH' ,
-            outputCurrency: output.address || EMBER_ADDRESS[ChainId.SMARTBCH]
-        }
-     } 
-  }
   interface ExchangeHeaderProps {
     input?: Currency
     output?: Currency
@@ -27,6 +19,12 @@ import { EMBER_ADDRESS } from '../../constants'
   const ExchangeHeader: FC<ExchangeHeaderProps> = ({ input, output, allowedSlippage }) => {
     const getQuery = (input, output) => {
 
+          if (chainId === ChainId.SMARTBCH_TESTNET){
+            return {
+              inputCurrency: 'ETH',
+              outputCurrency: EMBER_ADDRESS[chainId]
+            }
+          }
             if (!input && output) {
                 return {
                     inputCurrency: input.address || 'ETH',
@@ -44,12 +42,18 @@ import { EMBER_ADDRESS } from '../../constants'
                     inputCurrency: input.address || 'ETH',
                     outputCurrency: output.address || EMBER_ADDRESS[chainId]
                 }
-            else if (input && output) {
+            if (input && output) {
                 return {
                     inputCurrency: input.address || 'ETH' ,
                     outputCurrency: output.address || EMBER_ADDRESS[chainId]
                 }
             } 
+            else {
+                return {
+                  inputCurrency: 'ETH',
+                  outputCurrency: EMBER_ADDRESS[chainId]
+                }
+            }
         }
     const { i18n } = useLingui()
     const { chainId } = useActiveWeb3React()
@@ -66,7 +70,7 @@ import { EMBER_ADDRESS } from '../../constants'
             activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink"
             href={{
               pathname: '/exchange/swap',
-              query: getQuery(input, output),
+              query: getQuery(input || 'ETH', output || 'ETH'),
             }}
             
           >

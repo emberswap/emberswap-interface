@@ -1250,7 +1250,7 @@ msgstr "了解更多关于钱包的信息"
 #~ msgid "Limit order"
 #~ msgstr ""
 
-#: src/features/trade/Header.tsx:94
+#: src/features/trade/Header.tsx:98
 msgid "Liquidity"
 msgstr "流动性"
 
@@ -2098,7 +2098,7 @@ msgstr "提供{0} {1}和{2} {3}"
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/Header/index.tsx:40
 #: src/components/Header/index.tsx:184
-#: src/features/trade/Header.tsx:74
+#: src/features/trade/Header.tsx:78
 #: src/pages/exchange/swap/[[...tokens]].tsx:571
 #: src/pages/exchange/swap/[[...tokens]].tsx:600
 msgid "Swap"
