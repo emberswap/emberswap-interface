@@ -45,6 +45,7 @@ import EmberswapLogo from '../../../components/EmberswapLogo'
 import { LiquidityHeader } from '../../../features/liquidity'
 import Empty from '../../../components/Empty'
 import { useTokenBalancesWithLoadingIndicator } from '../../../state/wallet/hooks'
+import Alert from '../../../components/Alert'
 
 const DEFAULT_ADD_V2_SLIPPAGE_TOLERANCE = new Percent(50, 10_000)
 
@@ -555,8 +556,15 @@ export default function Add() {
           </div>
         </DoubleGlowShadow>
         <div className="py-4 space-y-6 md:py-8 lg:py-12 max-w-2xl w-full">
-              {v2IsLoading ? (
-                <Empty>
+        {!account ? (
+                <Alert className=" bg-transparent-grey "
+                title={i18n._(t`Liquidity Provider Rewards`)}
+                message={i18n._(t`Liquidity providers earn a 0.20% fee on all trades proportional to their share of
+                              the pool. Fees are added to the pool, accrue in real time and can be claimed by
+                              withdrawing your liquidity.`)}
+                type="information"
+              />
+                  ) : v2IsLoading ? (                <Empty>
                   <Dots>{i18n._(t`Loading`)}</Dots>
                 </Empty>
               ) : allV2PairsWithLiquidity?.length > 0 ? (
@@ -578,6 +586,13 @@ export default function Add() {
                 </>
               ) : (
                 <Empty className="flex text-lg text-center text-low-emphesis">
+                                    <Alert className=" bg-transparent-grey "
+          title={i18n._(t`Liquidity Provider Rewards`)}
+          message={i18n._(t`Liquidity providers earn a 0.20% fee on all trades proportional to their share of
+                        the pool. Fees are added to the pool, accrue in real time and can be claimed by
+                        withdrawing your liquidity.`)}
+          type="information"
+        />
                   <div className="px-4 py-2">{i18n._(t`No liquidity was found. `)}</div>
                 </Empty>
               )}</div>

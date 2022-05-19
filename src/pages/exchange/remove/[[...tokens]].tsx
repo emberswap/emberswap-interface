@@ -53,6 +53,7 @@ import ExchangeHeader from '../../../features/trade/Header'
 import Empty from '../../../components/Empty'
 import { useTokenBalancesWithLoadingIndicator } from '../../../state/wallet/hooks'
 import { useV2Pairs } from '../../../hooks/useV2Pairs'
+import EmberswapLogo from '../../../components/EmberswapLogo'
 
 const DEFAULT_REMOVE_LIQUIDITY_SLIPPAGE_TOLERANCE = new Percent(5, 100)
 
@@ -765,7 +766,7 @@ export default function Remove() {
         <title>{i18n._(t`Remove Liquidity`)} | EmberSwap </title>
         <meta key="description" name="description" content={i18n._(t`Remove liquidity of EmberSwap`)} />
       </Head>
-
+      <EmberswapLogo />
       <Container id="remove-liquidity-page" maxWidth="2xl" className="space-y-4">
 
         <DoubleGlowShadow>
@@ -901,7 +902,15 @@ export default function Remove() {
           </div>
         </DoubleGlowShadow>
             <div className="py-4 space-y-6 md:py-8 lg:py-12 max-w-2xl w-full">
-                {v2IsLoading ? (
+            {!account ? (
+                <Alert className=" bg-transparent-grey "
+                title={i18n._(t`Liquidity Provider Rewards`)}
+                message={i18n._(t`Liquidity providers earn a 0.20% fee on all trades proportional to their share of
+                              the pool. Fees are added to the pool, accrue in real time and can be claimed by
+                              withdrawing your liquidity.`)}
+                type="information"
+              />
+                  ) : v2IsLoading ? (
                 <Empty>
                   <Dots>{i18n._(t`Loading`)}</Dots>
                 </Empty>
@@ -924,6 +933,13 @@ export default function Remove() {
                 </>
               ) : (
                 <Empty className="flex text-lg text-center text-low-emphesis">
+                  <Alert className=" bg-transparent-grey "
+          title={i18n._(t`Liquidity Provider Rewards`)}
+          message={i18n._(t`Liquidity providers earn a 0.20% fee on all trades proportional to their share of
+                        the pool. Fees are added to the pool, accrue in real time and can be claimed by
+                        withdrawing your liquidity.`)}
+          type="information"
+        />
                   <div className="px-4 py-2">{i18n._(t`No liquidity was found. `)}</div>
                 </Empty>
               )}
