@@ -16,11 +16,14 @@ import ThemeSwitch from '../ThemeSwitch'
 import TokenStats from '../TokenStats'
 import LanguageSwitch from '../LanguageSwitch'
 import { isMobile } from 'react-device-detect'
+import { useRouter } from 'next/router'
 
 function AppBar(): JSX.Element {
   const { i18n } = useLingui()
   const { account, chainId, library } = useActiveWeb3React()
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
+  const router = useRouter()
+  const isFarm = router.asPath.startsWith('/exchange/swap?')
 
   return (
     <header className="flex-shrink-0 w-full">
@@ -32,6 +35,7 @@ function AppBar(): JSX.Element {
                 <div className="flex items-center">
                   <div className="hidden sm:block sm:ml-4">
                     <div className="flex space-x-2">
+                     {!isFarm ?
                       <NavLink href="/exchange/swap">
                         <a
                           id={`swap-nav-link`}
@@ -40,6 +44,16 @@ function AppBar(): JSX.Element {
                           {i18n._(t`Swap`)}
                         </a>
                       </NavLink>
+                      :
+                      <NavLink href={`${router.asPath}`}>
+                        <a
+                          id={`swap-nav-link`}
+                          className="p-2 text-base text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
+                        >
+                          {i18n._(t`Swap`)}
+                        </a>
+                      </NavLink>
+                     }
                       <NavLink href="/exchange/pool">
                         <a
                           id={`pool-nav-link`}
@@ -176,6 +190,7 @@ function AppBar(): JSX.Element {
 
             <Popover.Panel className="sm:hidden header-border-b">
               <div className="flex flex-col px-4 pt-2 pb-3 space-y-1">
+              {!isFarm ?
                 <Link href={'/exchange/swap'}>
                   <a
                     id={`swap-nav-link`}
@@ -184,6 +199,16 @@ function AppBar(): JSX.Element {
                     {i18n._(t`Swap`)}
                   </a>
                 </Link>
+                :
+                <Link href={`${router.asPath}`}>
+                  <a
+                    id={`swap-nav-link`}
+                    className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"
+                  >
+                    {i18n._(t`Swap`)}
+                  </a>
+                </Link>
+              }
                 <Link href={'/exchange/pool'}>
                   <a
                     id={`pool-nav-link`}

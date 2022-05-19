@@ -251,8 +251,8 @@ msgstr "移除数量"
 msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 msgstr "在试图执行该交换时发生了错误。你可能需要增加你的滑点容忍度。如果这不起作用，可能与你交易的代币不兼容。注意转移和重新安置代币的费用与Uniswap V3不兼容。"
 
-#: src/components/Header/index.tsx:97
-#: src/components/Header/index.tsx:232
+#: src/components/Header/index.tsx:110
+#: src/components/Header/index.tsx:256
 msgid "Analytics"
 msgstr "分析界面"
 
@@ -886,8 +886,8 @@ msgstr "过期是指订单失效的时间"
 msgid "Expired"
 msgstr "过期"
 
-#: src/components/Header/index.tsx:64
-#: src/components/Header/index.tsx:200
+#: src/components/Header/index.tsx:77
+#: src/components/Header/index.tsx:224
 msgid "Farm"
 msgstr "农耕"
 
@@ -992,8 +992,8 @@ msgstr ""
 msgid "Go Back"
 msgstr "返回"
 
-#: src/components/Header/index.tsx:88
-#: src/components/Header/index.tsx:224
+#: src/components/Header/index.tsx:101
+#: src/components/Header/index.tsx:248
 msgid "Governance"
 msgstr ""
 
@@ -1338,8 +1338,8 @@ msgstr "加载余额"
 msgid "Lock"
 msgstr "锁定"
 
-#: src/components/Header/index.tsx:80
-#: src/components/Header/index.tsx:216
+#: src/components/Header/index.tsx:93
+#: src/components/Header/index.tsx:240
 msgid "Locker"
 msgstr "锁"
 
@@ -1594,7 +1594,7 @@ msgstr "打开订单"
 #~ msgid "Open Source"
 #~ msgstr "开源"
 
-#: src/components/Header/index.tsx:144
+#: src/components/Header/index.tsx:157
 msgid "Open main menu"
 msgstr "打开主菜单"
 
@@ -1697,8 +1697,8 @@ msgstr "请输入“确认”以开启专家模式。"
 msgid "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 msgstr ""
 
-#: src/components/Header/index.tsx:48
-#: src/components/Header/index.tsx:192
+#: src/components/Header/index.tsx:61
+#: src/components/Header/index.tsx:216
 #: src/pages/exchange/pool/index.tsx:95
 msgid "Pool"
 msgstr "资金池"
@@ -2096,8 +2096,10 @@ msgstr "提供{0} {1}和{2} {3}"
 #~ msgstr ""
 
 #: src/components/ExchangeHeader.tsx:42
-#: src/components/Header/index.tsx:40
-#: src/components/Header/index.tsx:184
+#: src/components/Header/index.tsx:44
+#: src/components/Header/index.tsx:52
+#: src/components/Header/index.tsx:198
+#: src/components/Header/index.tsx:207
 #: src/features/trade/Header.tsx:78
 #: src/features/trade/Header.tsx:89
 #: src/pages/exchange/swap/[[...tokens]].tsx:571
@@ -2411,8 +2413,8 @@ msgstr "解开"
 #~ msgid "V2 Rewarder"
 #~ msgstr "V2奖励器"
 
-#: src/components/Header/index.tsx:72
-#: src/components/Header/index.tsx:208
+#: src/components/Header/index.tsx:85
+#: src/components/Header/index.tsx:232
 msgid "Vaults"
 msgstr ""
 
