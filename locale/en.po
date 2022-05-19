@@ -1328,7 +1328,7 @@ msgstr "Learn more about wallets"
 #~ msgid "Limit order"
 #~ msgstr "Limit order"
 
-#: src/features/trade/Header.tsx:93
+#: src/features/trade/Header.tsx:94
 msgid "Liquidity"
 msgstr "Liquidity"
 
@@ -2202,7 +2202,7 @@ msgstr "Supplying {0} {1} and {2} {3}"
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/Header/index.tsx:40
 #: src/components/Header/index.tsx:184
-#: src/features/trade/Header.tsx:73
+#: src/features/trade/Header.tsx:74
 #: src/pages/exchange/swap/[[...tokens]].tsx:571
 #: src/pages/exchange/swap/[[...tokens]].tsx:600
 msgid "Swap"

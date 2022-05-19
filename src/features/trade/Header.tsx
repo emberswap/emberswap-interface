@@ -64,9 +64,10 @@ import { EMBER_ADDRESS } from '../../constants'
         <div className="grid grid-cols-2 rounded p-3px bg-dark-800 h-[46px]">
           <NavLink
             activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink"
-            href={`/exchange/swap?inputCurrency=${input ? `${currencyId(input)}` : 'ETH'}${
-                output ? `&outputCurrency=${currencyId(output)}` : `&outputCurrency=`+ EMBER_ADDRESS[chainId]
-              }`}
+            href={{
+              pathname: '/exchange/swap',
+              query: getQuery(input, output),
+            }}
             
           >
             <a className="flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary hover:text-high-emphesis ">
