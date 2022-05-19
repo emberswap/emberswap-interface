@@ -61,23 +61,34 @@ import { EMBER_ADDRESS } from '../../constants'
     const [animateWallet, setAnimateWallet] = useState(false)
     const isRemove = router.asPath.startsWith('/exchange/remove')
     const isLimitOrder = router.asPath.startsWith('/limit-order')
-  
+    const isFarm = router.asPath.endsWith('/exchange/swap')
        
     return (
       <div className="flex items-center justify-between mb-4 space-x-3">
         <div className="grid grid-cols-2 rounded p-3px bg-dark-800 h-[46px]">
+          {!isFarm ?
           <NavLink
             activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink"
             href={{
               pathname: '/exchange/swap',
               query: getQuery(input || 'ETH', output || 'ETH'),
             }}
-            
           >
             <a className="flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary hover:text-high-emphesis ">
               {i18n._(t`Swap`)}
             </a>
           </NavLink>
+          : 
+          <NavLink
+          activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink"
+          href={{
+            pathname: '/exchange/swap',
+          }} 
+          >
+            <a className="flex items-center justify-center px-4 text-base font-medium text-center rounded-md text-secondary hover:text-high-emphesis ">
+              {i18n._(t`Swap`)}
+            </a>
+          </NavLink>}
           {/*<NavLink
             activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink"
             href={`/exchange/zap${input ? `/${currencyId(input)}` : '/ETH'}${
