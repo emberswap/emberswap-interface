@@ -153,14 +153,15 @@ msgstr "Account"
 msgid "Active"
 msgstr "Active"
 
-#: src/components/PositionCard/index.tsx:250
+#: src/components/PositionCard/index.tsx:251
 #: src/pages/exchange/pool/index.tsx:159
 msgid "Add"
 msgstr "Add"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/NavigationTabs/index.tsx:69
-#: src/pages/exchange/add/[[...tokens]].tsx:345
+#: src/pages/exchange/add/[[...tokens]].tsx:385
+#: src/pages/exchange/zap/[[...tokens]].tsx:347
 msgid "Add Liquidity"
 msgstr "Add Liquidity"
 
@@ -197,10 +198,14 @@ msgstr "Add liquidity"
 msgid "Add {0} to MetaMask"
 msgstr "Add {0} to MetaMask"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:197
-#: src/pages/exchange/add/[[...tokens]].tsx:223
-#: src/pages/exchange/add/[[...tokens]].tsx:197
-#: src/pages/exchange/add/[[...tokens]].tsx:223
+#: src/pages/exchange/add/[[...tokens]].tsx:201
+#: src/pages/exchange/add/[[...tokens]].tsx:227
+#: src/pages/exchange/add/[[...tokens]].tsx:201
+#: src/pages/exchange/add/[[...tokens]].tsx:227
+#: src/pages/exchange/zap/[[...tokens]].tsx:199
+#: src/pages/exchange/zap/[[...tokens]].tsx:225
+#: src/pages/exchange/zap/[[...tokens]].tsx:199
+#: src/pages/exchange/zap/[[...tokens]].tsx:225
 msgid "Add {0} {1} and {2} {3}"
 msgstr "Add {0} {1} and {2} {3}"
 
@@ -241,15 +246,15 @@ msgstr "Amount to Remove"
 msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 msgstr "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 
-#: src/components/Header/index.tsx:89
-#: src/components/Header/index.tsx:224
+#: src/components/Header/index.tsx:97
+#: src/components/Header/index.tsx:232
 msgid "Analytics"
 msgstr "Analytics"
 
 #: src/features/farm/FarmListItemDetails.tsx:178
 #: src/features/lending/Button.tsx:64
 #: src/features/vault/VaultListItemDetails.tsx:161
-#: src/pages/exchange/remove/[[...tokens]].tsx:828
+#: src/pages/exchange/remove/[[...tokens]].tsx:882
 #: src/pages/locker/create/index.tsx:307
 msgid "Approve"
 msgstr "Approve"
@@ -263,17 +268,19 @@ msgid "Approve Limit Order"
 msgstr "Approve Limit Order"
 
 #: src/features/limit-order/LimitOrderButton.tsx:160
-#: src/pages/exchange/add/[[...tokens]].tsx:464
-#: src/pages/exchange/add/[[...tokens]].tsx:481
+#: src/pages/exchange/add/[[...tokens]].tsx:503
+#: src/pages/exchange/add/[[...tokens]].tsx:520
 #: src/pages/exchange/swap/[[...tokens]].tsx:538
+#: src/pages/exchange/zap/[[...tokens]].tsx:462
+#: src/pages/exchange/zap/[[...tokens]].tsx:479
 msgid "Approve {0}"
 msgstr "Approve {0}"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:826
+#: src/pages/exchange/remove/[[...tokens]].tsx:880
 msgid "Approved"
 msgstr "Approved"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:824
+#: src/pages/exchange/remove/[[...tokens]].tsx:878
 msgid "Approving"
 msgstr "Approving"
 
@@ -282,8 +289,10 @@ msgid "Approving Limit Order"
 msgstr "Approving Limit Order"
 
 #: src/features/limit-order/LimitOrderButton.tsx:158
-#: src/pages/exchange/add/[[...tokens]].tsx:462
-#: src/pages/exchange/add/[[...tokens]].tsx:479
+#: src/pages/exchange/add/[[...tokens]].tsx:501
+#: src/pages/exchange/add/[[...tokens]].tsx:518
+#: src/pages/exchange/zap/[[...tokens]].tsx:460
+#: src/pages/exchange/zap/[[...tokens]].tsx:477
 msgid "Approving {0}"
 msgstr "Approving {0}"
 
@@ -581,11 +590,12 @@ msgstr "Clear all"
 #~ msgid "Community Approval"
 #~ msgstr "Community Approval"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:652
+#: src/pages/exchange/remove/[[...tokens]].tsx:701
 msgid "Confirm"
 msgstr "Confirm"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:498
+#: src/pages/exchange/add/[[...tokens]].tsx:537
+#: src/pages/exchange/zap/[[...tokens]].tsx:496
 msgid "Confirm Adding Liquidity"
 msgstr "Confirm Adding Liquidity"
 
@@ -606,7 +616,7 @@ msgstr "Confirm Supply"
 msgid "Confirm Swap"
 msgstr "Confirm Swap"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:838
+#: src/pages/exchange/remove/[[...tokens]].tsx:892
 msgid "Confirm Withdrawal"
 msgstr "Confirm Withdrawal"
 
@@ -861,7 +871,8 @@ msgstr "Enter a recipient"
 msgid "Enter a valid slippage percentage"
 msgstr "Enter a valid slippage percentage"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:440
+#: src/pages/exchange/add/[[...tokens]].tsx:479
+#: src/pages/exchange/zap/[[...tokens]].tsx:438
 #: src/state/burn/hooks.ts:138
 #: src/state/limit-order/hooks.ts:168
 #: src/state/mint/hooks.ts:202
@@ -925,8 +936,8 @@ msgstr "Expiration is the time at which the order will become invalid"
 msgid "Expired"
 msgstr "Expired"
 
-#: src/components/Header/index.tsx:56
-#: src/components/Header/index.tsx:192
+#: src/components/Header/index.tsx:64
+#: src/components/Header/index.tsx:200
 msgid "Farm"
 msgstr "Farm"
 
@@ -1054,8 +1065,8 @@ msgstr "Give me some BCH"
 msgid "Go Back"
 msgstr "Go Back"
 
-#: src/components/Header/index.tsx:80
-#: src/components/Header/index.tsx:216
+#: src/components/Header/index.tsx:88
+#: src/components/Header/index.tsx:224
 msgid "Governance"
 msgstr "Governance"
 
@@ -1317,9 +1328,9 @@ msgstr "Learn more about wallets"
 #~ msgid "Limit order"
 #~ msgstr "Limit order"
 
-#: src/components/ExchangeHeader.tsx:70
-#~ msgid "Liquidity"
-#~ msgstr "Liquidity"
+#: src/features/trade/Header.tsx:93
+msgid "Liquidity"
+msgstr "Liquidity"
 
 #: src/pages/user/transactions.tsx:93
 #~ msgid "Liquidity Positions"
@@ -1363,12 +1374,15 @@ msgstr ""
 msgid "Lists"
 msgstr "Lists"
 
-#: src/components/PositionCard/index.tsx:170
+#: src/components/PoolList/index.tsx:214
+#: src/components/PositionCard/index.tsx:171
 #: src/components/TransactionList.tsx:40
 #: src/features/farm/FarmList.tsx:105
 #: src/features/vault/VaultList.tsx:104
+#: src/pages/exchange/add/[[...tokens]].tsx:562
 #: src/pages/exchange/find/index.tsx:171
 #: src/pages/exchange/pool/index.tsx:127
+#: src/pages/exchange/remove/[[...tokens]].tsx:908
 msgid "Loading"
 msgstr "Loading"
 
@@ -1396,8 +1410,8 @@ msgstr "Loading balance"
 msgid "Lock"
 msgstr "Lock"
 
-#: src/components/Header/index.tsx:72
-#: src/components/Header/index.tsx:208
+#: src/components/Header/index.tsx:80
+#: src/components/Header/index.tsx:216
 msgid "Locker"
 msgstr "Locker"
 
@@ -1425,7 +1439,7 @@ msgstr "MAX"
 msgid "MEV Shield by Archer DAO"
 msgstr "MEV Shield by Archer DAO"
 
-#: src/components/PositionCard/index.tsx:174
+#: src/components/PositionCard/index.tsx:175
 #: src/modals/SearchModal/Manage.tsx:44
 msgid "Manage"
 msgstr "Manage"
@@ -1589,6 +1603,7 @@ msgstr "New to Crypto?"
 #~ msgid "No Liquidity found"
 #~ msgstr "No Liquidity found"
 
+#: src/components/PoolList/index.tsx:214
 #: src/features/farm/FarmList.tsx:105
 #: src/features/vault/VaultList.tsx:104
 msgid "No Results"
@@ -1606,7 +1621,9 @@ msgstr "No liquidity found to do swap"
 #~ msgid "No liquidity positions found"
 #~ msgstr "No liquidity positions found"
 
+#: src/pages/exchange/add/[[...tokens]].tsx:583
 #: src/pages/exchange/pool/index.tsx:148
+#: src/pages/exchange/remove/[[...tokens]].tsx:929
 msgid "No liquidity was found."
 msgstr "No liquidity was found."
 
@@ -1657,7 +1674,7 @@ msgstr "Open Orders"
 #~ msgid "Open Source"
 #~ msgstr "Open Source"
 
-#: src/components/Header/index.tsx:136
+#: src/components/Header/index.tsx:144
 msgid "Open main menu"
 msgstr "Open main menu"
 
@@ -1679,12 +1696,14 @@ msgstr "Order Expiration"
 msgid "Order History"
 msgstr "Order History"
 
+#: src/components/PoolList/index.tsx:154
 #: src/features/farm/FarmList.tsx:34
 #: src/features/vault/VaultList.tsx:32
 msgid "Order by"
 msgstr "Order by"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:276
+#: src/pages/exchange/add/[[...tokens]].tsx:280
+#: src/pages/exchange/zap/[[...tokens]].tsx:278
 msgid ""
 "Output is estimated. If the price changes by more than {0}% your transaction\n"
 "will revert."
@@ -1692,7 +1711,7 @@ msgstr ""
 "Output is estimated. If the price changes by more than {0}% your transaction\n"
 "will revert."
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:605
+#: src/pages/exchange/remove/[[...tokens]].tsx:654
 msgid "Output is estimated. If the price changes by more than {0}% your transaction will revert."
 msgstr "Output is estimated. If the price changes by more than {0}% your transaction will revert."
 
@@ -1764,7 +1783,7 @@ msgid "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 msgstr "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 
 #: src/components/Header/index.tsx:48
-#: src/components/Header/index.tsx:184
+#: src/components/Header/index.tsx:192
 #: src/pages/exchange/pool/index.tsx:95
 msgid "Pool"
 msgstr "Pool"
@@ -1781,17 +1800,18 @@ msgstr "Pool Found!"
 #~ msgid "Pool Rewards"
 #~ msgstr "Pool Rewards"
 
-#: src/components/PositionCard/index.tsx:77
-#: src/pages/exchange/add/[[...tokens]].tsx:273
+#: src/components/PositionCard/index.tsx:78
+#: src/pages/exchange/add/[[...tokens]].tsx:277
+#: src/pages/exchange/zap/[[...tokens]].tsx:275
 msgid "Pool Tokens"
 msgstr "Pool Tokens"
 
-#: src/components/PositionCard/index.tsx:200
+#: src/components/PositionCard/index.tsx:201
 msgid "Pool tokens in rewards pool"
 msgstr "Pool tokens in rewards pool"
 
-#: src/components/PositionCard/index.tsx:205
-#: src/components/PositionCard/index.tsx:219
+#: src/components/PositionCard/index.tsx:206
+#: src/components/PositionCard/index.tsx:220
 msgid "Pooled {0}"
 msgstr "Pooled {0}"
 
@@ -1852,7 +1872,7 @@ msgid "Rate"
 msgstr "Rate"
 
 #: src/features/liquidity/ConfirmAddModalBottom.tsx:30
-#: src/pages/exchange/remove/[[...tokens]].tsx:620
+#: src/pages/exchange/remove/[[...tokens]].tsx:669
 msgid "Rates"
 msgstr "Rates"
 
@@ -1878,17 +1898,17 @@ msgid "Recipient"
 msgstr "Recipient"
 
 #: src/components/AddressInputPanel/index.tsx:37
-#: src/components/PositionCard/index.tsx:259
+#: src/components/PositionCard/index.tsx:260
 msgid "Remove"
 msgstr "Remove"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/NavigationTabs/index.tsx:69
-#: src/pages/exchange/remove/[[...tokens]].tsx:716
+#: src/pages/exchange/remove/[[...tokens]].tsx:765
 msgid "Remove Liquidity"
 msgstr "Remove Liquidity"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:717
+#: src/pages/exchange/remove/[[...tokens]].tsx:766
 msgid "Remove liquidity of EmberSwap"
 msgstr "Remove liquidity of EmberSwap"
 
@@ -1900,12 +1920,12 @@ msgstr "Remove recipient"
 #~ msgid "Remove send"
 #~ msgstr "Remove send"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:279
-#: src/pages/exchange/remove/[[...tokens]].tsx:279
+#: src/pages/exchange/remove/[[...tokens]].tsx:293
+#: src/pages/exchange/remove/[[...tokens]].tsx:293
 msgid "Remove {0} {1} and {2} {3}"
 msgstr "Remove {0} {1} and {2} {3}"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:659
+#: src/pages/exchange/remove/[[...tokens]].tsx:708
 msgid "Removing {0} {1} and {2} {3}"
 msgstr "Removing {0} {1} and {2} {3}"
 
@@ -2058,6 +2078,7 @@ msgstr "Slippage tolerance"
 msgid "Something went wrong during signing of the approval. This is expected for hardware wallets, such as Trezor and Ledger. Click again and the fallback method will be used"
 msgstr "Something went wrong during signing of the approval. This is expected for hardware wallets, such as Trezor and Ledger. Click again and the fallback method will be used"
 
+#: src/components/PoolList/index.tsx:148
 #: src/features/farm/FarmList.tsx:29
 #: src/features/vault/VaultList.tsx:27
 msgid "Soon"
@@ -2153,7 +2174,8 @@ msgstr "Supply & Market Cap"
 #~ msgid "Supply APR"
 #~ msgstr "Supply APR"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:299
+#: src/pages/exchange/add/[[...tokens]].tsx:303
+#: src/pages/exchange/zap/[[...tokens]].tsx:301
 msgid "Supplying {0} {1} and {2} {3}"
 msgstr "Supplying {0} {1} and {2} {3}"
 
@@ -2179,7 +2201,8 @@ msgstr "Supplying {0} {1} and {2} {3}"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/Header/index.tsx:40
-#: src/components/Header/index.tsx:176
+#: src/components/Header/index.tsx:184
+#: src/features/trade/Header.tsx:73
 #: src/pages/exchange/swap/[[...tokens]].tsx:571
 #: src/pages/exchange/swap/[[...tokens]].tsx:600
 msgid "Swap"
@@ -2462,8 +2485,9 @@ msgstr "Unstake"
 #~ msgid "Unstaked"
 #~ msgstr "Unstaked"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:434
+#: src/pages/exchange/add/[[...tokens]].tsx:473
 #: src/pages/exchange/swap/[[...tokens]].tsx:502
+#: src/pages/exchange/zap/[[...tokens]].tsx:432
 msgid "Unsupported Asset"
 msgstr "Unsupported Asset"
 
@@ -2507,8 +2531,8 @@ msgstr "Unwrap"
 #~ msgid "VFAT FARMING CALCULATOR"
 #~ msgstr "VFAT FARMING CALCULATOR"
 
-#: src/components/Header/index.tsx:64
-#: src/components/Header/index.tsx:200
+#: src/components/Header/index.tsx:72
+#: src/components/Header/index.tsx:208
 msgid "Vaults"
 msgstr "Vaults"
 
@@ -2532,8 +2556,7 @@ msgstr "Vaults"
 msgid "View Contract"
 msgstr "View Contract"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:521
-#: src/pages/exchange/remove/[[...tokens]].tsx:852
+#: src/pages/exchange/zap/[[...tokens]].tsx:519
 msgid "View Liquidity Positions"
 msgstr "View Liquidity Positions"
 
@@ -2693,12 +2716,13 @@ msgid "You Pay:"
 msgstr "You Pay:"
 
 #: src/features/liquidity/RemoveLiquidityReceiveDetails.tsx:40
-#: src/pages/exchange/remove/[[...tokens]].tsx:732
-#: src/pages/exchange/remove/[[...tokens]].tsx:764
+#: src/pages/exchange/remove/[[...tokens]].tsx:786
+#: src/pages/exchange/remove/[[...tokens]].tsx:818
 msgid "You Will Receive"
 msgstr "You Will Receive"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:369
+#: src/pages/exchange/add/[[...tokens]].tsx:409
+#: src/pages/exchange/zap/[[...tokens]].tsx:371
 msgid "You are creating a pool"
 msgstr "You are creating a pool"
 
@@ -2734,7 +2758,8 @@ msgstr "You receive <0>(at least):</0>"
 #~ msgid "You receive:"
 #~ msgstr "You receive:"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:369
+#: src/pages/exchange/add/[[...tokens]].tsx:409
+#: src/pages/exchange/zap/[[...tokens]].tsx:371
 msgid "You will receive"
 msgstr "You will receive"
 
@@ -2777,7 +2802,7 @@ msgstr "You will receive {0} {1} on {2}"
 #~ msgid "Your Pool Tokens"
 #~ msgstr "Your Pool Tokens"
 
-#: src/components/PositionCard/index.tsx:67
+#: src/components/PositionCard/index.tsx:68
 msgid "Your Position"
 msgstr "Your Position"
 
@@ -2815,12 +2840,12 @@ msgstr "Your browser is not supported, please install"
 msgid "Your browser is supported, but first you need to install"
 msgstr "Your browser is supported, but first you need to install"
 
-#: src/components/PositionCard/index.tsx:82
-#: src/components/PositionCard/index.tsx:233
+#: src/components/PositionCard/index.tsx:83
+#: src/components/PositionCard/index.tsx:234
 msgid "Your pool share"
 msgstr "Your pool share"
 
-#: src/components/PositionCard/index.tsx:195
+#: src/components/PositionCard/index.tsx:196
 msgid "Your total pool tokens"
 msgstr "Your total pool tokens"
 
@@ -2858,7 +2883,8 @@ msgstr "Your transactions will appear here..."
 #~ msgid "Your {exchange} {0}/{1} liquidity will become SushiSwap {2}/{3} liquidity."
 #~ msgstr "Your {exchange} {0}/{1} liquidity will become SushiSwap {2}/{3} liquidity."
 
-#: src/pages/zap/index.tsx:272
+#: src/components/Header/index.tsx:56
+#: src/features/trade/Header.tsx:83
 #~ msgid "Zap"
 #~ msgstr "Zap"
 
@@ -3013,7 +3039,7 @@ msgstr "{0} {1} per {2}"
 #~ msgid "{0} {sign} market rate"
 #~ msgstr "{0} {sign} market rate"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:640
+#: src/pages/exchange/remove/[[...tokens]].tsx:689
 msgid "{0}/{1} Burned"
 msgstr "{0}/{1} Burned"
 
@@ -3035,6 +3061,7 @@ msgstr "{label}"
 #~ msgid "{title}"
 #~ msgstr "{title}"
 
+#: src/components/PoolList/index.tsx:159
 #: src/features/farm/FarmList.tsx:39
 #: src/features/vault/VaultList.tsx:37
 msgid "{v}"

@@ -2,7 +2,7 @@ import { ApprovalState, useApproveCallback } from '../../../hooks/useApproveCall
 import { ArrowDown, Plus } from 'react-feather'
 import { AutoRow, RowBetween } from '../../../components/Row'
 import { ButtonConfirmed, ButtonError } from '../../../components/Button'
-import { ChainId, Currency, NATIVE, Percent, WNATIVE } from '../../../sdk'
+import { ChainId, Currency, CurrencyAmount, NATIVE, Pair, Percent, WNATIVE } from '../../../sdk'
 import React, { useCallback, useMemo, useState } from 'react'
 import TransactionConfirmationModal, { ConfirmationModalContent } from '../../../modals/TransactionConfirmationModal'
 import { calculateGasMargin, calculateSlippageAmount } from '../../../functions/trade'
@@ -25,7 +25,7 @@ import Header from '../../../components/ExchangeHeader'
 import Link from 'next/link'
 import LiquidityHeader from '../../../features/liquidity/LiquidityHeader'
 import LiquidityPrice from '../../../features/liquidity/LiquidityPrice'
-import { MinimalPositionCard } from '../../../components/PositionCard'
+import FullPositionCard, { MinimalPositionCard } from '../../../components/PositionCard'
 import NavLink from '../../../components/NavLink'
 import PercentInputPanel from '../../../components/PercentInputPanel'
 import ReactGA from 'react-ga'
@@ -44,11 +44,15 @@ import { useLingui } from '@lingui/react'
 import { useRouter } from 'next/router'
 import { useTransactionAdder } from '../../../state/transactions/hooks'
 import useTransactionDeadline from '../../../hooks/useTransactionDeadline'
-import { useUserSlippageToleranceWithDefault } from '../../../state/user/hooks'
+import { toV2LiquidityToken, useTrackedTokenPairs, useUserSlippageToleranceWithDefault } from '../../../state/user/hooks'
 import { useV2LiquidityTokenPermit } from '../../../hooks/useERC20Permit'
 import { useWalletModalToggle } from '../../../state/application/hooks'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
 import { getGasPrice } from '../../../constants'
+import ExchangeHeader from '../../../features/trade/Header'
+import Empty from '../../../components/Empty'
+import { useTokenBalancesWithLoadingIndicator } from '../../../state/wallet/hooks'
+import { useV2Pairs } from '../../../hooks/useV2Pairs'
 
 const DEFAULT_REMOVE_LIQUIDITY_SLIPPAGE_TOLERANCE = new Percent(5, 100)
 
@@ -62,6 +66,16 @@ export default function Remove() {
   const [currencyA, currencyB] = [useCurrency(currencyIdA) ?? undefined, useCurrency(currencyIdB) ?? undefined]
   const { account, chainId, library } = useActiveWeb3React()
   const [tokenA, tokenB] = useMemo(() => [currencyA?.wrapped, currencyB?.wrapped], [currencyA, currencyB])
+
+  const {
+    dependentField,
+    currencies,
+    pairState,
+    currencyBalances,
+    noLiquidity,
+    liquidityMinted,
+    poolTokenPercentage,
+  } = useDerivedMintInfo(currencyA ?? undefined, currencyB ?? undefined)
 
   // toggle wallet when disconnected
   const toggleWalletModal = useWalletModalToggle()
@@ -296,7 +310,41 @@ export default function Remove() {
         })
     }
   }
+  const trackedTokenPairs = useTrackedTokenPairs()
 
+  const tokenPairsWithLiquidityTokens = useMemo(() => {
+    if (!chainId) {
+      return []
+    }
+    return trackedTokenPairs.map((tokens) => ({
+      liquidityToken: toV2LiquidityToken(tokens),
+      tokens,
+    }))
+  }, [trackedTokenPairs, chainId])
+
+  const liquidityTokens = useMemo(
+    () => tokenPairsWithLiquidityTokens.map((tpwlt) => tpwlt.liquidityToken),
+    [tokenPairsWithLiquidityTokens]
+  )
+  const [v2PairsBalances, fetchingV2PairBalances] = useTokenBalancesWithLoadingIndicator(
+    account ?? undefined,
+    liquidityTokens
+  )
+
+  // fetch the reserves for all V2 pools in which the user has a balance
+  const liquidityTokensWithBalances = useMemo(
+    () =>
+      tokenPairsWithLiquidityTokens.filter(({ liquidityToken }) =>
+        v2PairsBalances[liquidityToken?.address]?.greaterThan('0')
+      ),
+    [tokenPairsWithLiquidityTokens, v2PairsBalances]
+  )
+
+  const v2Pairs = useV2Pairs(liquidityTokensWithBalances.map(({ tokens }) => tokens))
+  const v2IsLoading =
+    fetchingV2PairBalances || v2Pairs?.length < liquidityTokensWithBalances.length || v2Pairs?.some((V2Pair) => !V2Pair)
+
+  const allV2PairsWithLiquidity = v2Pairs.map(([, pair]) => pair).filter((v2Pair): v2Pair is Pair => Boolean(v2Pair))
   // const isArgentWallet = useIsArgentWallet();
 
   // async function onAttemptToApprove() {
@@ -577,6 +625,7 @@ export default function Remove() {
 
   function modalHeader() {
     return (
+      
       <div className="grid gap-4 pt-3 pb-4">
         <div className="grid gap-2">
           <div className="flex items-center justify-between">
@@ -718,9 +767,14 @@ export default function Remove() {
       </Head>
 
       <Container id="remove-liquidity-page" maxWidth="2xl" className="space-y-4">
+
         <DoubleGlowShadow>
-          <div className="p-4 space-y-4 rounded backdrop-blur-md	bg-dark-900-custom" style={{ zIndex: 1 }}>          
-            <Header input={currencyA} output={currencyB} allowedSlippage={allowedSlippage} />
+          <div className="p-4 space-y-4 rounded backdrop-blur-md	bg-dark-900-custom" style={{ zIndex: 1 }}> 
+                <ExchangeHeader
+              input={currencies[Field.CURRENCY_A]}
+              output={currencies[Field.CURRENCY_B]}
+              allowedSlippage={allowedSlippage}
+            />         
             <div>
               <TransactionConfirmationModal
                 isOpen={showConfirm}
@@ -738,7 +792,7 @@ export default function Remove() {
                 pendingText={pendingText}
               />
               <AutoColumn gap="md">
-                {/* <LiquidityHeader input={currencyA} output={currencyB} /> */}
+               <LiquidityHeader input={currencyA} output={currencyB} />
 
                 <div>
                   <PercentInputPanel
@@ -846,10 +900,36 @@ export default function Remove() {
             {pair ? <MinimalPositionCard showUnwrapped={oneCurrencyIsWETH} pair={pair} /> : null}
           </div>
         </DoubleGlowShadow>
-        <div className="flex items-center px-4">
-          <NavLink href="/exchange/pool">
-            <a className="flex items-center space-x-2 font-medium text-center cursor-pointer text-base hover:text-high-emphesis">
-              <span>{i18n._(t`View Liquidity Positions`)}</span>
+            <div className="py-4 space-y-6 md:py-8 lg:py-12 max-w-2xl w-full">
+                {!account ? (
+                <Web3Connect size="lg" color="gradient" className="w-full" />
+                  ) : v2IsLoading ? (
+                <Empty>
+                  <Dots>{i18n._(t`Loading`)}</Dots>
+                </Empty>
+                  ) : allV2PairsWithLiquidity?.length > 0 ? (
+                <>
+                  {/* <div className="flex items-center justify-center">
+                  <ExternalLink
+                    href={"https://analytics.sushi.com/user/" + account}
+                  >
+                    Account analytics and accrued fees <span> ↗</span>
+                  </ExternalLink>
+                </div> */}
+                  {allV2PairsWithLiquidity.map((v2Pair) => (
+                    <FullPositionCard
+                      key={v2Pair.liquidityToken.address}
+                      pair={v2Pair}
+                      stakedBalance={CurrencyAmount.fromRawAmount(v2Pair.liquidityToken, '0')}
+                    />
+                  ))}
+                </>
+              ) : (
+                <Empty className="flex text-lg text-center text-low-emphesis">
+                  <div className="px-4 py-2">{i18n._(t`No liquidity was found. `)}</div>
+                </Empty>
+              )}
+              </div>
               {/* <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-4 h-4"
@@ -859,9 +939,6 @@ export default function Remove() {
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
               </svg> */}
-            </a>
-          </NavLink>
-        </div>
       </Container>
     </>
   )

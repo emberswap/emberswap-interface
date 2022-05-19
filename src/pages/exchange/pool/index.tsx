@@ -4,7 +4,7 @@ import { classNames, currencyId } from '../../../functions'
 import { toV2LiquidityToken, useTrackedTokenPairs } from '../../../state/user/hooks'
 
 import Alert from '../../../components/Alert'
-import { BIG_INT_ZERO } from '../../../constants'
+import { BIG_INT_ZERO, EMBER } from '../../../constants'
 import Back from '../../../components/Back'
 import Button from '../../../components/Button'
 import Card from '../../../components/Card'
@@ -119,7 +119,7 @@ export default function Pool() {
               </div>
             </div>
 
-            <div className="grid grid-flow-row gap-3">
+            <div className="py-4 space-y-6 md:py-8 lg:py-12 max-w-2xl w-full">
               {!account ? (
                 <Web3Connect size="lg" color="gradient" className="w-full" />
               ) : v2IsLoading ? (
@@ -154,7 +154,7 @@ export default function Pool() {
                     id="add-pool-button"
                     color="gradient"
                     className="grid items-center justify-center grid-flow-col gap-2 whitespace-nowrap"
-                    onClick={() => router.push(`/exchange/add/${currencyId(NATIVE[chainId])}`)}
+                    onClick={() => router.push(`/exchange/add/${currencyId(NATIVE[chainId])}/${currencyId(EMBER[chainId])}`)}
                   >
                     {i18n._(t`Add`)}
                   </Button>

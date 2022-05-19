@@ -48,6 +48,14 @@ function AppBar(): JSX.Element {
                           {i18n._(t`Pool`)}
                         </a>
                       </NavLink>
+                     {/* <NavLink href="/zap">
+                        <a
+                          id={`zap-nav-link`}
+                          className="p-2 text-base text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
+                        >
+                          {i18n._(t`Zap`)}
+                        </a>
+                      </NavLink>*/}
                       <NavLink href={'/farm?filter=all'}>
                         <a
                           id={`farm-nav-link`}

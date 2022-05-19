@@ -76,6 +76,8 @@ export const MASTERCHEF_V2_ADDRESS: AddressMap = {
 export const ZAPPER_ADDRESS: AddressMap = {
   [ChainId.MAINNET]: '0xcff6eF0B9916682B37D80c19cFF8949bc1886bC2',
   [ChainId.ROPSTEN]: '0xcff6eF0B9916682B37D80c19cFF8949bc1886bC2',
+  [ChainId.SMARTBCH]: '0xcff6eF0B9916682B37D80c19cFF8949bc1886bC2',
+  [ChainId.SMARTBCH_TESTNET]: '0xcff6eF0B9916682B37D80c19cFF8949bc1886bC2',
 }
 
 // TODO: specify merkle distributor for mainnet

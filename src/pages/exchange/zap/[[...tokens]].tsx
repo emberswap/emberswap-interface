@@ -1,14 +1,14 @@
 import { ApprovalState, useApproveCallback } from '../../../hooks/useApproveCallback'
 import { AutoRow, RowBetween } from '../../../components/Row'
 import Button, { ButtonError } from '../../../components/Button'
-import { Currency, CurrencyAmount, Percent, WNATIVE, currencyEquals, Pair } from '../../../sdk'
+import { Currency, CurrencyAmount, Percent, WNATIVE, currencyEquals } from '../../../sdk'
 import { getGasPrice, ZERO_PERCENT } from '../../../constants'
-import React, { useCallback, useMemo, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import TransactionConfirmationModal, { ConfirmationModalContent } from '../../../modals/TransactionConfirmationModal'
 import { calculateGasMargin, calculateSlippageAmount } from '../../../functions/trade'
 import { currencyId, maxAmountSpend } from '../../../functions/currency'
 import { useDerivedMintInfo, useMintActionHandlers, useMintState } from '../../../state/mint/hooks'
-import { toV2LiquidityToken, useExpertModeManager, useTrackedTokenPairs, useUserSlippageToleranceWithDefault } from '../../../state/user/hooks'
+import { useExpertModeManager, useUserSlippageToleranceWithDefault } from '../../../state/user/hooks'
 
 import { AutoColumn } from '../../../components/Column'
 import { BigNumber } from '@ethersproject/bignumber'
@@ -22,9 +22,9 @@ import Exchangeheader from '../../../features/trade/Header'
 import { Field } from '../../../state/mint/actions'
 import Head from 'next/head'
 import LiquidityPrice from '../../../features/liquidity/LiquidityPrice'
-import FullPositionCard, { MinimalPositionCard } from '../../../components/PositionCard'
+import { MinimalPositionCard } from '../../../components/PositionCard'
 import NavLink from '../../../components/NavLink'
-import { PairState, useV2Pairs } from '../../../hooks/useV2Pairs'
+import { PairState } from '../../../hooks/useV2Pairs'
 import { Plus } from 'react-feather'
 import ReactGA from 'react-ga'
 import { TransactionResponse } from '@ethersproject/providers'
@@ -43,8 +43,6 @@ import { useWalletModalToggle } from '../../../state/application/hooks'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
 import EmberswapLogo from '../../../components/EmberswapLogo'
 import { LiquidityHeader } from '../../../features/liquidity'
-import Empty from '../../../components/Empty'
-import { useTokenBalancesWithLoadingIndicator } from '../../../state/wallet/hooks'
 
 const DEFAULT_ADD_V2_SLIPPAGE_TOLERANCE = new Percent(50, 10_000)
 
@@ -343,42 +341,6 @@ export default function Add() {
 
   const addIsUnsupported = useIsSwapUnsupported(currencies?.CURRENCY_A, currencies?.CURRENCY_B)
 
-  const trackedTokenPairs = useTrackedTokenPairs()
-
-  const tokenPairsWithLiquidityTokens = useMemo(() => {
-    if (!chainId) {
-      return []
-    }
-    return trackedTokenPairs.map((tokens) => ({
-      liquidityToken: toV2LiquidityToken(tokens),
-      tokens,
-    }))
-  }, [trackedTokenPairs, chainId])
-
-  const liquidityTokens = useMemo(
-    () => tokenPairsWithLiquidityTokens.map((tpwlt) => tpwlt.liquidityToken),
-    [tokenPairsWithLiquidityTokens]
-  )
-  const [v2PairsBalances, fetchingV2PairBalances] = useTokenBalancesWithLoadingIndicator(
-    account ?? undefined,
-    liquidityTokens
-  )
-
-  // fetch the reserves for all V2 pools in which the user has a balance
-  const liquidityTokensWithBalances = useMemo(
-    () =>
-      tokenPairsWithLiquidityTokens.filter(({ liquidityToken }) =>
-        v2PairsBalances[liquidityToken?.address]?.greaterThan('0')
-      ),
-    [tokenPairsWithLiquidityTokens, v2PairsBalances]
-  )
-
-  const v2Pairs = useV2Pairs(liquidityTokensWithBalances.map(({ tokens }) => tokens))
-  const v2IsLoading =
-    fetchingV2PairBalances || v2Pairs?.length < liquidityTokensWithBalances.length || v2Pairs?.some((V2Pair) => !V2Pair)
-
-  const allV2PairsWithLiquidity = v2Pairs.map(([, pair]) => pair).filter((v2Pair): v2Pair is Pair => Boolean(v2Pair))
-  
   return (
     <>
       <Head>
@@ -414,10 +376,7 @@ export default function Add() {
               )}
               pendingText={pendingText}
             />
-            <div className="flex flex-col space-y-4">
-                <LiquidityHeader input={currencies[Field.CURRENCY_A]} output={currencies[Field.CURRENCY_B]} />
-               
-
+            <div className="flex flex-col space-y-4">           
               <div>
                 <CurrencyInputPanel
                   value={formattedAmounts[Field.CURRENCY_A]}
@@ -554,35 +513,13 @@ export default function Add() {
             )}
           </div>
         </DoubleGlowShadow>
-        <div className="py-4 space-y-6 md:py-8 lg:py-12 max-w-2xl w-full">
-              {!account ? (
-                <Web3Connect size="lg" color="gradient" className="w-full" />
-              ) : v2IsLoading ? (
-                <Empty>
-                  <Dots>{i18n._(t`Loading`)}</Dots>
-                </Empty>
-              ) : allV2PairsWithLiquidity?.length > 0 ? (
-                <>
-                  {/* <div className="flex items-center justify-center">
-                  <ExternalLink
-                    href={"https://analytics.sushi.com/user/" + account}
-                  >
-                    Account analytics and accrued fees <span> ↗</span>
-                  </ExternalLink>
-                </div> */}
-                  {allV2PairsWithLiquidity.map((v2Pair) => (
-                    <FullPositionCard
-                      key={v2Pair.liquidityToken.address}
-                      pair={v2Pair}
-                      stakedBalance={CurrencyAmount.fromRawAmount(v2Pair.liquidityToken, '0')}
-                    />
-                  ))}
-                </>
-              ) : (
-                <Empty className="flex text-lg text-center text-low-emphesis">
-                  <div className="px-4 py-2">{i18n._(t`No liquidity was found. `)}</div>
-                </Empty>
-              )}</div>
+        <div className="flex items-center px-4">
+          <NavLink href="/exchange/pool">
+            <a className="flex items-center space-x-2 font-medium text-center cursor-pointer text-base hover:text-high-emphesis">
+              <span>{i18n._(t`View Liquidity Positions`)}</span>
+            </a>
+          </NavLink>
+        </div>
       </Container>
     </>
   )
