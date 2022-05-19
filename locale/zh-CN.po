@@ -1299,10 +1299,10 @@ msgstr "清单"
 #: src/components/TransactionList.tsx:40
 #: src/features/farm/FarmList.tsx:105
 #: src/features/vault/VaultList.tsx:104
-#: src/pages/exchange/add/[[...tokens]].tsx:562
+#: src/pages/exchange/add/[[...tokens]].tsx:560
 #: src/pages/exchange/find/index.tsx:171
 #: src/pages/exchange/pool/index.tsx:127
-#: src/pages/exchange/remove/[[...tokens]].tsx:908
+#: src/pages/exchange/remove/[[...tokens]].tsx:906
 msgid "Loading"
 msgstr "载入中"
 
@@ -1535,9 +1535,9 @@ msgstr "该交换没有流动性"
 #~ msgid "No liquidity positions found"
 #~ msgstr "没有发现流动性"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:583
+#: src/pages/exchange/add/[[...tokens]].tsx:581
 #: src/pages/exchange/pool/index.tsx:148
-#: src/pages/exchange/remove/[[...tokens]].tsx:929
+#: src/pages/exchange/remove/[[...tokens]].tsx:927
 msgid "No liquidity was found."
 msgstr "未发现流动性"
 

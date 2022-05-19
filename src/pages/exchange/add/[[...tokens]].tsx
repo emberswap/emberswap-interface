@@ -555,9 +555,7 @@ export default function Add() {
           </div>
         </DoubleGlowShadow>
         <div className="py-4 space-y-6 md:py-8 lg:py-12 max-w-2xl w-full">
-              {!account ? (
-                <Web3Connect size="lg" color="gradient" className="w-full" />
-              ) : v2IsLoading ? (
+              {v2IsLoading ? (
                 <Empty>
                   <Dots>{i18n._(t`Loading`)}</Dots>
                 </Empty>

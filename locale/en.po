@@ -1379,10 +1379,10 @@ msgstr "Lists"
 #: src/components/TransactionList.tsx:40
 #: src/features/farm/FarmList.tsx:105
 #: src/features/vault/VaultList.tsx:104
-#: src/pages/exchange/add/[[...tokens]].tsx:562
+#: src/pages/exchange/add/[[...tokens]].tsx:560
 #: src/pages/exchange/find/index.tsx:171
 #: src/pages/exchange/pool/index.tsx:127
-#: src/pages/exchange/remove/[[...tokens]].tsx:908
+#: src/pages/exchange/remove/[[...tokens]].tsx:906
 msgid "Loading"
 msgstr "Loading"
 
@@ -1621,9 +1621,9 @@ msgstr "No liquidity found to do swap"
 #~ msgid "No liquidity positions found"
 #~ msgstr "No liquidity positions found"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:583
+#: src/pages/exchange/add/[[...tokens]].tsx:581
 #: src/pages/exchange/pool/index.tsx:148
-#: src/pages/exchange/remove/[[...tokens]].tsx:929
+#: src/pages/exchange/remove/[[...tokens]].tsx:927
 msgid "No liquidity was found."
 msgstr "No liquidity was found."
 
