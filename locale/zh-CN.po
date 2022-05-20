@@ -161,8 +161,8 @@ msgstr "添加"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/NavigationTabs/index.tsx:69
-#: src/pages/exchange/add/[[...tokens]].tsx:386
-#: src/pages/exchange/zap/[[...tokens]].tsx:347
+#: src/pages/exchange/add/[[...tokens]].tsx:388
+#: src/pages/exchange/zap/[[...tokens]].tsx:349
 msgid "Add Liquidity"
 msgstr "添加流动性"
 
@@ -186,7 +186,7 @@ msgstr ""
 #~ msgid "Add collateral in order to borrow assets"
 #~ msgstr "添加抵押品以借出资产"
 
-#: src/pages/exchange/find/index.tsx:152
+#: src/pages/exchange/find/index.tsx:157
 msgid "Add liquidity"
 msgstr "添加流动性"
 
@@ -203,14 +203,14 @@ msgstr "添加流动性"
 msgid "Add {0} to MetaMask"
 msgstr "将{0}加入MetaMask"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:202
-#: src/pages/exchange/add/[[...tokens]].tsx:228
-#: src/pages/exchange/add/[[...tokens]].tsx:202
-#: src/pages/exchange/add/[[...tokens]].tsx:228
-#: src/pages/exchange/zap/[[...tokens]].tsx:199
-#: src/pages/exchange/zap/[[...tokens]].tsx:225
-#: src/pages/exchange/zap/[[...tokens]].tsx:199
-#: src/pages/exchange/zap/[[...tokens]].tsx:225
+#: src/pages/exchange/add/[[...tokens]].tsx:204
+#: src/pages/exchange/add/[[...tokens]].tsx:230
+#: src/pages/exchange/add/[[...tokens]].tsx:204
+#: src/pages/exchange/add/[[...tokens]].tsx:230
+#: src/pages/exchange/zap/[[...tokens]].tsx:201
+#: src/pages/exchange/zap/[[...tokens]].tsx:227
+#: src/pages/exchange/zap/[[...tokens]].tsx:201
+#: src/pages/exchange/zap/[[...tokens]].tsx:227
 msgid "Add {0} {1} and {2} {3}"
 msgstr "添加 {0} {1} 和 {2} {3}"
 
@@ -251,15 +251,15 @@ msgstr "移除数量"
 msgid "An error occurred when trying to execute this swap. You may need to increase your slippage tolerance. If that does not work, there may be an incompatibility with the token you are trading. Note fee on transfer and rebase tokens are incompatible with Uniswap V3."
 msgstr "在试图执行该交换时发生了错误。你可能需要增加你的滑点容忍度。如果这不起作用，可能与你交易的代币不兼容。注意转移和重新安置代币的费用与Uniswap V3不兼容。"
 
-#: src/components/Header/index.tsx:110
-#: src/components/Header/index.tsx:256
+#: src/components/Header/index.tsx:111
+#: src/components/Header/index.tsx:257
 msgid "Analytics"
 msgstr "分析界面"
 
 #: src/features/farm/FarmListItemDetails.tsx:178
 #: src/features/lending/Button.tsx:64
 #: src/features/vault/VaultListItemDetails.tsx:161
-#: src/pages/exchange/remove/[[...tokens]].tsx:883
+#: src/pages/exchange/remove/[[...tokens]].tsx:889
 #: src/pages/locker/create/index.tsx:307
 msgid "Approve"
 msgstr "批准"
@@ -273,19 +273,19 @@ msgid "Approve Limit Order"
 msgstr "授权限价订单"
 
 #: src/features/limit-order/LimitOrderButton.tsx:160
-#: src/pages/exchange/add/[[...tokens]].tsx:504
-#: src/pages/exchange/add/[[...tokens]].tsx:521
+#: src/pages/exchange/add/[[...tokens]].tsx:509
+#: src/pages/exchange/add/[[...tokens]].tsx:526
 #: src/pages/exchange/swap/[[...tokens]].tsx:538
-#: src/pages/exchange/zap/[[...tokens]].tsx:462
-#: src/pages/exchange/zap/[[...tokens]].tsx:479
+#: src/pages/exchange/zap/[[...tokens]].tsx:467
+#: src/pages/exchange/zap/[[...tokens]].tsx:484
 msgid "Approve {0}"
 msgstr "批准{0}"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:881
+#: src/pages/exchange/remove/[[...tokens]].tsx:887
 msgid "Approved"
 msgstr "已批准"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:879
+#: src/pages/exchange/remove/[[...tokens]].tsx:885
 msgid "Approving"
 msgstr "批准中"
 
@@ -294,10 +294,10 @@ msgid "Approving Limit Order"
 msgstr "授权限价订单"
 
 #: src/features/limit-order/LimitOrderButton.tsx:158
-#: src/pages/exchange/add/[[...tokens]].tsx:502
-#: src/pages/exchange/add/[[...tokens]].tsx:519
-#: src/pages/exchange/zap/[[...tokens]].tsx:460
-#: src/pages/exchange/zap/[[...tokens]].tsx:477
+#: src/pages/exchange/add/[[...tokens]].tsx:507
+#: src/pages/exchange/add/[[...tokens]].tsx:524
+#: src/pages/exchange/zap/[[...tokens]].tsx:465
+#: src/pages/exchange/zap/[[...tokens]].tsx:482
 msgid "Approving {0}"
 msgstr "批准{0}"
 
@@ -557,12 +557,12 @@ msgstr "清除"
 #~ msgid "Community Approval"
 #~ msgstr "社区批准"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:702
+#: src/pages/exchange/remove/[[...tokens]].tsx:704
 msgid "Confirm"
 msgstr "确认"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:538
-#: src/pages/exchange/zap/[[...tokens]].tsx:496
+#: src/pages/exchange/add/[[...tokens]].tsx:543
+#: src/pages/exchange/zap/[[...tokens]].tsx:501
 msgid "Confirm Adding Liquidity"
 msgstr "确认添加流动性"
 
@@ -583,7 +583,7 @@ msgstr "确认供应"
 msgid "Confirm Swap"
 msgstr "确认交换"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:893
+#: src/pages/exchange/remove/[[...tokens]].tsx:899
 msgid "Confirm Withdrawal"
 msgstr "确认提取"
 
@@ -671,7 +671,7 @@ msgstr "创建交易对"
 msgid "Create lock"
 msgstr "创建锁仓"
 
-#: src/pages/exchange/find/index.tsx:163
+#: src/pages/exchange/find/index.tsx:168
 msgid "Create pool"
 msgstr "创建池"
 
@@ -825,8 +825,8 @@ msgstr "输入接收人"
 msgid "Enter a valid slippage percentage"
 msgstr "输入有效的滑点百分比"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:480
-#: src/pages/exchange/zap/[[...tokens]].tsx:438
+#: src/pages/exchange/add/[[...tokens]].tsx:485
+#: src/pages/exchange/zap/[[...tokens]].tsx:443
 #: src/state/burn/hooks.ts:138
 #: src/state/limit-order/hooks.ts:168
 #: src/state/mint/hooks.ts:202
@@ -886,8 +886,8 @@ msgstr "过期是指订单失效的时间"
 msgid "Expired"
 msgstr "过期"
 
-#: src/components/Header/index.tsx:77
-#: src/components/Header/index.tsx:224
+#: src/components/Header/index.tsx:78
+#: src/components/Header/index.tsx:225
 msgid "Farm"
 msgstr "农耕"
 
@@ -912,7 +912,7 @@ msgstr "费用"
 msgid "Filled"
 msgstr "已填充"
 
-#: src/pages/exchange/find/index.tsx:83
+#: src/pages/exchange/find/index.tsx:85
 msgid "Find Pool"
 msgstr "查找池"
 
@@ -992,8 +992,8 @@ msgstr ""
 msgid "Go Back"
 msgstr "返回"
 
-#: src/components/Header/index.tsx:101
-#: src/components/Header/index.tsx:248
+#: src/components/Header/index.tsx:102
+#: src/components/Header/index.tsx:249
 msgid "Governance"
 msgstr ""
 
@@ -1094,7 +1094,7 @@ msgid "Import"
 msgstr "导入"
 
 #: src/components/NavigationTabs/index.tsx:32
-#: src/pages/exchange/find/index.tsx:94
+#: src/pages/exchange/find/index.tsx:96
 msgid "Import Pool"
 msgstr "导入流动性池"
 
@@ -1150,7 +1150,7 @@ msgstr "代币{0}余额不足"
 msgid "Interface Settings"
 msgstr "交互设置"
 
-#: src/pages/exchange/find/index.tsx:168
+#: src/pages/exchange/find/index.tsx:173
 #: src/state/mint/hooks.ts:198
 msgid "Invalid pair"
 msgstr "无效的代币对"
@@ -1262,11 +1262,11 @@ msgstr "流动性"
 #~ msgid "Liquidity Provider Fee"
 #~ msgstr "LP奖励"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:561
-#: src/pages/exchange/add/[[...tokens]].tsx:590
+#: src/pages/exchange/add/[[...tokens]].tsx:566
+#: src/pages/exchange/add/[[...tokens]].tsx:595
 #: src/pages/exchange/pool/index.tsx:106
-#: src/pages/exchange/remove/[[...tokens]].tsx:907
-#: src/pages/exchange/remove/[[...tokens]].tsx:937
+#: src/pages/exchange/remove/[[...tokens]].tsx:913
+#: src/pages/exchange/remove/[[...tokens]].tsx:943
 msgid "Liquidity Provider Rewards"
 msgstr "LP奖励"
 
@@ -1277,11 +1277,11 @@ msgstr "LP奖励"
 #~ "withdrawing your liquidity"
 #~ msgstr ""
 
-#: src/pages/exchange/add/[[...tokens]].tsx:562
-#: src/pages/exchange/add/[[...tokens]].tsx:591
+#: src/pages/exchange/add/[[...tokens]].tsx:567
+#: src/pages/exchange/add/[[...tokens]].tsx:596
 #: src/pages/exchange/pool/index.tsx:107
-#: src/pages/exchange/remove/[[...tokens]].tsx:908
-#: src/pages/exchange/remove/[[...tokens]].tsx:938
+#: src/pages/exchange/remove/[[...tokens]].tsx:914
+#: src/pages/exchange/remove/[[...tokens]].tsx:944
 msgid ""
 "Liquidity providers earn a 0.20% fee on all trades proportional to their share of\n"
 "the pool. Fees are added to the pool, accrue in real time and can be claimed by\n"
@@ -1307,10 +1307,10 @@ msgstr "清单"
 #: src/components/TransactionList.tsx:40
 #: src/features/farm/FarmList.tsx:105
 #: src/features/vault/VaultList.tsx:104
-#: src/pages/exchange/add/[[...tokens]].tsx:568
-#: src/pages/exchange/find/index.tsx:171
+#: src/pages/exchange/add/[[...tokens]].tsx:573
+#: src/pages/exchange/find/index.tsx:176
 #: src/pages/exchange/pool/index.tsx:127
-#: src/pages/exchange/remove/[[...tokens]].tsx:915
+#: src/pages/exchange/remove/[[...tokens]].tsx:921
 msgid "Loading"
 msgstr "载入中"
 
@@ -1338,8 +1338,8 @@ msgstr "加载余额"
 msgid "Lock"
 msgstr "锁定"
 
-#: src/components/Header/index.tsx:93
-#: src/components/Header/index.tsx:240
+#: src/components/Header/index.tsx:94
+#: src/components/Header/index.tsx:241
 msgid "Locker"
 msgstr "锁"
 
@@ -1378,7 +1378,7 @@ msgstr "管理"
 msgid "Manage Token Lists"
 msgstr "管理代币列表"
 
-#: src/pages/exchange/find/index.tsx:137
+#: src/pages/exchange/find/index.tsx:142
 msgid "Manage this pool"
 msgstr "管理这个池子"
 
@@ -1543,9 +1543,9 @@ msgstr "该交换没有流动性"
 #~ msgid "No liquidity positions found"
 #~ msgstr "没有发现流动性"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:596
+#: src/pages/exchange/add/[[...tokens]].tsx:601
 #: src/pages/exchange/pool/index.tsx:148
-#: src/pages/exchange/remove/[[...tokens]].tsx:943
+#: src/pages/exchange/remove/[[...tokens]].tsx:949
 msgid "No liquidity was found."
 msgstr "未发现流动性"
 
@@ -1553,7 +1553,7 @@ msgstr "未发现流动性"
 msgid "No order history"
 msgstr "无订单历史"
 
-#: src/pages/exchange/find/index.tsx:161
+#: src/pages/exchange/find/index.tsx:166
 msgid "No pool found"
 msgstr "未找到池"
 
@@ -1594,7 +1594,7 @@ msgstr "打开订单"
 #~ msgid "Open Source"
 #~ msgstr "开源"
 
-#: src/components/Header/index.tsx:157
+#: src/components/Header/index.tsx:158
 msgid "Open main menu"
 msgstr "打开主菜单"
 
@@ -1619,14 +1619,14 @@ msgstr "订单历史"
 msgid "Order by"
 msgstr ""
 
-#: src/pages/exchange/add/[[...tokens]].tsx:281
-#: src/pages/exchange/zap/[[...tokens]].tsx:278
+#: src/pages/exchange/add/[[...tokens]].tsx:283
+#: src/pages/exchange/zap/[[...tokens]].tsx:280
 msgid ""
 "Output is estimated. If the price changes by more than {0}% your transaction\n"
 "will revert."
 msgstr "输出是预估值 如果价格变化超过{0}%，你的交易将被取消"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:655
+#: src/pages/exchange/remove/[[...tokens]].tsx:657
 msgid "Output is estimated. If the price changes by more than {0}% your transaction will revert."
 msgstr "估计输出。如果价格变化超过{0} ％，您的交易将被退回。"
 
@@ -1697,8 +1697,8 @@ msgstr "请输入“确认”以开启专家模式。"
 msgid "Please type the word \"confirm\" to {0} and lock your tokens for {1}."
 msgstr ""
 
-#: src/components/Header/index.tsx:61
-#: src/components/Header/index.tsx:216
+#: src/components/Header/index.tsx:62
+#: src/components/Header/index.tsx:217
 #: src/pages/exchange/pool/index.tsx:95
 msgid "Pool"
 msgstr "资金池"
@@ -1707,7 +1707,7 @@ msgstr "资金池"
 msgid "Pool Details"
 msgstr "流动池详情"
 
-#: src/pages/exchange/find/index.tsx:135
+#: src/pages/exchange/find/index.tsx:140
 msgid "Pool Found!"
 msgstr "找到池！"
 
@@ -1716,8 +1716,8 @@ msgstr "找到池！"
 #~ msgstr "流动性池奖励"
 
 #: src/components/PositionCard/index.tsx:78
-#: src/pages/exchange/add/[[...tokens]].tsx:278
-#: src/pages/exchange/zap/[[...tokens]].tsx:275
+#: src/pages/exchange/add/[[...tokens]].tsx:280
+#: src/pages/exchange/zap/[[...tokens]].tsx:277
 msgid "Pool Tokens"
 msgstr "流动性池中的总代币"
 
@@ -1780,7 +1780,7 @@ msgid "Rate"
 msgstr "比率"
 
 #: src/features/liquidity/ConfirmAddModalBottom.tsx:30
-#: src/pages/exchange/remove/[[...tokens]].tsx:670
+#: src/pages/exchange/remove/[[...tokens]].tsx:672
 msgid "Rates"
 msgstr "费率"
 
@@ -1812,11 +1812,11 @@ msgstr "去除"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/NavigationTabs/index.tsx:69
-#: src/pages/exchange/remove/[[...tokens]].tsx:766
+#: src/pages/exchange/remove/[[...tokens]].tsx:768
 msgid "Remove Liquidity"
 msgstr "删除流动金"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:767
+#: src/pages/exchange/remove/[[...tokens]].tsx:769
 msgid "Remove liquidity of EmberSwap"
 msgstr "从EmberSwap中移除流动性"
 
@@ -1828,12 +1828,12 @@ msgstr "移除接收人"
 #~ msgid "Remove send"
 #~ msgstr "删除发送"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:294
-#: src/pages/exchange/remove/[[...tokens]].tsx:294
+#: src/pages/exchange/remove/[[...tokens]].tsx:296
+#: src/pages/exchange/remove/[[...tokens]].tsx:296
 msgid "Remove {0} {1} and {2} {3}"
 msgstr "移除{0} {1} 和 {2} {3}"
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:709
+#: src/pages/exchange/remove/[[...tokens]].tsx:711
 msgid "Removing {0} {1} and {2} {3}"
 msgstr "移除{0}{1}和{2}{3}"
 
@@ -1938,7 +1938,7 @@ msgstr "选择比率"
 msgid "Select a token"
 msgstr "选择通证"
 
-#: src/pages/exchange/find/index.tsx:77
+#: src/pages/exchange/find/index.tsx:79
 msgid "Select a token to find your liquidity"
 msgstr "选择代币以找到您的流动性"
 
@@ -2071,8 +2071,8 @@ msgstr "供应和市值"
 #~ msgid "Supply APR"
 #~ msgstr "存款APR"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:304
-#: src/pages/exchange/zap/[[...tokens]].tsx:301
+#: src/pages/exchange/add/[[...tokens]].tsx:306
+#: src/pages/exchange/zap/[[...tokens]].tsx:303
 msgid "Supplying {0} {1} and {2} {3}"
 msgstr "提供{0} {1}和{2} {3}"
 
@@ -2097,9 +2097,9 @@ msgstr "提供{0} {1}和{2} {3}"
 
 #: src/components/ExchangeHeader.tsx:42
 #: src/components/Header/index.tsx:44
-#: src/components/Header/index.tsx:52
-#: src/components/Header/index.tsx:198
-#: src/components/Header/index.tsx:207
+#: src/components/Header/index.tsx:53
+#: src/components/Header/index.tsx:199
+#: src/components/Header/index.tsx:208
 #: src/features/trade/Header.tsx:78
 #: src/features/trade/Header.tsx:89
 #: src/pages/exchange/swap/[[...tokens]].tsx:571
@@ -2371,9 +2371,9 @@ msgstr "解除抵押"
 #~ msgid "Unstaked"
 #~ msgstr "解除质押"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:474
+#: src/pages/exchange/add/[[...tokens]].tsx:479
 #: src/pages/exchange/swap/[[...tokens]].tsx:502
-#: src/pages/exchange/zap/[[...tokens]].tsx:432
+#: src/pages/exchange/zap/[[...tokens]].tsx:437
 msgid "Unsupported Asset"
 msgstr "不支持的资产"
 
@@ -2413,8 +2413,8 @@ msgstr "解开"
 #~ msgid "V2 Rewarder"
 #~ msgstr "V2奖励器"
 
-#: src/components/Header/index.tsx:85
-#: src/components/Header/index.tsx:232
+#: src/components/Header/index.tsx:86
+#: src/components/Header/index.tsx:233
 msgid "Vaults"
 msgstr ""
 
@@ -2438,7 +2438,7 @@ msgstr ""
 msgid "View Contract"
 msgstr "查看合约"
 
-#: src/pages/exchange/zap/[[...tokens]].tsx:519
+#: src/pages/exchange/zap/[[...tokens]].tsx:524
 msgid "View Liquidity Positions"
 msgstr "查看流动性仓位"
 
@@ -2591,13 +2591,13 @@ msgid "You Pay:"
 msgstr "你支付"
 
 #: src/features/liquidity/RemoveLiquidityReceiveDetails.tsx:40
-#: src/pages/exchange/remove/[[...tokens]].tsx:787
-#: src/pages/exchange/remove/[[...tokens]].tsx:819
+#: src/pages/exchange/remove/[[...tokens]].tsx:789
+#: src/pages/exchange/remove/[[...tokens]].tsx:825
 msgid "You Will Receive"
 msgstr "你将收到"
 
-#: src/pages/exchange/add/[[...tokens]].tsx:410
-#: src/pages/exchange/zap/[[...tokens]].tsx:371
+#: src/pages/exchange/add/[[...tokens]].tsx:412
+#: src/pages/exchange/zap/[[...tokens]].tsx:373
 msgid "You are creating a pool"
 msgstr "您正在创建一个池"
 
@@ -2613,7 +2613,7 @@ msgstr ""
 #~ msgid "You are sending {currencyAmount} {0} from {1}"
 #~ msgstr ""
 
-#: src/pages/exchange/find/index.tsx:149
+#: src/pages/exchange/find/index.tsx:154
 msgid "You don’t have liquidity in this pool yet"
 msgstr "您的这个池中还没有流动性"
 
@@ -2633,8 +2633,8 @@ msgstr "你收到<0>（至少）：</0>"
 #~ msgid "You receive:"
 #~ msgstr ""
 
-#: src/pages/exchange/add/[[...tokens]].tsx:410
-#: src/pages/exchange/zap/[[...tokens]].tsx:371
+#: src/pages/exchange/add/[[...tokens]].tsx:412
+#: src/pages/exchange/zap/[[...tokens]].tsx:373
 msgid "You will receive"
 msgstr "您将收到"
 
@@ -2753,10 +2753,9 @@ msgstr "你的交易将在这里显示"
 #~ msgid "Your {exchange} {0}/{1} liquidity will become SushiSwap {2}/{3} liquidity."
 #~ msgstr "您的{exchange} {0} / {1}流动性将变为SushiSwap {2} / {3}的流动性。"
 
-#: src/components/Header/index.tsx:56
-#: src/features/trade/Header.tsx:83
-#~ msgid "Zap"
-#~ msgstr ""
+#: src/features/trade/Header.tsx:99
+msgid "Zap"
+msgstr ""
 
 #: src/pages/exchange/limit-order/[[...tokens]].tsx:165
 #~ msgid "above"
@@ -2904,7 +2903,7 @@ msgstr "{0} {1} 每 {2}"
 #~ msgid "{0} {sign} market rate"
 #~ msgstr ""
 
-#: src/pages/exchange/remove/[[...tokens]].tsx:690
+#: src/pages/exchange/remove/[[...tokens]].tsx:692
 msgid "{0}/{1} Burned"
 msgstr "{0}/{1} 销毁"
 

@@ -54,12 +54,14 @@ import Empty from '../../../components/Empty'
 import { useTokenBalancesWithLoadingIndicator } from '../../../state/wallet/hooks'
 import { useV2Pairs } from '../../../hooks/useV2Pairs'
 import EmberswapLogo from '../../../components/EmberswapLogo'
+import { useTheme } from '../../../components/ThemeSwitch'
 
 const DEFAULT_REMOVE_LIQUIDITY_SLIPPAGE_TOLERANCE = new Percent(5, 100)
 
 const REMOVE_TIPS = {}
 
 export default function Remove() {
+  const { theme } = useTheme();
   const { i18n } = useLingui()
   const router = useRouter()
   const tokens = router.query.tokens
@@ -806,7 +808,11 @@ export default function Remove() {
                     <AutoRow justify={'flex-start'} style={{ padding: '0 1rem' }}>
                       <button className="z-10 -mt-6 -mb-6 rounded-full cursor-default backdrop-blur-md	bg-dark-900-custom p-3px">
                         <div className="p-3 rounded-full bg-dark-800">
-                          <ArrowDownIcon width="32px" height="32px" />
+                          <ArrowDownIcon 
+                            width="32px" 
+                            height="32px" 
+                            color={theme ==='light' ? "#444444" : "#e0dcdc"}
+                            />
                         </div>
                       </button>
                     </AutoRow>

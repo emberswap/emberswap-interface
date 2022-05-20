@@ -26,6 +26,7 @@ import { useTokenBalance } from '../../../state/wallet/hooks'
 import Image from 'next/image'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
 import EmberswapLogo from '../../../components/EmberswapLogo'
+import { useTheme } from '../../../components/ThemeSwitch'
 
 enum Fields {
   TOKEN0 = 0,
@@ -33,6 +34,7 @@ enum Fields {
 }
 
 export default function PoolFinder() {
+  const { theme } = useTheme();
   const { i18n } = useLingui()
   const { account, chainId } = useActiveWeb3React()
 
@@ -107,7 +109,10 @@ export default function PoolFinder() {
                 <AutoRow justify={'flex-start'} style={{ padding: '0 1rem' }}>
                   <button className="z-10 -mt-6 -mb-6 rounded-full backdrop-blur-md	bg-dark-900-custom p-3px">
                     <div className="p-3 rounded-full bg-dark-800 hover:bg-dark-700">
-                      <Plus size="32" />
+                      <Plus 
+                        size="32"
+                        color={theme ==='light' ? "#444444" : "#e0dcdc"}
+                        />
                     </div>
                   </button>
                 </AutoRow>

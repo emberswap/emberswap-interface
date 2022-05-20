@@ -25,7 +25,7 @@ import LiquidityPrice from '../../../features/liquidity/LiquidityPrice'
 import { MinimalPositionCard } from '../../../components/PositionCard'
 import NavLink from '../../../components/NavLink'
 import { PairState } from '../../../hooks/useV2Pairs'
-import { Plus } from 'react-feather'
+import { Plus, Zap } from 'react-feather'
 import ReactGA from 'react-ga'
 import { TransactionResponse } from '@ethersproject/providers'
 import UnsupportedCurrencyFooter from '../../../features/swap/UnsupportedCurrencyFooter'
@@ -43,10 +43,12 @@ import { useWalletModalToggle } from '../../../state/application/hooks'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
 import EmberswapLogo from '../../../components/EmberswapLogo'
 import { LiquidityHeader } from '../../../features/liquidity'
+import { useTheme } from '../../../components/ThemeSwitch'
 
 const DEFAULT_ADD_V2_SLIPPAGE_TOLERANCE = new Percent(50, 10_000)
 
 export default function Add() {
+  const { theme } = useTheme();
   const { i18n } = useLingui()
   const { account, chainId, library } = useActiveWeb3React()
   const router = useRouter()
@@ -395,7 +397,10 @@ export default function Add() {
                   <AutoRow justify={isExpertMode ? 'space-between' : 'flex-start'} style={{ padding: '0 1rem' }}>
                     <button className="z-10 -mt-6 -mb-6 rounded-full cursor-default backdrop-blur-md	bg-dark-900-custom p-3px">
                       <div className="p-3 rounded-full bg-dark-800">
-                        <Plus size="32" />
+                        <Zap 
+                          size="32"
+                          color={theme ==='light' ? "#444444" : "#e0dcdc"}
+                        />
                       </div>
                     </button>
                   </AutoRow>

@@ -46,10 +46,12 @@ import { LiquidityHeader } from '../../../features/liquidity'
 import Empty from '../../../components/Empty'
 import { useTokenBalancesWithLoadingIndicator } from '../../../state/wallet/hooks'
 import Alert from '../../../components/Alert'
+import { useTheme } from '../../../components/ThemeSwitch'
 
 const DEFAULT_ADD_V2_SLIPPAGE_TOLERANCE = new Percent(50, 10_000)
 
 export default function Add() {
+  const { theme } = useTheme();
   const { i18n } = useLingui()
   const { account, chainId, library } = useActiveWeb3React()
   const router = useRouter()
@@ -437,7 +439,10 @@ export default function Add() {
                   <AutoRow justify={isExpertMode ? 'space-between' : 'flex-start'} style={{ padding: '0 1rem' }}>
                     <button className="z-10 -mt-6 -mb-6 rounded-full cursor-default backdrop-blur-md	bg-dark-900-custom p-3px">
                       <div className="p-3 rounded-full bg-dark-800">
-                        <Plus size="32" />
+                        <Plus 
+                          size="32"
+                          color={theme ==='light' ? "#444444" : "#e0dcdc"}
+                        />
                       </div>
                     </button>
                   </AutoRow>
