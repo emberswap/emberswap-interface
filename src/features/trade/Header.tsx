@@ -65,7 +65,7 @@ import { EMBER_ADDRESS } from '../../constants'
        
     return (
       <div className="flex items-center justify-between mb-4 space-x-3">
-        <div className="grid grid-cols-3 rounded p-3px bg-dark-800 h-[46px]">
+        <div className="grid grid-cols-2 rounded p-3px bg-dark-800 h-[46px]">
           {!isFarm ?
           <NavLink
             activeClassName="font-bold border rounded text-high-emphesis border-dark-800 bg-gradient-to-r from-opaque-blue to-opaque-pink hover:from-blue hover:to-pink"
