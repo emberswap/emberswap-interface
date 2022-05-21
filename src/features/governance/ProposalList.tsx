@@ -7,13 +7,19 @@ import React from 'react'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import useSortableData from '../../hooks/useSortableData'
+import { useRouter } from 'next/router'
 
-const ProposalList = ({ proposals, term }) => {
+const ProposalList = ({ proposals, term, filter }) => {
+
+  const { asPath, pathname, route, query, basePath } = useRouter()
   const { items, requestSort, sortConfig } = useSortableData(proposals)
   const { i18n } = useLingui()
   const [numDisplayed, setNumDisplayed] = useInfiniteScroll(items)
+  const isBeefy = query['filter'] == 'beefy'
 
-  return items ? (
+  return isBeefy ? (
+    <div className="w-full py-6 text-center">{i18n._(t`Soon`)}</div>
+  ) : items ? (
     <>
       <div className="grid grid-cols-3 text-base font-bold text-primary">
         <div

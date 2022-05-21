@@ -150,6 +150,7 @@ msgstr "接受"
 msgid "Account"
 msgstr "账户"
 
+#: src/features/governance/ProposalMenu.tsx:30
 #: src/modals/SearchModal/ImportRow.tsx:97
 msgid "Active"
 msgstr "激活"
@@ -225,6 +226,10 @@ msgstr "已添加"
 #: src/features/farm/FarmMenu.tsx:30
 msgid "All Farms"
 msgstr ""
+
+#: src/features/governance/ProposalMenu.tsx:30
+#~ msgid "All Proposals"
+#~ msgstr ""
 
 #: src/features/vault/VaultMenu.tsx:32
 msgid "All Vaults"
@@ -545,6 +550,10 @@ msgstr "清除"
 
 #~ msgid "Click on a pool below, input the amount you wish to migrate or select max, and clickmigrate"
 #~ msgstr "点击下面的一个池子，输入您想迁移的数量或选择最大，然后点击/nmigrate"
+
+#: src/features/governance/ProposalMenu.tsx:31
+msgid "Closed"
+msgstr ""
 
 #: src/pages/kashi/borrow/[pair].tsx:93 src/pages/kashi/borrow/[pair].tsx:106
 #: src/pages/kashi/borrow/index.tsx:72 src/pages/kashi/borrow/index.tsx:166
@@ -1898,7 +1907,7 @@ msgstr "路由经过这些代币将给您的交易带来最好的价格。"
 #~ msgid "Search by name, symbol, address"
 #~ msgstr "通过名字、代号或地址搜索"
 
-#: src/pages/governance/index.tsx:117
+#: src/pages/governance/index.tsx:139
 msgid "Search by proposal title"
 msgstr ""
 
@@ -1983,6 +1992,7 @@ msgstr "在签署批准时出现错误。可能是硬件钱包例如Trezor和Led
 
 #: src/components/PoolList/index.tsx:148
 #: src/features/farm/FarmList.tsx:29
+#: src/features/governance/ProposalList.tsx:21
 #: src/features/vault/VaultList.tsx:27
 msgid "Soon"
 msgstr "马上"
@@ -2045,11 +2055,11 @@ msgstr ""
 #~ msgid "Staking APR"
 #~ msgstr "质押APR"
 
-#: src/features/governance/ProposalList.tsx:42
+#: src/features/governance/ProposalList.tsx:48
 msgid "Start/End Block"
 msgstr ""
 
-#: src/features/governance/ProposalList.tsx:33
+#: src/features/governance/ProposalList.tsx:39
 #: src/pages/bridge/history/index.tsx:161
 #: src/pages/bridge/history/index.tsx:308
 msgid "Status"
@@ -2238,7 +2248,7 @@ msgstr "矿工费以鼓励矿工选择这种交易。"
 msgid "Tip: Custom tokens are stored locally in your browser"
 msgstr "提示：自定义令牌存储在你的浏览器中"
 
-#: src/features/governance/ProposalList.tsx:23
+#: src/features/governance/ProposalList.tsx:29
 msgid "Title"
 msgstr ""
 
@@ -2251,7 +2261,7 @@ msgstr "到"
 #~ msgid "To (estimated)"
 #~ msgstr "至(估计)"
 
-#: src/pages/governance/index.tsx:103
+#: src/pages/governance/index.tsx:115
 msgid "To make a proposal click"
 msgstr ""
 
@@ -2472,7 +2482,7 @@ msgstr "在浏览器查看"
 msgid "View proposal details"
 msgstr ""
 
-#: src/pages/governance/index.tsx:102
+#: src/pages/governance/index.tsx:114
 msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
 msgstr ""
 
@@ -2504,7 +2514,7 @@ msgstr "在区块浏览器上查看交易"
 msgid "Vote"
 msgstr ""
 
-#: src/pages/governance/index.tsx:98
+#: src/pages/governance/index.tsx:110
 msgid "Vote using EMBER on community created proposals."
 msgstr ""
 
@@ -2754,14 +2764,14 @@ msgstr "你的交易将在这里显示"
 #~ msgstr "您的{exchange} {0} / {1}流动性将变为SushiSwap {2} / {3}的流动性。"
 
 #: src/features/trade/Header.tsx:99
-msgid "Zap"
-msgstr ""
+#~ msgid "Zap"
+#~ msgstr ""
 
 #: src/pages/exchange/limit-order/[[...tokens]].tsx:165
 #~ msgid "above"
 #~ msgstr ""
 
-#: src/pages/governance/index.tsx:41
+#: src/pages/governance/index.tsx:50
 #: src/pages/governance/proposal/[proposalId].tsx:52
 #: src/pages/governance/proposal/[proposalId].tsx:133
 msgid "active"
@@ -2776,7 +2786,7 @@ msgstr "年化"
 #~ msgid "below"
 #~ msgstr ""
 
-#: src/pages/governance/index.tsx:40
+#: src/pages/governance/index.tsx:49
 #: src/pages/governance/proposal/[proposalId].tsx:51
 msgid "closed"
 msgstr ""
@@ -2797,7 +2807,7 @@ msgstr "加载失败"
 #~ msgid "forum discussion"
 #~ msgstr ""
 
-#: src/pages/governance/index.tsx:104
+#: src/pages/governance/index.tsx:116
 msgid "here!"
 msgstr ""
 
@@ -2907,12 +2917,12 @@ msgstr "{0} {1} 每 {2}"
 msgid "{0}/{1} Burned"
 msgstr "{0}/{1} 销毁"
 
-#: src/pages/governance/index.tsx:43
+#: src/pages/governance/index.tsx:52
 #: src/pages/governance/proposal/[proposalId].tsx:54
 msgid "{expireTime} ago"
 msgstr ""
 
-#: src/pages/governance/index.tsx:44
+#: src/pages/governance/index.tsx:53
 #: src/pages/governance/proposal/[proposalId].tsx:55
 msgid "{expireTime} left"
 msgstr ""

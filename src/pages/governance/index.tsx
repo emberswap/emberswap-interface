@@ -17,18 +17,27 @@ import { useWeb3React } from '@web3-react/core'
 import moment from 'moment'
 import Link from 'next/link'
 import DoubleGlowShadow from '../../components/DoubleGlowShadow'
+import Menu from '../../features/governance/ProposalMenu'
+import { useRouter } from 'next/router'
 
 export default function Vote() {
   const { i18n } = useLingui()
   const { account, chainId } = useWeb3React()
-
+  const router = useRouter()
   const parsedQs = useParsedQueryString();
   const currentBlock = useBlockNumber();
+  const type = router.query.filter as string
+
 
   const { data, error }: SWRResponse<any[], Error> = useSWR(
     `${VOTING_API_URL}/proposal/all${account ? `?address=${account}` : ""}`,
     (url) => fetch(url).then((r) => r.json())
   )
+
+  const FILTER = {
+    active: (proposal) => proposal.endBlock > currentBlock,
+    past: (proposal) => proposal.endBlock < currentBlock,
+  }
 
   const zero = BigNumber.from(0);
   data?.forEach(proposal => {
@@ -52,13 +61,17 @@ export default function Vote() {
     }
   });
 
+  const filters = data?.filter((proposal) =>{
+    return type in FILTER ? FILTER[type](proposal): true
+  })
+
   const options = {
     keys: ['title', 'proposalId'],
     threshold: 0.4,
     default: parsedQs.proposalId
   }
   const { result, term, search } = useFuse({
-    data,
+    data:filters,
     options,
   })
   
@@ -72,7 +85,7 @@ export default function Vote() {
           name="description"
           content="Vote using EMBER on community created proposals."
         />
-        <meta key="twitter:url" name="twitter:url" content="https://emberswap.com/vote" />
+        <meta key="twitter:url" name="twitter:url" content="https://emberswap.com/vote?filter=active" />
         <meta key="twitter:title" name="twitter:title" content="Vote with EMBER" />
         <meta
           key="twitter:description"
@@ -81,7 +94,7 @@ export default function Vote() {
         />
         <meta key="twitter:image" name="twitter:image" content="/images/governance/emberswap-governance.png" />
         <meta key="og:title" property="og:title" content="Vote with EMBER" />
-        <meta key="og:url" property="og:url" content="https://emberswap.com/vote" />
+        <meta key="og:url" property="og:url" content="https://emberswap.com/vote?filter=active" />
         <meta key="og:image" property="og:image" content="/images/governance/emberswap-governance.png" />
         <meta
           key="og:description"
@@ -91,7 +104,6 @@ export default function Vote() {
       </Head>
       <div className="flex flex-col w-full min-h-full">
         <div className="flex justify-center mb-6">
-       
           <div className="flex flex-col w-full max-w-xl mt-auto mb-2">
             <div className="flex max-w-lg">
               <div className="self-end mb-3 text-lg font-bold md:text-2xl text-high-emphesis md:mb-7">
@@ -107,9 +119,19 @@ export default function Vote() {
             <Image src="/images/governance/emberswap-governance.png" alt="EmberSwap Governance" width="100%" height="100%" layout="responsive" />
           </div>
         </div> 
+        <div className={`col-span-12 md:col-span-3 space-y-4 w-full max-w-xs px-6`}>
+          <div>
+            <Menu
+              term={term}
+              onSearch={(value) => {
+              search(value)
+              }}
+              positionsLength={[data].length}
+            />
+          </div>
+        </div>
         <div className="flex justify-center mb-6">    
-            <DoubleGlowShadow>
-
+          <DoubleGlowShadow>
           <div className="flex flex-col w-full mt-auto mb-4 max-w-7xl">
             <div className={classNames('space-y-6 col-span-4 lg:col-span-3')}>
               <Search
@@ -122,13 +144,12 @@ export default function Vote() {
                     'relative w-full bg-transparent border border-transparent focus:border-gradient-r-blue-pink-dark-900 rounded placeholder-secondary focus:placeholder-primary font-bold text-base px-6 py-3.5',
                 }}
               />
-
               <div className="flex items-center hidden text-lg font-bold md:block text-high-emphesis whitespace-nowrap">
                 Proposals{' '}
                 <div className="w-full h-0 ml-4 font-bold bg-transparent border border-b-0 border-transparent rounded text-high-emphesis md:border-gradient-r-blue-pink-dark-800 opacity-20"></div>
               </div>
 
-              <ProposalList proposals={result} term={term} />
+              <ProposalList proposals={result} term={term} filter={FILTER}/>
             </div>
           </div>    
         </DoubleGlowShadow>

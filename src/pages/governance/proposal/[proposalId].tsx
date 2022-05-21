@@ -82,7 +82,7 @@ export default function Proposal() {
           name="description"
           content="Vote using EMBER on community created proposals."
         />
-        <meta key="twitter:url" name="twitter:url" content="https://emberswap.com/vote" />
+        <meta key="twitter:url" name="twitter:url" content="https://emberswap.com/vote?filter=active" />
         <meta key="twitter:title" name="twitter:title" content="Vote with EMBER" />
         <meta
           key="twitter:description"
@@ -91,7 +91,7 @@ export default function Proposal() {
         />
         <meta key="twitter:image" name="twitter:image" content="/images/governance/emberswap-governance.png" />
         <meta key="og:title" property="og:title" content="Vote with EMBER" />
-        <meta key="og:url" property="og:url" content="https://emberswap.com/vote" />
+        <meta key="og:url" property="og:url" content="https://emberswap.com/vote?filter=active" />
         <meta key="og:image" property="og:image" content="/images/governance/emberswap-governance.png" />
         <meta
           key="og:description"

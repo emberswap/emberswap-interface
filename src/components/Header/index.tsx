@@ -94,7 +94,7 @@ function AppBar(): JSX.Element {
                           {i18n._(t`Locker`)}
                         </a>
                       </NavLink>
-                      <NavLink href={'/vote'}>
+                      <NavLink href={'/vote?filter=active'}>
                           <a
                             id={`governance-nav-link`}
                             className="p-2 text-base text-primary hover:text-high-emphesis focus:text-high-emphesis whitespace-nowrap"
@@ -241,7 +241,7 @@ function AppBar(): JSX.Element {
                     {i18n._(t`Locker`)}
                   </a>
                 </Link>
-                <Link href={'/vote'}>
+                <Link href={'/vote?filter=active'}>
                           <a
                             id={`governance-nav-link`}
                             className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"

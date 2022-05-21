@@ -149,6 +149,7 @@ msgstr "Accept"
 msgid "Account"
 msgstr "Account"
 
+#: src/features/governance/ProposalMenu.tsx:30
 #: src/modals/SearchModal/ImportRow.tsx:97
 msgid "Active"
 msgstr "Active"
@@ -220,6 +221,10 @@ msgstr "Added"
 #: src/features/farm/FarmMenu.tsx:30
 msgid "All Farms"
 msgstr "All Farms"
+
+#: src/features/governance/ProposalMenu.tsx:30
+#~ msgid "All Proposals"
+#~ msgstr "All Proposals"
 
 #: src/features/vault/VaultMenu.tsx:32
 msgid "All Vaults"
@@ -575,6 +580,10 @@ msgstr "Clear all"
 #~ msgstr ""
 #~ "Click on a pool below, input the amount you wish to migrate or select max, and click\n"
 #~ "migrate"
+
+#: src/features/governance/ProposalMenu.tsx:31
+msgid "Closed"
+msgstr "Closed"
 
 #: src/pages/kashi/borrow/index.tsx:72
 #: src/pages/kashi/borrow/index.tsx:166
@@ -1998,7 +2007,7 @@ msgstr "Routing through these tokens resulted in the best price for your trade."
 #~ msgid "Search by name, symbol, address"
 #~ msgstr "Search by name, symbol, address"
 
-#: src/pages/governance/index.tsx:117
+#: src/pages/governance/index.tsx:139
 msgid "Search by proposal title"
 msgstr "Search by proposal title"
 
@@ -2088,6 +2097,7 @@ msgstr "Something went wrong during signing of the approval. This is expected fo
 
 #: src/components/PoolList/index.tsx:148
 #: src/features/farm/FarmList.tsx:29
+#: src/features/governance/ProposalList.tsx:21
 #: src/features/vault/VaultList.tsx:27
 msgid "Soon"
 msgstr "Soon"
@@ -2155,11 +2165,11 @@ msgstr "Stake LP to Farm"
 #~ msgid "Staking APR"
 #~ msgstr "Staking APR"
 
-#: src/features/governance/ProposalList.tsx:42
+#: src/features/governance/ProposalList.tsx:48
 msgid "Start/End Block"
 msgstr "Start/End Block"
 
-#: src/features/governance/ProposalList.tsx:33
+#: src/features/governance/ProposalList.tsx:39
 #: src/pages/bridge/history/index.tsx:161
 #: src/pages/bridge/history/index.tsx:308
 msgid "Status"
@@ -2360,7 +2370,7 @@ msgstr "Tip to encourage miners to select this transaction."
 msgid "Tip: Custom tokens are stored locally in your browser"
 msgstr "Tip: Custom tokens are stored locally in your browser"
 
-#: src/features/governance/ProposalList.tsx:23
+#: src/features/governance/ProposalList.tsx:29
 msgid "Title"
 msgstr "Title"
 
@@ -2373,7 +2383,7 @@ msgstr "To"
 #~ msgid "To (estimated)"
 #~ msgstr "To (estimated)"
 
-#: src/pages/governance/index.tsx:103
+#: src/pages/governance/index.tsx:115
 msgid "To make a proposal click"
 msgstr "To make a proposal click"
 
@@ -2601,7 +2611,7 @@ msgstr "View on explorer"
 msgid "View proposal details"
 msgstr "View proposal details"
 
-#: src/pages/governance/index.tsx:102
+#: src/pages/governance/index.tsx:114
 msgid "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
 msgstr "View proposals and vote on them using your EMBER. The amount of EMBER you hold at the snapshot block determines your vote weight. You may only vote once per proposal."
 
@@ -2633,7 +2643,7 @@ msgstr "View transaction on explorer"
 msgid "Vote"
 msgstr "Vote"
 
-#: src/pages/governance/index.tsx:98
+#: src/pages/governance/index.tsx:110
 msgid "Vote using EMBER on community created proposals."
 msgstr "Vote using EMBER on community created proposals."
 
@@ -2895,14 +2905,14 @@ msgstr "Your transactions will appear here..."
 #~ msgstr "Your {exchange} {0}/{1} liquidity will become SushiSwap {2}/{3} liquidity."
 
 #: src/features/trade/Header.tsx:99
-msgid "Zap"
-msgstr "Zap"
+#~ msgid "Zap"
+#~ msgstr "Zap"
 
 #: src/pages/exchange/limit-order/[[...tokens]].tsx:165
 #~ msgid "above"
 #~ msgstr "above"
 
-#: src/pages/governance/index.tsx:41
+#: src/pages/governance/index.tsx:50
 #: src/pages/governance/proposal/[proposalId].tsx:52
 #: src/pages/governance/proposal/[proposalId].tsx:133
 msgid "active"
@@ -2917,7 +2927,7 @@ msgstr "annualized"
 #~ msgid "below"
 #~ msgstr "below"
 
-#: src/pages/governance/index.tsx:40
+#: src/pages/governance/index.tsx:49
 #: src/pages/governance/proposal/[proposalId].tsx:51
 msgid "closed"
 msgstr "closed"
@@ -2938,7 +2948,7 @@ msgstr "failed to load"
 #~ msgid "forum discussion"
 #~ msgstr "forum discussion"
 
-#: src/pages/governance/index.tsx:104
+#: src/pages/governance/index.tsx:116
 msgid "here!"
 msgstr "here!"
 
@@ -3053,12 +3063,12 @@ msgstr "{0} {1} per {2}"
 msgid "{0}/{1} Burned"
 msgstr "{0}/{1} Burned"
 
-#: src/pages/governance/index.tsx:43
+#: src/pages/governance/index.tsx:52
 #: src/pages/governance/proposal/[proposalId].tsx:54
 msgid "{expireTime} ago"
 msgstr "{expireTime} ago"
 
-#: src/pages/governance/index.tsx:44
+#: src/pages/governance/index.tsx:53
 #: src/pages/governance/proposal/[proposalId].tsx:55
 msgid "{expireTime} left"
 msgstr "{expireTime} left"
