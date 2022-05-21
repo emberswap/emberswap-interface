@@ -34,11 +34,11 @@ const ProposalList = ({ proposals, term, filter }) => {
         </div>
         <div
           className="flex items-center justify-center px-4 cursor-pointer hover:text-high-emphesis"
-          onClick={() => requestSort('status')}
+          onClick={() => requestSort('endBlock')}
         >
           {i18n._(t`Status`)}
           {sortConfig &&
-            sortConfig.key === 'status' &&
+            sortConfig.key === 'endBlock' &&
             ((sortConfig.direction === 'ascending' && <ChevronUpIcon width={12} height={12} />) ||
               (sortConfig.direction === 'descending' && <ChevronDownIcon width={12} height={12} />))}
         </div>
