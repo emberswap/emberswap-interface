@@ -1907,7 +1907,7 @@ msgstr "路由经过这些代币将给您的交易带来最好的价格。"
 #~ msgid "Search by name, symbol, address"
 #~ msgstr "通过名字、代号或地址搜索"
 
-#: src/pages/governance/index.tsx:139
+#: src/pages/governance/index.tsx:140
 msgid "Search by proposal title"
 msgstr ""
 

@@ -2007,7 +2007,7 @@ msgstr "Routing through these tokens resulted in the best price for your trade."
 #~ msgid "Search by name, symbol, address"
 #~ msgstr "Search by name, symbol, address"
 
-#: src/pages/governance/index.tsx:139
+#: src/pages/governance/index.tsx:140
 msgid "Search by proposal title"
 msgstr "Search by proposal title"
 

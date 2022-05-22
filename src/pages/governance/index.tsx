@@ -119,6 +119,7 @@ export default function Vote() {
             <Image src="/images/governance/emberswap-governance.png" alt="EmberSwap Governance" width="100%" height="100%" layout="responsive" />
           </div>
         </div> 
+        <div className="md:flex justify-center mb-6">
         <div className={`col-span-12 md:col-span-3 space-y-4 w-full max-w-xs px-6`}>
           <div>
             <Menu
@@ -130,7 +131,7 @@ export default function Vote() {
             />
           </div>
         </div>
-        <div className="flex justify-center mb-6">    
+        <div className="flex inline-flex">    
           <DoubleGlowShadow>
           <div className="flex flex-col w-full mt-auto mb-4 max-w-7xl">
             <div className={classNames('space-y-6 col-span-4 lg:col-span-3')}>
@@ -153,6 +154,7 @@ export default function Vote() {
             </div>
           </div>    
         </DoubleGlowShadow>
+      </div>
       </div>
     </div>            
   </Container>
