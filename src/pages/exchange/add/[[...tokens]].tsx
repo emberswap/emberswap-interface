@@ -47,6 +47,7 @@ import Empty from '../../../components/Empty'
 import { useTokenBalancesWithLoadingIndicator } from '../../../state/wallet/hooks'
 import Alert from '../../../components/Alert'
 import { useTheme } from '../../../components/ThemeSwitch'
+import ExternalLink from '../../../components/ExternalLink'
 
 const DEFAULT_ADD_V2_SLIPPAGE_TOLERANCE = new Percent(50, 10_000)
 
@@ -574,13 +575,13 @@ export default function Add() {
                 </Empty>
               ) : allV2PairsWithLiquidity?.length > 0 ? (
                 <>
-                  {/* <div className="flex items-center justify-center">
+                  {<div className="flex items-center justify-center">
                   <ExternalLink
-                    href={"https://analytics.sushi.com/user/" + account}
+                    href={"https://analytics.emberswap.com/user/" + account}
                   >
                     Account analytics and accrued fees <span> ↗</span>
                   </ExternalLink>
-                </div> */}
+                </div> }
                   {allV2PairsWithLiquidity.map((v2Pair) => (
                     <FullPositionCard
                       key={v2Pair.liquidityToken.address}

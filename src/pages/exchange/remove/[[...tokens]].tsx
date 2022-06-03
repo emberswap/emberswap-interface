@@ -55,6 +55,7 @@ import { useTokenBalancesWithLoadingIndicator } from '../../../state/wallet/hook
 import { useV2Pairs } from '../../../hooks/useV2Pairs'
 import EmberswapLogo from '../../../components/EmberswapLogo'
 import { useTheme } from '../../../components/ThemeSwitch'
+import ExternalLink from '../../../components/ExternalLink'
 
 const DEFAULT_REMOVE_LIQUIDITY_SLIPPAGE_TOLERANCE = new Percent(5, 100)
 
@@ -922,13 +923,13 @@ export default function Remove() {
                 </Empty>
                   ) : allV2PairsWithLiquidity?.length > 0 ? (
                 <>
-                  {/* <div className="flex items-center justify-center">
+                  {<div className="flex items-center justify-center">
                   <ExternalLink
-                    href={"https://analytics.sushi.com/user/" + account}
+                    href={"https://analytics.emberswap.com/user/" + account}
                   >
                     Account analytics and accrued fees <span> ↗</span>
                   </ExternalLink>
-                </div> */}
+                </div>}
                   {allV2PairsWithLiquidity.map((v2Pair) => (
                     <FullPositionCard
                       key={v2Pair.liquidityToken.address}

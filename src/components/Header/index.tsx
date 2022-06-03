@@ -102,7 +102,7 @@ function AppBar(): JSX.Element {
                             {i18n._(t`Governance`)}
                           </a>
                         </NavLink>
-                      <NavLink href="/analytics">
+                      <NavLink href="https://analytics.emberswap.com">
                         <a
                          // target="_blank"
                           id={`swap-nav-link`}
@@ -249,7 +249,7 @@ function AppBar(): JSX.Element {
                             {i18n._(t`Governance`)}
                           </a>
                         </Link>
-                <Link href="/analytics">
+                <Link href="https://analytics.emberswap.com">
                   <a
                    // target="_blank"
                     className="p-2 text-baseline text-primary hover:text-high-emphesis focus:text-high-emphesis md:p-3 whitespace-nowrap"

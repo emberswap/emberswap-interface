@@ -128,13 +128,13 @@ export default function Pool() {
                 </Empty>
               ) : allV2PairsWithLiquidity?.length > 0 ? (
                 <>
-                  {/* <div className="flex items-center justify-center">
+                  {<div className="flex items-center justify-center">
                   <ExternalLink
-                    href={"https://analytics.sushi.com/user/" + account}
+                    href={"https://analytics.emberswap.com/user/" + account}
                   >
                     Account analytics and accrued fees <span> ↗</span>
                   </ExternalLink>
-                </div> */}
+                </div>}
                   {allV2PairsWithLiquidity.map((v2Pair) => (
                     <FullPositionCard
                       key={v2Pair.liquidityToken.address}
