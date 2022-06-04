@@ -92,8 +92,20 @@ const builders = {
     }
   },
 
-  smartscan: (chainName: string, data: string, type: 'transaction' | 'token' | 'address' | 'block') => {
-    const prefix = 'https://smartscan.cash/'
+  sonar: (chainName: string, data: string, type: 'transaction' | 'token' | 'address' | 'block') => {
+    const prefix = 'https://sonar.cash/'
+    switch (type) {
+      case 'transaction':
+        return `${prefix}/tx/${data}`
+      case 'address':
+        return `${prefix}/address/${data}`
+      default:
+        return `${prefix}/${type}/${data}`
+    }
+  },
+
+  sonarTestnet: (chainName: string, data: string, type: 'transaction' | 'token' | 'address' | 'block') => {
+    const prefix = 'https://testnet.sonar.cash/'
     switch (type) {
       case 'transaction':
         return `${prefix}/tx/${data}`
@@ -249,11 +261,11 @@ const chains: ChainObject = {
   },
   [ChainId.SMARTBCH]: {
     chainName: '',
-    builder: builders.smartscan,
+    builder: builders.sonar,
   },
   [ChainId.SMARTBCH_TESTNET]: {
     chainName: 'testnet',
-    builder: builders.smartscan,
+    builder: builders.sonarTestnet,
   },
   [ChainId.AVALANCHE]: {
     chainName: '',

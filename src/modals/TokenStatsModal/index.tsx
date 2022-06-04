@@ -105,7 +105,11 @@ export default function TokenStatsModal({ token }: { token: any }) {
     )
   }
   const getTokenLogoURL = (address: string) => {
-    return `https://smartscan.cash/address/${EMBER_ADDRESS[chainId]}`
+    if (chainId === ChainId.SMARTBCH_TESTNET) {
+      return `https://testnet.sonar.cash/address/${EMBER_ADDRESS[chainId]}`
+    }
+    else
+    return `https://sonar.cash/address/${EMBER_ADDRESS[chainId]}`
   }
   function getModalContent() {
     return (

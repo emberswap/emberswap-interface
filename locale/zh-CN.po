@@ -512,7 +512,7 @@ msgstr "改变"
 msgid "Chinese"
 msgstr "中文"
 
-#: src/modals/TokenStatsModal/index.tsx:161
+#: src/modals/TokenStatsModal/index.tsx:165
 msgid "Circulating Supply"
 msgstr "当前供应"
 
@@ -1395,7 +1395,7 @@ msgstr "管理这个池子"
 #~ msgid "Market"
 #~ msgstr ""
 
-#: src/modals/TokenStatsModal/index.tsx:209
+#: src/modals/TokenStatsModal/index.tsx:213
 msgid "Market Cap"
 msgstr "市值"
 
@@ -2073,7 +2073,7 @@ msgstr ""
 #~ msgid "Submit Tool"
 #~ msgstr "提交工具"
 
-#: src/modals/TokenStatsModal/index.tsx:155
+#: src/modals/TokenStatsModal/index.tsx:159
 msgid "Supply & Market Cap"
 msgstr "供应和市值"
 
@@ -2444,7 +2444,7 @@ msgstr ""
 #~ msgid "Vietnamese"
 #~ msgstr ""
 
-#: src/modals/TokenStatsModal/index.tsx:142
+#: src/modals/TokenStatsModal/index.tsx:146
 msgid "View Contract"
 msgstr "查看合约"
 
@@ -2870,7 +2870,7 @@ msgstr "否则交易将会被拒绝"
 #~ msgid "{0, plural, one {Token} many {Tokens}}"
 #~ msgstr ""
 
-#: src/modals/TokenStatsModal/index.tsx:114
+#: src/modals/TokenStatsModal/index.tsx:118
 msgid "{0}"
 msgstr "{0}"
 

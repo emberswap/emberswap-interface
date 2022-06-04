@@ -59,7 +59,7 @@ export const SUPPORTED_NETWORKS: {
       decimals: 18,
     },
     rpcUrls: ['https://smartbch.fountainhead.cash/mainnet', 'https://smartbch.greyh.at'],
-    blockExplorerUrls: ['https://smartscan.cash/'],
+    blockExplorerUrls: ['https://sonar.cash/'],
   },
   [ChainId.SMARTBCH_TESTNET]: {
     chainId: '0x2711',
@@ -70,7 +70,7 @@ export const SUPPORTED_NETWORKS: {
       decimals: 18,
     },
     rpcUrls: ['https://moeing.tech:9545', 'http://35.220.203.194:8545'],
-    blockExplorerUrls: ['https://smartscan.cash/'],
+    blockExplorerUrls: ['https://testnet.sonar.cash/'],
   },
 }
 

@@ -113,7 +113,7 @@ function MyApp({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="EmberSwap - DeFi on smartBCH" />
-        <meta name="keywords" content="incinerate,fire,ember,emberswap,burnomics,bitcoin,dogecoin,bch,sbch,smartbch,evm,cash,doge,defi,coinbase,coinmarketcap,coinmarket,smartscan,whitebit,coingecko,cryptocurrency,crypto,pancakeswap,dex,etherium,eth,btc" />
+        <meta name="keywords" content="incinerate,fire,ember,emberswap,burnomics,bitcoin,dogecoin,bch,sbch,smartbch,evm,cash,doge,defi,coinbase,coinmarketcap,coinmarket,sonarcash, sonar,whitebit,coingecko,cryptocurrency,crypto,pancakeswap,dex,etherium,eth,btc" />
 
         <meta name="format-detection" content="telephone=no" />
         <meta name="mobile-web-app-capable" content="yes" />
