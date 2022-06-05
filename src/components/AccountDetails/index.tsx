@@ -150,7 +150,7 @@ const AccountDetails: FC<AccountDetailsProps> = ({
                 <ExternalLink
                   color="light-green"
                   startIcon={<LinkIcon size={16} />}
-                  href={chainId && getExplorerLink(chainId, ENSName || account, 'address')}
+                  href={chainId && getExplorerLink(chainId, account, 'address')}
                 >
                   <Typography variant="sm">{i18n._(t`View on explorer`)}</Typography>
                 </ExternalLink>
