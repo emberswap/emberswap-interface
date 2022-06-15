@@ -226,7 +226,7 @@ msgstr "All Farms"
 #~ msgid "All Proposals"
 #~ msgstr "All Proposals"
 
-#: src/features/vault/VaultMenu.tsx:32
+#: src/features/vault/VaultMenu.tsx:31
 msgid "All Vaults"
 msgstr "All Vaults"
 
@@ -275,7 +275,7 @@ msgstr "Approve Limit Order"
 #: src/features/limit-order/LimitOrderButton.tsx:160
 #: src/pages/exchange/add/[[...tokens]].tsx:510
 #: src/pages/exchange/add/[[...tokens]].tsx:527
-#: src/pages/exchange/swap/[[...tokens]].tsx:538
+#: src/pages/exchange/swap/[[...tokens]].tsx:543
 #: src/pages/exchange/zap/[[...tokens]].tsx:467
 #: src/pages/exchange/zap/[[...tokens]].tsx:484
 msgid "Approve {0}"
@@ -906,7 +906,7 @@ msgstr "Error connecting. Try refreshing the page."
 msgid "Everytime you stake or claim rewards your lock time renews."
 msgstr "Everytime you stake or claim rewards your lock time renews."
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:372
+#: src/pages/exchange/swap/[[...tokens]].tsx:377
 msgid "Exchange"
 msgstr "Exchange"
 
@@ -1219,7 +1219,7 @@ msgstr "Input is estimated. You will sell at most"
 #~ msgid "Insufficient WETH balance"
 #~ msgstr "Insufficient WETH balance"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:523
+#: src/pages/exchange/swap/[[...tokens]].tsx:528
 msgid "Insufficient liquidity for this trade"
 msgstr "Insufficient liquidity for this trade"
 
@@ -1590,7 +1590,7 @@ msgstr "My Orders"
 #~ msgid "My Vault"
 #~ msgstr "My Vault"
 
-#: src/features/vault/VaultMenu.tsx:33
+#: src/features/vault/VaultMenu.tsx:32
 msgid "My Vaults"
 msgstr "My Vaults"
 
@@ -1752,7 +1752,7 @@ msgstr "Output will be sent to"
 msgid "Past Farms"
 msgstr "Past Farms"
 
-#: src/features/vault/VaultMenu.tsx:34
+#: src/features/vault/VaultMenu.tsx:33
 msgid "Past Vaults"
 msgstr "Past Vaults"
 
@@ -1860,12 +1860,12 @@ msgstr "Powered by Anyswap Network"
 msgid "Price Impact"
 msgstr "Price Impact"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:568
+#: src/pages/exchange/swap/[[...tokens]].tsx:573
 msgid "Price Impact High"
 msgstr "Price Impact High"
 
 #: src/features/swap/SwapModalFooter.tsx:113
-#: src/pages/exchange/swap/[[...tokens]].tsx:597
+#: src/pages/exchange/swap/[[...tokens]].tsx:602
 msgid "Price Impact Too High"
 msgstr "Price Impact Too High"
 
@@ -1929,7 +1929,7 @@ msgstr "Remove Liquidity"
 msgid "Remove liquidity of EmberSwap"
 msgstr "Remove liquidity of EmberSwap"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:461
+#: src/pages/exchange/swap/[[...tokens]].tsx:466
 msgid "Remove recipient"
 msgstr "Remove recipient"
 
@@ -2224,30 +2224,30 @@ msgstr "Supplying {0} {1} and {2} {3}"
 #: src/components/Header/index.tsx:208
 #: src/features/trade/Header.tsx:78
 #: src/features/trade/Header.tsx:89
-#: src/pages/exchange/swap/[[...tokens]].tsx:571
-#: src/pages/exchange/swap/[[...tokens]].tsx:600
+#: src/pages/exchange/swap/[[...tokens]].tsx:576
+#: src/pages/exchange/swap/[[...tokens]].tsx:605
 msgid "Swap"
 msgstr "Swap"
 
 #: src/features/swap/SwapModalFooter.tsx:115
-#: src/pages/exchange/swap/[[...tokens]].tsx:570
-#: src/pages/exchange/swap/[[...tokens]].tsx:599
+#: src/pages/exchange/swap/[[...tokens]].tsx:575
+#: src/pages/exchange/swap/[[...tokens]].tsx:604
 msgid "Swap Anyway"
 msgstr "Swap Anyway"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:412
+#: src/pages/exchange/swap/[[...tokens]].tsx:417
 msgid "Swap From (est.):"
 msgstr "Swap From (est.):"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:412
+#: src/pages/exchange/swap/[[...tokens]].tsx:417
 msgid "Swap From:"
 msgstr "Swap From:"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:471
+#: src/pages/exchange/swap/[[...tokens]].tsx:476
 msgid "Swap To (est.):"
 msgstr "Swap To (est.):"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:471
+#: src/pages/exchange/swap/[[...tokens]].tsx:476
 msgid "Swap To:"
 msgstr "Swap To:"
 
@@ -2473,7 +2473,7 @@ msgstr "Transaction deadline"
 #~ msgid "Transactions"
 #~ msgstr "Transactions"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:524
+#: src/pages/exchange/swap/[[...tokens]].tsx:529
 msgid "Try enabling multi-hop trades"
 msgstr "Try enabling multi-hop trades"
 
@@ -2507,12 +2507,12 @@ msgstr "Unstake"
 #~ msgstr "Unstaked"
 
 #: src/pages/exchange/add/[[...tokens]].tsx:480
-#: src/pages/exchange/swap/[[...tokens]].tsx:502
+#: src/pages/exchange/swap/[[...tokens]].tsx:507
 #: src/pages/exchange/zap/[[...tokens]].tsx:437
 msgid "Unsupported Asset"
 msgstr "Unsupported Asset"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:518
+#: src/pages/exchange/swap/[[...tokens]].tsx:523
 msgid "Unwrap"
 msgstr "Unwrap"
 
@@ -2704,7 +2704,7 @@ msgstr "Withdraw from locker {id}"
 #~ msgid "Withdraw {assetSymbol}"
 #~ msgstr "Withdraw {assetSymbol}"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:516
+#: src/pages/exchange/swap/[[...tokens]].tsx:521
 msgid "Wrap"
 msgstr "Wrap"
 
@@ -2904,6 +2904,7 @@ msgstr "Your transactions will appear here..."
 #~ msgid "Your {exchange} {0}/{1} liquidity will become SushiSwap {2}/{3} liquidity."
 #~ msgstr "Your {exchange} {0}/{1} liquidity will become SushiSwap {2}/{3} liquidity."
 
+#: src/components/Header/index.tsx:70
 #: src/features/trade/Header.tsx:99
 #~ msgid "Zap"
 #~ msgstr "Zap"

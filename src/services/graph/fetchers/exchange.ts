@@ -10,11 +10,14 @@ import {
   tokenSubsetQuery,
   tokensQuery,
   transactionsQuery,
+  TOKEN_CHART,
 } from '../queries'
-
 import { ChainId } from '../../../sdk'
 import { GRAPH_HOST } from '../constants'
 import { request } from 'graphql-request'
+import dayjs from 'dayjs'
+import utc from 'dayjs/plugin/utc'
+dayjs.extend(utc)
 
 export const EXCHANGE = {
   [ChainId.MAINNET]: 'sushiswap/exchange',
@@ -26,32 +29,34 @@ export const EXCHANGE = {
   [ChainId.OKEX]: 'sushiswap/okex-exchange',
   [ChainId.AVALANCHE]: 'sushiswap/avalanche-exchange',
   [ChainId.CELO]: 'sushiswap/celo-exchange',
+  [ChainId.SMARTBCH]: 'emberswap/subgraphv2',
 }
 
-export const exchange = async (chainId = ChainId.MAINNET, query, variables) =>
+
+export const exchange = async (chainId = ChainId.SMARTBCH, query, variables) =>
   request(`${GRAPH_HOST[chainId]}/subgraphs/name/${EXCHANGE[chainId]}`, query, variables)
 
-export const getPairs = async (chainId = ChainId.MAINNET, variables = undefined, query = pairsQuery) => {
+export const getPairs = async (chainId = ChainId.SMARTBCH, variables = undefined, query = pairsQuery) => {
   const { pairs } = await exchange(chainId, query, variables)
   return pairs
 }
 
-export const getTokenSubset = async (chainId = ChainId.MAINNET, variables) => {
+export const getTokenSubset = async (chainId = ChainId.SMARTBCH, variables) => {
   const { tokens } = await exchange(chainId, tokenSubsetQuery, variables)
   return tokens
 }
 
-export const getTokens = async (chainId = ChainId.MAINNET, query = tokensQuery, variables) => {
+export const getTokens = async (chainId = ChainId.SMARTBCH, query = tokensQuery, variables) => {
   const { tokens } = await exchange(chainId, query, variables)
   return tokens
 }
 
-export const getToken = async (chainId = ChainId.MAINNET, query = tokenQuery, variables) => {
+export const getToken = async (chainId = ChainId.SMARTBCH, query = tokenQuery, variables) => {
   const { token } = await exchange(chainId, query, variables)
   return token
 }
 
-export const getTokenPrices = async (chainId = ChainId.MAINNET, variables) => {
+export const getTokenPrices = async (chainId = ChainId.SMARTBCH, variables) => {
   const { tokens } = await exchange(chainId, tokensQuery, variables)
   return tokens.map((token) => token?.derivedETH)
 }
@@ -63,6 +68,19 @@ export const getTokenPrice = async (chainId = ChainId.SMARTBCH, query, variables
   const { token } = await exchange(chainId, query, variables)
   return token?.derivedETH * nativePrice
 }
+
+export const getFactoryPrice = async (chainId = ChainId.SMARTBCH, query = factoryQuery, variables) => {
+  const { factory } = await exchange(chainId, query, variables)
+  return factory
+}
+
+export const getTokenData = async (chainId = ChainId.SMARTBCH, query, variables) => {
+  // console.log('getTokenPrice')
+
+  const  { tokenDayDatas }  = await exchange(chainId, query, variables)
+  return tokenDayDatas
+}
+
 
 export const getNativePrice = async (chainId = ChainId.SMARTBCH, variables = undefined) => {
   // console.log('getEthPrice')
@@ -94,7 +112,20 @@ export const getAlcxPrice = async () => {
 
 export const getEmberPrice = async () => {
   return getTokenPrice(ChainId.SMARTBCH, tokenPriceQuery, {
-    id: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
+    id: '0x6babf5277849265b6738e75aec43aefdde0ce88d',
+  })
+}
+
+export const getTokenStats = async (address, skip) => {
+  return getTokenData(ChainId.SMARTBCH, TOKEN_CHART, {
+    tokenAddr: address,
+    skip: skip,
+  })
+}
+
+export const gotTokenPrice = async (address) => {
+  return getTokenPrice(ChainId.SMARTBCH, tokenPriceQuery, {
+    id: address,
   })
 }
 
@@ -120,27 +151,28 @@ export const getBundle = async (
   return exchange(chainId, query, variables)
 }
 
-export const getLiquidityPositions = async (chainId = ChainId.MAINNET, variables) => {
+export const getLiquidityPositions = async (chainId = ChainId.SMARTBCH, variables) => {
   const { liquidityPositions } = await exchange(chainId, liquidityPositionsQuery, variables)
   return liquidityPositions
 }
 
-export const getDayData = async (chainId = ChainId.MAINNET, query = dayDatasQuery, variables = undefined) => {
+export const getDayData = async (chainId = ChainId.SMARTBCH, query = dayDatasQuery, variables = undefined) => {
   const { dayDatas } = await exchange(chainId, query, variables)
   return dayDatas
 }
 
-export const getFactory = async (chainId = ChainId.MAINNET, variables = undefined) => {
-  const { factory } = await exchange(chainId, factoryQuery, variables)
-  return factory
+export const getFactory = async () => {
+  return getFactoryPrice(ChainId.SMARTBCH, factoryQuery, {
+    id: "0xE62983a68679834eD884B9673Fb6aF13db740fF0",
+  })
 }
 
-export const getTransactions = async (chainId = ChainId.MAINNET, query = transactionsQuery, variables = undefined) => {
+export const getTransactions = async (chainId = ChainId.SMARTBCH, query = transactionsQuery, variables = undefined) => {
   const { swaps } = await exchange(chainId, query, variables)
   return swaps
 }
 
-export const getTokenPairs = async (chainId = ChainId.MAINNET, query = tokenPairsQuery, variables = undefined) => {
+export const getTokenPairs = async (chainId = ChainId.SMARTBCH, query = tokenPairsQuery, variables = undefined) => {
   const { pairs1, pairs2 } = await exchange(chainId, query, variables)
   return pairs1 || pairs2 ? [...(pairs1 ? pairs1 : []), ...(pairs2 ? pairs2 : [])] : undefined
 }

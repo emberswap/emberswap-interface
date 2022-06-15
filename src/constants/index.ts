@@ -4,6 +4,24 @@ import { binance, fortmatic, injected, portis, torus, walletconnect, walletlink 
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import { BigNumber } from 'ethers'
 
+export const timeframeOptions = {
+  WEEK: '1 week',
+  MONTH: '1 month',
+  ALL_TIME: 'All time',
+}
+
+// pairs that should be tracked but arent due to lag in subgraph
+export const TRACKED_OVERRIDES_PAIRS = []
+
+// tokens that should be tracked but arent due to lag in subgraph
+// all pairs that include token will be tracked
+export const TRACKED_OVERRIDES_TOKENS = ['0x6babf5277849265b6738e75aec43aefdde0ce88d']
+
+export const SUPPORTED_LIST_URLS__NO_ENS = [
+  'https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/emberswap.tokenlist.json',
+  'https://raw.githubusercontent.com/emberswap/SmartBCH-Token-List/main/tokens.json',
+]
+
 export const RPC = {
   [ChainId.MAINNET]: 'https://eth-mainnet.alchemyapi.io/v2/q1gSNoSMEzJms47Qn93f9-9Xg5clkmEC',
   [ChainId.ROPSTEN]: 'https://eth-ropsten.alchemyapi.io/v2/cidKix2Xr-snU3f6f6Zjq_rYdalKKHmW',

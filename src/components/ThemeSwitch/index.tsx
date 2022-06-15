@@ -41,7 +41,6 @@ export function ThemeProvider(props: { children: React.ReactNode }) {
 
     if (theme === 'dark') {
       document.documentElement.classList.add('dark')
-      console.log(themeEl);
       themeEl && themeEl.setAttribute('content', '#F338C3')
     } else {
       document.documentElement.classList.remove('dark')

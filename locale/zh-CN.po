@@ -231,7 +231,7 @@ msgstr ""
 #~ msgid "All Proposals"
 #~ msgstr ""
 
-#: src/features/vault/VaultMenu.tsx:32
+#: src/features/vault/VaultMenu.tsx:31
 msgid "All Vaults"
 msgstr ""
 
@@ -280,7 +280,7 @@ msgstr "授权限价订单"
 #: src/features/limit-order/LimitOrderButton.tsx:160
 #: src/pages/exchange/add/[[...tokens]].tsx:510
 #: src/pages/exchange/add/[[...tokens]].tsx:527
-#: src/pages/exchange/swap/[[...tokens]].tsx:538
+#: src/pages/exchange/swap/[[...tokens]].tsx:543
 #: src/pages/exchange/zap/[[...tokens]].tsx:467
 #: src/pages/exchange/zap/[[...tokens]].tsx:484
 msgid "Approve {0}"
@@ -860,7 +860,7 @@ msgstr "连接错误 尝试刷新网络"
 msgid "Everytime you stake or claim rewards your lock time renews."
 msgstr ""
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:372
+#: src/pages/exchange/swap/[[...tokens]].tsx:377
 msgid "Exchange"
 msgstr ""
 
@@ -1144,7 +1144,7 @@ msgstr "预估输入 你最多卖出"
 #~ msgid "Insufficient WETH balance"
 #~ msgstr "WETH余额不足"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:523
+#: src/pages/exchange/swap/[[...tokens]].tsx:528
 msgid "Insufficient liquidity for this trade"
 msgstr "该交易的流动性不足"
 
@@ -1504,7 +1504,7 @@ msgstr "我的订单"
 #~ msgid "My Vault"
 #~ msgstr ""
 
-#: src/features/vault/VaultMenu.tsx:33
+#: src/features/vault/VaultMenu.tsx:32
 msgid "My Vaults"
 msgstr ""
 
@@ -1659,7 +1659,7 @@ msgstr "输出将发送到"
 msgid "Past Farms"
 msgstr ""
 
-#: src/features/vault/VaultMenu.tsx:34
+#: src/features/vault/VaultMenu.tsx:33
 msgid "Past Vaults"
 msgstr ""
 
@@ -1760,12 +1760,12 @@ msgstr ""
 msgid "Price Impact"
 msgstr "价格影响"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:568
+#: src/pages/exchange/swap/[[...tokens]].tsx:573
 msgid "Price Impact High"
 msgstr "价格影响高"
 
 #: src/features/swap/SwapModalFooter.tsx:113
-#: src/pages/exchange/swap/[[...tokens]].tsx:597
+#: src/pages/exchange/swap/[[...tokens]].tsx:602
 msgid "Price Impact Too High"
 msgstr "价格影响过高"
 
@@ -1829,7 +1829,7 @@ msgstr "删除流动金"
 msgid "Remove liquidity of EmberSwap"
 msgstr "从EmberSwap中移除流动性"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:461
+#: src/pages/exchange/swap/[[...tokens]].tsx:466
 msgid "Remove recipient"
 msgstr "移除接收人"
 
@@ -2112,30 +2112,30 @@ msgstr "提供{0} {1}和{2} {3}"
 #: src/components/Header/index.tsx:208
 #: src/features/trade/Header.tsx:78
 #: src/features/trade/Header.tsx:89
-#: src/pages/exchange/swap/[[...tokens]].tsx:571
-#: src/pages/exchange/swap/[[...tokens]].tsx:600
+#: src/pages/exchange/swap/[[...tokens]].tsx:576
+#: src/pages/exchange/swap/[[...tokens]].tsx:605
 msgid "Swap"
 msgstr "兑换"
 
 #: src/features/swap/SwapModalFooter.tsx:115
-#: src/pages/exchange/swap/[[...tokens]].tsx:570
-#: src/pages/exchange/swap/[[...tokens]].tsx:599
+#: src/pages/exchange/swap/[[...tokens]].tsx:575
+#: src/pages/exchange/swap/[[...tokens]].tsx:604
 msgid "Swap Anyway"
 msgstr "仍要交换"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:412
+#: src/pages/exchange/swap/[[...tokens]].tsx:417
 msgid "Swap From (est.):"
 msgstr "交换自（估计）："
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:412
+#: src/pages/exchange/swap/[[...tokens]].tsx:417
 msgid "Swap From:"
 msgstr "交换自："
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:471
+#: src/pages/exchange/swap/[[...tokens]].tsx:476
 msgid "Swap To (est.):"
 msgstr "交换至（估算）："
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:471
+#: src/pages/exchange/swap/[[...tokens]].tsx:476
 msgid "Swap To:"
 msgstr "交换至："
 
@@ -2348,7 +2348,7 @@ msgstr "交易期限"
 #~ msgid "Transactions"
 #~ msgstr "交易"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:524
+#: src/pages/exchange/swap/[[...tokens]].tsx:529
 msgid "Try enabling multi-hop trades"
 msgstr "尝试启用多跳交易"
 
@@ -2382,12 +2382,12 @@ msgstr "解除抵押"
 #~ msgstr "解除质押"
 
 #: src/pages/exchange/add/[[...tokens]].tsx:480
-#: src/pages/exchange/swap/[[...tokens]].tsx:502
+#: src/pages/exchange/swap/[[...tokens]].tsx:507
 #: src/pages/exchange/zap/[[...tokens]].tsx:437
 msgid "Unsupported Asset"
 msgstr "不支持的资产"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:518
+#: src/pages/exchange/swap/[[...tokens]].tsx:523
 msgid "Unwrap"
 msgstr "解开"
 
@@ -2570,7 +2570,7 @@ msgstr "从锁定{id}中取款"
 #~ msgid "Withdraw {assetSymbol}"
 #~ msgstr "提现{assetSymbol}"
 
-#: src/pages/exchange/swap/[[...tokens]].tsx:516
+#: src/pages/exchange/swap/[[...tokens]].tsx:521
 msgid "Wrap"
 msgstr "包裹"
 
@@ -2763,6 +2763,7 @@ msgstr "你的交易将在这里显示"
 #~ msgid "Your {exchange} {0}/{1} liquidity will become SushiSwap {2}/{3} liquidity."
 #~ msgstr "您的{exchange} {0} / {1}流动性将变为SushiSwap {2} / {3}的流动性。"
 
+#: src/components/Header/index.tsx:70
 #: src/features/trade/Header.tsx:99
 #~ msgid "Zap"
 #~ msgstr ""

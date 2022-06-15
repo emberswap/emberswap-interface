@@ -278,6 +278,7 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
   // ],
 }
 
+export const BUNDLE_ID = '1'
 
 export const FACTORY_ADDRESS: { [chainId in ChainId]: string } = {
   [ChainId.MAINNET]: '',

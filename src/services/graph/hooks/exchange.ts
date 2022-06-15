@@ -1,7 +1,6 @@
 import {
   exchange,
   getAlcxPrice,
-  getBundle,
   getCvxPrice,
   getLiquidityPositions,
   getMaticPrice,
@@ -11,18 +10,19 @@ import {
   getNativePrice,
   getTokens,
   getDayData,
-  getFactory,
   getToken,
   getTokenPairs,
   getTransactions,
+  gotTokenPrice,
 } from '../fetchers'
 import { getEthPrice, getPairs } from '../fetchers'
 import useSWR, { SWRConfiguration } from 'swr'
 import { useBlock } from './blocks'
 import { ChainId } from '../../../sdk'
-import { ethPriceQuery } from '../queries'
 import { useActiveWeb3React } from '../../../hooks'
-import { first } from 'lodash'
+import dayjs from 'dayjs'
+import utc from 'dayjs/plugin/utc'
+dayjs.extend(utc)
 
 export function useExchange(variables = undefined, query = undefined, swrConfig: SWRConfiguration = undefined) {
   const { chainId } = useActiveWeb3React()
@@ -34,15 +34,6 @@ export function useExchange(variables = undefined, query = undefined, swrConfig:
   return data
 }
 
-export function useFactory(variables = undefined, swrConfig: SWRConfiguration = undefined) {
-  const { chainId } = useActiveWeb3React()
-  const { data } = useSWR(
-    chainId ? ['factory', chainId, JSON.stringify(variables)] : null,
-    () => getFactory(chainId, variables),
-    swrConfig
-  )
-  return data
-}
 
 interface useNativePriceProps {
   timestamp?: number
@@ -115,13 +106,8 @@ export function useEmberPrice(swrConfig: SWRConfiguration = undefined) {
   return data
 }
 
-export function useBundle(variables = undefined, swrConfig: SWRConfiguration = undefined) {
-  const { chainId } = useActiveWeb3React()
-  const { data } = useSWR(
-    chainId ? [chainId, ethPriceQuery, JSON.stringify(variables)] : null,
-    () => getBundle(),
-    swrConfig
-  )
+export function useTokenPrice(address = undefined, swrConfig: SWRConfiguration = undefined) {
+  const { data } = useSWR('tokenPrice', () => gotTokenPrice(address), swrConfig)
   return data
 }
 

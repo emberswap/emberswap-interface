@@ -24,7 +24,6 @@ const MenuItem = ({ href, title }) => {
 const Menu = ({ positionsLength, onSearch, term  }) => {
   const { account, chainId } = useActiveWeb3React()
   const { i18n } = useLingui() 
-         console.log(account)
 
   return (
     <div className={`grid grid-cols-12`}>

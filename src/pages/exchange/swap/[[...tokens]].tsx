@@ -15,7 +15,6 @@ import {
 import { useExpertModeManager, useUserSingleHopOnly, useUserTransactionTTL } from '../../../state/user/hooks'
 import useWrapCallback, { WrapType } from '../../../hooks/useWrapCallback'
 import SwapHeader from '../../../features/trade/Header'
-
 import AddressInputPanel from '../../../components/AddressInputPanel'
 import Button from '../../../components/Button'
 import ConfirmSwapModal from '../../../features/swap/ConfirmSwapModal'
@@ -41,15 +40,15 @@ import { useActiveWeb3React } from '../../../hooks/useActiveWeb3React'
 import useENSAddress from '../../../hooks/useENSAddress'
 import useIsArgentWallet from '../../../hooks/useIsArgentWallet'
 import { useIsSwapUnsupported } from '../../../hooks/useIsSwapUnsupported'
-import { useRouter } from 'next/router'
 import { useSwapCallback } from '../../../hooks/useSwapCallback'
 import { useUSDCValue } from '../../../hooks/useUSDCPrice'
 import { warningSeverity } from '../../../functions/prices'
 import DoubleGlowShadow from '../../../components/DoubleGlowShadow'
-import Image from 'next/image'
 import EmberswapLogo from '../../../components/EmberswapLogo'
 import { useTheme } from '../../../components/ThemeSwitch'
-import Alert from '../../../components/Alert'
+import  ChartCard  from '../../../features/analytics/Dashboard/ChartCard'
+import { useTokenPriceData } from '../../../contexts/TokenData'
+import { timeframeOptions } from '../../../constants'
 
 export default function Swap() {
   const { i18n } = useLingui()
@@ -363,8 +362,14 @@ export default function Swap() {
   )
 
   const swapIsUnsupported = useIsSwapUnsupported(currencies?.INPUT, currencies?.OUTPUT)
-
+  var CurrencyOutput = currencies[Field.OUTPUT]
+  var OutputAddress = CurrencyOutput?.wrapped?.address?.toLowerCase()
   const [animateSwapArrows, setAnimateSwapArrows] = useState<boolean>(false)
+  const hourlyWeek = useTokenPriceData(OutputAddress, timeframeOptions.WEEK, 3600)
+  var datalength = hourlyWeek?.length - 1 || 0
+  var priceUSD  = hourlyWeek?.[datalength]?.close || '0'
+  var OutputSymbol = CurrencyOutput?.wrapped?.symbol  || ''
+  OutputSymbol === 'WBCH' ? OutputSymbol = 'BCH' : ''  
 
   return (
     <>
@@ -376,17 +381,17 @@ export default function Swap() {
           content="EmberSwap allows for swapping of compatible tokens on SmartBCH."
         />
       </Head>
-
       <TokenWarningModal
         isOpen={importTokensNotInDefault.length > 0 && !dismissTokenWarning}
         tokens={importTokensNotInDefault}
         onConfirm={handleConfirmTokenWarning}
       />
-
       <EmberswapLogo />
-
-      <DoubleGlowShadow opacity="0.6">
-        <div id="swap-page" className="w-full max-w-2xl p-4 space-y-4 rounded backdrop-blur-md	bg-dark-900-custom z-1">
+      <DoubleGlowShadow opacity="0.6" maxWidth={false}>
+        <div id="swap-page" className="grid grid-cols-1 gap-2 z-4 max-w-screen-xl m-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 space-y-2 lg:space-x-6 md:space-y-0">          
+          {<ChartCard OutputAddress = {OutputAddress} base={priceUSD} symbol={OutputSymbol}/>}
+          <div className="col-span-1 rounded backdrop-blur-md bg-dark-900-custom z-1 flex flex-col md:ml-2 mb-2 md:mb-0  p-6 rounded-xxl">
           <SwapHeader
             input={currencies[Field.INPUT]}
             output={currencies[Field.OUTPUT]}
@@ -610,6 +615,8 @@ export default function Swap() {
           {!swapIsUnsupported ? null : (
             <UnsupportedCurrencyFooter show={swapIsUnsupported} currencies={[currencies.INPUT, currencies.OUTPUT]} />
           )}
+        </div>
+        </div>
         </div>
       </DoubleGlowShadow>
     </>

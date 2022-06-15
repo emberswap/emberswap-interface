@@ -1,14 +1,20 @@
 import gql from 'graphql-tag'
 
-export const factoryQuery = gql`
-  query factoryQuery($id: String! = "0xc0aee478e3658e2610c5f7a4a2e1777ce9e4f2ac", $block: Block_height) {
-    factory(id: $id, block: $block) {
-      id
-      volumeUSD
-      liquidityUSD
-    }
-  }
-`
+const FACTORY_ADDRESS = '0xE62983a68679834eD884B9673Fb6aF13db740fF0'
+
+export const factoryQuery = (block) => {
+  const queryString = ` query uniswapFactories {
+      uniswapFactories(
+       ${block ? `block: { number: ${block}}` : ``} 
+       where: { id: "${FACTORY_ADDRESS}" }) {
+        id
+        totalVolumeUSD
+        untrackedVolumeUSD
+        totalLiquidityUSD
+      }
+    }`
+  return gql(queryString)
+}
 
 export const userIdsQuery = gql`
   query userIdsQuery($first: Int! = 1000, $skip: Int! = 0) {
@@ -283,18 +289,18 @@ export const tokenIdsQuery = gql`
   }
 `
 
-export const tokenDayDatasQuery = gql`
-  query tokenDayDatasQuery($first: Int! = 1000, $tokens: [Bytes]!, $date: Int! = 0) {
-    tokenDayDatas(first: $first, orderBy: date, orderDirection: desc, where: { token_in: $tokens, date_gt: $date }) {
+export const TOKEN_CHART = gql`
+  query tokenDayDatas($tokenAddr: String!, $skip: Int!) {
+    tokenDayDatas(first: 1000, skip: $skip, orderBy: date, orderDirection: asc, where: { token: $tokenAddr }) {
       id
       date
-      token {
-        id
-      }
-      volumeUSD
-      liquidityUSD
       priceUSD
-      txCount
+      totalLiquidityToken
+      totalLiquidityUSD
+      totalLiquidityETH
+      dailyVolumeETH
+      dailyVolumeToken
+      dailyVolumeUSD
     }
   }
 `

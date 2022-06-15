@@ -35,6 +35,11 @@ import PriceProvider  from '../contexts/priceContext'
 import FarmContext from '../contexts/farmContext'
 import { usePricesApi } from '../features/farm/hooks'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3'
+import TokenDataContextProvider, { Updater as TokenDataContextUpdater } from '../contexts/TokenData'
+import ApplicationContextProvider from '../contexts/Application'
+import PairDataContextProvider, { Updater as PairDataContextUpdater } from '../contexts/PairData'
+import GlobalDataContextProvider from '../contexts/GlobalData'
+import LocalStorageContextProvider, { Updater as LocalStorageContextUpdater } from '../contexts/LocalStorage'
 
 const Web3ProviderNetwork = dynamic(() => import('../components/Web3ProviderNetwork'), { ssr: false })
 const Web3ProviderNetworkBridge = dynamic(() => import('../components/Web3ProviderBridge'), { ssr: false })
@@ -141,6 +146,11 @@ function MyApp({
               <Web3ReactManager>
                 <ReduxProvider store={store}>
                   <PriceProvider>
+                  <LocalStorageContextProvider>
+                  <ApplicationContextProvider>
+                    <TokenDataContextProvider>
+                      <GlobalDataContextProvider>
+                      <PairDataContextProvider>
                     <>
                       <ListsUpdater />
                       <UserUpdater />
@@ -157,6 +167,11 @@ function MyApp({
                       </Layout>
                       </ThemeProvider>
                     </Provider>
+                    </PairDataContextProvider>
+                    </GlobalDataContextProvider>
+                    </TokenDataContextProvider>
+                  </ApplicationContextProvider>
+                  </LocalStorageContextProvider>
                   </PriceProvider>
                 </ReduxProvider>
               </Web3ReactManager>

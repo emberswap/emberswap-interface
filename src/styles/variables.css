@@ -60,6 +60,7 @@
     --color-dark-1000:#000000;
     --color-dark-900:#080808;
     --color-dark-900-custom:#0808086b;
+    --color-dark-9900-custom:rgba(115,111,111,0.361);
     --color-dark-850:#101010;
     --color-dark-800:#101010;
     --color-dark-950:#101010;
@@ -142,6 +143,7 @@
     --color-dark-1000:#fff;
     --color-dark-900:#a0a1a2;
     --color-dark-900-custom:#a0a1a224;
+    --color-dark-9900-custom:rgba(190,190,190,0.37);
     --color-dark-850:#65737e;
     --color-dark-800:#bebebe;
     --dark-8000:#e2e2e2;

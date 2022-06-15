@@ -14,12 +14,13 @@ export const BLOCKS = {
   [ChainId.HARMONY]: 'sushiswap/harmony-blocks',
   [ChainId.AVALANCHE]: 'matthewlilley/avalanche-blocks',
   [ChainId.CELO]: 'sushiswap/celo-blocks',
+  [ChainId.SMARTBCH]: 'blocklytics/ethereum-blocks',
 }
 
-export const fetcher = async (chainId = ChainId.MAINNET, query, variables) =>
+export const fetcher = async (chainId = ChainId.SMARTBCH, query, variables) =>
   request(`${GRAPH_HOST[chainId]}/subgraphs/name/${BLOCKS[chainId]}`, query, variables)
 
-export const getBlocks = async (chainId = ChainId.MAINNET, start, end) => {
+export const getBlocks = async (chainId = ChainId.SMARTBCH, start, end) => {
   const { blocks } = await fetcher(chainId, blocksQuery, {
     start,
     end,
@@ -28,23 +29,23 @@ export const getBlocks = async (chainId = ChainId.MAINNET, start, end) => {
 }
 
 export const getBlock = async (chainId = ChainId.SMARTBCH, timestamp: number) => {
-  const { blocks } = await fetcher(
+  const  blocks  = await fetcher(
     chainId,
     blockQuery,
     timestamp
       ? {
           where: {
-            timestamp_gt: timestamp - 600,
-            timestamp_lt: timestamp,
+            timestampFrom: timestamp - 600,
+            timestampTo: timestamp,
           },
         }
       : {}
   )
 
-  return Number(blocks?.[0]?.number)
+  return blocks?.data?.blocks?.[0]?.number
 }
 
-export const getOneDayBlock = async (chainId = ChainId.MAINNET) => {
+export const getOneDayBlock = async (chainId = ChainId.SMARTBCH) => {
   const date = startOfHour(subDays(Date.now(), 1))
   const start = Math.floor(Number(date) / 1000)
   const end = Math.floor(Number(date) / 1000) + 600
@@ -52,7 +53,7 @@ export const getOneDayBlock = async (chainId = ChainId.MAINNET) => {
   return blocks?.[0]?.number
 }
 
-export const getOneWeekBlock = async (chainId = ChainId.MAINNET) => {
+export const getOneWeekBlock = async (chainId = ChainId.SMARTBCH) => {
   const date = startOfHour(subDays(Date.now(), 7))
   const start = Math.floor(Number(date) / 1000)
   const end = Math.floor(Number(date) / 1000) + 600
@@ -60,11 +61,11 @@ export const getOneWeekBlock = async (chainId = ChainId.MAINNET) => {
   return blocks?.[0]?.number
 }
 
-export const getCustomDayBlock = async (chainId = ChainId.MAINNET, days: number) => {
+export const getCustomDayBlock = async (chainId = ChainId.SMARTBCH, days: number) => {
   const date = startOfHour(subDays(Date.now(), days))
   const start = Math.floor(Number(date) / 1000)
   const end = Math.floor(Number(date) / 1000) + 600
-  const { blocks } = await request(`https://api.thegraph.com/subgraphs/name/${BLOCKS[chainId]}`, blocksQuery, {
+  const { blocks } = await request(`https://thegraph.emberswap.org/subgraphs/name/${BLOCKS[chainId]}`, blocksQuery, {
     start,
     end,
   })
@@ -73,7 +74,7 @@ export const getCustomDayBlock = async (chainId = ChainId.MAINNET, days: number)
 
 // Grabs the last 1000 (a sample statistical) blocks and averages
 // the time difference between them
-export const getAverageBlockTime = async (chainId = ChainId.MAINNET) => {
+export const getAverageBlockTime = async (chainId = ChainId.SMARTBCH) => {
   const now = startOfHour(Date.now())
   const start = getUnixTime(subHours(now, 6))
   const end = getUnixTime(now)

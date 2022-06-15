@@ -100,6 +100,7 @@ module.exports = {
         'dark-1000': 'var(--color-dark-1000)',
         'dark-900': 'var(--color-dark-900)',
         'dark-900-custom': 'var(--color-dark-900-custom)',
+        'dark-9900-custom': 'var(--color-dark-9900-custom)',
         'dark-850': 'var(--color-dark-850)',
         'dark-800': 'var(--color-dark-800)',
         'dark-950': 'var(--color-dark-950)',
