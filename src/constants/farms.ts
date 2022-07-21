@@ -618,6 +618,40 @@ export const POOLS: AddressMap = {
       name: 'Ember-LP',
       symbol: 'EMBER-LP',
     },
+    '0x3e11b8b814e8f87b4811e97c948ddaf6b5db2092': {
+      id: 35,
+      token0: {
+        id: '0xBc9bD8DDe6C5a8e1CBE293356E02f5984693b195',
+        name: 'BlockNG-Peg BCH Token',
+        symbol: 'bcBCH',
+        decimals: 18,
+      },
+      token1: {
+        id: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
+        name: 'Ember',
+        symbol: 'EMBER',
+        decimals: 18,
+      },
+      name: 'Ember-LP',
+      symbol: 'EMBER-LP',
+    },
+    '0x3239c9d03690af63da758a36a4a14e6b36dc091f': {
+      id: 36,
+      token0: {
+        id: '0xBc2F884680c95A02cea099dA2F524b366d9028Ba',
+        name: 'BlockNG-Peg USDT Token',
+        symbol: 'bcUSDT',
+        decimals: 18,
+      },
+      token1: {
+        id: '0x6BAbf5277849265b6738e75AEC43AEfdde0Ce88D',
+        name: 'Ember',
+        symbol: 'EMBER',
+        decimals: 18,
+      },
+      name: 'Ember-LP',
+      symbol: 'EMBER-LP',
+    },
   },
   [ChainId.SMARTBCH_TESTNET]: {
     '0x790Fb0Cda5920cAe32afE598fDB3746F8d610f59':{

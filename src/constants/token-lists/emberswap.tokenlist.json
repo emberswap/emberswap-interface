@@ -137,6 +137,70 @@
       "decimals": 18,
       "chainId": 10000,
       "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0x4ee06d0486ced674E75Ed9e521725580e8ffDA21/logo.png"
+    },
+    {
+      "name": "BlockNG-Peg BNB Token",
+      "address": "0xBc7b858B5694D485AD17c89675649cE44De21BEa",
+      "symbol": "bcBNB",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0xBc7b858B5694D485AD17c89675649cE44De21BEa/logo.png"
+    },
+    {
+      "name": "BlockNG-Peg USDT Token",
+      "address": "0xBc2F884680c95A02cea099dA2F524b366d9028Ba",
+      "symbol": "bcUSDT",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0xBc2F884680c95A02cea099dA2F524b366d9028Ba/logo.png"
+    },
+    {
+      "name": "BlockNG-Peg BUSD Token",
+      "address": "0xbC6aEA0c2Cd7bFA073903ebdc23c8aAe79C7c826",
+      "symbol": "bcBUSD",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0xbC6aEA0c2Cd7bFA073903ebdc23c8aAe79C7c826/logo.png"
+    },
+    {
+      "name": "BlockNG-Peg USDC Token",
+      "address": "0xBcbd9990dcEC6a64741ea27BeC0cA8ff6B91Bc26",
+      "symbol": "bcUSDC",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0xBcbd9990dcEC6a64741ea27BeC0cA8ff6B91Bc26/logo.png"
+    },
+    {
+      "name": "BlockNG-Peg BTC Token",
+      "address": "0xbC8643ceDd98F94756633f18945362d3B24283B8",
+      "symbol": "bcBTC",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0xbC8643ceDd98F94756633f18945362d3B24283B8/logo.png"
+    },
+    {
+      "name": "BlockNG-Peg ETH Token",
+      "address": "0xbC7160974318820be438e54439b309921e96B62C",
+      "symbol": "bcETH",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0xbC7160974318820be438e54439b309921e96B62C/logo.png"
+    },
+    {
+      "name": "BlockNG-Peg DAI Token",
+      "address": "0xBCCD70794BB199B0993E56Bfe277142246c2f43b",
+      "symbol": "bcDAI",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0xBCCD70794BB199B0993E56Bfe277142246c2f43b/logo.png"
+    },
+    {
+      "name": "BlockNG-Peg BCH Token",
+      "address": "0xBc9bD8DDe6C5a8e1CBE293356E02f5984693b195",
+      "symbol": "bcBCH",
+      "decimals": 18,
+      "chainId": 10000,
+      "logoURI": "https://raw.githubusercontent.com/emberswap/emberswap-tokenlist/main/assets/smartbch/0xBc9bD8DDe6C5a8e1CBE293356E02f5984693b195/logo.png"
     }
   ]
 }
