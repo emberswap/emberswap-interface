@@ -34,7 +34,7 @@ export const RPC = {
   [ChainId.OKEX_TESTNET]: 'https://exchaintestrpc.okex.org',
   [ChainId.ARBITRUM]: 'https://arb1.arbitrum.io/rpc',
   [ChainId.MOONRIVER]: 'https://moonriver-api.bwarelabs.com/0e63ad82-4f98-46f9-8496-f75657e3a8e4', //'https://moonriver.api.onfinality.io/public',
-  [ChainId.SMARTBCH]: 'https://smartbch.fountainhead.cash/mainnet', //'https://smartbch.greyh.at',
+  [ChainId.SMARTBCH]: 'https://smartbch.greyh.at', //'https://global.uat.cash', 'https://smartbch.fountainhead.cash/mainnet',
   [ChainId.SMARTBCH_TESTNET]: 'https://moeing.tech:9545', //'https://smartbch.greyh.at',
 }
 

@@ -1,7 +1,7 @@
 const Web3 = require('web3')
 const { default: axios } = require('axios')
 import IUniswapV2PairABI from '../../constants/abis/uniswap-v2-pair.json'
-var NETWORK_URL = 'https://smartbch.greyh.at'
+var NETWORK_URL = 'https://global.uat.cash'
 var web3 = new Web3(NETWORK_URL)
 
 export default async function handler(req, res) {

@@ -58,7 +58,7 @@ export const SUPPORTED_NETWORKS: {
       symbol: 'BCH',
       decimals: 18,
     },
-    rpcUrls: ['https://smartbch.fountainhead.cash/mainnet', 'https://smartbch.greyh.at'],
+    rpcUrls: ['https://smartbch.greyh.at', 'https://global.uat.cash', 'https://smartbch.fountainhead.cash/mainnet' ],
     blockExplorerUrls: ['https://sonar.cash/'],
   },
   [ChainId.SMARTBCH_TESTNET]: {
@@ -102,7 +102,7 @@ export default function ChainModal({
   return (
     <Modal isOpen={isOpen} onDismiss={onDismiss} maxWidth={400}>
       <ModalHeader onClose={onDismiss} title={title} />
-      <div className="grid grid-flow-row-dense grid-cols-1 gap-3 overflow-y-auto mt-4">
+      <div className="grid grid-flow-row-dense grid-cols-1 gap-3 mt-4 overflow-y-auto">
         {availableChains.map((key: ChainId, i: number) => {
           if (chain.id === key) {
             return (

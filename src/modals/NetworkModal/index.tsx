@@ -146,7 +146,7 @@ export const SUPPORTED_NETWORKS: {
       symbol: 'BCH',
       decimals: 18,
     },
-    rpcUrls: ['https://smartbch.fountainhead.cash/mainnet','https://smartbch.greyh.at'],
+    rpcUrls: ['https://smartbch.greyh.at', 'https://global.uat.cash', 'https://smartbch.fountainhead.cash/mainnet'],
     blockExplorerUrls: ['https://sonar.cash/'],
   },
   [ChainId.SMARTBCH_TESTNET]: {
@@ -205,7 +205,7 @@ export default function NetworkModal(): JSX.Element | null {
                   library?.send('wallet_addEthereumChain', [params, account])
                 }
               }}
-              className="flex items-center w-full col-span-1 p-3 space-x-3 rounded border cursor-pointer bg-dark-950 hover:bg-dark-900"
+              className="flex items-center w-full col-span-1 p-3 space-x-3 border rounded cursor-pointer bg-dark-950 hover:bg-dark-900"
             >
               <Image src={NETWORK_ICON[key]} alt="Switch Network" className="rounded-md" width="32px" height="32px" />
               <div className="font-bold text-primary">{NETWORK_LABEL[key]}</div>
